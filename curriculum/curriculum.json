@@ -2,13 +2,12 @@
   "curriculum_name": "Full-Stack Software Engineering – Jeff Hutting Edition",
   "audience": "Self-directed adult learner transitioning toward professional software engineering",
   "global_objectives": [
-  "Develop competency in modern full-stack web development",
-  "Build and deploy real applications with increasing autonomy",
-  "Gain confidence navigating real codebases and debugging problems",
-  "Learn core computer science concepts relevant to practical engineering",
-  "Create a professional portfolio demonstrating real technical capability",
-  "Prepare effectively for technical interviews and professional collaboration"
-]
+    "Develop competency in modern full-stack web development",
+    "Build and deploy real applications with increasing autonomy",
+    "Gain confidence navigating real codebases and debugging problems",
+    "Learn core computer science concepts relevant to practical engineering",
+    "Create a professional portfolio demonstrating real technical capability",
+    "Prepare effectively for technical interviews and professional collaboration"
   ],
   "prerequisites": [
     "Basic computer literacy",
