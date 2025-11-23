@@ -1,0 +1,13 @@
+{
+  "learner_id": "jeff",
+  "current_phase_id": "P1",
+  "current_lesson_id": "P1-L01",
+  "completed_lessons": [],
+  "project_states": [],
+  "skill_flags": {
+    "git_basics": "novice",
+    "js_basics": "novice",
+    "terminal_comfort": "low" 
+  },
+  "misconception_notes": []
+}
