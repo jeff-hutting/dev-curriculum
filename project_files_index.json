@@ -1,0 +1,19 @@
+{
+  "schemas": [
+    "schemas/curriculum_schema.json",
+    "schemas/phase_schema.json",
+    "schemas/lesson_schema.json",
+    "schemas/learner_state_schema.json",
+    "schemas/project_schema.json"
+  ],
+  "core": [
+    "user_profile.short.md",
+    "user_profile.medium.md",
+    "user_profile.fill.md",
+    "curriculum/curriculum.json",
+    "learner_state/learner_state.json"
+  ],
+  "phases": [],
+  "lessons": [],
+  "projects": []
+}
