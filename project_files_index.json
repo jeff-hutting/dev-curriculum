@@ -1,19 +1,27 @@
 {
-  "schemas": [
-    "schemas/curriculum_schema.json",
-    "schemas/phase_schema.json",
-    "schemas/lesson_schema.json",
-    "schemas/learner_state_schema.json",
-    "schemas/project_schema.json"
-  ],
-  "core": [
-    "user_profile.short.md",
-    "user_profile.medium.md",
-    "user_profile.fill.md",
-    "curriculum/curriculum.json",
-    "learner_state/learner_state.json"
-  ],
-  "phases": [],
-  "lessons": [],
-  "projects": []
+  "files": {
+    "curriculum": {
+      "path": "curriculum/curriculum.json"
+    },
+    "learner_state": {
+      "path": "learner-state/learner_state.json"
+    },
+    "schemas": {
+      "curriculum_schema": "schemas/curriculum_schema.json",
+      "phase_schema": "schemas/phase_schema.json",
+      "lesson_schema": "schemas/lesson_schema.json",
+      "project_schema": "schemas/project_schema.json",
+      "learner_state_schema": "schemas/learner_state_schema.json"
+    },
+    "templates": {
+      "lesson_summary": "templates/lesson_summary_template.md",
+      "reflection": "templates/reflection_template.md",
+      "lesson_launch": "ux/lesson_launcher.md"
+    },
+    "profiles": {
+      "short": "user_profile.short.md",
+      "medium": "user_profile.medium.md",
+      "full": "user_profile.full.md"
+    }
+  }
 }
