@@ -18,27 +18,13 @@ This repo serves as a learning operating system, not a loose collection of tutor
 
 ## How the System Works
 
-The system operates in three intentional modes, controlled through profile selection and the slash command bootstrap startup workflow.
+### Modes and Profiles
 
-Modes and profiles table:
-
-Mode: Lesson Mode
-Use: Focused drills, fast iteration, coding practice
-Profile file: user_profile.short.md
-
-Mode: Project / Architecture Mode
-Use: Multi-step work, system design, workflow scaffolding
-Profile file: user_profile.medium.md
-
-Mode: Strategic Mode
-Use: Roadmap, pacing, prioritization, direction changes
-Profile file: user_profile.full.md
-
-Session startup examples (type directly into the AI companion):
-
-/bootstrap lesson
-/bootstrap project
-/bootstrap strategic
+| Mode | Primary Purpose | Output Style / Use Case | Profile File | Startup Command |
+|------|----------------|--------------------------|--------------|-----------------|
+| **Lesson Mode** | Focused drills, fast execution | Code-first, minimal context, rapid iteration | `user_profile.short.md` | `/bootstrap lesson` |
+| **Project / Architecture Mode** | Multi-step tasks & system design | Structured breakdowns, risk analysis, architecture-first | `user_profile.medium.md` | `/bootstrap project` |
+| **Strategic Mode** | Roadmap, pacing, prioritization | Long-horizon reasoning, tradeoff decisions | `user_profile.full.md` | `/bootstrap strategic` |
 
 ---
 
