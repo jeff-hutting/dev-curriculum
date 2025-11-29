@@ -1,0 +1,24 @@
+{
+  "version": "0.1.0",
+  "objectives": [
+    {
+      "objective_id": "P1-L01-OBJ1",
+      "lesson_id": "P1-L01",
+      "objective": "Explain what an API is",
+      "levels": [
+        {
+          "label": "met",
+          "description": "Can clearly explain what an API is in plain language and give one concrete example."
+        },
+        {
+          "label": "partial",
+          "description": "Has a vague or partially correct idea of what an API is, but explanation is incomplete or fuzzy."
+        },
+        {
+          "label": "not_met",
+          "description": "Cannot explain what an API is in a meaningful or accurate way."
+        }
+      ]
+    }
+  ]
+}
