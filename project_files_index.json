@@ -1,10 +1,10 @@
 {
   "files": {
-    "curriculum": {
-      "path": "curriculum/curriculum.json"
-    },
-    "learner_state": {
-      "path": "learner-state/learner_state.json"
+    "core": {
+      "curriculum": "curriculum/curriculum.json",
+      "learner_state": "learner-state/learner_state.json",
+      "objective_rubric": "learner-state/objective_rubric.json",
+      "project_files_index": "project_files_index.json"
     },
     "schemas": {
       "curriculum_schema": "schemas/curriculum_schema.json",
@@ -16,12 +16,24 @@
     "templates": {
       "lesson_summary": "templates/lesson_summary_template.md",
       "reflection": "templates/reflection_template.md",
+      "advisor_recommendation": "templates/advisor_recommendation_template.json",
       "lesson_launch": "ux/lesson_launcher.md"
     },
     "profiles": {
       "short": "user_profile.short.md",
       "medium": "user_profile.medium.md",
       "full": "user_profile.full.md"
+    },
+    "prompts": {
+      "bootstrap": "prompts/bootstrap.txt",
+      "role_architecture_hq": "prompts/role_architecture_hq.txt",
+      "role_curriculum_factory": "prompts/role_curriculum_factory.txt",
+      "role_professor": "prompts/role_professor.txt",
+      "role_advisor": "prompts/role_advisor.txt",
+      "role_evaluator": "prompts/role_evaluator.txt"
+    },
+    "lessons": {
+      "P1-L01": "curriculum/lessons/P1-L01.json"
     }
   }
 }
