@@ -1,0 +1,58 @@
+{
+  "lesson_id": "P1-L01",
+  "title": "What Programming Is & How the Web Works",
+  "phase_id": "P1",
+  "estimated_time_minutes": 45,
+  "lesson_type": "conceptual",
+  "prerequisites": [],
+  "learning_objectives": [
+    "Explain what a program is in plain language",
+    "Describe the client–server model of the web",
+    "Define API (Application Programming Interface) at a high level"
+  ],
+  "course_context": [
+    "What full-stack development means at a high level",
+    "How this lesson connects to the larger curriculum",
+    "How hands-on projects and lessons will work"
+  ],
+  "outline": [
+    "Orientation: What is this course? What is full-stack development?",
+    "Motivation: Why learn to program?",
+    "Programs and algorithms",
+    "What happens when you type a URL",
+    "APIs as contracts between software pieces"
+  ],
+  "key_terms": [
+    "program",
+    "algorithm",
+    "client",
+    "server",
+    "API (Application Programming Interface)"
+  ],
+  "expected_outcomes": [
+    "Learner can verbally explain what a program is",
+    "Learner can describe how a browser request becomes a response",
+    "Learner can use a simple metaphor to explain API"
+  ],
+  "exercise": [
+    "Draw a diagram of the client–server request cycle"
+  ],
+  "assessment": {
+    "type": "short-answer",
+    "format": [
+      "3 short-answer questions",
+      "1 explain-like-I'm-five question"
+    ],
+    "reflection_prompt": [
+      "What surprised you most about programming?",
+      "What feels exciting or intimidating at this point?"
+    ]
+  },
+  "resources": [],
+  "project_usage": {},
+  "constraints_for_professor": [
+    "Define all acronyms on first use",
+    "Do not show code beyond tiny snippets",
+    "Keep focus on mental models, not configuration"
+  ]
+}
