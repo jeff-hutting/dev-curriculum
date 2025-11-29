@@ -32,5 +32,10 @@
     "Small, frequent exercises over giant projects",
     "Concept → example → exercise → reflection",
     "Use realistic but not overwhelming examples"
-  ]
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "created_at": "2025-11-29",
+    "updated_at": "2025-11-29"
+  }
 }
