@@ -1,0 +1,44 @@
+{
+  "lesson_id": "P2-L01",
+  "title": "HTTP and APIs in Practice",
+  "phase_id": "P2",
+  "estimated_time_minutes": 75,
+  "lesson_type": "conceptual",
+  "prerequisites": [
+    "P1-L01",
+    "P1-L03"
+  ],
+  "learning_objectives": [
+    "Describe HTTP as the protocol behind most web requests",
+    "Explain what an API (Application Programming Interface) is in practical terms",
+    "Differentiate between clients, servers, and endpoints",
+    "Use a simple API testing tool (or browser) to inspect requests and responses"
+  ],
+  "outline": [
+    "Recap: client–server model",
+    "HTTP methods (GET, POST) at a high level",
+    "APIs as structured contracts: endpoints, parameters, responses",
+    "Hands-on: calling a public JSON API and inspecting the response"
+  ],
+  "key_terms": [
+    "HTTP",
+    "request",
+    "response",
+    "endpoint",
+    "JSON",
+    "API (Application Programming Interface)"
+  ],
+  "assessment": {
+    "type": "short-answer-plus-screenshot",
+    "format": [
+      "Short answers explaining an observed API response",
+      "Screenshot or transcript of a successful API call"
+    ]
+  },
+  "resources": [],
+  "project_usage": {},
+  "constraints_for_professor": [
+    "Use a simple, unauthenticated public API",
+    "Avoid deep dives into status codes beyond the basics (200, 404, 500)"
+  ]
+}
