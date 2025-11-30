@@ -20,12 +20,47 @@
     {
       "phase_id": "P1",
       "phase_name": "Foundations – Web & Programming Basics",
-      "weeks_planned": 8
+      "entry_criteria": [
+        "Comfort using a modern web browser",
+        "Basic file/folder navigation on macOS",
+        "Able to install software with guidance"
+      ],
+      "exit_criteria": [
+        "Can explain what a program is in plain language",
+        "Can describe the client–server model of the web",
+        "Can define API (Application Programming Interface) at a high level",
+        "Can create and modify a simple HTML/CSS page",
+        "Can write small JavaScript snippets that run in the browser console",
+        "Can initialize a Git repository, commit changes, and push to GitHub"
+      ],
+      "weeks_planned": 8,
+      "lessons": {
+        "P1-L01": "curriculum/lessons/P1_L01.json",
+        "P1-L02": "curriculum/lessons/P1_L02.json",
+        "P1-L03": "curriculum/lessons/P1_L03.json",
+        "P1-L04": "curriculum/lessons/P1_L04.json"
+      }
     },
     {
       "phase_id": "P2",
       "phase_name": "APIs, Back End, and Data",
-      "weeks_planned": 8
+      "entry_criteria": [
+        "Meets P1 exit criteria",
+        "Comfortable editing code in VS Code",
+        "Basic familiarity with Git and GitHub workflow"
+      ],
+      "exit_criteria": [
+        "Can explain what an HTTP API is and how clients interact with it",
+        "Can build and run a simple JSON-based API in a local dev environment",
+        "Understands the basics of persisting data (files or simple database)",
+        "Can reason about request/response flows and basic error handling"
+      ],
+      "weeks_planned": 8,
+      "lessons": {
+        "P2-L01": "curriculum/lessons/P2_L01.json",
+        "P2-L02": "curriculum/lessons/P2_L02.json",
+        "P2-L03": "curriculum/lessons/P2_L03.json"
+      }
     }
   ],
   "pedagogy_principles": [
