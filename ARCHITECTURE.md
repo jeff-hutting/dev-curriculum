@@ -1,29 +1,31 @@
-# ARCHITECTURE.md — Claude-Native Edition v1.0
+# ARCHITECTURE.md — Catchbook Curriculum Edition v2.0
 
-> **Status:** Active Development (v1.0)  
-> **Platform:** Claude Desktop + GitHub MCP + VS Code  
-> **Philosophy:** File-backed state, artifact-first delivery, Git-native workflow
+> **Status:** Active Development (v2.0)  
+> **Platform:** Claude Desktop + GitHub MCP + Filesystem MCP + VS Code  
+> **Philosophy:** File-backed state, artifact-first delivery, Git-native workflow  
+> **Project Spine:** Catchbook AI Fishing Journal (28 phases, 139 modules, ~850 hours)
 
 ---
 
 ## Table of Contents
 
-- [Phase 0: Mental Model](https://claude.ai/chat/24b3d28d-d84f-48e3-b511-9992e9e004e0#phase-0-mental-model)
-- [Phase 1: Repository Structure](https://claude.ai/chat/24b3d28d-d84f-48e3-b511-9992e9e004e0#phase-1-repository-structure)
-- [Phase 2: GitHub MCP Setup](https://claude.ai/chat/24b3d28d-d84f-48e3-b511-9992e9e004e0#phase-2-github-mcp-setup)
-- [Phase 3: Core Schemas](https://claude.ai/chat/24b3d28d-d84f-48e3-b511-9992e9e004e0#phase-3-core-schemas)
-- [Phase 4: Role System](https://claude.ai/chat/24b3d28d-d84f-48e3-b511-9992e9e004e0#phase-4-role-system)
-- [Phase 5: Bootstrap Ritual](https://claude.ai/chat/24b3d28d-d84f-48e3-b511-9992e9e004e0#phase-5-bootstrap-ritual)
-- [Phase 6: Quick Start Path](https://claude.ai/chat/24b3d28d-d84f-48e3-b511-9992e9e004e0#phase-6-quick-start-path)
-- [Phase 7: Learner State Architecture](https://claude.ai/chat/24b3d28d-d84f-48e3-b511-9992e9e004e0#phase-7-learner-state-architecture)
-- [Phase 8: Lesson Delivery Model](https://claude.ai/chat/24b3d28d-d84f-48e3-b511-9992e9e004e0#phase-8-lesson-delivery-model)
-- [Phase 9: Command Registry](https://claude.ai/chat/24b3d28d-d84f-48e3-b511-9992e9e004e0#phase-9-command-registry)
-- [Phase 10: Validation Pipeline](https://claude.ai/chat/24b3d28d-d84f-48e3-b511-9992e9e004e0#phase-10-validation-pipeline)
-- [Phase 11: Recovery & Rollback System](https://claude.ai/chat/24b3d28d-d84f-48e3-b511-9992e9e004e0#phase-11-recovery--rollback-system)
-- [Phase 12: Success Metrics](https://claude.ai/chat/24b3d28d-d84f-48e3-b511-9992e9e004e0#phase-12-success-metrics)
-- [Appendix A: File Index Structure](https://claude.ai/chat/24b3d28d-d84f-48e3-b511-9992e9e004e0#appendix-a-file-index-structure)
-- [Appendix B: Roadmap](https://claude.ai/chat/24b3d28d-d84f-48e3-b511-9992e9e004e0#appendix-b-roadmap)
-- [Appendix C: Migration from ChatGPT](https://claude.ai/chat/24b3d28d-d84f-48e3-b511-9992e9e004e0#appendix-c-migration-from-chatgpt)
+- [Phase 0: Mental Model](#phase-0-mental-model)
+- [Phase 1: Repository Structure](#phase-1-repository-structure)
+- [Phase 2: MCP Setup](#phase-2-mcp-setup)
+- [Phase 3: Core Schemas](#phase-3-core-schemas)
+- [Phase 4: Role System](#phase-4-role-system)
+- [Phase 5: Bootstrap Ritual](#phase-5-bootstrap-ritual)
+- [Phase 6: Quick Start Path](#phase-6-quick-start-path)
+- [Phase 7: Learner State Architecture](#phase-7-learner-state-architecture)
+- [Phase 8: Lesson Delivery Model](#phase-8-lesson-delivery-model)
+- [Phase 9: Command Registry](#phase-9-command-registry)
+- [Phase 10: Validation Pipeline](#phase-10-validation-pipeline)
+- [Phase 11: Recovery & Rollback System](#phase-11-recovery--rollback-system)
+- [Phase 12: Success Metrics](#phase-12-success-metrics)
+- [Appendix A: Catchbook Curriculum Overview](#appendix-a-catchbook-curriculum-overview)
+- [Appendix B: File Naming Conventions](#appendix-b-file-naming-conventions)
+- [Appendix C: Curriculum Generation Strategy](#appendix-c-curriculum-generation-strategy)
+- [Appendix D: Roadmap](#appendix-d-roadmap)
 
 ---
 
@@ -31,13 +33,9 @@
 
 ### What This System Is
 
-A **Git-native, Claude-assisted learning operating system** where:
+A **Git-native, Claude-assisted full-stack engineering curriculum** built around a real production project: **Catchbook**, an AI-powered fishing diary app. The curriculum spans 28 phases, 139 modules, and approximately 850 hours of hands-on learning.
 
-- All state lives in your repository, not AI memory
-- Claude reads files via GitHub MCP during sessions
-- You approve and execute all commits
-- Every deliverable is artifact-first for clean copy/paste
-- Progress compounds through structured practice, not passive consumption
+**Core Innovation:** Every module produces a real, shippable feature for Catchbook. No throwaway exercises—only production code that compounds into a complete application.
 
 ### Core Principles
 
@@ -45,123 +43,183 @@ A **Git-native, Claude-assisted learning operating system** where:
 2. **Artifact-first delivery** — All structured content uses Claude's artifact system
 3. **Explicit role contracts** — Roles defined in versioned files
 4. **Git-native workflow** — Every session produces a commit
-5. **Minimal viable commands** — Start with 5 core commands, add only when needed
-6. **Progressive disclosure** — Quick start path for beginners, comprehensive docs for depth
+5. **Just-in-time curriculum** — Generate lessons as needed, not all upfront
+6. **Real project spine** — Catchbook drives every learning module
+7. **Progressive disclosure** — Quick start path for beginners, comprehensive docs for depth
 
-### Key Components
+### Catchbook as Curriculum Spine
 
-**Entities:**
+**Why Catchbook?**
+- **Motivation:** Building a real product users will actually use
+- **Compound learning:** Each phase builds on previous work
+- **Portfolio coherence:** One deep project beats a dozen shallow demos
+- **Market validation:** Test features and gather feedback as you build
+- **Production stakes:** Forces best practices from day 1
+- **Full-stack coverage:** Touches every layer from mobile UI to ML models
 
-- `Curriculum` — Top-level learning design
-- `Phase` — Major learning sections (e.g., Foundations, Backend)
-- `Lesson` — Individual teaching units
-- `Project` — Long-lived code repositories
-- `State` — Your progress, decomposed into atomic files
+**What is Catchbook?**
+Catchbook is an AI-powered fishing journal that uses photo capture + EXIF data + computer vision to auto-populate catch details. Target: 10 seconds to log a catch vs. 3-5 minutes in competing apps.
+
+**Tech Stack:**
+- Frontend: React + TypeScript (web), React Native or SwiftUI (mobile)
+- Backend: Python + FastAPI
+- Database: PostgreSQL + PostGIS
+- AI: Claude API for species ID and recommendations
+- Mobile: PWA → React Native or SwiftUI
+
+**Product Spec:** See `projects/catchbook-product-spec.md` for complete specification.
+
+### Curriculum Structure
+
+**Hierarchy:** Phases → Modules → Lessons
+
+- **Phase:** Major learning section (e.g., "Foundations", "Backend Development")
+  - 28 phases total (P01-P28)
+  - Each phase contains 3-7 modules
+  - File: `curriculum/phases/P01.json`
+
+- **Module:** Focused skill area within a phase (e.g., "Git fundamentals", "React basics")
+  - 139 modules total across all phases
+  - Each module contains 1-5 lessons
+  - File: `curriculum/modules/P01-M01.json`
+  - Estimated time: 6-16 hours per module
+
+- **Lesson:** Individual teaching unit with specific learning objectives
+  - Generated just-in-time by Curriculum Designer
+  - File: `curriculum/lessons/P01-M01-L01.json`
+  - Estimated time: 45-90 minutes per lesson
+
+**Example Path:**
+- Phase 1: Foundations → Module 1.1: Git fundamentals → Lesson 1: What is version control?
+- File hierarchy: `P01.json` → `P01-M01.json` → `P01-M01-L01.json`
+
+### Key Entities
+
+**Curriculum Components:**
+- `Curriculum` — Top-level design (28-phase Catchbook roadmap)
+- `Phase` — Major section (e.g., P01: Foundations)
+- `Module` — Skill cluster (e.g., P01-M01: Git fundamentals)
+- `Lesson` — Teaching unit (e.g., P01-M01-L01: Version control concepts)
+- `Project` — Catchbook (primary), with supplementary projects as needed
+
+**State Components:**
+- `current.json` — Active position (current phase, module, lesson)
+- `skills.json` — Skill tracking across curriculum
+- `metrics.json` — Time invested, confidence ratings, completion stats
+- `completed/` — Per-lesson completion records
 
 **Roles:**
+- `Architect` — System design, schema management, structure validation
+- `Curriculum Designer` — Module and lesson generation (just-in-time)
+- `Professor` — Lesson delivery, teaching, checkpoint facilitation
+- `Advisor` — Progress tracking, next-step recommendations, pacing
+- `Evaluator` — Assessment, rubric scoring, quality assurance
 
-- `Architect` — System design and schema management
-- `Curriculum Designer` — Lesson sequencing and scaffolding
-- `Professor` — Lesson delivery and teaching
-- `Advisor` — Progress tracking and next-step recommendations
-- `Evaluator` — Assessment and quality assurance
+### Workflow Pattern
 
-**Workflow:**
-
-1. Claude reads repo via GitHub MCP
-2. You select a role and task
-3. Claude generates artifacts (JSON, Markdown, code)
-4. You review, copy to VS Code, save files
-5. Claude proposes commit message
-6. You commit and push
+1. **Advisor recommends** next module/lesson based on progress
+2. **Curriculum Designer generates** lesson files if not yet created
+3. **Professor delivers** lesson with guided checkpoints
+4. **User produces** Catchbook feature or code artifact
+5. **User commits** work to Git with proper message
+6. **System updates** learner state (skills, metrics, completed)
+7. **Evaluator assesses** (optional) to validate mastery
+8. **Repeat** until Catchbook v1.0 is complete
 
 ---
 
 ## Phase 1: Repository Structure
 
-### 1.1 Create GitHub Repository
+### 1.1 GitHub Repository
 
-Repository name: `dev-curriculum`
+Repository name: `dev-curriculum`  
+Branch: `master` (not `main`)  
+Visibility: Private
 
 ### 1.2 Directory Structure
 
 ```text
 dev-curriculum/
 ├── curriculum/
-│   ├── curriculum.json              # Top-level design
+│   ├── curriculum.json              # Top-level Catchbook curriculum design
 │   ├── phases/
-│   │   ├── P1-index.json            # Phase 1 overview + lesson list
-│   │   ├── P2-index.json
-│   │   └── ...
+│   │   ├── P01.json                 # Phase 1: Foundations
+│   │   ├── P02.json                 # Phase 2: Professional Tooling
+│   │   └── ...                      # P03-P28 (generated just-in-time)
+│   ├── modules/
+│   │   ├── P01-M01.json             # Module: Git fundamentals
+│   │   ├── P01-M02.json             # Module: Branching and PRs
+│   │   └── ...                      # Generated just-in-time as needed
 │   └── lessons/
-│       ├── P1-L01.json              # Full lesson detail
-│       ├── P1-L02.json
-│       └── ...
+│       ├── P01-M01-L01.json         # Lesson: Version control concepts
+│       ├── P01-M01-L02.json         # Lesson: Basic Git commands
+│       └── ...                      # Generated just-in-time by Curriculum Designer
 ├── projects/
-│   ├── PRJ-GIT-INTRO.json           # Project definitions
-│   └── ...
+│   ├── catchbook-product-spec.md    # Complete Catchbook specification
+│   └── supplementary/               # Additional projects if needed
+│       └── ...
 ├── learner-state/
-│   ├── current.json                 # Active position (phase, lesson)
+│   ├── current.json                 # Active position (phase/module/lesson)
 │   ├── completed/
-│   │   ├── P1-L01.json              # Per-lesson completion record
+│   │   ├── P01-M01-L01.json         # Per-lesson completion records
 │   │   └── ...
 │   ├── skills.json                  # Skill tracking
 │   └── metrics.json                 # Time, confidence, mastery data
 ├── reflections/
-│   ├── 2025-11-29.md                # Daily reflection entries
+│   ├── 2025-12-02.md                # Daily reflection entries
 │   └── ...
 ├── lesson-summaries/
-│   ├── P1-L01-summary.md            # Per-lesson summaries
+│   ├── P01-M01-L01-summary.md       # Per-lesson summaries
 │   └── ...
 ├── schemas/
 │   ├── curriculum.schema.json
-│   ├── phase-index.schema.json
+│   ├── phase.schema.json
+│   ├── module.schema.json
 │   ├── lesson.schema.json
-│   ├── project.schema.json
 │   ├── state-current.schema.json
 │   ├── state-completed.schema.json
 │   ├── state-skills.schema.json
 │   └── state-metrics.schema.json
 ├── roles/
-│   ├── architect.md                 # Role definition files
+│   ├── architect.md                 # Role definitions
 │   ├── curriculum-designer.md
 │   ├── professor.md
 │   ├── advisor.md
 │   └── evaluator.md
 ├── templates/
-│   ├── lesson-summary.template.md   # Strict templates (machine-readable)
-│   ├── reflection.template.md       # Loose templates (human-readable)
+│   ├── lesson-summary.template.md
+│   ├── reflection.template.md
 │   └── commit-message.template.txt
 ├── snapshots/
-│   ├── 2025-11-29-pre-lesson.zip    # State snapshots for rollback
+│   ├── 2025-12-02-pre-module.zip    # State backups for rollback
 │   └── ...
 ├── tools/
 │   └── validate.py                  # Schema validation script
 ├── .github/
 │   └── workflows/
 │       └── validate.yml             # CI validation
-├── user-profile.md                  # Single unified profile
+├── catchbook-curriculum-v1.csv      # Master curriculum overview (28 phases, 139 modules)
+├── user-profile.md                  # Learner profile (Jeff)
 ├── quickstart.md                    # Beginner-friendly entry point
-├── instructions.md                  # Comprehensive reference
-└── README.md
+├── instructions.md                  # Operational reference
+├── ARCHITECTURE.md                  # This document
+└── README.md                        # Repository overview
 ```
 
 ### 1.3 Initial Commit
 
-Create this structure locally, then:
-
 ```bash
 git init
 git add .
-git commit -m "feat(init): create curriculum system structure"
-git branch -M main
+git commit -m "feat(init): create Catchbook curriculum system structure"
+git branch -M master
 git remote add origin git@github.com:jeff-hutting/dev-curriculum.git
-git push -u origin main
+git push -u origin master
 ```
 
 ---
 
-## Phase 2: GitHub MCP Setup
+## Phase 2: MCP Setup
 
 ### 2.1 Install Claude Desktop
 
@@ -178,10 +236,7 @@ Download from: https://claude.ai/download
   "mcpServers": {
     "github": {
       "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-github"
-      ],
+      "args": ["-y", "@modelcontextprotocol/server-github"],
       "env": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "ghp_your_token_here"
       }
@@ -199,11 +254,29 @@ Download from: https://claude.ai/download
     - `read:org` (read org data)
 4. Copy token and paste into config above
 
-### 2.4 Restart Claude Desktop
+### 2.4 Configure Filesystem MCP
 
-Close and reopen Claude Desktop app. MCP connection should be active.
+**Add to same config file:**
 
-### 2.5 Verify Connection
+```json
+{
+  "mcpServers": {
+    "github": { ... },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/jeffhutting/dev/dev-curriculum"]
+    }
+  }
+}
+```
+
+This gives Claude access to local repository files for bulk operations.
+
+### 2.5 Restart Claude Desktop
+
+Close and reopen Claude Desktop app. Both MCP connections should be active.
+
+### 2.6 Verify Connection
 
 Open new chat in Claude Desktop:
 
@@ -211,23 +284,48 @@ Open new chat in Claude Desktop:
 Can you list the contents of my dev-curriculum repository?
 ```
 
-Expected: Claude reads repo structure via MCP and lists files.
+Expected: Claude reads repo structure and lists files.
 
 ---
 
 ## Phase 3: Core Schemas
 
-Create these schema files under `schemas/`. All schemas enforce strict structure for machine-readable files.
+### 3.1 Schema Overview
 
-### 3.1 `schemas/curriculum.schema.json`
+All schemas enforce strict structure for machine-readable files. Schemas validate:
+- Curriculum hierarchy (phases → modules → lessons)
+- Learner state decomposition
+- Catchbook project integration
+- Completion tracking
+
+### 3.2 `schemas/curriculum.schema.json`
 
 ```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "required": ["curriculum_name", "audience", "global_objectives", "phases", "metadata"],
+  "required": ["curriculum_name", "project", "audience", "global_objectives", "phases", "metadata"],
   "properties": {
     "curriculum_name": {"type": "string"},
+    "project": {
+      "type": "object",
+      "required": ["name", "description", "spec_file"],
+      "properties": {
+        "name": {"type": "string"},
+        "description": {"type": "string"},
+        "spec_file": {"type": "string"},
+        "tech_stack": {
+          "type": "object",
+          "properties": {
+            "frontend": {"type": "array", "items": {"type": "string"}},
+            "backend": {"type": "array", "items": {"type": "string"}},
+            "database": {"type": "array", "items": {"type": "string"}},
+            "mobile": {"type": "array", "items": {"type": "string"}},
+            "ai_ml": {"type": "array", "items": {"type": "string"}}
+          }
+        }
+      }
+    },
     "audience": {"type": "string"},
     "global_objectives": {
       "type": "array",
@@ -241,13 +339,17 @@ Create these schema files under `schemas/`. All schemas enforce strict structure
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["phase_id", "phase_name"],
+        "required": ["phase_id", "phase_name", "estimated_hours"],
         "properties": {
-          "phase_id": {"type": "string", "pattern": "^P[0-9]+$"},
-          "phase_name": {"type": "string"}
+          "phase_id": {"type": "string", "pattern": "^P[0-9]{2}$"},
+          "phase_name": {"type": "string"},
+          "estimated_hours": {"type": "integer", "minimum": 1},
+          "module_count": {"type": "integer", "minimum": 1}
         }
       }
     },
+    "total_estimated_hours": {"type": "integer", "minimum": 1},
+    "total_modules": {"type": "integer", "minimum": 1},
     "pedagogy_principles": {
       "type": "array",
       "items": {"type": "string"}
@@ -265,17 +367,18 @@ Create these schema files under `schemas/`. All schemas enforce strict structure
 }
 ```
 
-### 3.2 `schemas/phase-index.schema.json`
+### 3.3 `schemas/phase.schema.json`
 
 ```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "required": ["phase_id", "phase_name", "lessons", "metadata"],
+  "required": ["phase_id", "phase_name", "modules", "metadata"],
   "properties": {
-    "phase_id": {"type": "string", "pattern": "^P[0-9]+$"},
+    "phase_id": {"type": "string", "pattern": "^P[0-9]{2}$"},
     "phase_name": {"type": "string"},
     "description": {"type": "string"},
+    "catchbook_focus": {"type": "string"},
     "entry_criteria": {
       "type": "array",
       "items": {"type": "string"}
@@ -284,17 +387,17 @@ Create these schema files under `schemas/`. All schemas enforce strict structure
       "type": "array",
       "items": {"type": "string"}
     },
-    "estimated_weeks": {"type": "integer", "minimum": 1},
-    "lessons": {
+    "estimated_hours": {"type": "integer", "minimum": 1},
+    "modules": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["lesson_id", "title", "estimated_minutes"],
+        "required": ["module_id", "module_name", "estimated_hours", "catchbook_deliverable"],
         "properties": {
-          "lesson_id": {"type": "string", "pattern": "^P[0-9]+-L[0-9]+$"},
-          "title": {"type": "string"},
-          "lesson_type": {"type": "string", "enum": ["conceptual", "hands-on", "project", "review"]},
-          "estimated_minutes": {"type": "integer", "minimum": 15}
+          "module_id": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}$"},
+          "module_name": {"type": "string"},
+          "estimated_hours": {"type": "integer", "minimum": 1},
+          "catchbook_deliverable": {"type": "string"}
         }
       }
     },
@@ -310,22 +413,96 @@ Create these schema files under `schemas/`. All schemas enforce strict structure
 }
 ```
 
-### 3.3 `schemas/lesson.schema.json`
+### 3.4 `schemas/module.schema.json`
 
 ```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "required": ["lesson_id", "title", "phase_id", "lesson_type", "learning_objectives", "outline", "assessment"],
+  "required": ["module_id", "module_name", "phase_id", "estimated_hours", "catchbook_deliverable", "learning_objectives", "lessons"],
   "properties": {
-    "lesson_id": {"type": "string", "pattern": "^P[0-9]+-L[0-9]+$"},
+    "module_id": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}$"},
+    "module_name": {"type": "string"},
+    "phase_id": {"type": "string", "pattern": "^P[0-9]{2}$"},
+    "estimated_hours": {"type": "integer", "minimum": 1},
+    "catchbook_deliverable": {"type": "string"},
+    "description": {"type": "string"},
+    "prerequisites": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}$"}
+    },
+    "learning_objectives": {
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 1
+    },
+    "skills_taught": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "lessons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["lesson_id", "title", "estimated_minutes"],
+        "properties": {
+          "lesson_id": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}-L[0-9]{2}$"},
+          "title": {"type": "string"},
+          "lesson_type": {"type": "string", "enum": ["conceptual", "hands-on", "project", "review"]},
+          "estimated_minutes": {"type": "integer", "minimum": 15}
+        }
+      }
+    },
+    "catchbook_integration": {
+      "type": "object",
+      "properties": {
+        "feature_area": {"type": "string"},
+        "repository_path": {"type": "string"},
+        "dependencies": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "resources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "title", "url"],
+        "properties": {
+          "type": {"type": "string"},
+          "title": {"type": "string"},
+          "url": {"type": "string", "format": "uri"}
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["created_at", "updated_at"],
+      "properties": {
+        "created_at": {"type": "string", "format": "date"},
+        "updated_at": {"type": "string", "format": "date"},
+        "generated_by": {"type": "string"}
+      }
+    }
+  }
+}
+```
+
+### 3.5 `schemas/lesson.schema.json`
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["lesson_id", "title", "module_id", "phase_id", "lesson_type", "learning_objectives", "outline", "assessment"],
+  "properties": {
+    "lesson_id": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}-L[0-9]{2}$"},
     "title": {"type": "string"},
-    "phase_id": {"type": "string", "pattern": "^P[0-9]+$"},
+    "module_id": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}$"},
+    "phase_id": {"type": "string", "pattern": "^P[0-9]{2}$"},
     "estimated_minutes": {"type": "integer", "minimum": 15},
     "lesson_type": {"type": "string", "enum": ["conceptual", "hands-on", "project", "review"]},
     "prerequisites": {
       "type": "array",
-      "items": {"type": "string", "pattern": "^P[0-9]+-L[0-9]+$"}
+      "items": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}-L[0-9]{2}$"}
     },
     "learning_objectives": {
       "type": "array",
@@ -340,6 +517,14 @@ Create these schema files under `schemas/`. All schemas enforce strict structure
     "key_terms": {
       "type": "array",
       "items": {"type": "string"}
+    },
+    "catchbook_context": {
+      "type": "object",
+      "properties": {
+        "feature": {"type": "string"},
+        "deliverable": {"type": "string"},
+        "code_location": {"type": "string"}
+      }
     },
     "assessment": {
       "type": "object",
@@ -364,50 +549,57 @@ Create these schema files under `schemas/`. All schemas enforce strict structure
         }
       }
     },
-    "project_usage": {
-      "type": "object",
-      "properties": {
-        "project_id": {"type": "string"},
-        "role": {"type": "string"},
-        "focus_area": {"type": "string"}
-      }
-    },
     "professor_constraints": {
       "type": "array",
       "items": {"type": "string"}
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["created_at"],
+      "properties": {
+        "created_at": {"type": "string", "format": "date"},
+        "generated_by": {"type": "string"}
+      }
     }
   }
 }
 ```
 
-### 3.4 `schemas/state-current.schema.json`
+### 3.6 State Schemas
+
+#### `schemas/state-current.schema.json`
 
 ```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "required": ["learner_id", "current_phase_id", "current_lesson_id", "last_updated"],
+  "required": ["learner_id", "current_phase_id", "current_module_id", "current_lesson_id", "last_updated"],
   "properties": {
     "learner_id": {"type": "string"},
-    "current_phase_id": {"type": "string", "pattern": "^P[0-9]+$"},
-    "current_lesson_id": {"type": "string", "pattern": "^P[0-9]+-L[0-9]+$"},
+    "current_phase_id": {"type": "string", "pattern": "^P[0-9]{2}$"},
+    "current_module_id": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}$"},
+    "current_lesson_id": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}-L[0-9]{2}$"},
     "last_updated": {"type": "string", "format": "date-time"}
   }
 }
 ```
 
-### 3.5 `schemas/state-completed.schema.json`
+#### `schemas/state-completed.schema.json`
 
 ```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "required": ["lesson_id", "completed_at", "duration_minutes", "confidence_rating"],
+  "required": ["lesson_id", "module_id", "phase_id", "completed_at", "duration_minutes", "confidence_rating"],
   "properties": {
-    "lesson_id": {"type": "string", "pattern": "^P[0-9]+-L[0-9]+$"},
+    "lesson_id": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}-L[0-9]{2}$"},
+    "module_id": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}$"},
+    "phase_id": {"type": "string", "pattern": "^P[0-9]{2}$"},
     "completed_at": {"type": "string", "format": "date-time"},
     "duration_minutes": {"type": "integer", "minimum": 1},
     "confidence_rating": {"type": "integer", "minimum": 1, "maximum": 5},
+    "catchbook_deliverable": {"type": "string"},
+    "code_committed": {"type": "boolean"},
     "objectives_met": {
       "type": "array",
       "items": {"type": "string"}
@@ -424,7 +616,7 @@ Create these schema files under `schemas/`. All schemas enforce strict structure
 }
 ```
 
-### 3.6 `schemas/state-skills.schema.json`
+#### `schemas/state-skills.schema.json`
 
 ```json
 {
@@ -441,7 +633,11 @@ Create these schema files under `schemas/`. All schemas enforce strict structure
           "properties": {
             "level": {"type": "string", "enum": ["novice", "emerging", "competent", "proficient", "expert"]},
             "last_practiced": {"type": "string", "format": "date"},
-            "confidence": {"type": "integer", "minimum": 1, "maximum": 5}
+            "confidence": {"type": "integer", "minimum": 1, "maximum": 5},
+            "modules_practiced": {
+              "type": "array",
+              "items": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}$"}
+            }
           }
         }
       }
@@ -451,16 +647,19 @@ Create these schema files under `schemas/`. All schemas enforce strict structure
 }
 ```
 
-### 3.7 `schemas/state-metrics.schema.json`
+#### `schemas/state-metrics.schema.json`
 
 ```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "required": ["total_time_minutes", "lessons_completed", "reflections_written", "last_updated"],
+  "required": ["total_time_minutes", "lessons_completed", "modules_completed", "phases_completed", "reflections_written", "last_updated"],
   "properties": {
     "total_time_minutes": {"type": "integer", "minimum": 0},
     "lessons_completed": {"type": "integer", "minimum": 0},
+    "modules_completed": {"type": "integer", "minimum": 0},
+    "phases_completed": {"type": "integer", "minimum": 0},
+    "catchbook_features_shipped": {"type": "integer", "minimum": 0},
     "reflections_written": {"type": "integer", "minimum": 0},
     "average_confidence": {"type": "number", "minimum": 1, "maximum": 5},
     "consistency_score": {"type": "number", "minimum": 0, "maximum": 1},
@@ -473,7 +672,7 @@ Create these schema files under `schemas/`. All schemas enforce strict structure
 
 ```bash
 git add schemas/
-git commit -m "feat(schemas): add JSON Schema definitions for curriculum and state"
+git commit -m "feat(schemas): add JSON schemas for Catchbook curriculum structure"
 git push
 ```
 
@@ -483,11 +682,11 @@ git push
 
 ### 4.1 Role Definition Pattern
 
-Each role is defined in a Markdown file under `roles/`. Claude loads the role file to understand its responsibilities.
+Each role is defined in a Markdown file under `roles/`. Claude loads the role file to understand its responsibilities within the Catchbook curriculum context.
 
 **Structure:**
 
-```text
+```markdown
 # Role: {Role Name}
 
 ## Purpose
@@ -507,33 +706,41 @@ One-sentence description of role responsibility.
 - Rules this role must follow
 - When to defer to other roles
 
+## Catchbook Context
+- How this role relates to Catchbook development
+- Examples of Catchbook-specific outputs
+
 ## Example Session Flow
 1. Step-by-step workflow
 2. From role activation to deliverable
 ```
 
-### 4.2 Create Role Files
+### 4.2 Updated Role Files
 
 #### `roles/architect.md`
 
-```text
+```markdown
 # Role: Architect
 
 ## Purpose
-Design and maintain system structure, schemas, and file organization.
+Design and maintain system structure, schemas, and file organization for the Catchbook curriculum system.
 
 ## Responsibilities
 - Define and refine JSON schemas
-- Design file structure and naming conventions
+- Design file structure and naming conventions (phases/modules/lessons)
 - Validate architectural consistency
 - Propose structural improvements
 - Document system design decisions
+- Ensure Catchbook integration patterns are consistent
 
 ## Input Files Required
 - `schemas/*.schema.json`
 - `curriculum/curriculum.json`
-- All phase index files
-- `README.md`, `instructions.md`
+- `catchbook-curriculum-v1.csv`
+- All phase files (`P01.json`, `P02.json`, etc.)
+- All module files (`P01-M01.json`, etc.)
+- `projects/catchbook-product-spec.md`
+- `ARCHITECTURE.md`, `README.md`, `instructions.md`
 
 ## Output Format
 - Schema files (JSON)
@@ -546,82 +753,108 @@ Design and maintain system structure, schemas, and file organization.
 - Never make progress decisions (defer to Advisor)
 - All schema changes must be backward-compatible or include migration plan
 - Always validate proposed changes against existing files
+- Ensure all deliverables map to Catchbook features
+
+## Catchbook Context
+- Validates that every module has a clear Catchbook deliverable
+- Ensures tech stack alignment (React, FastAPI, PostgreSQL, etc.)
+- Maintains consistency between curriculum structure and Catchbook architecture
+- Proposes patterns for integrating curriculum with actual Catchbook codebase
 
 ## Example Session Flow
 1. User requests schema validation
-2. Architect loads all schemas and data files via GitHub MCP
+2. Architect loads all schemas and data files via MCP
 3. Identifies inconsistencies or violations
 4. Proposes specific fixes as artifacts
-5. Generates commit message for user to execute
+5. Generates commit message following Conventional Commits
 6. Updates documentation if structure changed
 ```
 
 #### `roles/curriculum-designer.md`
 
-```text
+```markdown
 # Role: Curriculum Designer
 
 ## Purpose
-Create lesson sequences, phase structures, and learning scaffolding.
+Generate module structures and lesson sequences just-in-time as learner progresses through Catchbook development.
 
 ## Responsibilities
-- Generate phase index files with lesson lists
-- Create individual lesson JSON files matching schema
+- Generate phase files with module lists (from catchbook-curriculum-v1.csv)
+- Create individual module JSON files with lesson outlines
+- Generate lesson JSON files when requested by Professor or Advisor
 - Ensure prerequisite chains are valid
-- Design project integration across lessons
-- Maintain pedagogical coherence
+- Design Catchbook feature integration for each module
+- Break down large modules into manageable lessons (45-90 min each)
+- Maintain pedagogical coherence across phases
 
 ## Input Files Required
+- `catchbook-curriculum-v1.csv` (master curriculum overview)
 - `curriculum/curriculum.json`
-- `schemas/phase-index.schema.json`
+- `projects/catchbook-product-spec.md`
+- `schemas/phase.schema.json`
+- `schemas/module.schema.json`
 - `schemas/lesson.schema.json`
 - `learner-state/skills.json` (for scaffolding decisions)
 
 ## Output Format
-- Phase index files (JSON)
-- Lesson definition files (JSON)
-- Project definition files (JSON)
+- Phase files (JSON): `P01.json`, `P02.json`, etc.
+- Module files (JSON): `P01-M01.json`, `P01-M02.json`, etc.
+- Lesson files (JSON): `P01-M01-L01.json`, `P01-M01-L02.json`, etc.
 - Proposed commit messages
 
 ## Constraints
 - Never deliver actual teaching content (defer to Professor)
 - Never assess learner progress (defer to Advisor)
-- All lessons must validate against lesson schema
+- All files must validate against schemas
 - Prerequisites must reference only existing lessons
-- Estimated times must be realistic (15-90 minutes per lesson)
+- Estimated times must be realistic (lessons: 45-90 min, modules: 6-16 hrs)
+- Every module must specify concrete Catchbook deliverable
+- Lessons within a module must build toward module's Catchbook deliverable
+
+## Catchbook Context
+- Maps CSV modules to actual Catchbook features from product spec
+- Ensures each lesson produces shippable code or documentation
+- Sequences lessons to build Catchbook incrementally (MVP → full product)
+- References specific sections of catchbook-product-spec.md
+- Aligns tech stack choices with Catchbook architecture
 
 ## Example Session Flow
-1. User requests "Generate Phase 1 lessons"
-2. Designer loads curriculum.json and P1-index.json
-3. Generates 8-10 lesson files as artifacts
-4. Each artifact is a complete, schema-valid JSON file
-5. User copies artifacts to VS Code, saves under curriculum/lessons/
-6. Designer proposes commit message
-7. User commits and pushes
+1. User requests "Generate Phase 1 modules"
+2. Designer loads catchbook-curriculum-v1.csv and filters Phase 1 rows
+3. Generates P01.json with all 4 modules listed
+4. Generates P01-M01.json (Git fundamentals) with lesson outline
+5. When Professor needs lessons, generates P01-M01-L01.json, P01-M01-L02.json, etc.
+6. Each lesson artifact is complete, schema-valid JSON
+7. User copies artifacts to VS Code, saves under appropriate directories
+8. Designer proposes commit message: "feat(curriculum): generate Phase 1 modules"
+9. User commits and pushes
 ```
 
 #### `roles/professor.md`
 
-```text
+```markdown
 # Role: Professor
 
 ## Purpose
-Deliver individual lessons through structured, interactive teaching.
+Deliver individual lessons through structured, interactive teaching focused on Catchbook development.
 
 ## Responsibilities
 - Load lesson file and follow its structure
-- Teach concepts step-by-step with checkpoints
+- Teach concepts step-by-step with Catchbook examples
 - Generate lesson documents as artifacts
 - Facilitate checkpoint discussions
+- Guide hands-on Catchbook coding exercises
 - Produce end-of-lesson deliverables (summary, state update, reflection prompt)
 - Adapt pacing based on learner state
+- Verify Catchbook code quality before lesson completion
 
 ## Input Files Required
-- `curriculum/lessons/{lesson_id}.json`
+- `curriculum/lessons/{lesson_id}.json` (e.g., P01-M01-L01.json)
+- `curriculum/modules/{module_id}.json` (e.g., P01-M01.json)
 - `learner-state/current.json`
 - `learner-state/skills.json`
 - `learner-state/completed/{prior_lesson_ids}.json` (if prerequisites exist)
-- Project JSON if `project_usage` is defined
+- `projects/catchbook-product-spec.md` (for feature context)
 
 ## Output Format
 - Lesson document (Markdown artifact with content + checkpoint questions)
@@ -637,45 +870,63 @@ Deliver individual lessons through structured, interactive teaching.
 - Never skip assessment criteria
 - Never modify curriculum structure (defer to Designer)
 - Never make next-lesson decisions (defer to Advisor)
+- All code examples must align with Catchbook tech stack
+- Deliverables must be production-ready for Catchbook repo
+
+## Catchbook Context
+- Every lesson includes Catchbook-specific examples and exercises
+- Guides learner to implement actual Catchbook features
+- References catchbook-product-spec.md for feature requirements
+- Ensures code produced matches Catchbook architecture patterns
+- Validates that module's Catchbook deliverable is achieved
+- Provides context on how current lesson fits into broader Catchbook vision
 
 ## Example Session Flow
-1. User requests "Teach P1-L01"
-2. Professor loads lesson file via GitHub MCP
-3. Generates complete lesson document as artifact
-4. Document includes: introduction, concepts, examples, checkpoint questions
-5. User reads artifact, responds to checkpoint questions in chat
+1. User requests "Teach P01-M01-L01"
+2. Professor loads lesson file and module file via MCP
+3. Loads catchbook-product-spec.md to understand Catchbook context
+4. Generates complete lesson document as artifact:
+   - Introduction: Why this matters for Catchbook
+   - Concepts with Catchbook examples
+   - Hands-on exercise: "Set up Catchbook Git repo"
+   - Checkpoint questions at 15-minute intervals
+5. User reads artifact, works through exercise, responds to checkpoints in chat
 6. Professor adapts explanations based on responses
 7. After final checkpoint, Professor generates:
    - Lesson summary artifact (based on template)
    - State update artifacts (4 JSON files)
-   - Reflection prompt as conversational text
+   - Reflection prompt: "How does Git workflow apply to your Catchbook development?"
 8. User copies artifacts to VS Code, saves files
-9. Professor proposes commit message
-10. User commits and pushes
+9. Professor proposes commit message: "feat(lesson): complete P01-M01-L01 Git fundamentals"
+10. User commits Catchbook repo changes + curriculum state updates
 ```
 
 #### `roles/advisor.md`
 
-```text
+```markdown
 # Role: Advisor
 
 ## Purpose
-Recommend next learning activities based on progress, skills, and goals.
+Recommend next learning activities based on progress, skills, Catchbook feature priorities, and timeline goals.
 
 ## Responsibilities
 - Analyze learner state (current position, completed lessons, skills, metrics)
-- Recommend next lesson or review activity
+- Recommend next lesson, module, or review activity
 - Flag skills needing reinforcement
-- Propose weekly learning plans
+- Propose weekly learning plans aligned with Catchbook milestones
 - Identify prerequisite gaps
+- Track Catchbook feature completion vs. curriculum progress
+- Adjust pacing recommendations based on 10-20 hrs/week availability
 
 ## Input Files Required
+- `catchbook-curriculum-v1.csv` (master curriculum overview)
 - `curriculum/curriculum.json`
-- All phase index files
+- All phase and module files
 - `learner-state/current.json`
 - `learner-state/completed/*.json`
 - `learner-state/skills.json`
 - `learner-state/metrics.json`
+- `projects/catchbook-product-spec.md` (to understand feature priorities)
 
 ## Output Format
 - Recommendation document (Markdown artifact)
@@ -688,68 +939,95 @@ Recommend next learning activities based on progress, skills, and goals.
 - Recommendations must respect prerequisite chains
 - Must justify recommendations with evidence from state files
 - Cannot make decisions for user — only recommend
+- Must consider Catchbook feature dependencies (e.g., can't build API endpoints before backend setup)
+
+## Catchbook Context
+- Tracks which Catchbook features are completed vs. planned
+- Recommends modules that unblock high-priority Catchbook features
+- Suggests review if recent Catchbook code quality is low
+- Proposes skipping modules if learner already has skill (validated against completed projects)
+- Aligns weekly plans with Catchbook milestones (e.g., "MVP by Month 4")
 
 ## Example Session Flow
 1. User requests "What should I do next?"
-2. Advisor loads all learner-state files via GitHub MCP
-3. Analyzes completed lessons, skills, and metrics
-4. Generates recommendation artifact with:
-   - Suggested next lesson with justification
-   - Skills to review (if any)
-   - Weekly plan (if requested)
-5. User reviews recommendation
-6. If user agrees, activates Professor for suggested lesson
+2. Advisor loads all learner-state files via MCP
+3. Loads catchbook-curriculum-v1.csv to understand remaining modules
+4. Analyzes completed lessons, skills, and metrics
+5. Checks Catchbook product spec to see which features are priorities
+6. Generates recommendation artifact with:
+   - Suggested next lesson with justification: "Complete P01-M01-L02 to finish Git fundamentals module, which unlocks Catchbook repo setup"
+   - Skills to review (if any): "Git branching confidence is 2/5, recommend reviewing P01-M01-L01 before continuing"
+   - Weekly plan (if requested): "This week: Complete Module 1.1 (6 hours), set up Catchbook repo, write first commit"
+   - Catchbook milestone context: "This puts you on track for Phase 1 completion in 4 weeks"
+7. User reviews recommendation
+8. If user agrees, activates Professor for suggested lesson
 ```
 
 #### `roles/evaluator.md`
 
-```text
+```markdown
 # Role: Evaluator
 
 ## Purpose
-Assess lesson quality, learning outcomes, and system effectiveness.
+Assess lesson quality, learning outcomes, Catchbook code quality, and system effectiveness.
 
 ## Responsibilities
 - Validate that completed lessons met stated objectives
 - Review lesson summaries for gaps or misconceptions
 - Assess skill progression over time
+- Evaluate Catchbook code quality (architecture, best practices, functionality)
 - Identify curriculum weaknesses
 - Propose lesson improvements
+- Verify that module deliverables are production-ready for Catchbook
 
 ## Input Files Required
 - Lesson file being evaluated
 - Corresponding completed state file
 - Lesson summary file
 - Reflection file (if exists)
+- Catchbook codebase (if evaluating code quality)
+- `projects/catchbook-product-spec.md` (for feature requirements)
 
 ## Output Format
 - Evaluation report (Markdown artifact)
 - Optional: proposed lesson updates (JSON artifact)
 - Optional: proposed skill adjustments (JSON artifact)
+- Optional: Catchbook code review findings (Markdown)
 
 ## Constraints
 - Never make curriculum changes directly (propose to Designer)
 - Never teach (defer to Professor)
 - Never decide next steps (defer to Advisor)
 - All assessments must reference specific evidence from files
+- Code evaluations must be constructive and reference best practices
+
+## Catchbook Context
+- Evaluates if Catchbook deliverables meet product spec requirements
+- Checks code quality against Catchbook architecture patterns
+- Validates that features are shippable (not just "learning exercises")
+- Proposes improvements to align curriculum with real-world Catchbook needs
+- Identifies where curriculum should add Catchbook-specific guidance
 
 ## Example Session Flow
-1. User requests "Evaluate P1-L01"
+1. User requests "Evaluate P01-M01-L01"
 2. Evaluator loads lesson file, completed state, summary, reflection
-3. Generates evaluation report as artifact:
+3. If module has Catchbook deliverable, loads relevant code from Catchbook repo
+4. Generates evaluation report as artifact:
    - Were objectives met? (evidence from summary)
    - Were misconceptions addressed? (evidence from reflection)
    - Is skill level update justified? (evidence from checkpoint responses)
-   - Recommendations for lesson improvement
-4. User reviews evaluation
-5. If lesson needs updates, user activates Designer to modify lesson file
+   - Catchbook code quality: "Repo setup follows best practices, README is clear"
+   - Recommendations for lesson improvement: "Add checkpoint on .gitignore patterns"
+5. User reviews evaluation
+6. If lesson needs updates, user activates Designer to modify lesson file
+7. If Catchbook code needs revision, user refactors with Professor guidance
 ```
 
 **Commit role files:**
 
 ```bash
 git add roles/
-git commit -m "feat(roles): add role definition files"
+git commit -m "feat(roles): update role definitions for Catchbook curriculum"
 git push
 ```
 
@@ -769,25 +1047,39 @@ Every Claude Desktop session starts with a bootstrap to load context.
 
 **Claude's expected behavior:**
 
-1. Detect that user is in dev-curriculum repository (via GitHub MCP)
+1. Detect dev-curriculum repository (via GitHub MCP or Filesystem MCP)
 2. Read `user-profile.md`
 3. Read `learner-state/current.json`
-4. Display:
+4. Read `catchbook-curriculum-v1.csv` (to show progress within 28-phase structure)
+5. Display:
 
 ```text
-=== Dev Curriculum System Bootstrap ===
+=== Catchbook Curriculum System Bootstrap ===
 
 Repository: dev-curriculum
 Learner: Jeff
-Current Position: P1-L03 (Foundations – Web & Programming Basics)
-Last Updated: 2025-11-29
+Project: Catchbook AI Fishing Journal
+
+Current Position:
+  Phase: P01 - Foundations (Module 1 of 4)
+  Module: P01-M01 - Git fundamentals
+  Lesson: P01-M01-L01 - Version control concepts
+  
+Progress:
+  Phases Completed: 0/28
+  Modules Completed: 0/139
+  Lessons Completed: 0
+  Total Time: 0 hours
+  Catchbook Features Shipped: 0
+  
+Last Updated: 2025-12-02
 
 Available Commands:
-/teach {lesson_id}  — Start a lesson with Professor
-/next               — Get Advisor recommendation
-/status             — View progress dashboard
-/validate           — Run schema validation
-/help               — Show all commands
+  /teach {lesson_id}    — Start a lesson with Professor
+  /next                 — Get Advisor recommendation
+  /status               — View progress dashboard
+  /validate             — Run schema validation
+  /help                 — Show all commands
 
 Select a role or command to continue.
 ```
@@ -803,7 +1095,7 @@ Select a role or command to continue.
 or
 
 ```text
-/teach P1-L01
+/teach P01-M01-L01
 ```
 
 **Claude's expected behavior:**
@@ -815,7 +1107,10 @@ or
 ```text
 Role: Professor activated.
 
-Ready to teach lesson P1-L01: What Programming Is & How the Web Works
+Ready to teach lesson P01-M01-L01: Version control concepts
+
+Module Context: Git fundamentals (6 hours total)
+Catchbook Deliverable: Catchbook repo setup + README
 
 Type /begin to start the lesson, or ask questions first.
 ```
@@ -826,12 +1121,18 @@ Type /begin to start the lesson, or ask questions first.
 
 ### 6.1 Create `quickstart.md`
 
-This is the beginner-friendly entry point. Hides complexity until needed.
+````markdown
+# Catchbook Curriculum — Quick Start
 
-````text
-# Dev Curriculum — Quick Start
+**Goal:** Complete your first lesson and make your first Catchbook commit in 60 minutes.
 
-**Goal:** Complete your first lesson in 30 minutes.
+## What You're Building
+
+**Catchbook** is an AI-powered fishing journal app. Over 28 phases, you'll build it from scratch: mobile UI, backend API, database, AI species identification, and more.
+
+This curriculum isn't about throwaway exercises—you're shipping real features that compound into a production app.
+
+---
 
 ## Step 1: Bootstrap the System
 
@@ -841,44 +1142,66 @@ Open Claude Desktop and type:
 /bootstrap
 ```
 
-Claude will load your curriculum and show your current position.
+Claude will load your curriculum and show your current position within the 28-phase Catchbook roadmap.
+
+---
 
 ## Step 2: Start Your First Lesson
 
 Type:
 
 ```
-/teach P1-L01
+/teach P01-M01-L01
 ```
 
-Claude will activate Professor mode and load the lesson.
+Claude will activate Professor mode and load the lesson on Git fundamentals.
+
+---
 
 ## Step 3: Read the Lesson Document
 
 Claude will generate a lesson document as an artifact. This contains:
-- Concepts to learn
-- Examples
-- Checkpoint questions
+- **Why this matters for Catchbook** (context)
+- **Concepts to learn** (theory)
+- **Hands-on exercise** (practice with Catchbook repo)
+- **Checkpoint questions** (verify understanding)
 
 Read through it at your own pace.
+
+---
 
 ## Step 4: Answer Checkpoint Questions
 
 When you reach a checkpoint, answer the question in the chat.
 
-Example checkpoint:
-> **Checkpoint 1:** In your own words, what is a program?
+**Example checkpoint:**
+> **Checkpoint 1:** In your own words, why is version control important for the Catchbook project?
 
 Type your answer. Claude will adapt the next section based on your response.
 
-## Step 5: Complete the Lesson
+---
+
+## Step 5: Complete the Hands-On Exercise
+
+Follow the instructions to:
+1. Create a Catchbook repository
+2. Write a README describing the project
+3. Make your first Git commit
+
+This is your first **real Catchbook deliverable**—not a toy example.
+
+---
+
+## Step 6: Complete the Lesson
 
 After the final checkpoint, Claude will generate:
-1. Lesson summary (copy to `lesson-summaries/P1-L01-summary.md`)
-2. State updates (copy JSON artifacts to `learner-state/` files)
-3. Reflection prompt (answer conversationally)
+1. **Lesson summary** → Copy to `lesson-summaries/P01-M01-L01-summary.md`
+2. **State updates** → Copy JSON artifacts to `learner-state/` files
+3. **Reflection prompt** → Answer conversationally in chat
 
-## Step 6: Save and Commit
+---
+
+## Step 7: Save and Commit
 
 In VS Code:
 1. Copy artifacts to appropriate files
@@ -887,11 +1210,13 @@ In VS Code:
 
 ```bash
 git add .
-git commit -m "feat(lesson): complete P1-L01"
+git commit -m "feat(lesson): complete P01-M01-L01 version control concepts"
 git push
 ```
 
-## Step 7: What's Next?
+---
+
+## Step 8: What's Next?
 
 Type:
 
@@ -899,151 +1224,27 @@ Type:
 /next
 ```
 
-Claude will activate Advisor and recommend your next lesson.
+Claude will activate Advisor and recommend your next lesson based on:
+- Your progress in the Catchbook curriculum
+- Skills you've mastered
+- Which Catchbook features are ready to build next
 
 ---
 
-**That's it!** Repeat this loop for every lesson.
+## The Big Picture
+
+**28 Phases. 139 Modules. ~850 Hours. One Real Product.**
+
+You're not just learning full-stack development—you're building **Catchbook** from day 1 to production launch.
+
+Every lesson ships a feature. Every module completes a major component. Every phase advances Catchbook toward launch.
+
+---
+
+**Ready?** Start with `/bootstrap` in Claude Desktop.
 
 For advanced features, see `instructions.md`.
 ````
-
-### 6.2 Create `instructions.md` (Comprehensive Reference)
-
-````text
-# Dev Curriculum — Complete Instructions
-
-## Overview
-
-This is a file-backed, Claude-assisted learning system. All state lives in Git, not AI memory.
-
-## Architecture
-
-See `ARCHITECTURE.md` for full system design.
-
-## Roles
-
-- **Architect:** System design and schema management (`roles/architect.md`)
-- **Curriculum Designer:** Lesson creation and sequencing (`roles/curriculum-designer.md`)
-- **Professor:** Lesson delivery and teaching (`roles/professor.md`)
-- **Advisor:** Progress tracking and recommendations (`roles/advisor.md`)
-- **Evaluator:** Assessment and quality assurance (`roles/evaluator.md`)
-
-## Commands
-
-### Core Commands
-- `/bootstrap` — Initialize session
-- `/teach {lesson_id}` — Start lesson with Professor
-- `/next` — Get Advisor recommendation
-- `/status` — View progress dashboard
-- `/validate` — Run schema validation
-
-### Role Commands
-- `/role {role_name}` — Activate specific role
-- `/help {role_name}` — Show role documentation
-
-### Maintenance Commands
-- `/snapshot` — Create state backup for rollback
-- `/rollback {snapshot_name}` — Restore previous state
-- `/repair` — Fix file inconsistencies
-
-## File Structure
-
-```
-curriculum/        — Curriculum design and lessons
-learner-state/     — Progress tracking (decomposed)
-roles/             — Role definition files
-schemas/           — JSON Schema validation
-templates/         — Output templates
-snapshots/         — State backups
-lesson-summaries/  — Completed lesson records
-reflections/       — Learning journal
-```
-
-## Workflow
-
-1. Open Claude Desktop
-2. Run `/bootstrap`
-3. Select role or command
-4. Claude generates artifacts
-5. Copy artifacts to VS Code
-6. Save files
-7. Commit with Claude's proposed message
-8. Push to GitHub
-
-## Validation
-
-### Pre-commit validation
-Claude validates all JSON artifacts before output.
-
-### CI validation
-GitHub Actions runs schema validation on every push.
-
-## Recovery
-
-### Create snapshot
-```
-/snapshot pre-lesson-P1-L03
-```
-
-### Rollback to snapshot
-```
-/rollback pre-lesson-P1-L03
-```
-
-### Redo lesson
-```
-/redo P1-L02
-```
-
-This removes the lesson from completed state and resets skills to pre-lesson values.
-
-## Success Metrics
-
-Tracked in `learner-state/metrics.json`:
-- Total time investment
-- Lessons completed
-- Confidence ratings over time
-- Reflection consistency
-- Skill progression
-
-## Troubleshooting
-
-**Problem:** Claude can't access repository
-- **Solution:** Check GitHub MCP configuration in `~/Library/Application Support/Claude/claude_desktop_config.json`
-
-**Problem:** Schema validation fails
-- **Solution:** Run `/validate` to see specific errors, then fix files manually
-
-**Problem:** State files out of sync
-- **Solution:** Run `/repair` to diagnose and fix
-
-**Problem:** Lost progress after crash
-- **Solution:** Run `/rollback {latest_snapshot}` to restore
-
-## Advanced Topics
-
-### Custom Roles
-Create new role files under `roles/` following the standard pattern.
-
-### Custom Metrics
-Add fields to `state-metrics.schema.json` and update metrics.json manually.
-
-### Multi-track Curriculum
-Add additional phases to `curriculum.json` and generate separate lesson sequences.
-
----
-
-For quick start, see `quickstart.md`.
-````
-
-**Commit documentation:**
-
-```bash
-git add quickstart.md instructions.md
-git commit -m "docs: add quickstart and comprehensive instructions"
-git push
-```
 
 ---
 
@@ -1053,6 +1254,8 @@ git push
 
 **Philosophy:** Atomic state files enable clean Git history and focused updates.
 
+**Key Difference from v1.0:** State now tracks phases, modules, AND lessons.
+
 ### 7.2 Create Initial State Files
 
 #### `learner-state/current.json`
@@ -1060,9 +1263,10 @@ git push
 ```json
 {
   "learner_id": "jeff",
-  "current_phase_id": "P1",
-  "current_lesson_id": "P1-L01",
-  "last_updated": "2025-11-29T00:00:00Z"
+  "current_phase_id": "P01",
+  "current_module_id": "P01-M01",
+  "current_lesson_id": "P01-M01-L01",
+  "last_updated": "2025-12-02T00:00:00Z"
 }
 ```
 
@@ -1073,26 +1277,36 @@ git push
   "skills": {
     "git_basics": {
       "level": "novice",
-      "last_practiced": "2025-11-29",
-      "confidence": 2
-    },
-    "js_basics": {
-      "level": "novice",
-      "last_practiced": "2025-11-29",
-      "confidence": 2
+      "last_practiced": "2025-12-02",
+      "confidence": 2,
+      "modules_practiced": []
     },
     "terminal_comfort": {
       "level": "novice",
-      "last_practiced": "2025-11-29",
-      "confidence": 2
+      "last_practiced": "2025-12-02",
+      "confidence": 2,
+      "modules_practiced": []
     },
     "html_css": {
       "level": "novice",
-      "last_practiced": "2025-11-29",
-      "confidence": 2
+      "last_practiced": "2025-12-02",
+      "confidence": 2,
+      "modules_practiced": []
+    },
+    "javascript_basics": {
+      "level": "novice",
+      "last_practiced": "2025-12-02",
+      "confidence": 2,
+      "modules_practiced": []
+    },
+    "python_basics": {
+      "level": "novice",
+      "last_practiced": "2025-12-02",
+      "confidence": 2,
+      "modules_practiced": []
     }
   },
-  "last_updated": "2025-11-29T00:00:00Z"
+  "last_updated": "2025-12-02T00:00:00Z"
 }
 ```
 
@@ -1102,10 +1316,13 @@ git push
 {
   "total_time_minutes": 0,
   "lessons_completed": 0,
+  "modules_completed": 0,
+  "phases_completed": 0,
+  "catchbook_features_shipped": 0,
   "reflections_written": 0,
   "average_confidence": 0,
   "consistency_score": 0,
-  "last_updated": "2025-11-29T00:00:00Z"
+  "last_updated": "2025-12-02T00:00:00Z"
 }
 ```
 
@@ -1117,7 +1334,7 @@ Empty directory placeholder for completed lesson records.
 
 ```bash
 git add learner-state/
-git commit -m "feat(state): initialize learner state files"
+git commit -m "feat(state): initialize learner state for Catchbook curriculum"
 git push
 ```
 
@@ -1125,16 +1342,16 @@ git push
 
 After each lesson, Professor generates 4 artifacts:
 
-1. **current.json update** — new current_lesson_id
-2. **completed/{lesson_id}.json** — completion record
-3. **skills.json update** — skill level changes
-4. **metrics.json update** — time, confidence, count increments
+1. **current.json update** — new current_lesson_id (and module_id if transitioning)
+2. **completed/{lesson_id}.json** — completion record with Catchbook deliverable
+3. **skills.json update** — skill level changes + modules_practiced tracking
+4. **metrics.json update** — time, confidence, count increments (including catchbook_features_shipped)
 
 User copies these artifacts to appropriate files and commits atomically:
 
 ```bash
 git add learner-state/
-git commit -m "feat(progress): complete P1-L01"
+git commit -m "feat(progress): complete P01-M01-L01 version control concepts"
 git push
 ```
 
@@ -1142,16 +1359,27 @@ git push
 
 ## Phase 8: Lesson Delivery Model
 
-### 8.1 Lesson Format: Document + Guided Checkpoints
+### 8.1 Lesson Format: Document + Guided Checkpoints + Catchbook Integration
 
 **Structure:**
 
-````text
+````markdown
 # Lesson: {Title}
 
-**Phase:** {phase_id}  
+**Phase:** {phase_id} - {phase_name}  
+**Module:** {module_id} - {module_name}  
 **Estimated Time:** {minutes} minutes  
 **Prerequisites:** {list or "None"}
+
+---
+
+## Catchbook Context
+
+**What You're Building:** {Brief description of Catchbook feature this lesson contributes to}
+
+**Why It Matters:** {How this skill applies to Catchbook development}
+
+**Module Deliverable:** {What you'll ship by end of module}
 
 ---
 
@@ -1166,23 +1394,23 @@ By the end of this lesson, you will be able to:
 
 ## Introduction
 
-{2-3 paragraphs setting context and motivation}
+{2-3 paragraphs setting context and motivation with Catchbook examples}
 
 ---
 
 ## Section 1: {Topic}
 
-{Explanation with examples}
+{Explanation with Catchbook-specific examples}
 
-### Example
+### Example (Catchbook)
 
 ```javascript
-// Code example if applicable
+// Real Catchbook code example
 ```
 
 ---
 
-**CHECKPOINT 1:** {Question to verify understanding}
+**CHECKPOINT 1:** {Question to verify understanding in Catchbook context}
 
 {Pause here and answer in chat before continuing}
 
@@ -1212,9 +1440,21 @@ By the end of this lesson, you will be able to:
 
 ---
 
+## Hands-On Exercise: Build for Catchbook
+
+{Step-by-step instructions to implement actual Catchbook feature}
+
+**Deliverable:** {Specific file, commit, or feature to produce}
+
+**Acceptance Criteria:**
+1. {criterion 1}
+2. {criterion 2}
+
+---
+
 ## Summary
 
-{Recap of key concepts}
+{Recap of key concepts and how they apply to Catchbook}
 
 ---
 
@@ -1243,40 +1483,58 @@ By the end of this lesson, you will be able to:
 
 ---
 
+## Next Steps
+
+**Next Lesson:** {next_lesson_id} - {next_lesson_title}  
+**Catchbook Progress:** {What Catchbook features are now possible}
+
+---
+
 **End of Lesson Document**
 ````
 
 ### 8.2 Professor Workflow
 
-1. User: `/teach P1-L01`
-2. Professor loads `curriculum/lessons/P1-L01.json` via GitHub MCP
-3. Professor generates lesson document as artifact (following structure above)
-4. User reads document, answers checkpoint questions in chat
-5. Professor adapts explanations based on answers
-6. After final checkpoint, Professor generates:
+1. User: `/teach P01-M01-L01`
+2. Professor loads `curriculum/lessons/P01-M01-L01.json` via MCP
+3. Professor loads `curriculum/modules/P01-M01.json` for module context
+4. Professor loads `projects/catchbook-product-spec.md` for feature context
+5. Professor generates lesson document as artifact (following structure above)
+6. User reads document, completes hands-on exercise, answers checkpoint questions in chat
+7. Professor adapts explanations based on answers
+8. After final checkpoint, Professor generates:
     - Lesson summary artifact
     - 4 state update artifacts (JSON)
-    - Reflection prompt (conversational)
-7. User copies artifacts to VS Code, saves
-8. Professor proposes commit message
-9. User commits and pushes
+    - Reflection prompt (conversational, Catchbook-focused)
+9. User copies artifacts to VS Code, saves
+10. Professor proposes commit message following Conventional Commits
+11. User commits Catchbook repo changes (if any) + curriculum state updates
 
 ### 8.3 Lesson Summary Template
 
 Located at `templates/lesson-summary.template.md`:
 
-```text
+```markdown
 ---
 lesson_id: {{lesson_id}}
+module_id: {{module_id}}
+phase_id: {{phase_id}}
 completed_at: {{iso_timestamp}}
 duration_minutes: {{duration}}
 confidence_rating: {{1-5}}
+catchbook_deliverable: {{description}}
 ---
 
 # Lesson Summary — {{lesson_id}}
 
 ## Title
 {{lesson_title}}
+
+## Module Context
+{{module_name}} ({{module_id}})
+
+## Catchbook Feature
+{{catchbook_feature_description}}
 
 ## Objectives Met
 - [ ] {{objective_1}}
@@ -1298,6 +1556,14 @@ confidence_rating: {{1-5}}
 - {{skill_1}}: {{novice|emerging|competent|proficient|expert}}
 - {{skill_2}}: {{novice|emerging|competent|proficient|expert}}
 
+## Catchbook Deliverable
+{{description_of_what_was_built_or_shipped}}
+
+## Code Committed
+- Repository: {{repo_name}}
+- Commit: {{commit_hash}}
+- Files changed: {{file_list}}
+
 ## Next Steps
 - {{next_step}}
 
@@ -1307,16 +1573,16 @@ confidence_rating: {{1-5}}
 **Would Recommend Reviewing:** {{yes|no}}
 ```
 
-**Professor uses this template** when generating summary artifact.
-
 ### 8.4 Reflection Template
 
 Located at `templates/reflection.template.md`:
 
-```text
+```markdown
 ---
 date: {{YYYY-MM-DD}}
 lesson_id: {{lesson_id}}
+module_id: {{module_id}}
+phase_id: {{phase_id}}
 energy_level: {{1-10}}
 ---
 
@@ -1325,14 +1591,20 @@ energy_level: {{1-10}}
 ## Lesson
 {{lesson_title}}
 
+## Catchbook Context
+{{what_catchbook_feature_or_capability_this_enabled}}
+
 ## How It Felt
 {{2-4 sentences in learner's voice about the experience}}
 
 ## What Clicked
-{{What concepts made sense}}
+{{What concepts made sense, especially in Catchbook context}}
 
 ## What's Still Fuzzy
 {{What needs more practice or clarification}}
+
+## Real-World Application
+{{How this lesson applies to building Catchbook or other real projects}}
 
 ## Mood After Lesson
 {{energized|neutral|tired|frustrated|excited}}
@@ -1342,13 +1614,11 @@ energy_level: {{1-10}}
 **Energy Level:** {{1-10}}/10
 ```
 
-**This template is loose** — learner writes freeform within structure.
-
 **Commit templates:**
 
 ```bash
 git add templates/
-git commit -m "feat(templates): add lesson summary and reflection templates"
+git commit -m "feat(templates): add Catchbook-focused lesson summary and reflection templates"
 git push
 ```
 
@@ -1358,61 +1628,91 @@ git push
 
 ### 9.1 Minimal Command Set (Start)
 
-|Command|Purpose|Role Required|
-|---|---|---|
-|`/bootstrap`|Initialize session|None|
-|`/teach {lesson_id}`|Start lesson|Professor|
-|`/next`|Get recommendation|Advisor|
-|`/status`|View dashboard|None|
-|`/validate`|Check schemas|Architect|
+| Command | Purpose | Role Required |
+|---------|---------|---------------|
+| `/bootstrap` | Initialize session | None |
+| `/teach {lesson_id}` | Start lesson | Professor |
+| `/next` | Get recommendation | Advisor |
+| `/status` | View dashboard | None |
+| `/validate` | Check schemas | Architect |
 
 ### 9.2 Command Behavior Definitions
 
 #### `/bootstrap`
 
 **Input:** None  
-**Output:** Session initialization message + current position + command list  
-**Files Read:** `user-profile.md`, `learner-state/current.json`
+**Output:** Session initialization message + current position + Catchbook progress + command list  
+**Files Read:** `user-profile.md`, `learner-state/current.json`, `catchbook-curriculum-v1.csv`
 
 #### `/teach {lesson_id}`
 
-**Input:** Lesson ID (e.g., `P1-L01`)  
-**Output:** Activates Professor, loads lesson, generates lesson document artifact  
-**Files Read:** `curriculum/lessons/{lesson_id}.json`, all learner-state files, `roles/professor.md`
+**Input:** Lesson ID (e.g., `P01-M01-L01`)  
+**Output:** Activates Professor, loads lesson, generates lesson document artifact with Catchbook context  
+**Files Read:**
+- `curriculum/lessons/{lesson_id}.json`
+- `curriculum/modules/{module_id}.json`
+- All learner-state files
+- `projects/catchbook-product-spec.md`
+- `roles/professor.md`
 
 #### `/next`
 
 **Input:** None  
-**Output:** Activates Advisor, generates recommendation artifact  
-**Files Read:** `curriculum/curriculum.json`, all phase indices, all learner-state files, `roles/advisor.md`
+**Output:** Activates Advisor, generates recommendation artifact with Catchbook milestone context  
+**Files Read:**
+- `catchbook-curriculum-v1.csv`
+- `curriculum/curriculum.json`
+- All phase and module files
+- All learner-state files
+- `projects/catchbook-product-spec.md`
+- `roles/advisor.md`
 
 #### `/status`
 
 **Input:** None  
-**Output:** Progress dashboard (formatted text)  
+**Output:** Progress dashboard with Catchbook feature completion tracking  
 **Files Read:** All learner-state files, curriculum files
 
 **Example output:**
 
 ```text
-=== Progress Dashboard ===
+=== Catchbook Curriculum Progress Dashboard ===
 
-Current Phase: P1 — Foundations (Lesson 3 of 10)
-Last Completed: P1-L02 (2025-11-28)
-Current Target: P1-L03
+Project: Catchbook AI Fishing Journal
+Current Phase: P01 — Foundations (Module 1 of 4)
+Current Module: P01-M01 — Git fundamentals
+Current Lesson: P01-M01-L01 — Version control concepts
 
-Total Time Invested: 180 minutes
-Lessons Completed: 2
-Average Confidence: 3.5/5
-Reflections Written: 2
+Last Completed: None
+Last Updated: 2025-12-02
+
+Overall Progress:
+├─ Phases: 0/28 completed (0%)
+├─ Modules: 0/139 completed (0%)
+├─ Lessons: 0 completed
+└─ Catchbook Features Shipped: 0
+
+Time Investment:
+├─ Total Time: 0 hours
+├─ Average Session: 0 minutes
+└─ Consistency Score: 0.0 (0 weeks with 2+ lessons)
 
 Skill Levels:
-- git_basics:         ★★☆☆☆ (emerging)
-- js_basics:          ★★☆☆☆ (emerging)
-- terminal_comfort:   ★☆☆☆☆ (novice)
-- html_css:           ★★★☆☆ (competent)
+├─ git_basics:         ★☆☆☆☆ (novice, confidence 2/5)
+├─ terminal_comfort:   ★☆☆☆☆ (novice, confidence 2/5)
+├─ html_css:           ★☆☆☆☆ (novice, confidence 2/5)
+├─ javascript_basics:  ★☆☆☆☆ (novice, confidence 2/5)
+└─ python_basics:      ★☆☆☆☆ (novice, confidence 2/5)
 
-Next Recommended: P1-L03 — Setting Up Development Environment
+Average Confidence: N/A
+Reflections Written: 0
+
+Next Milestone: Complete P01-M01 (Git fundamentals) → Unlock Catchbook repo setup
+
+Catchbook Progress:
+├─ Repo Setup: Not started
+├─ README Documentation: Not started
+└─ First Commit: Not started
 
 === End Dashboard ===
 ```
@@ -1420,7 +1720,7 @@ Next Recommended: P1-L03 — Setting Up Development Environment
 #### `/validate`
 
 **Input:** None (or optional: specific file path)  
-**Output:** Validation report  
+**Output:** Validation report for curriculum structure and state files  
 **Files Read:** All JSON files in repo, all schema files, `roles/architect.md`
 
 **Example output:**
@@ -1429,33 +1729,28 @@ Next Recommended: P1-L03 — Setting Up Development Environment
 === Schema Validation Report ===
 
 ✓ curriculum/curriculum.json — VALID
-✓ curriculum/phases/P1-index.json — VALID
-✓ curriculum/lessons/P1-L01.json — VALID
-✗ learner-state/skills.json — INVALID
-  - Line 5: Property "last_practiced" is required but missing for "html_css"
+✓ learner-state/current.json — VALID
+✓ learner-state/skills.json — VALID
+✓ learner-state/metrics.json — VALID
 
-Recommendation: Fix learner-state/skills.json by adding missing field.
+Phase Files:
+✓ curriculum/phases/P01.json — VALID
+
+Module Files:
+(No module files generated yet)
+
+Lesson Files:
+(No lesson files generated yet)
+
+Completed State Files:
+(No completed lessons yet)
+
+Summary: 4/4 files valid (100%)
+
+Recommendation: Generate Phase 1 modules to begin curriculum.
 
 === End Validation ===
 ```
-
-### 9.3 Adding Commands When Friction Emerges
-
-**Process:**
-
-1. User identifies repetitive manual action
-2. User requests command via Architect role
-3. Architect proposes command definition
-4. Command added to registry
-5. All roles updated to recognize new command
-
-**Example:** If user frequently needs to review completed lessons, add:
-
-```text
-/review {lesson_id}
-```
-
-This would load the completed state file and summary for review without re-teaching.
 
 ---
 
@@ -1467,16 +1762,9 @@ This would load the completed state file and summary for review without re-teach
 **How:** Claude validates against schema internally  
 **Outcome:** Only valid JSON artifacts are produced
 
-**Example:** User requests lesson generation. Before outputting artifact, Claude:
-
-1. Loads `schemas/lesson.schema.json`
-2. Validates generated lesson object
-3. If invalid, fixes and re-validates
-4. Only then outputs artifact
-
 ### 10.2 Post-commit Validation (GitHub Actions CI)
 
-**When:** On every push to main branch  
+**When:** On every push to master branch  
 **How:** GitHub Actions runs `tools/validate.py`  
 **Outcome:** CI fails if any file violates schema
 
@@ -1487,9 +1775,9 @@ name: Schema Validation
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
-    branches: [main]
+    branches: [master]
 
 jobs:
   validate:
@@ -1511,12 +1799,12 @@ jobs:
           python tools/validate.py
 ```
 
-#### Create `tools/validate.py`
+#### Update `tools/validate.py`
 
 ```python
 #!/usr/bin/env python3
 """
-Schema validation script for dev-curriculum system.
+Schema validation script for Catchbook curriculum system.
 Validates all JSON files against their corresponding schemas.
 """
 
@@ -1553,22 +1841,28 @@ def main():
         (repo_root / "learner-state/metrics.json", repo_root / "schemas/state-metrics.schema.json"),
     ]
     
-    # Validate phase indices
+    # Validate phase files
     phase_dir = repo_root / "curriculum/phases"
     if phase_dir.exists():
-        for phase_file in phase_dir.glob("P*-index.json"):
-            validations.append((phase_file, repo_root / "schemas/phase-index.schema.json"))
+        for phase_file in phase_dir.glob("P*.json"):
+            validations.append((phase_file, repo_root / "schemas/phase.schema.json"))
     
-    # Validate lessons
+    # Validate module files
+    module_dir = repo_root / "curriculum/modules"
+    if module_dir.exists():
+        for module_file in module_dir.glob("P*-M*.json"):
+            validations.append((module_file, repo_root / "schemas/module.schema.json"))
+    
+    # Validate lesson files
     lesson_dir = repo_root / "curriculum/lessons"
     if lesson_dir.exists():
-        for lesson_file in lesson_dir.glob("P*-L*.json"):
+        for lesson_file in lesson_dir.glob("P*-M*-L*.json"):
             validations.append((lesson_file, repo_root / "schemas/lesson.schema.json"))
     
     # Validate completed state files
     completed_dir = repo_root / "learner-state/completed"
     if completed_dir.exists():
-        for completed_file in completed_dir.glob("P*-L*.json"):
+        for completed_file in completed_dir.glob("P*-M*-L*.json"):
             validations.append((completed_file, repo_root / "schemas/state-completed.schema.json"))
     
     errors = []
@@ -1605,25 +1899,9 @@ chmod +x tools/validate.py
 
 ```bash
 git add .github/workflows/validate.yml tools/validate.py
-git commit -m "feat(validation): add CI validation pipeline"
+git commit -m "feat(validation): add CI validation pipeline for Catchbook curriculum"
 git push
 ```
-
-### 10.3 Local Validation Command
-
-User can run validation locally anytime:
-
-```bash
-python tools/validate.py
-```
-
-Or via Claude:
-
-```text
-/validate
-```
-
-Claude activates Architect role and runs validation via the script (if Claude can execute Python locally via MCP extensions — otherwise, Claude reads files and validates manually).
 
 ---
 
@@ -1631,27 +1909,27 @@ Claude activates Architect role and runs validation via the script (if Claude ca
 
 ### 11.1 State Snapshots
 
-**Purpose:** Create point-in-time backups before risky operations (e.g., starting new lessons, major skill updates).
+**Purpose:** Create point-in-time backups before risky operations.
 
 #### Create Snapshot Command
 
 User types:
 
 ```text
-/snapshot pre-lesson-P1-L03
+/snapshot pre-module-P01-M02
 ```
 
 **Claude's behavior:**
 
 1. Activates Architect role
 2. Creates ZIP archive of entire `learner-state/` directory
-3. Saves to `snapshots/2025-11-29-pre-lesson-P1-L03.zip`
+3. Saves to `snapshots/2025-12-02-pre-module-P01-M02.zip`
 4. Generates artifact with confirmation message
 5. Proposes commit message:
 
 ```bash
 git add snapshots/
-git commit -m "chore(snapshot): create pre-lesson-P1-L03 backup"
+git commit -m "chore(snapshot): create pre-module-P01-M02 backup"
 git push
 ```
 
@@ -1660,7 +1938,7 @@ git push
 User types:
 
 ```text
-/rollback pre-lesson-P1-L03
+/rollback pre-module-P01-M02
 ```
 
 **Claude's behavior:**
@@ -1674,7 +1952,7 @@ User types:
 
 ```bash
 git add learner-state/
-git commit -m "chore(rollback): restore state to pre-lesson-P1-L03"
+git commit -m "chore(rollback): restore state to pre-module-P01-M02"
 git push
 ```
 
@@ -1685,20 +1963,20 @@ git push
 User types:
 
 ```text
-/redo P1-L02
+/redo P01-M01-L02
 ```
 
 **Claude's behavior:**
 
 1. Activates Advisor role
-2. Loads `learner-state/completed/P1-L02.json`
+2. Loads `learner-state/completed/P01-M01-L02.json`
 3. Generates new state artifacts with:
-    - `current.json`: sets `current_lesson_id` to `P1-L02`
-    - Removes `P1-L02.json` from `completed/`
+    - `current.json`: sets `current_lesson_id` to `P01-M01-L02`
+    - Removes `P01-M01-L02.json` from `completed/`
     - Reverts skill levels to pre-lesson values (if recorded)
-    - Decrements metrics (lessons_completed, total_time, etc.)
+    - Decrements metrics (lessons_completed, total_time, catchbook_features_shipped)
 4. User copies artifacts and commits
-5. User can now run `/teach P1-L02` fresh
+5. User can now run `/teach P01-M01-L02` fresh
 
 ### 11.3 Manual State Editing
 
@@ -1713,46 +1991,8 @@ User types:
 
 ```bash
 git add learner-state/skills.json
-git commit -m "fix(state): correct terminal_comfort level to emerging"
+git commit -m "fix(state): correct git_basics level to emerging"
 git push
-```
-
-### 11.4 Repair Command
-
-**Purpose:** Diagnose and fix file inconsistencies.
-
-User types:
-
-```text
-/repair
-```
-
-**Claude's behavior:**
-
-1. Activates Architect role
-2. Runs validation on all files
-3. Identifies issues:
-    - Schema violations
-    - Missing required files
-    - Orphaned references (e.g., lesson references non-existent prerequisite)
-4. Generates repair plan artifact with specific edits
-5. User applies edits manually
-6. User re-runs `/validate` to confirm
-
-**Example repair plan:**
-
-```text
-=== Repair Plan ===
-
-Issue 1: learner-state/skills.json missing "last_practiced" for "html_css"
-Fix: Add field "last_practiced": "2025-11-29" to html_css object
-
-Issue 2: curriculum/lessons/P1-L03.json references prerequisite "P1-L02" but P1-L02.json does not exist
-Fix: Either create P1-L02.json or remove from P1-L03 prerequisites array
-
-Recommendation: Fix Issue 1 immediately (required for schema). Evaluate Issue 2 based on curriculum design intent.
-
-=== End Repair Plan ===
 ```
 
 ---
@@ -1762,195 +2002,255 @@ Recommendation: Fix Issue 1 immediately (required for schema). Evaluate Issue 2 
 ### 12.1 Metrics Tracked in `learner-state/metrics.json`
 
 1. **Total Time Investment** (`total_time_minutes`)
-
-    - Cumulative time across all lessons
-    - Updated after each lesson completion
-
 2. **Lessons Completed** (`lessons_completed`)
+3. **Modules Completed** (`modules_completed`)
+4. **Phases Completed** (`phases_completed`)
+5. **Catchbook Features Shipped** (`catchbook_features_shipped`)
+6. **Reflections Written** (`reflections_written`)
+7. **Average Confidence** (`average_confidence`)
+8. **Consistency Score** (`consistency_score`)
 
-    - Count of files in `learner-state/completed/`
+### 12.2 Success Milestones
 
-3. **Average Confidence** (`average_confidence`)
+| Milestone | Target | Significance |
+|-----------|--------|--------------|
+| First Commit | Week 1 | Catchbook repo initialized |
+| Module 1 Complete | Week 2 | Git proficiency established |
+| Phase 1 Complete | Week 4 | Foundations mastery |
+| Phase 3 Complete (Frontend Basics) | Week 10 | Catchbook landing page live |
+| Phase 8 Complete (Backend API) | Week 20 | Catchbook API functional |
+| Phase 11 Complete (React) | Week 30 | Catchbook SPA prototype |
+| Phase 15 Complete (AI Integration) | Week 40 | Species ID working |
+| Phase 21 Complete (Deployment) | Week 50 | Catchbook MVP live |
+| Phase 28 Complete | Week 60-80 | Catchbook v1.0 launched |
 
-    - Mean of all `confidence_rating` values from completed lessons
-    - Range: 1.0-5.0
+### 12.3 Timeline Estimates
 
-4. **Consistency Score** (`consistency_score`)
+**Based on 10-20 hours/week:**
+- **Total Hours:** ~850 hours
+- **At 10 hrs/week:** 85 weeks (~20 months)
+- **At 15 hrs/week:** 57 weeks (~13 months)
+- **At 20 hrs/week:** 43 weeks (~10 months)
 
-    - Percentage of weeks with at least 2 lessons completed
-    - Range: 0.0-1.0
-    - Calculated weekly
+**Recommended Pace:** 15 hours/week = Catchbook launch in ~1 year
 
-5. **Reflections Written** (`reflections_written`)
+---
 
-    - Count of files in `reflections/`
+## Appendix A: Catchbook Curriculum Overview
 
-### 12.2 Metrics Dashboard
+### A.1 Full Curriculum Structure
 
-User types:
+See `catchbook-curriculum-v1.csv` for complete breakdown.
+
+**Summary:**
+- **28 Phases**
+- **139 Modules**
+- **Estimated 850 hours**
+- **Single Project Spine:** Catchbook
+
+### A.2 Phase Breakdown
+
+| Phase | Name | Modules | Hours | Key Catchbook Deliverables |
+|-------|------|---------|-------|----------------------------|
+| P01 | Foundations | 4 | 24 | Repo setup, Git workflow, tooling |
+| P02 | Professional Tooling | 4 | 24 | Linting, environment config, project structure |
+| P03 | Frontend Basics | 5 | 46 | Landing page, responsive design, photo gallery |
+| P04 | Python Fundamentals | 5 | 52 | CLI tools, EXIF parser, weather API |
+| P05 | Data Structures & Algorithms | 5 | 58 | Optimized data handling for catches |
+| P06 | Modern JavaScript | 3 | 40 | Async photo upload, state management |
+| P07 | TypeScript | 3 | 32 | Type-safe frontend codebase |
+| P08 | Backend API (FastAPI) | 5 | 52 | REST API, database, file uploads |
+| P09 | Database Design | 5 | 50 | PostgreSQL schema, relationships, queries |
+| P10 | Authentication & Security | 5 | 52 | User auth, JWT, OAuth, OWASP compliance |
+| P11 | React Fundamentals | 5 | 58 | Component library, SPA routing |
+| P12 | React + TypeScript | 4 | 40 | Type-safe React components |
+| P13 | Node.js (Alternative Backend) | 4 | 40 | Express API (comparison to FastAPI) |
+| P14 | Advanced SQL & Analytics | 4 | 44 | Catch analytics, reports, visualizations |
+| P15 | AI Integration (Claude API) | 4 | 44 | Species ID, prompt engineering |
+| P16 | Advanced AI Features | 4 | 52 | RAG, recommendations, streaming |
+| P17 | External API Integration | 4 | 40 | Weather, tides, solunar data |
+| P18 | Equipment Tracking | 4 | 42 | Gear database, relationships, recommendations |
+| P19 | Testing | 5 | 50 | Unit, integration, E2E tests, coverage |
+| P20 | Performance Optimization | 5 | 46 | Image compression, caching, lazy loading |
+| P21 | DevOps & Deployment | 5 | 48 | CI/CD, Docker, hosting, environments |
+| P22 | Monitoring & Logging | 4 | 40 | Structured logging, error tracking, metrics |
+| P23 | Progressive Web App | 4 | 38 | Offline mode, camera API, push notifications |
+| P24 | Computer Science Fundamentals | 4 | 44 | Systems, networking, distributed systems |
+| P25 | Software Architecture | 4 | 52 | Design patterns, SOLID, hexagonal architecture |
+| P26 | Accessibility & i18n | 4 | 36 | WCAG compliance, internationalization |
+| P27 | Native Mobile | 4 | 58 | React Native or SwiftUI, app store deployment |
+| P28 | Launch & Marketing | 5 | 50 | Product Hunt, blog, community, open source |
+
+---
+
+## Appendix B: File Naming Conventions
+
+### B.1 Naming Pattern
+
+**Phases:** `P01.json`, `P02.json`, ..., `P28.json` (zero-padded)
+
+**Modules:** `P01-M01.json`, `P01-M02.json`, ..., `P28-M05.json`
+
+**Lessons:** `P01-M01-L01.json`, `P01-M01-L02.json`, ..., `P28-M05-L03.json`
+
+**Completed State:** `P01-M01-L01.json`, `P01-M01-L02.json` (in `learner-state/completed/`)
+
+**Summaries:** `P01-M01-L01-summary.md`, `P01-M01-L02-summary.md` (in `lesson-summaries/`)
+
+### B.2 Rationale
+
+- **Zero-padding:** Ensures correct alphabetical sorting (P01 before P10)
+- **Hyphenation:** Clear hierarchy (Phase-Module-Lesson)
+- **Consistency:** Same pattern across all file types
+
+### B.3 Examples
 
 ```text
-/status
+curriculum/phases/P01.json
+curriculum/modules/P01-M01.json
+curriculum/modules/P01-M02.json
+curriculum/lessons/P01-M01-L01.json
+curriculum/lessons/P01-M01-L02.json
+learner-state/completed/P01-M01-L01.json
+lesson-summaries/P01-M01-L01-summary.md
 ```
 
-Claude displays metrics as part of dashboard (shown in Phase 9).
+---
 
-### 12.3 Metrics Update Pattern
+## Appendix C: Curriculum Generation Strategy
 
-After each lesson, Professor generates `metrics.json` artifact with updated values:
+### C.1 Just-In-Time Approach
 
-```json
-{
-  "total_time_minutes": 225,
-  "lessons_completed": 3,
-  "reflections_written": 3,
-  "average_confidence": 3.67,
-  "consistency_score": 0.85,
-  "last_updated": "2025-11-29T14:30:00Z"
-}
-```
+**Philosophy:** Generate curriculum files only when needed, not all upfront.
 
-User copies artifact to `learner-state/metrics.json` and commits.
+**Rationale:**
+1. **Flexibility:** Adjust curriculum based on learner progress and feedback
+2. **Efficiency:** Don't pre-generate 850 hours of content that might change
+3. **Focus:** Keep repository lean, generate next phase as current phase nears completion
+4. **Iteration:** Lessons improve based on actual learner experience
 
-### 12.4 Long-term Analysis
+### C.2 Generation Workflow
 
-**Future enhancement (v2.0):**
+**Phase Files:**
+- Generate `P01.json` at project start
+- Generate `P02.json` when Phase 1 is 75% complete
+- Continue pattern for all 28 phases
 
-- Export metrics to CSV for visualization
-- Generate progress charts (Notion, Obsidian, or HTML dashboard)
-- Identify skill plateau patterns
-- Recommend review cycles based on confidence trends
+**Module Files:**
+- Generate all modules for current phase when phase file is created
+- Example: When `P01.json` is created, also generate `P01-M01.json` through `P01-M04.json`
+
+**Lesson Files:**
+- Generate lessons for current module just before teaching
+- Example: When user starts Module 1.1, Curriculum Designer generates `P01-M01-L01.json`, `P01-M01-L02.json`, etc.
+- Lessons generated in batches (all lessons for one module at once)
+
+**Who Generates:**
+- **Curriculum Designer role** generates all curriculum files
+- **User** activates Designer via separate chat dedicated to curriculum generation
+- **Architect role** validates generated files against schemas
+
+### C.3 Generation Triggers
+
+| Trigger | Action |
+|---------|--------|
+| Project start | Generate P01.json + P01-M01 through P01-M04 |
+| User requests `/teach P01-M01-L01` | Generate all lessons for P01-M01 (if not exist) |
+| Phase 1 reaches 75% complete | Generate P02.json + P02-M01 through P02-M04 |
+| User completes Phase 1 | Generate Phase 2 lessons as needed |
+| ... | Continue pattern |
+
+### C.4 CSV as Source of Truth
+
+`catchbook-curriculum-v1.csv` contains:
+- All 28 phases
+- All 139 modules
+- Module names, focus areas, Catchbook deliverables, estimated hours
+
+**Curriculum Designer** uses CSV as reference when generating JSON files.
+
+**Workflow:**
+1. Read CSV row for target module
+2. Extract: phase, module name, focus, Catchbook deliverable, hours
+3. Generate JSON file following schema
+4. Break down module into 3-5 lessons (if not already specified)
+5. Ensure each lesson contributes to module's Catchbook deliverable
+6. Validate against schema
+7. Output as artifact for user to save
 
 ---
 
-## Appendix A: File Index Structure
+## Appendix D: Roadmap
 
-### A.1 Purpose
+### v2.0 — Catchbook Curriculum Foundation (Current)
 
-The file index is dynamically maintained by the system, not manually edited. It provides a centralized registry of all curriculum and state files for fast lookups.
-
-### A.2 Auto-generated During Bootstrap
-
-When user runs `/bootstrap`, Claude generates file index by scanning repo structure:
-
-```json
-{
-  "curriculum": {
-    "root": "curriculum/curriculum.json",
-    "phases": [
-      "curriculum/phases/P1-index.json",
-      "curriculum/phases/P2-index.json"
-    ],
-    "lessons": [
-      "curriculum/lessons/P1-L01.json",
-      "curriculum/lessons/P1-L02.json",
-      "curriculum/lessons/P1-L03.json"
-    ]
-  },
-  "state": {
-    "current": "learner-state/current.json",
-    "skills": "learner-state/skills.json",
-    "metrics": "learner-state/metrics.json",
-    "completed": [
-      "learner-state/completed/P1-L01.json",
-      "learner-state/completed/P1-L02.json"
-    ]
-  },
-  "roles": [
-    "roles/architect.md",
-    "roles/curriculum-designer.md",
-    "roles/professor.md",
-    "roles/advisor.md",
-    "roles/evaluator.md"
-  ],
-  "schemas": [
-    "schemas/curriculum.schema.json",
-    "schemas/phase-index.schema.json",
-    "schemas/lesson.schema.json",
-    "schemas/state-current.schema.json",
-    "schemas/state-completed.schema.json",
-    "schemas/state-skills.schema.json",
-    "schemas/state-metrics.schema.json"
-  ],
-  "last_updated": "2025-11-29T14:30:00Z"
-}
-```
-
-This index is **not committed to repo** — it's regenerated every bootstrap.
-
----
-
-## Appendix B: Roadmap
-
-### v1.0 — Foundation (Current)
-
-**Goal:** Core system operational with manual workflows
+**Goal:** Core system operational with Catchbook-first workflow
 
 **Deliverables:**
+- ✅ Repository structure updated for Catchbook
+- ✅ Schemas for phases/modules/lessons
+- ✅ Role definitions updated for Catchbook context
+- ✅ State tracking for phases/modules/lessons
+- ✅ catchbook-curriculum-v1.csv integrated
+- ✅ Just-in-time curriculum generation strategy
+- ⏳ Generate Phase 1 files (P01.json + 4 modules + initial lessons)
+- ⏳ Complete first module end-to-end (P01-M01: Git fundamentals)
+- ⏳ Validate workflow and adjust as needed
 
-- ✅ Repository structure
-- ✅ GitHub MCP integration
-- ✅ Schemas for all entities
-- ✅ Role system with 5 roles
-- ✅ Bootstrap ritual
-- ✅ Quick start path
-- ✅ Decomposed learner state
-- ✅ Lesson delivery model (document + checkpoints)
-- ✅ Minimal command set (5 commands)
-- ✅ Pre-commit validation (Claude)
-- ✅ CI validation (GitHub Actions)
-- ✅ Recovery system (snapshots, rollback, redo)
-- ✅ Success metrics tracking
-
-**Status:** Ready for first lesson delivery
+**Status:** Architecture documented, ready for Phase 1 generation
 
 ---
 
-### v1.1 — Curriculum Build-out
+### v2.1 — Phase 1 Execution
 
-**Goal:** Generate Phase 1 lessons and test full loop
+**Goal:** Complete Phase 1 (Foundations) and establish rhythm
 
 **Deliverables:**
+- Generate all Phase 1 lesson files (as needed)
+- Complete all 4 Phase 1 modules:
+  - P01-M01: Git fundamentals (6 hours)
+  - P01-M02: Branching and PR workflow (6 hours)
+  - P01-M03: Commit conventions + PR templates (6 hours)
+  - P01-M04: GitHub Issues + Projects (6 hours)
+- Set up Catchbook repository with proper structure
+- Write Catchbook README and first documentation
+- Establish Git workflow for Catchbook development
+- Validate lesson quality and pacing
+- Refine templates based on actual usage
 
-- Create `curriculum/curriculum.json` (complete)
-- Generate `curriculum/phases/P1-index.json` with 10 lessons
-- Generate all P1 lesson files (`P1-L01.json` through `P1-L10.json`)
-- Define at least 1 reusable project (e.g., Git intro repo)
-- Complete first 3 lessons end-to-end
-- Document friction points and improvements
-
-**Outcome:** Working curriculum with validated learner loop
+**Outcome:** Phase 1 complete, Catchbook repo operational, workflow validated
 
 ---
 
-### v1.2 — Profile & Template Refinement
+### v2.2 — Phase 2-3 Execution
 
-**Goal:** Optimize user profile and output templates
+**Goal:** Professional tooling + frontend basics
 
 **Deliverables:**
+- Complete Phase 2 (Professional Tooling): 24 hours
+- Complete Phase 3 (Frontend Basics): 46 hours
+- Catchbook landing page live (static)
+- Photo gallery prototype
+- Linting and tooling configured for Catchbook
 
-- Refine `user-profile.md` based on lesson experiences
-- Update `lesson-summary.template.md` based on actual usage
-- Update `reflection.template.md` for natural voice
-- Add commit message templates for common operations
-- Document template usage patterns
-
-**Outcome:** Cleaner artifacts, less manual editing
+**Outcome:** Frontend fundamentals mastered, visual Catchbook prototype
 
 ---
 
-### v2.0 — Automation Layer
+### v3.0 — Automation Layer
 
 **Goal:** Reduce manual file operations
 
 **Deliverables:**
-
 - CLI tool for common operations:
-
-    ```bash
-    devc teach P1-L01          # Launches Professor sessiondevc next                  # Launches Advisordevc commit                # Auto-commit with proper messagedevc snapshot {name}       # Create backupdevc rollback {name}       # Restore backup
-    ```
-
+  ```bash
+  devc teach P01-M01-L01    # Launches Professor session
+  devc next                 # Launches Advisor
+  devc commit               # Auto-commit with proper message
+  devc snapshot {name}      # Create backup
+  devc rollback {name}      # Restore backup
+  devc status               # Show dashboard
+  ```
 - Auto-apply state updates (after user approval)
 - Auto-commit with generated messages
 - Batch validation runner
@@ -1960,213 +2260,47 @@ This index is **not committed to repo** — it's regenerated every bootstrap.
 
 ---
 
-### v2.1 — Dashboard & Visualization
+### v4.0 — Mid-Curriculum (Phases 8-15)
 
-**Goal:** Visual progress tracking
-
-**Deliverables:**
-
-- HTML dashboard generator (static site)
-- Skill radar chart visualization
-- Confidence trend line graph
-- Weekly consistency heatmap
-- Export to Notion integration (optional)
-- Export to Obsidian graph (optional)
-
-**Outcome:** Clear visual feedback on progress
-
----
-
-### v3.0 — Web Application
-
-**Goal:** Full UI-driven experience
+**Goal:** Backend + AI integration complete
 
 **Deliverables:**
+- Catchbook API fully functional (FastAPI + PostgreSQL)
+- User authentication working
+- Species ID via Claude API operational
+- Catch logging end-to-end (photo → database → display)
 
-- Next.js frontend with pages:
-  - Dashboard (progress, metrics, skill radar)
-  - Lesson browser (curriculum view)
-  - Lesson runner (read lesson, answer checkpoints)
-  - Reflection journal
-  - Settings (profile editing)
-- FastAPI backend:
-  - File CRUD operations
-  - Git operations (commit, push)
-  - Validation endpoints
-  - Claude API integration for role activation
-- Authentication (if multi-user)
-- Deployment (Vercel + Railway or similar)
-
-**Outcome:** Production-ready learning platform
+**Outcome:** Catchbook MVP functional (core features work)
 
 ---
 
-## Appendix C: Migration from ChatGPT
+### v5.0 — Advanced Features (Phases 16-23)
 
-### C.1 File Transfer
+**Goal:** Polish and production-readiness
 
-**One-time operation:**
+**Deliverables:**
+- Predictions and recommendations live
+- PWA with offline mode
+- CI/CD pipeline operational
+- Monitoring and logging in place
+- Performance optimized
 
-1. Download all files from ChatGPT Project Files
-2. Organize into Claude-native structure (Phase 1)
-3. Commit to GitHub
-4. Set up GitHub MCP (Phase 2)
+**Outcome:** Catchbook production-ready
 
-### C.2 Profile Migration
-
-**Current ChatGPT profiles:**
-
-- `user_profile.short.md`
-- `user_profile.medium.md`
-- `user_profile.full.md`
-
-**Claude-native approach:**
-
-- Single `user-profile.md` (combines all context)
-- Roles load only what they need internally
-
-**Migration:**
-
-1. Merge all three profiles into one
-2. Add YAML frontmatter for metadata:
-
-```yaml
----
-learner_id: jeff
-location: Vacaville, CA
-experience_level: beginner-intermediate
-learning_style: hands-on, SOP-driven
-primary_goals:
-  - transition to full-time engineering
-  - ship CatchBook v1
-  - build YouTube education platform
 ---
 
-# User Profile — Jeff Hutting
+### v6.0 — Native Mobile + Launch (Phases 24-28)
 
-## Background
-...
-```
+**Goal:** Native mobile app + public launch
 
-### C.3 Role Prompt Migration
+**Deliverables:**
+- React Native or SwiftUI mobile app
+- App Store / Play Store deployment
+- Product Hunt launch
+- Technical blog series
+- Open source library releases
 
-**ChatGPT approach:**
-
-- Prompts in `prompts/` directory
-- User copy/pastes to activate roles
-
-**Claude-native approach:**
-
-- Role definitions in `roles/` directory (Markdown files)
-- Claude loads role file automatically via GitHub MCP
-- No manual copy/paste needed
-
-**Migration:**
-
-1. Convert each prompt file to role definition file
-2. Add structured sections (Purpose, Responsibilities, etc.)
-3. Save under `roles/`
-
-### C.4 Lesson File Migration
-
-**No changes needed** — lesson JSON structure remains the same.
-
-**Validation:**
-
-1. Run `/validate` after migration
-2. Fix any schema violations
-3. Commit cleaned files
-
-### C.5 Learner State Migration
-
-**ChatGPT approach:**
-
-- Single `learner_state.json`
-
-**Claude-native approach:**
-
-- Decomposed: `current.json`, `skills.json`, `metrics.json`, `completed/*.json`
-
-**Migration script (manual):**
-
-```python
-import json
-from pathlib import Path
-from datetime import datetime
-
-# Load old state
-with open('learner_state.json') as f:
-    old_state = json.load(f)
-
-# Create current.json
-current = {
-    "learner_id": old_state["learner_id"],
-    "current_phase_id": old_state["current_phase_id"],
-    "current_lesson_id": old_state["current_lesson_id"],
-    "last_updated": datetime.utcnow().isoformat() + "Z"
-}
-
-# Create skills.json
-skills = {
-    "skills": {},
-    "last_updated": datetime.utcnow().isoformat() + "Z"
-}
-for skill, level in old_state.get("skill_flags", {}).items():
-    skills["skills"][skill] = {
-        "level": level,
-        "last_practiced": datetime.utcnow().date().isoformat(),
-        "confidence": 2  # Default, update manually if needed
-    }
-
-# Create metrics.json
-metrics = {
-    "total_time_minutes": 0,  # Calculate from completed lessons if data exists
-    "lessons_completed": len(old_state.get("completed_lessons", [])),
-    "reflections_written": 0,  # Count reflection files
-    "average_confidence": 0,  # Calculate from completed lessons
-    "consistency_score": 0,  # Will build over time
-    "last_updated": datetime.utcnow().isoformat() + "Z"
-}
-
-# Create completed lesson files (if old state has completion data)
-completed_dir = Path("learner-state/completed")
-completed_dir.mkdir(exist_ok=True)
-
-for lesson in old_state.get("completed_lessons", []):
-    lesson_id = lesson if isinstance(lesson, str) else lesson.get("lesson_id")
-    completed_record = {
-        "lesson_id": lesson_id,
-        "completed_at": datetime.utcnow().isoformat() + "Z",  # Placeholder
-        "duration_minutes": 45,  # Estimate
-        "confidence_rating": 3,  # Placeholder
-        "objectives_met": [],
-        "struggles": [],
-        "misconceptions_noted": []
-    }
-    
-    with open(completed_dir / f"{lesson_id}.json", 'w') as f:
-        json.dump(completed_record, f, indent=2)
-
-# Save new files
-with open('learner-state/current.json', 'w') as f:
-    json.dump(current, f, indent=2)
-
-with open('learner-state/skills.json', 'w') as f:
-    json.dump(skills, f, indent=2)
-
-with open('learner-state/metrics.json', 'w') as f:
-    json.dump(metrics, f, indent=2)
-
-print("Migration complete. Review files and commit.")
-```
-
-Run script, then:
-
-```bash
-git add learner-state/
-git commit -m "feat(migration): decompose learner state from ChatGPT format"
-git push
-```
+**Outcome:** Catchbook v1.0 launched, public product
 
 ---
 
@@ -2174,13 +2308,21 @@ git push
 
 This architecture is designed to:
 
-- Eliminate file sync overhead (GitHub MCP replaces ChatGPT Projects)
-- Provide clean, artifact-based outputs (no markdown rendering issues)
-- Scale from v1.0 (manual) → v3.0 (full web app) without rework
-- Maintain Git-native discipline throughout
+- **Eliminate throwaway learning:** Every module ships a Catchbook feature
+- **Provide clean artifact-based workflows:** GitHub MCP + Filesystem MCP replace file sync overhead
+- **Scale from v2.0 (manual) → v6.0 (production app):** Without curriculum rework
+- **Maintain Git-native discipline throughout:** Every session = commit
+- **Build a real product users want:** Catchbook isn't a learning exercise, it's a launchable app
 
-**Next action:** Follow Phase 1-5 to set up repository and bootstrap system.
+**Current State:** Architecture complete, ready to generate Phase 1 curriculum files.
+
+**Next Actions:**
+1. Activate Curriculum Designer (separate chat)
+2. Generate `P01.json` (Phase 1 file)
+3. Generate `P01-M01.json` through `P01-M04.json` (Module files)
+4. Generate initial lesson files for P01-M01 (Git fundamentals)
+5. Begin teaching with `/teach P01-M01-L01`
 
 ---
 
-## End of ARCHITECTURE.md — Claude-Native Edition v1.0
+**End of ARCHITECTURE.md — Catchbook Curriculum Edition v2.0**
