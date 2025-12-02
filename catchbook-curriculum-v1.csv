@@ -1,0 +1,123 @@
+Phase,Module,Focus,Catchbook Deliverable,EstHours
+1,1.1,Git fundamentals: init add commit push,Catchbook repo setup + README,6
+1,1.2,Branching and PR workflow,First PR merged to Catchbook repo,6
+1,1.3,Commit conventions + PR templates,Professional repo hygiene for Catchbook,6
+1,1.4,GitHub Issues + Projects (Kanban),Catchbook feature board + milestones,6
+2,2.1,Professional tooling: ESLint Prettier pre-commit hooks,Linted Catchbook repo template,6
+2,2.2,Virtual environments (venv poetry) + package management,Python project template for Catchbook,6
+2,2.3,Environment variables + secrets management,.env-based config for Catchbook APIs,6
+2,2.4,.gitignore patterns + directory structure,Production-ready Catchbook file structure,6
+3,3.1,HTML & CSS basics,Catchbook landing page (static),10
+3,3.2,Responsive design + mobile-first approach,Mobile-optimized landing page,8
+3,3.3,JavaScript basics: variables loops functions,Interactive elements on landing page,10
+3,3.4,DOM manipulation + events,Photo gallery prototype (manual upload),12
+3,3.5,Browser DevTools + debugging,Debugged Catchbook frontend,6
+4,4.1,Python basics: lists dicts control flow,Python scripting fundamentals,10
+4,4.2,File I/O + JSON/CSV parsing,EXIF data extractor script,12
+4,4.3,CLI utilities + argparse,Catchbook CLI tool (EXIF + weather),12
+4,4.4,API calls with requests library,Weather data fetcher for catch locations,10
+4,4.5,Error handling + logging,Robust Catchbook CLI v1.0,8
+5,5.1,Arrays linked lists stacks queues,Catch history data structures,12
+5,5.2,Hash maps sets frequency patterns,Species lookup optimization,10
+5,5.3,Trees (binary BST) graph basics,Location hierarchy for fishing spots,14
+5,5.4,Sorting & searching algorithms,Catch search/filter implementation,12
+5,5.5,Big O analysis + problem-solving strategies,Performance analysis doc for Catchbook,10
+6,6.1,ES6+: modules destructuring arrow functions,Modern JS refactor of Catchbook frontend,12
+6,6.2,Async JS: fetch promises async/await,Async photo upload to backend,14
+6,6.3,State management in browser apps,Catch entry form with state persistence,14
+6,6.4,Local storage + browser APIs,Offline catch entry (localStorage),10
+7,7.1,TypeScript basics: type annotations interfaces,Convert Catchbook JS to TypeScript,10
+7,7.2,TypeScript advanced: generics utility types,Type-safe Catch Species models,12
+7,7.3,TypeScript + DOM + fetch,Fully typed Catchbook frontend,10
+8,8.1,HTTP REST JSON fundamentals,REST API design doc for Catchbook,8
+8,8.2,FastAPI project setup + routing,Catchbook API skeleton,10
+8,8.3,Request validation with Pydantic,Validated catch creation endpoint,10
+8,8.4,SQLite basics + CRUD operations,Catchbook database v0.1,12
+8,8.5,File uploads (photos) + storage,Photo upload endpoint for catches,12
+9,9.1,SQL foundations: DDL DML queries,Catchbook schema design,10
+9,9.2,Database design: normalization indexes,Optimized Catchbook schema,10
+9,9.3,ORMs (SQLAlchemy) + migrations,Alembic migrations for Catchbook,12
+9,9.4,Foreign keys relationships,User→Catch Species→Catch relationships,10
+9,9.5,Query optimization + EXPLAIN,Indexed queries for catch history,8
+10,10.1,Password hashing + user registration,User signup endpoint (bcrypt),10
+10,10.2,JWT tokens + protected routes,Auth-protected catch endpoints,12
+10,10.3,OAuth 2.0 integration (Google Apple),Social login for Catchbook users,14
+10,10.4,Security best practices (OWASP Top 10),Security audit checklist for Catchbook,8
+10,10.5,CORS CSRF XSS prevention,Secure Catchbook API v1.0,8
+11,11.1,React basics: components props state,Catchbook component library,14
+11,1.2,React hooks: useState useEffect,API-connected catch list,12
+11,11.3,React Router + multi-page apps,Catchbook SPA with routing,12
+11,11.4,Forms in React (controlled components),Catch entry form in React,10
+11,11.5,Conditional rendering + lists,Dynamic catch history display,10
+12,12.1,React + TypeScript setup,Type-safe React components,10
+12,12.2,React Context API for global state,Auth state management,12
+12,12.3,Custom hooks + composition,Reusable Catchbook hooks (useCatch useAuth),10
+12,12.4,Error boundaries + loading states,Robust UI with error handling,8
+13,13.1,Node.js basics + Express setup,Node/Express alternative backend,12
+13,13.2,Express routing + middleware,Express API endpoints for Catchbook,10
+13,13.3,TypeScript + Express,Type-safe Node backend,10
+13,13.4,Comparison: FastAPI vs Express performance,Backend architecture decision doc,8
+14,14.1,Advanced SQL: window functions CTEs,Catch analytics queries,12
+14,14.2,Data modeling: star schema dimensional,Analytics schema for Catchbook,10
+14,14.3,SQL aggregations + reporting,Monthly catch reports,10
+14,14.4,Data visualization with Plotly,Catch trends dashboard,12
+15,15.1,Claude API basics + structured outputs,Species ID prompt engineering,12
+15,15.2,Image analysis with vision models,Photo→species detection,14
+15,15.3,Confidence scoring + fallback logic,Manual override for low-confidence IDs,10
+15,15.4,Prompt optimization for accuracy,Refined species ID prompts v2.0,8
+16,16.1,RAG pipeline: embeddings + vector search,Catch similarity search,16
+16,16.2,LLM-powered recommendations,Fishing suggestion engine,14
+16,16.3,Function calling for structured outputs,AI-generated catch insights,12
+16,16.4,Streaming responses for real-time feedback,Live AI analysis UI,10
+17,17.1,Weather API integration (OpenWeather),Automated weather data on upload,10
+17,17.2,NOAA tides API (coastal locations),Tide data for catch locations,10
+17,17.3,Solunar API (feeding times),Major/minor periods calculation,10
+17,17.4,API response caching (Redis),Optimized external API calls,10
+18,18.1,Equipment models: Rod Reel Lure Vessel,Gear database schema,10
+18,18.2,Many-to-many: Catch↔Equipment,Catch-to-gear relationships,10
+18,18.3,Equipment library UI,Tackle box management interface,12
+18,18.4,Gear recommendations based on catches,AI-suggested gear for conditions,10
+19,19.1,Unit testing: pytest for Python,Backend test suite,10
+19,19.2,Unit testing: Jest/Vitest for TypeScript,Frontend test suite,10
+19,19.3,Integration tests: FastAPI TestClient,API endpoint tests,10
+19,19.4,E2E tests: Playwright for flows,Catch creation E2E test,12
+19,19.5,Test coverage reporting + CI integration,100% critical path coverage,8
+20,20.1,Image compression on upload,Reduced photo storage costs,8
+20,20.2,Database query optimization,Indexed + cached queries,10
+20,20.3,React lazy loading + code splitting,Optimized bundle size,10
+20,20.4,CDN setup for photos (Cloudflare R2),Fast image delivery,10
+20,20.5,Lighthouse performance audit,Performance score >90,8
+21,21.1,GitHub Actions: lint test build,CI pipeline for Catchbook,10
+21,21.2,Docker containerization (backend + frontend),Dockerized Catchbook services,12
+21,21.3,Backend deployment (Railway Render Fly.io),Deployed API endpoint,10
+21,21.4,Frontend deployment (Vercel Netlify),Deployed React app,8
+21,21.5,Environment management (dev staging prod),Multi-environment setup,8
+22,22.1,Structured logging: JSON logs correlation IDs,Production-grade logging,10
+22,22.2,Error tracking with Sentry,Automated error alerts,8
+22,22.3,Metrics with Prometheus + Grafana,Monitoring dashboard,12
+22,22.4,Distributed tracing basics,Request tracing across services,10
+23,23.1,Service worker for offline mode,Offline catch entry,12
+23,23.2,Camera API for native photo capture,In-app camera integration,10
+23,23.3,Push notifications setup,Fishing conditions alerts,10
+23,23.4,Add to home screen prompt,Installable PWA,6
+24,24.1,How computers work: CPU memory I/O,Systems fundamentals notes,10
+24,24.2,Networking deep dive: TCP/IP DNS HTTP/2,Network debugging for Catchbook,12
+24,24.3,Distributed systems: CAP consistency,Architecture tradeoffs doc,10
+24,24.4,Caching strategies for Catchbook,Redis caching implementation,12
+25,25.1,Design patterns: Factory Observer Strategy,Refactored Catchbook modules,14
+25,25.2,SOLID principles in TypeScript/Python,SOLID refactoring exercise,12
+25,25.3,Hexagonal architecture refactor,Domain-driven Catchbook design,14
+25,25.4,Event-driven patterns for AI processing,Async species ID queue,12
+26,26.1,WCAG guidelines: A AA AAA compliance,Accessibility audit report,8
+26,26.2,Screen reader testing + keyboard nav,Accessible Catchbook UI,10
+26,26.3,Color contrast + visual design,WCAG AA-compliant design,8
+26,26.4,Internationalization (i18n),Multi-language support (ES FR),10
+27,27.1,React Native setup (or SwiftUI alternative),Native mobile project setup,14
+27,27.2,Native camera + location integration,iOS/Android camera feature,16
+27,27.3,Native maps integration,Catch location mapping,12
+27,27.4,App Store + Play Store deployment,Published mobile app,16
+28,28.1,Product Hunt launch page + demo video,Public launch materials,12
+28,28.2,Blog series: Building Catchbook,Technical blogging (4 posts),16
+28,28.3,Community engagement (Reddit YouTube),User acquisition strategy,10
+28,28.4,Open source library releases,EXIF parser npm/PyPI package,12
+28,28.5,Roadmap v2.0 planning,Next 6 months feature plan,8
