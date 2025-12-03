@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["lesson_id", "title", "module_id", "phase_id", "lesson_type", "learning_objectives", "outline", "assessment"],
+  "properties": {
+    "lesson_id": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}-L[0-9]{2}$"},
+    "title": {"type": "string"},
+    "module_id": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}$"},
+    "phase_id": {"type": "string", "pattern": "^P[0-9]{2}$"},
+    "estimated_minutes": {"type": "integer", "minimum": 15},
+    "lesson_type": {"type": "string", "enum": ["conceptual", "hands-on", "project", "review"]},
+    "prerequisites": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}-L[0-9]{2}$"}
+    },
+    "learning_objectives": {
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 1
+    },
+    "outline": {
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 1
+    },
+    "key_terms": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "catchbook_context": {
+      "type": "object",
+      "properties": {
+        "feature": {"type": "string"},
+        "deliverable": {"type": "string"},
+        "code_location": {"type": "string"}
+      }
+    },
+    "assessment": {
+      "type": "object",
+      "required": ["type", "criteria"],
+      "properties": {
+        "type": {"type": "string"},
+        "criteria": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "resources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "title", "url"],
+        "properties": {
+          "type": {"type": "string"},
+          "title": {"type": "string"},
+          "url": {"type": "string", "format": "uri"}
+        }
+      }
+    },
+    "professor_constraints": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["created_at"],
+      "properties": {
+        "created_at": {"type": "string", "format": "date"},
+        "generated_by": {"type": "string"}
+      }
+    }
+  }
+}
