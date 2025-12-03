@@ -1,0 +1,35 @@
+{
+  "skills": {
+    "git_basics": {
+      "level": "novice",
+      "last_practiced": "2025-12-02",
+      "confidence": 2,
+      "modules_practiced": []
+    },
+    "terminal_comfort": {
+      "level": "novice",
+      "last_practiced": "2025-12-02",
+      "confidence": 2,
+      "modules_practiced": []
+    },
+    "html_css": {
+      "level": "novice",
+      "last_practiced": "2025-12-02",
+      "confidence": 2,
+      "modules_practiced": []
+    },
+    "javascript_basics": {
+      "level": "novice",
+      "last_practiced": "2025-12-02",
+      "confidence": 2,
+      "modules_practiced": []
+    },
+    "python_basics": {
+      "level": "novice",
+      "last_practiced": "2025-12-02",
+      "confidence": 2,
+      "modules_practiced": []
+    }
+  },
+  "last_updated": "2025-12-02T00:00:00Z"
+}
