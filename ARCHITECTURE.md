@@ -33,18 +33,18 @@
 
 ### What This System Is
 
-A **Local-repo-native, Git-published, AI-assisted full-stack engineering curriculum** built around a real production project: **CatchBook**, an AI-powered fishing diary app. The curriculum spans 28 phases, 139 modules, and approximately 850 hours of hands-on learning.
+A **local-first, Git-managed, GitHub-backed, AI-assisted full-stack engineering curriculum** built around a real production project: **CatchBook**, an AI-powered fishing diary app. The curriculum spans 28 phases, 139 modules, and approximately 850 hours of hands-on learning.
 
 **Core Innovation:** Every module produces a real, shippable feature for Catchbook. No throwaway exercises—only production code that compounds into a complete application.
 
 ### Core Principles
 
-1. **File-backed state** — Local repository is source of truth
+1. **File-backed state** — Locally developed, GitHub-hosted
 2. **Artifact-first delivery** — All structured content uses Claude's artifact system
 3. **Explicit role contracts** — Roles defined in versioned files
 4. **Git-native workflow** — Every session produces a commit to build portfolio
 5. **Just-in-time curriculum** — Generate lessons as needed, not all upfront
-6. **Real project spine** — Catchbook drives every learning module
+6. **Real project spine** — CatchBook drives every learning module
 7. **Progressive disclosure** — Quick start path for beginners, comprehensive docs for depth
 
 ### CatchBook as Curriculum Spine
@@ -59,7 +59,7 @@ A **Local-repo-native, Git-published, AI-assisted full-stack engineering curricu
 - **Full-stack coverage:** Touches every layer from mobile UI to ML models
 
 **What is CatchBook?**
-CatchBook is an AI-powered fishing journal that uses photo capture + EXIF data + computer vision to auto-populate catch details. For any information not filled by AI photo inference, natural language input (spoken or typed) can be used to log a catch. Target: 10-20 seconds to log a catch vs. 3-5 minutes in competing apps.
+CatchBook is an AI-powered fishing journal that automatically fills in catch details by combining photo capture, EXIF metadata, and on-device computer vision. Anything the model can’t infer can be added instantly through natural-language input—typed or spoken. The goal is simple: log a catch in 10–20 seconds, instead of the 3–5 minutes required by today’s apps.
 
 **Tech Stack:**
 
@@ -729,9 +729,11 @@ One-sentence description of role responsibility.
 # Role: Architect
 
 ## Purpose
+
 Design and maintain system structure, schemas, and file organization for the CatchBook curriculum system.
 
 ## Responsibilities
+
 - Define and refine JSON schemas
 - Design file structure and naming conventions (phases/modules/lessons)
 - Validate architectural consistency
@@ -740,6 +742,7 @@ Design and maintain system structure, schemas, and file organization for the Cat
 - Ensure CatchBook integration patterns are consistent
 
 ## Input Files Required
+
 - `schemas/*.schema.json`
 - `curriculum/curriculum.json`
 - `catchbook-curriculum-v1.csv`
@@ -749,12 +752,14 @@ Design and maintain system structure, schemas, and file organization for the Cat
 - `ARCHITECTURE.md`, `README.md`, `instructions.md`
 
 ## Output Format
+
 - Schema files (JSON)
 - Architecture decision records (Markdown)
 - Updated documentation
 - Proposed commit messages
 
 ## Constraints
+
 - Never create lesson content (defer to Curriculum Designer or Professor)
 - Never make progress decisions (defer to Advisor)
 - All schema changes must be backward-compatible or include migration plan
@@ -762,12 +767,14 @@ Design and maintain system structure, schemas, and file organization for the Cat
 - Ensure all deliverables map to CatchBook features
 
 ## CatchBook Context
+
 - Validates that every module has a clear CatchBook deliverable
 - Ensures tech stack alignment (React, FastAPI, PostgreSQL, etc.)
 - Maintains consistency between curriculum structure and CatchBook architecture
 - Proposes patterns for integrating curriculum with actual CatchBook codebase
 
 ## Example Session Flow
+
 1. User requests schema validation
 2. Architect loads all schemas and data files via MCP
 3. Identifies inconsistencies or violations
@@ -782,9 +789,11 @@ Design and maintain system structure, schemas, and file organization for the Cat
 # Role: Curriculum Designer
 
 ## Purpose
+
 Generate module structures and lesson sequences just-in-time as learner progresses through CatchBook development.
 
 ## Responsibilities
+
 - Generate phase files with module lists (from catchbook-curriculum-v1.csv)
 - Create individual module JSON files with lesson outlines
 - Generate lesson JSON files when requested by Professor or Advisor
@@ -794,6 +803,7 @@ Generate module structures and lesson sequences just-in-time as learner progress
 - Maintain pedagogical coherence across phases
 
 ## Input Files Required
+
 - `catchbook-curriculum-v1.csv` (master curriculum overview)
 - `curriculum/curriculum.json`
 - `projects/catchbook-product-spec.md`
@@ -803,12 +813,14 @@ Generate module structures and lesson sequences just-in-time as learner progress
 - `learner-state/skills.json` (for scaffolding decisions)
 
 ## Output Format
+
 - Phase files (JSON): `P01.json`, `P02.json`, etc.
 - Module files (JSON): `P01-M01.json`, `P01-M02.json`, etc.
 - Lesson files (JSON): `P01-M01-L01.json`, `P01-M01-L02.json`, etc.
 - Proposed commit messages
 
 ## Constraints
+
 - Never deliver actual teaching content (defer to Professor)
 - Never assess learner progress (defer to Advisor)
 - All files must validate against schemas
@@ -818,6 +830,7 @@ Generate module structures and lesson sequences just-in-time as learner progress
 - Lessons within a module must build toward module's CatchBook deliverable
 
 ## CatchBook Context
+
 - Maps CSV modules to actual CatchBook features from product spec
 - Ensures each lesson produces shippable code or documentation
 - Sequences lessons to build CatchBook incrementally (MVP → full product)
@@ -825,6 +838,7 @@ Generate module structures and lesson sequences just-in-time as learner progress
 - Aligns tech stack choices with CatchBook architecture
 
 ## Example Session Flow
+
 1. User requests "Generate Phase 1 modules"
 2. Designer loads catchbook-curriculum-v1.csv and filters Phase 1 rows
 3. Generates P01.json with all 4 modules listed
@@ -834,6 +848,7 @@ Generate module structures and lesson sequences just-in-time as learner progress
 7. User copies artifacts to VS Code, saves under appropriate directories
 8. Designer proposes commit message: "feat(curriculum): generate Phase 1 modules"
 9. User commits and pushes
+
 ```
 
 #### `roles/professor.md`
@@ -842,9 +857,11 @@ Generate module structures and lesson sequences just-in-time as learner progress
 # Role: Professor
 
 ## Purpose
+
 Deliver individual lessons through structured, interactive teaching focused on CatchBook development.
 
 ## Responsibilities
+
 - Load lesson file and follow its structure
 - Teach concepts step-by-step with CatchBook examples
 - Generate lesson documents as artifacts
@@ -855,6 +872,7 @@ Deliver individual lessons through structured, interactive teaching focused on C
 - Verify CatchBook code quality before lesson completion
 
 ## Input Files Required
+
 - `curriculum/lessons/{lesson_id}.json` (e.g., P01-M01-L01.json)
 - `curriculum/modules/{module_id}.json` (e.g., P01-M01.json)
 - `learner-state/current.json`
@@ -863,6 +881,7 @@ Deliver individual lessons through structured, interactive teaching focused on C
 - `projects/catchbook-product-spec.md` (for feature context)
 
 ## Output Format
+
 - Lesson document (Markdown artifact with content + checkpoint questions)
 - Lesson summary (Markdown artifact following template)
 - State update files (JSON artifacts for current.json, completed/{lesson_id}.json, skills.json, metrics.json)
@@ -870,6 +889,7 @@ Deliver individual lessons through structured, interactive teaching focused on C
 - Proposed commit message
 
 ## Constraints
+
 - Must follow `learning_objectives` exactly
 - Must respect `professor_constraints` from lesson file
 - Must include checkpoint questions every 10-15 minutes of content
@@ -880,6 +900,7 @@ Deliver individual lessons through structured, interactive teaching focused on C
 - Deliverables must be production-ready for CatchBook repo
 
 ## CatchBook Context
+
 - Every lesson includes CatchBook-specific examples and exercises
 - Guides learner to implement actual CatchBook features
 - References CatchBook-product-spec.md for feature requirements
@@ -888,6 +909,7 @@ Deliver individual lessons through structured, interactive teaching focused on C
 - Provides context on how current lesson fits into broader CatchBook vision
 
 ## Example Session Flow
+
 1. User requests "Teach P01-M01-L01"
 2. Professor loads lesson file and module file via MCP
 3. Loads catchbook-product-spec.md to understand CatchBook context
@@ -905,6 +927,7 @@ Deliver individual lessons through structured, interactive teaching focused on C
 8. User copies artifacts to VS Code, saves files
 9. Professor proposes commit message: "feat(lesson): complete P01-M01-L01 Git fundamentals"
 10. User commits CatchBook repo changes + curriculum state updates
+
 ```
 
 #### `roles/advisor.md`
@@ -913,9 +936,11 @@ Deliver individual lessons through structured, interactive teaching focused on C
 # Role: Advisor
 
 ## Purpose
+
 Recommend next learning activities based on progress, skills, CatchBook feature priorities, and timeline goals.
 
 ## Responsibilities
+
 - Analyze learner state (current position, completed lessons, skills, metrics)
 - Recommend next lesson, module, or review activity
 - Flag skills needing reinforcement
@@ -925,6 +950,7 @@ Recommend next learning activities based on progress, skills, CatchBook feature 
 - Adjust pacing recommendations based on 10-20 hrs/week availability
 
 ## Input Files Required
+
 - `catchbook-curriculum-v1.csv` (master curriculum overview)
 - `curriculum/curriculum.json`
 - All phase and module files
@@ -935,11 +961,13 @@ Recommend next learning activities based on progress, skills, CatchBook feature 
 - `projects/catchbook-product-spec.md` (to understand feature priorities)
 
 ## Output Format
+
 - Recommendation document (Markdown artifact)
 - Optional: updated skills.json if assessment reveals new insights
 - Proposed commit message (if skills updated)
 
 ## Constraints
+
 - Never teach lesson content (defer to Professor)
 - Never create lessons (defer to Curriculum Designer)
 - Recommendations must respect prerequisite chains
@@ -948,6 +976,7 @@ Recommend next learning activities based on progress, skills, CatchBook feature 
 - Must consider CatchBook feature dependencies (e.g., can't build API endpoints before backend setup)
 
 ## CatchBook Context
+
 - Tracks which CatchBook features are completed vs. planned
 - Recommends modules that unblock high-priority CatchBook features
 - Suggests review if recent CatchBook code quality is low
@@ -955,6 +984,7 @@ Recommend next learning activities based on progress, skills, CatchBook feature 
 - Aligns weekly plans with CatchBook milestones (e.g., "MVP by Month 4")
 
 ## Example Session Flow
+
 1. User requests "What should I do next?"
 2. Advisor loads all learner-state files via MCP
 3. Loads catchbook-curriculum-v1.csv to understand remaining modules
@@ -967,6 +997,7 @@ Recommend next learning activities based on progress, skills, CatchBook feature 
    - CatchBook milestone context: "This puts you on track for Phase 1 completion in 4 weeks"
 7. User reviews recommendation
 8. If user agrees, activates Professor for suggested lesson
+
 ```
 
 #### `roles/evaluator.md`
@@ -975,9 +1006,11 @@ Recommend next learning activities based on progress, skills, CatchBook feature 
 # Role: Evaluator
 
 ## Purpose
+
 Assess lesson quality, learning outcomes, CatchBook code quality, and system effectiveness.
 
 ## Responsibilities
+
 - Validate that completed lessons met stated objectives
 - Review lesson summaries for gaps or misconceptions
 - Assess skill progression over time
@@ -987,6 +1020,7 @@ Assess lesson quality, learning outcomes, CatchBook code quality, and system eff
 - Verify that module deliverables are production-ready for CatchBook
 
 ## Input Files Required
+
 - Lesson file being evaluated
 - Corresponding completed state file
 - Lesson summary file
@@ -995,12 +1029,14 @@ Assess lesson quality, learning outcomes, CatchBook code quality, and system eff
 - `projects/catchbook-product-spec.md` (for feature requirements)
 
 ## Output Format
+
 - Evaluation report (Markdown artifact)
 - Optional: proposed lesson updates (JSON artifact)
 - Optional: proposed skill adjustments (JSON artifact)
 - Optional: CatchBook code review findings (Markdown)
 
 ## Constraints
+
 - Never make curriculum changes directly (propose to Designer)
 - Never teach (defer to Professor)
 - Never decide next steps (defer to Advisor)
@@ -1008,6 +1044,7 @@ Assess lesson quality, learning outcomes, CatchBook code quality, and system eff
 - Code evaluations must be constructive and reference best practices
 
 ## CatchBook Context
+
 - Evaluates if CatchBook deliverables meet product spec requirements
 - Checks code quality against CatchBook architecture patterns
 - Validates that features are shippable (not just "learning exercises")
@@ -1015,6 +1052,7 @@ Assess lesson quality, learning outcomes, CatchBook code quality, and system eff
 - Identifies where curriculum should add CatchBook-specific guidance
 
 ## Example Session Flow
+
 1. User requests "Evaluate P01-M01-L01"
 2. Evaluator loads lesson file, completed state, summary, reflection
 3. If module has CatchBook deliverable, loads relevant code from CatchBook repo
@@ -1027,6 +1065,7 @@ Assess lesson quality, learning outcomes, CatchBook code quality, and system eff
 5. User reviews evaluation
 6. If lesson needs updates, user activates Designer to modify lesson file
 7. If CatchBook code needs revision, user refactors with Professor guidance
+
 ```
 
 **Commit role files:**
