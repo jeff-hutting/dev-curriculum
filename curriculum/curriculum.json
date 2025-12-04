@@ -1,5 +1,17 @@
 {
   "curriculum_name": "Full-Stack Software Engineering – Jeff Hutting Edition",
+  "project": {
+    "name": "CatchBook",
+    "description": "AI-powered fishing journal that auto-populates catch data using photo capture, EXIF metadata, and computer vision. Target: log catches in 10 seconds vs 3-5 minutes in competing apps.",
+    "spec_file": "projects/catchbook-product-spec.md",
+    "tech_stack": {
+      "frontend": ["React", "TypeScript", "React Native"],
+      "backend": ["Python", "FastAPI"],
+      "database": ["PostgreSQL", "PostGIS"],
+      "mobile": ["Progressive Web App", "React Native", "SwiftUI"],
+      "ai_ml": ["Claude API", "TensorFlow", "MobileNetV2", "XGBoost"]
+    }
+  },
   "audience": "Self-directed adult learner transitioning toward professional software engineering",
   "global_objectives": [
     "Develop competency in modern full-stack web development",
@@ -18,59 +30,186 @@
   ],
   "phases": [
     {
-      "phase_id": "P1",
-      "phase_name": "Foundations – Web & Programming Basics",
-      "entry_criteria": [
-        "Comfort using a modern web browser",
-        "Basic file/folder navigation on macOS",
-        "Able to install software with guidance"
-      ],
-      "exit_criteria": [
-        "Can explain what a program is in plain language",
-        "Can describe the client–server model of the web",
-        "Can define API (Application Programming Interface) at a high level",
-        "Can create and modify a simple HTML/CSS page",
-        "Can write small JavaScript snippets that run in the browser console",
-        "Can initialize a Git repository, commit changes, and push to GitHub"
-      ],
-      "weeks_planned": 8,
-      "lessons": {
-        "P1-L01": "curriculum/lessons/P1_L01.json",
-        "P1-L02": "curriculum/lessons/P1_L02.json",
-        "P1-L03": "curriculum/lessons/P1_L03.json",
-        "P1-L04": "curriculum/lessons/P1_L04.json"
-      }
+      "phase_id": "P01",
+      "phase_name": "Foundations",
+      "estimated_hours": 24,
+      "module_count": 4
     },
     {
-      "phase_id": "P2",
-      "phase_name": "APIs, Back End, and Data",
-      "entry_criteria": [
-        "Meets P1 exit criteria",
-        "Comfortable editing code in VS Code",
-        "Basic familiarity with Git and GitHub workflow"
-      ],
-      "exit_criteria": [
-        "Can explain what an HTTP API is and how clients interact with it",
-        "Can build and run a simple JSON-based API in a local dev environment",
-        "Understands the basics of persisting data (files or simple database)",
-        "Can reason about request/response flows and basic error handling"
-      ],
-      "weeks_planned": 8,
-      "lessons": {
-        "P2-L01": "curriculum/lessons/P2_L01.json",
-        "P2-L02": "curriculum/lessons/P2_L02.json",
-        "P2-L03": "curriculum/lessons/P2_L03.json"
-      }
+      "phase_id": "P02",
+      "phase_name": "Professional Tooling",
+      "estimated_hours": 24,
+      "module_count": 4
+    },
+    {
+      "phase_id": "P03",
+      "phase_name": "Frontend Basics",
+      "estimated_hours": 46,
+      "module_count": 5
+    },
+    {
+      "phase_id": "P04",
+      "phase_name": "Python Fundamentals",
+      "estimated_hours": 52,
+      "module_count": 5
+    },
+    {
+      "phase_id": "P05",
+      "phase_name": "Data Structures & Algorithms",
+      "estimated_hours": 58,
+      "module_count": 5
+    },
+    {
+      "phase_id": "P06",
+      "phase_name": "Modern JavaScript",
+      "estimated_hours": 40,
+      "module_count": 3
+    },
+    {
+      "phase_id": "P07",
+      "phase_name": "TypeScript",
+      "estimated_hours": 32,
+      "module_count": 3
+    },
+    {
+      "phase_id": "P08",
+      "phase_name": "Backend API (FastAPI)",
+      "estimated_hours": 52,
+      "module_count": 5
+    },
+    {
+      "phase_id": "P09",
+      "phase_name": "Database Design",
+      "estimated_hours": 50,
+      "module_count": 5
+    },
+    {
+      "phase_id": "P10",
+      "phase_name": "Authentication & Security",
+      "estimated_hours": 52,
+      "module_count": 5
+    },
+    {
+      "phase_id": "P11",
+      "phase_name": "React Fundamentals",
+      "estimated_hours": 58,
+      "module_count": 5
+    },
+    {
+      "phase_id": "P12",
+      "phase_name": "React + TypeScript",
+      "estimated_hours": 40,
+      "module_count": 4
+    },
+    {
+      "phase_id": "P13",
+      "phase_name": "Node.js",
+      "estimated_hours": 40,
+      "module_count": 4
+    },
+    {
+      "phase_id": "P14",
+      "phase_name": "Advanced SQL & Analytics",
+      "estimated_hours": 44,
+      "module_count": 4
+    },
+    {
+      "phase_id": "P15",
+      "phase_name": "AI Integration (Claude API)",
+      "estimated_hours": 44,
+      "module_count": 4
+    },
+    {
+      "phase_id": "P16",
+      "phase_name": "Advanced AI Features",
+      "estimated_hours": 52,
+      "module_count": 4
+    },
+    {
+      "phase_id": "P17",
+      "phase_name": "External API Integration",
+      "estimated_hours": 40,
+      "module_count": 4
+    },
+    {
+      "phase_id": "P18",
+      "phase_name": "Equipment Tracking",
+      "estimated_hours": 42,
+      "module_count": 4
+    },
+    {
+      "phase_id": "P19",
+      "phase_name": "Testing",
+      "estimated_hours": 50,
+      "module_count": 5
+    },
+    {
+      "phase_id": "P20",
+      "phase_name": "Performance Optimization",
+      "estimated_hours": 46,
+      "module_count": 5
+    },
+    {
+      "phase_id": "P21",
+      "phase_name": "DevOps & Deployment",
+      "estimated_hours": 48,
+      "module_count": 5
+    },
+    {
+      "phase_id": "P22",
+      "phase_name": "Monitoring & Logging",
+      "estimated_hours": 40,
+      "module_count": 4
+    },
+    {
+      "phase_id": "P23",
+      "phase_name": "Progressive Web App",
+      "estimated_hours": 38,
+      "module_count": 4
+    },
+    {
+      "phase_id": "P24",
+      "phase_name": "Computer Science Fundamentals",
+      "estimated_hours": 44,
+      "module_count": 4
+    },
+    {
+      "phase_id": "P25",
+      "phase_name": "Software Architecture",
+      "estimated_hours": 52,
+      "module_count": 4
+    },
+    {
+      "phase_id": "P26",
+      "phase_name": "Accessibility & Internationalization",
+      "estimated_hours": 36,
+      "module_count": 4
+    },
+    {
+      "phase_id": "P27",
+      "phase_name": "Native Mobile",
+      "estimated_hours": 58,
+      "module_count": 4
+    },
+    {
+      "phase_id": "P28",
+      "phase_name": "Launch & Marketing",
+      "estimated_hours": 50,
+      "module_count": 5
     }
   ],
+  "total_estimated_hours": 850,
+  "total_modules": 139,
   "pedagogy_principles": [
-    "Small, frequent exercises over giant projects",
-    "Concept → example → exercise → reflection",
-    "Use realistic but not overwhelming examples"
+    "Build real features for CatchBook, not throwaway exercises",
+    "Small, shippable iterations that compound into complete product",
+    "Just-in-time learning aligned with immediate project needs",
+    "Production-quality code from day 1 (testing, docs, best practices)",
+    "Architecture-first thinking: understand the 'why' before the 'how'"
   ],
   "metadata": {
-    "version": "0.1.0",
-    "created_at": "2025-11-29",
-    "updated_at": "2025-11-29"
+    "version": "2.0",
+    "created_at": "2025-12-03",
+    "updated_at": "2025-12-03"
   }
 }
