@@ -1,16 +1,16 @@
 {
   "skills": {
     "git_basics": {
-      "level": "novice",
-      "last_practiced": "2025-12-02",
-      "confidence": 2,
-      "modules_practiced": []
+      "level": "beginner",
+      "last_practiced": "2025-12-04",
+      "confidence": 4.5,
+      "modules_practiced": ["P01-M01"]
     },
     "terminal_comfort": {
-      "level": "novice",
-      "last_practiced": "2025-12-02",
-      "confidence": 2,
-      "modules_practiced": []
+      "level": "beginner",
+      "last_practiced": "2025-12-04",
+      "confidence": 3,
+      "modules_practiced": ["P01-M01"]
     },
     "html_css": {
       "level": "novice",
@@ -29,7 +29,19 @@
       "last_practiced": "2025-12-02",
       "confidence": 2,
       "modules_practiced": []
+    },
+    "markdown_documentation": {
+      "level": "beginner",
+      "last_practiced": "2025-12-04",
+      "confidence": 4,
+      "modules_practiced": ["P01-M01"]
+    },
+    "project_organization": {
+      "level": "beginner",
+      "last_practiced": "2025-12-04",
+      "confidence": 3,
+      "modules_practiced": ["P01-M01"]
     }
   },
-  "last_updated": "2025-12-02T00:00:00Z"
+  "last_updated": "2025-12-04T18:30:00Z"
 }
