@@ -168,7 +168,8 @@ dev-curriculum/
 │   ├── current.json                 # Active position (phase/module/lesson)
 │   ├── completed/
 │   │   ├── P01-M01-L01.json         # Per-lesson completion records
-│   │   └── ...
+│   │   ├── .gitkeep/
+|   |   └── ...
 │   ├── skills.json                  # Skill tracking
 │   └── metrics.json                 # Time, confidence, mastery data
 ├── reflections/
@@ -229,7 +230,7 @@ git push -u origin master
 
 ### 2.1 Install Claude Desktop
 
-Download from: https://claude.ai/download
+Download from: <https://claude.ai/download>
 
 ### 2.2 Configure GitHub MCP Server
 
@@ -253,7 +254,7 @@ Download from: https://claude.ai/download
 
 ### 2.3 Generate GitHub Personal Access Token
 
-1. Go to https://github.com/settings/tokens
+1. Go to <https://github.com/settings/tokens>
 2. Click "Generate new token (classic)"
 3. Scopes needed:
     - `repo` (full control of private repositories)
@@ -299,6 +300,7 @@ Expected: Claude reads repo structure and lists files.
 ### 3.1 Schema Overview
 
 All schemas enforce strict structure for machine-readable files. Schemas validate:
+
 - Curriculum hierarchy (phases → modules → lessons)
 - Learner state decomposition
 - CatchBook project integration
@@ -1183,7 +1185,7 @@ This curriculum isn't about throwaway exercises—you're shipping real features 
 
 Open Claude Desktop and type:
 
-```
+```text
 /bootstrap
 ```
 
@@ -1195,7 +1197,7 @@ Claude will load your curriculum and show your current position within the 28-ph
 
 Type:
 
-```
+```text
 /teach P01-M01-L01
 ```
 
@@ -1206,6 +1208,7 @@ Claude will activate Professor mode and load the lesson on Git fundamentals.
 ## Step 3: Read the Lesson Document
 
 Claude will generate a lesson document as an artifact. This contains:
+
 - **Why this matters for CatchBook** (context)
 - **Concepts to learn** (theory)
 - **Hands-on exercise** (practice with CatchBook repo)
@@ -1229,6 +1232,7 @@ Type your answer. Claude will adapt the next section based on your response.
 ## Step 5: Complete the Hands-On Exercise
 
 Follow the instructions to:
+
 1. Create a CatchBook repository
 2. Write a README describing the project
 3. Make your first Git commit
@@ -1240,6 +1244,7 @@ This is your first **real CatchBook deliverable**—not a toy example.
 ## Step 6: Complete the Lesson
 
 After the final checkpoint, Claude will generate:
+
 1. **Lesson summary** → Copy to `lesson-summaries/P01-M01-L01-summary.md`
 2. **State updates** → Copy JSON artifacts to `learner-state/` files
 3. **Reflection prompt** → Answer conversationally in chat
@@ -1265,7 +1270,7 @@ git push
 
 Type:
 
-```
+```text
 /next
 ```
 
@@ -1492,6 +1497,7 @@ By the end of this lesson, you will be able to:
 **Deliverable:** {Specific file, commit, or feature to produce}
 
 **Acceptance Criteria:**
+
 1. {criterion 1}
 2. {criterion 2}
 
@@ -1508,6 +1514,7 @@ By the end of this lesson, you will be able to:
 {Based on lesson.assessment from JSON}
 
 **Criteria:**
+
 1. {criterion 1}
 2. {criterion 2}
 
@@ -1573,43 +1580,54 @@ catchbook_deliverable: {{description}}
 # Lesson Summary — {{lesson_id}}
 
 ## Title
+
 {{lesson_title}}
 
 ## Module Context
+
 {{module_name}} ({{module_id}})
 
 ## CatchBook Feature
+
 {{catchbook_feature_description}}
 
 ## Objectives Met
+
 - [ ] {{objective_1}}
 - [ ] {{objective_2}}
 - [ ] {{objective_3}}
 
 ## Key Wins
+
 - {{win_1}}
 - {{win_2}}
 
 ## Struggles
+
 - {{struggle_1}}
 - {{struggle_2}}
 
 ## Misconceptions Corrected
+
 - {{misconception_1}}
 
 ## Skills Practiced
+
 - {{skill_1}}: {{novice|emerging|competent|proficient|expert}}
 - {{skill_2}}: {{novice|emerging|competent|proficient|expert}}
 
 ## CatchBook Deliverable
+
 {{description_of_what_was_built_or_shipped}}
 
 ## Code Committed
+
 - Repository: {{repo_name}}
 - Commit: {{commit_hash}}
 - Files changed: {{file_list}}
 
 ## Next Steps
+
 - {{next_step}}
 
 ---
@@ -1634,24 +1652,31 @@ energy_level: {{1-10}}
 # Reflection — {{date}}
 
 ## Lesson
+
 {{lesson_title}}
 
 ## CatchBook Context
+
 {{what_catchbook_feature_or_capability_this_enabled}}
 
 ## How It Felt
+
 {{2-4 sentences in learner's voice about the experience}}
 
 ## What Clicked
+
 {{What concepts made sense, especially in CatchBook context}}
 
 ## What's Still Fuzzy
+
 {{What needs more practice or clarification}}
 
 ## Real-World Application
+
 {{How this lesson applies to building CatchBook or other real projects}}
 
 ## Mood After Lesson
+
 {{energized|neutral|tired|frustrated|excited}}
 
 ---
@@ -1694,6 +1719,7 @@ git push
 **Input:** Lesson ID (e.g., `P01-M01-L01`)  
 **Output:** Activates Professor, loads lesson, generates lesson document artifact with CatchBook context  
 **Files Read:**
+
 - `curriculum/lessons/{lesson_id}.json`
 - `curriculum/modules/{module_id}.json`
 - All learner-state files
@@ -1705,6 +1731,7 @@ git push
 **Input:** None  
 **Output:** Activates Advisor, generates recommendation artifact with CatchBook milestone context  
 **Files Read:**
+
 - `catchbook-curriculum-v1.csv`
 - `curriculum/curriculum.json`
 - All phase and module files
@@ -2072,6 +2099,7 @@ git push
 ### 12.3 Timeline Estimates
 
 **Based on 10-20 hours/week:**
+
 - **Total Hours:** ~850 hours
 - **At 10 hrs/week:** 85 weeks (~20 months)
 - **At 15 hrs/week:** 57 weeks (~13 months)
@@ -2088,6 +2116,7 @@ git push
 See `catchbook-curriculum-v1.csv` for complete breakdown.
 
 **Summary:**
+
 - **28 Phases**
 - **139 Modules**
 - **Estimated 850 hours**
@@ -2169,6 +2198,7 @@ lesson-summaries/P01-M01-L01-summary.md
 **Philosophy:** Generate curriculum files only when needed, not all upfront.
 
 **Rationale:**
+
 1. **Flexibility:** Adjust curriculum based on learner progress and feedback
 2. **Efficiency:** Don't pre-generate 850 hours of content that might change
 3. **Focus:** Keep repository lean, generate next phase as current phase nears completion
@@ -2177,20 +2207,24 @@ lesson-summaries/P01-M01-L01-summary.md
 ### C.2 Generation Workflow
 
 **Phase Files:**
+
 - Generate `P01.json` at project start
 - Generate `P02.json` when Phase 1 is 75% complete
 - Continue pattern for all 28 phases
 
 **Module Files:**
+
 - Generate all modules for current phase when phase file is created
 - Example: When `P01.json` is created, also generate `P01-M01.json` through `P01-M04.json`
 
 **Lesson Files:**
+
 - Generate lessons for current module just before teaching
 - Example: When user starts Module 1.1, Curriculum Designer generates `P01-M01-L01.json`, `P01-M01-L02.json`, etc.
 - Lessons generated in batches (all lessons for one module at once)
 
 **Who Generates:**
+
 - **Curriculum Designer role** generates all curriculum files
 - **User** activates Designer via separate chat dedicated to curriculum generation
 - **Architect role** validates generated files against schemas
@@ -2208,6 +2242,7 @@ lesson-summaries/P01-M01-L01-summary.md
 ### C.4 CSV as Source of Truth
 
 `catchbook-curriculum-v1.csv` contains:
+
 - All 28 phases
 - All 139 modules
 - Module names, focus areas, CatchBook deliverables, estimated hours
@@ -2215,6 +2250,7 @@ lesson-summaries/P01-M01-L01-summary.md
 **Curriculum Designer** uses CSV as reference when generating JSON files.
 
 **Workflow:**
+
 1. Read CSV row for target module
 2. Extract: phase, module name, focus, CatchBook deliverable, hours
 3. Generate JSON file following schema
@@ -2232,6 +2268,7 @@ lesson-summaries/P01-M01-L01-summary.md
 **Goal:** Core system operational with CatchBook-first workflow
 
 **Deliverables:**
+
 - ✅ Repository structure updated for CatchBook
 - ✅ Schemas for phases/modules/lessons
 - ✅ Role definitions updated for CatchBook context
@@ -2251,6 +2288,7 @@ lesson-summaries/P01-M01-L01-summary.md
 **Goal:** Complete Phase 1 (Foundations) and establish rhythm
 
 **Deliverables:**
+
 - Generate all Phase 1 lesson files (as needed)
 - Complete all 4 Phase 1 modules:
   - P01-M01: Git fundamentals (6 hours)
@@ -2272,6 +2310,7 @@ lesson-summaries/P01-M01-L01-summary.md
 **Goal:** Professional tooling + frontend basics
 
 **Deliverables:**
+
 - Complete Phase 2 (Professional Tooling): 24 hours
 - Complete Phase 3 (Frontend Basics): 46 hours
 - CatchBook landing page live (static)
@@ -2287,7 +2326,9 @@ lesson-summaries/P01-M01-L01-summary.md
 **Goal:** Reduce manual file operations
 
 **Deliverables:**
+
 - CLI tool for common operations:
+
   ```bash
   devc teach P01-M01-L01    # Launches Professor session
   devc next                 # Launches Advisor
@@ -2296,6 +2337,7 @@ lesson-summaries/P01-M01-L01-summary.md
   devc rollback {name}      # Restore backup
   devc status               # Show dashboard
   ```
+
 - Auto-apply state updates (after user approval)
 - Auto-commit with generated messages
 - Batch validation runner
@@ -2310,6 +2352,7 @@ lesson-summaries/P01-M01-L01-summary.md
 **Goal:** Backend + AI integration complete
 
 **Deliverables:**
+
 - CatchBook API fully functional (FastAPI + PostgreSQL)
 - User authentication working
 - Species ID via Claude API operational
@@ -2324,6 +2367,7 @@ lesson-summaries/P01-M01-L01-summary.md
 **Goal:** Polish and production-readiness
 
 **Deliverables:**
+
 - Predictions and recommendations live
 - PWA with offline mode
 - CI/CD pipeline operational
@@ -2339,6 +2383,7 @@ lesson-summaries/P01-M01-L01-summary.md
 **Goal:** Native mobile app + public launch
 
 **Deliverables:**
+
 - React Native or SwiftUI mobile app
 - App Store / Play Store deployment
 - Product Hunt launch
@@ -2362,6 +2407,7 @@ This architecture is designed to:
 **Current State:** Architecture complete, ready to generate Phase 1 curriculum files.
 
 **Next Actions:**
+
 1. Activate Curriculum Designer (separate chat)
 2. Generate `P01.json` (Phase 1 file)
 3. Generate `P01-M01.json` through `P01-M04.json` (Module files)
@@ -2370,4 +2416,4 @@ This architecture is designed to:
 
 ---
 
-**End of ARCHITECTURE.md — CatchBook Curriculum Edition v2.0**
+## End of ARCHITECTURE.md — CatchBook Curriculum Edition v2.0
