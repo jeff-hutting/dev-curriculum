@@ -1,0 +1,86 @@
+{
+  "module_id": "P01-M01",
+  "module_name": "Git fundamentals: init add commit push",
+  "phase_id": "P01",
+  "estimated_hours": 6,
+  "catchbook_deliverable": "CatchBook repository initialized on GitHub with professional README, .gitignore, and initial project structure. First meaningful commit demonstrates version control proficiency.",
+  "description": "Master the core Git workflow for version control. Learn to initialize repositories, track changes, write meaningful commit messages, and sync work with GitHub. Apply these skills immediately by setting up the CatchBook project repository with proper documentation and structure.",
+  "prerequisites": [],
+  "learning_objectives": [
+    "Explain the purpose of version control and why it's essential for CatchBook development",
+    "Initialize a Git repository and configure user settings",
+    "Stage and commit changes with clear, descriptive messages",
+    "Connect local repository to GitHub and push commits",
+    "Write a professional README that communicates CatchBook's vision and setup instructions",
+    "Create a .gitignore file to exclude unnecessary files from version control",
+    "Establish a clean initial project structure for CatchBook"
+  ],
+  "skills_taught": [
+    "git_basics",
+    "terminal_comfort",
+    "markdown_documentation",
+    "project_organization"
+  ],
+  "lessons": [
+    {
+      "lesson_id": "P01-M01-L01",
+      "title": "Version control concepts and why Git matters",
+      "lesson_type": "conceptual",
+      "estimated_minutes": 60
+    },
+    {
+      "lesson_id": "P01-M01-L02",
+      "title": "Git installation, configuration, and first repository",
+      "lesson_type": "hands-on",
+      "estimated_minutes": 75
+    },
+    {
+      "lesson_id": "P01-M01-L03",
+      "title": "The staging area, commits, and commit messages",
+      "lesson_type": "hands-on",
+      "estimated_minutes": 90
+    },
+    {
+      "lesson_id": "P01-M01-L04",
+      "title": "Connecting to GitHub and pushing your first CatchBook commit",
+      "lesson_type": "project",
+      "estimated_minutes": 90
+    }
+  ],
+  "catchbook_integration": {
+    "feature_area": "Project Infrastructure",
+    "repository_path": "github.com/jeff-hutting/catchbook",
+    "dependencies": [
+      "GitHub account",
+      "Git installed locally",
+      "VS Code or preferred text editor"
+    ]
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Pro Git Book (Official Git Documentation)",
+      "url": "https://git-scm.com/book/en/v2"
+    },
+    {
+      "type": "tutorial",
+      "title": "GitHub Hello World Tutorial",
+      "url": "https://docs.github.com/en/get-started/quickstart/hello-world"
+    },
+    {
+      "type": "reference",
+      "title": "Git Command Reference",
+      "url": "https://git-scm.com/docs"
+    },
+    {
+      "type": "video",
+      "title": "Git Tutorial for Beginners (freeCodeCamp)",
+      "url": "https://www.youtube.com/watch?v=RGOj5yH7evk"
+    }
+  ],
+  "metadata": {
+    "created_at": "2025-12-03",
+    "updated_at": "2025-12-03",
+    "generated_by": "Curriculum Designer v2.0"
+  }
+}
