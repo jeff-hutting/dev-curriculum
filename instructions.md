@@ -59,6 +59,7 @@ Git commits (your learning portfolio)
 **How:** Photo + EXIF + AI species identification + weather/tide APIs
 
 **Tech Stack:**
+
 - Frontend: React + TypeScript, React Native/SwiftUI
 - Backend: Python + FastAPI
 - Database: PostgreSQL + PostGIS
@@ -75,6 +76,7 @@ Git commits (your learning portfolio)
 ### Prerequisites
 
 **Required:**
+
 - macOS (or Linux/Windows with path adjustments)
 - Claude Desktop app installed
 - GitHub account with personal access token
@@ -83,6 +85,7 @@ Git commits (your learning portfolio)
 - Basic terminal comfort
 
 **Recommended:**
+
 - Node.js (for future CatchBook development)
 - Python 3.11+ (for future CatchBook development)
 - PostgreSQL (for future CatchBook development)
@@ -91,7 +94,7 @@ Git commits (your learning portfolio)
 
 #### Step 1: Install Claude Desktop
 
-Download and install from: https://claude.ai/download
+Download and install from: <https://claude.ai/download>
 
 #### Step 2: Configure Model Context Protocol (MCP)
 
@@ -121,7 +124,7 @@ MCP allows Claude to read your repository directly. This is critical for the sys
 
 **Get GitHub Token:**
 
-1. Visit: https://github.com/settings/tokens
+1. Visit: <https://github.com/settings/tokens>
 2. Click "Generate new token (classic)"
 3. Required scopes: `repo` (full control), `read:org`
 4. Copy token and replace `ghp_your_token_here` in config above
@@ -163,6 +166,7 @@ In Claude Desktop:
 ```
 
 **What Happens:**
+
 - Claude loads curriculum context
 - Reads `learner-state/current.json`
 - Displays current position in 28-phase roadmap
@@ -205,6 +209,7 @@ Available Commands:
 ```
 
 **What Happens:**
+
 - Claude activates Professor role
 - Loads lesson file (P01-M01-L01.json)
 - Generates complete lesson document as artifact
@@ -213,6 +218,7 @@ Available Commands:
 #### 3. Complete Lesson
 
 **Read lesson document** (generated artifact):
+
 - Introduction: Why this matters for CatchBook
 - Concepts with CatchBook examples
 - Hands-on exercise: Set up CatchBook repo
@@ -409,6 +415,7 @@ Claude operates in 5 specialized roles. Each has specific responsibilities, inpu
 **Purpose:** System design, schema management, structure validation
 
 **When to Use:**
+
 - Validating schemas
 - Checking file structure consistency
 - Proposing architectural improvements
@@ -427,6 +434,7 @@ or
 ```
 
 **Typical Outputs:**
+
 - Validation reports
 - Schema files (JSON)
 - Architecture decision records (Markdown)
@@ -452,6 +460,7 @@ Recommendation: Add 'catchbook_deliverable' field to P01-M01.json
 **Purpose:** Generate module structures and lesson sequences just-in-time
 
 **When to Use:**
+
 - Generating phase files
 - Creating module files
 - Generating lesson files before teaching
@@ -466,6 +475,7 @@ Recommendation: Add 'catchbook_deliverable' field to P01-M01.json
 **Important:** Use separate chat for curriculum generation (not teaching chat)
 
 **Typical Outputs:**
+
 - Phase files (JSON): `P01.json`, `P02.json`
 - Module files (JSON): `P01-M01.json`, `P01-M02.json`
 - Lesson files (JSON): `P01-M01-L01.json`, `P01-M01-L02.json`
@@ -506,6 +516,7 @@ feat(curriculum): generate Phase 1 foundation modules
 **Purpose:** Deliver lessons through structured, interactive teaching
 
 **When to Use:**
+
 - Teaching individual lessons
 - Facilitating checkpoint discussions
 - Generating lesson documents
@@ -520,6 +531,7 @@ feat(curriculum): generate Phase 1 foundation modules
 (Automatically activates Professor)
 
 **Typical Outputs:**
+
 - Lesson document (Markdown artifact)
 - Lesson summary (Markdown artifact)
 - State updates (4-5 JSON artifacts)
@@ -537,6 +549,7 @@ feat(curriculum): generate Phase 1 foundation modules
 7. User: [copies artifacts to VS Code, commits]
 
 **Constraints:**
+
 - Must follow lesson objectives exactly
 - Must respect professor_constraints from lesson file
 - Cannot skip assessment criteria
@@ -548,6 +561,7 @@ feat(curriculum): generate Phase 1 foundation modules
 **Purpose:** Progress tracking, next-step recommendations, pacing guidance
 
 **When to Use:**
+
 - Deciding what to do next
 - Getting weekly learning plans
 - Identifying skills needing reinforcement
@@ -566,6 +580,7 @@ or
 ```
 
 **Typical Outputs:**
+
 - Recommendation document (Markdown artifact)
 - Weekly learning plan (Markdown)
 - Skill gap analysis (Markdown)
@@ -590,6 +605,7 @@ Confidence Check: git_basics currently 2/5. After Module 1.1, should reach 3/5.
 ```
 
 **Questions Advisor Can Answer:**
+
 - "What should I do next?"
 - "Am I on track for CatchBook MVP by March?"
 - "Which skills need reinforcement?"
@@ -597,6 +613,7 @@ Confidence Check: git_basics currently 2/5. After Module 1.1, should reach 3/5.
 - "What's my weekly plan to complete Phase 1?"
 
 **Constraints:**
+
 - Cannot teach lessons (defer to Professor)
 - Cannot create curriculum (defer to Designer)
 - Recommendations must be evidence-based (cite state files)
@@ -607,6 +624,7 @@ Confidence Check: git_basics currently 2/5. After Module 1.1, should reach 3/5.
 **Purpose:** Assess lesson quality, learning outcomes, code quality
 
 **When to Use:**
+
 - Reviewing completed lessons
 - Checking if objectives were met
 - Assessing CatchBook code quality
@@ -626,6 +644,7 @@ Evaluate P01-M01-L01
 ```
 
 **Typical Outputs:**
+
 - Evaluation report (Markdown artifact)
 - Optional: proposed lesson updates (JSON)
 - Optional: proposed skill adjustments (JSON)
@@ -671,6 +690,7 @@ Overall: Strong lesson execution. Objectives met. Minor improvements possible.
 ```
 
 **Constraints:**
+
 - Cannot make curriculum changes directly (propose to Designer)
 - Cannot teach (defer to Professor)
 - Cannot decide next steps (defer to Advisor)
@@ -708,6 +728,7 @@ Overall: Strong lesson execution. Objectives met. Minor improvements possible.
 **When to Use:** Start of every new Claude Desktop chat
 
 **What Happens:**
+
 1. Claude detects dev-curriculum repository (via MCP)
 2. Reads `user-profile.md`
 3. Reads `learner-state/current.json`
@@ -748,6 +769,7 @@ Available Commands:
 **No Arguments**
 
 **Troubleshooting:**
+
 - If bootstrap fails, check MCP connection (see [Troubleshooting](#troubleshooting))
 
 ---
@@ -763,9 +785,11 @@ Available Commands:
 ```
 
 **Arguments:**
+
 - `lesson_id`: Required. Format: `P##-M##-L##` (e.g., `P01-M01-L01`)
 
 **What Happens:**
+
 1. Claude activates Professor role
 2. Loads `curriculum/lessons/{lesson_id}.json`
 3. Loads `curriculum/modules/{module_id}.json` (for context)
@@ -782,6 +806,7 @@ Available Commands:
 9. Proposes commit message
 
 **Lesson Document Structure:**
+
 - CatchBook context (what you're building, why it matters)
 - Learning objectives
 - Concepts with examples
@@ -814,6 +839,7 @@ You: /begin
 ```
 
 **Error Conditions:**
+
 - Lesson file doesn't exist → Activate Curriculum Designer (separate chat) to generate it
 - Prerequisites not met → Advisor recommends prerequisite lessons first
 
@@ -830,6 +856,7 @@ You: /begin
 ```
 
 **What Happens:**
+
 1. Claude activates Advisor role
 2. Loads all learner-state files
 3. Loads catchbook-curriculum-v1.csv
@@ -892,6 +919,7 @@ Should I review anything before continuing?
 ```
 
 **What Happens:**
+
 1. Claude loads all learner-state files
 2. Loads curriculum files for context
 3. Generates formatted dashboard showing:
@@ -948,6 +976,7 @@ CatchBook Progress:
 ```
 
 **Use Cases:**
+
 - Weekly review
 - Sharing progress with mentors
 - Checking if on track for goals
@@ -968,6 +997,7 @@ CatchBook Progress:
 ```
 
 **What Happens:**
+
 1. Claude activates Architect role
 2. Loads all JSON files in repository
 3. Loads corresponding schemas
@@ -1009,6 +1039,7 @@ Recommendations:
 ```
 
 **When to Use:**
+
 - After manually editing JSON files
 - After generating new curriculum files
 - Before committing major changes
@@ -1035,9 +1066,11 @@ python tools/validate.py
 ```
 
 **Arguments:**
+
 - `name`: Required. Descriptive name for snapshot (kebab-case recommended)
 
 **What Happens:**
+
 1. Claude activates Architect role
 2. Creates ZIP archive of `learner-state/` directory
 3. Saves to `snapshots/{date}-{name}.zip`
@@ -1065,6 +1098,7 @@ chore(snapshot): create pre-module-P02-M01 backup
 ```
 
 **When to Use:**
+
 - Before starting new module
 - Before major skill level adjustments
 - Before redo operations
@@ -1085,9 +1119,11 @@ chore(snapshot): create pre-module-P02-M01 backup
 ```
 
 **Arguments:**
+
 - `name`: Required. Snapshot name (without date prefix or .zip extension)
 
 **What Happens:**
+
 1. Claude activates Architect role
 2. Locates snapshot in `snapshots/`
 3. Extracts contents
@@ -1117,6 +1153,7 @@ chore(rollback): restore state to pre-module-P02-M01
 ```
 
 **When to Use:**
+
 - Mistake in state files
 - Need to redo module
 - Accidentally advanced too far
@@ -1298,6 +1335,7 @@ git push
 ```
 
 **When to Use:**
+
 - After completing a module (consolidate learning)
 - Before starting new phase (refresh foundations)
 - If struggling with current lessons (reinforce prerequisites)
@@ -1366,6 +1404,7 @@ git push
 10. **Return to teaching chat**
 
 **Why Separate Chat?**
+
 - Keeps teaching context clean
 - Prevents role confusion
 - Allows parallel curriculum development
