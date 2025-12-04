@@ -1,0 +1,93 @@
+{
+  "lesson_id": "P01-M01-L02",
+  "title": "Git Basics: Your First Repository",
+  "module_id": "P01-M01",
+  "phase_id": "P01",
+  "estimated_minutes": 90,
+  "lesson_type": "hands-on",
+  "prerequisites": ["P01-M01-L01"],
+  "learning_objectives": [
+    "Install and configure Git on your local machine",
+    "Initialize a Git repository and understand the .git directory",
+    "Use git add to stage changes and understand the staging area concept",
+    "Create commits with descriptive messages",
+    "Use git status and git log to inspect repository state",
+    "Create a README.md file for the CatchBook project"
+  ],
+  "outline": [
+    "Installing Git: Verify installation with git --version",
+    "Configuring Git: user.name and user.email (why this matters)",
+    "Creating your first repository: git init for CatchBook",
+    "Understanding the three states: working directory, staging area, repository",
+    "The staging area: Why git add exists (selective commits)",
+    "Making your first commit: git commit with meaningful messages",
+    "Viewing history: git log, git log --oneline, git log --graph",
+    "Checking status: git status and interpreting output",
+    "Hands-on exercise: Create CatchBook repo structure with README",
+    "Checkpoint: Commit workflow understanding"
+  ],
+  "key_terms": [
+    "git init",
+    "Working directory",
+    "Staging area (index)",
+    "git add",
+    "git commit",
+    "Commit message",
+    "git status",
+    "git log",
+    "HEAD",
+    ".git directory",
+    "Tracked vs untracked files"
+  ],
+  "catchbook_context": {
+    "feature": "CatchBook repository initialization",
+    "deliverable": "CatchBook Git repository with README.md describing the project",
+    "code_location": "catchbook/ (root directory)"
+  },
+  "assessment": {
+    "type": "hands_on_exercise",
+    "criteria": [
+      "Git is installed and configured with correct user info",
+      "CatchBook repository initialized with git init",
+      "README.md created with project description",
+      "At least 2 commits made with descriptive messages",
+      "Can use git status to check repository state",
+      "Can use git log to view commit history"
+    ]
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Pro Git Book - Chapter 2: Git Basics",
+      "url": "https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository"
+    },
+    {
+      "type": "interactive",
+      "title": "Learn Git Branching - Introduction Sequence",
+      "url": "https://learngitbranching.js.org/"
+    },
+    {
+      "type": "video",
+      "title": "Git Tutorial for Beginners: Learn Git in 15 Minutes",
+      "url": "https://www.youtube.com/watch?v=USjZcfj8yxE"
+    },
+    {
+      "type": "cheatsheet",
+      "title": "Git Cheat Sheet",
+      "url": "https://education.github.com/git-cheat-sheet-education.pdf"
+    }
+  ],
+  "professor_constraints": [
+    "Walk through each command step-by-step with expected output",
+    "Show common errors and how to interpret them (e.g., 'not a git repository')",
+    "Emphasize commit message best practices early (imperative mood, 50 char limit)",
+    "Use CatchBook README as the practice file (makes it real)",
+    "Include checkpoint after staging area explanation (common confusion point)",
+    "Demonstrate git status after every operation to show state changes",
+    "Address 'why do I need to add before commit?' question proactively"
+  ],
+  "metadata": {
+    "created_at": "2025-12-03",
+    "generated_by": "curriculum-designer-v2.0"
+  }
+}

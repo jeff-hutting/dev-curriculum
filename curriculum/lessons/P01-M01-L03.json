@@ -1,0 +1,97 @@
+{
+  "lesson_id": "P01-M01-L03",
+  "title": "Working with Remotes: Git Meets GitHub",
+  "module_id": "P01-M01",
+  "phase_id": "P01",
+  "estimated_minutes": 90,
+  "lesson_type": "hands-on",
+  "prerequisites": ["P01-M01-L02"],
+  "learning_objectives": [
+    "Understand the difference between Git (local) and GitHub (remote)",
+    "Create a GitHub repository for CatchBook",
+    "Connect local repository to GitHub remote with git remote add",
+    "Push commits to GitHub with git push",
+    "Clone repositories with git clone",
+    "Pull changes from remote with git pull",
+    "Understand authentication (SSH keys vs HTTPS tokens)"
+  ],
+  "outline": [
+    "Git vs GitHub: Local tool vs cloud platform",
+    "Why use a remote? Backup, collaboration, deployment",
+    "Creating a GitHub account and repository",
+    "SSH keys vs HTTPS: Setting up authentication",
+    "Connecting local repo to remote: git remote add origin",
+    "Pushing code: git push -u origin main (or master)",
+    "Understanding upstream tracking: What -u does",
+    "Cloning repositories: git clone for fresh starts",
+    "Fetching vs pulling: git fetch and git pull differences",
+    "Hands-on exercise: Push CatchBook repo to GitHub",
+    "Checkpoint: Remote workflow understanding"
+  ],
+  "key_terms": [
+    "Remote repository",
+    "Origin",
+    "git remote",
+    "git push",
+    "git pull",
+    "git clone",
+    "git fetch",
+    "Upstream",
+    "SSH key",
+    "Personal Access Token (PAT)",
+    "GitHub",
+    "Remote tracking branch"
+  ],
+  "catchbook_context": {
+    "feature": "CatchBook cloud backup and version history",
+    "deliverable": "CatchBook repository on GitHub with initial commits pushed",
+    "code_location": "https://github.com/{username}/catchbook"
+  },
+  "assessment": {
+    "type": "hands_on_exercise",
+    "criteria": [
+      "GitHub account created",
+      "CatchBook repository created on GitHub",
+      "Local repository connected to GitHub remote",
+      "Commits successfully pushed to GitHub",
+      "Can view commit history on GitHub web interface",
+      "Understands when to use git push vs git pull"
+    ]
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "GitHub Docs - About Remote Repositories",
+      "url": "https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories"
+    },
+    {
+      "type": "documentation",
+      "title": "GitHub Docs - Connecting with SSH",
+      "url": "https://docs.github.com/en/authentication/connecting-to-github-with-ssh"
+    },
+    {
+      "type": "video",
+      "title": "Git and GitHub for Beginners - Crash Course",
+      "url": "https://www.youtube.com/watch?v=RGOj5yH7evk"
+    },
+    {
+      "type": "guide",
+      "title": "Setting up Git and GitHub",
+      "url": "https://www.theodinproject.com/lessons/foundations-setting-up-git"
+    }
+  ],
+  "professor_constraints": [
+    "Help troubleshoot authentication issues (common beginner blocker)",
+    "Show both SSH and HTTPS setup, recommend SSH for long-term use",
+    "Demonstrate the GitHub web interface to show commits appear there",
+    "Address 'what if I make a mistake and push?' question",
+    "Use git push -u origin main for first push, explain upstream tracking",
+    "Show git remote -v to verify remote connection",
+    "Include checkpoint after push/pull explanation (common confusion)",
+    "Emphasize: GitHub is backup + collaboration, not just storage"
+  ],
+  "metadata": {
+    "created_at": "2025-12-03",
+    "generated_by": "curriculum-designer-v2.0"
+  }
+}
