@@ -77,27 +77,93 @@ curriculum/
 
 ## Lesson Document Formatting Requirements
 
+# Revised Section: Obsidian Properties Formatting
+
+## Lesson Document Formatting Requirements
+
 All lesson documents MUST include:
 
-1. **Table of Contents (TOC)**
-   - Placed immediately after lesson header and metadata
+1. **Lesson Header**
+   - Placed at the very beginning of document
+   - Format: `# {title}` (from lesson.json)
+
+2. **Obsidian Properties (Metadata Block)**
+   - Placed immediately after lesson header
+   - Enclosed in YAML frontmatter delimiters (`---`)
+   - Property fields are derived from lesson.schema.json and lesson.json
+   - Format:
+
+   ```markdown
+   ---
+   lesson: {lesson_id} - {title}
+   module: {module_id}
+   phase: {phase_id}
+   lesson_type: {lesson_type}
+   estimated_time: {estimated_minutes} minutes
+   prerequisites: {prerequisites or "none"}
+   key_terms: [{comma-separated list from lesson.json}]
+   created: {metadata.created_at}
+   tags:
+      - learning
+      - catchbook
+      - claude
+      - lesson
+      - {additional contextual tags as appropriate}
+   ---
+   ```
+
+   **Field Specifications:**
+   - **lesson**: Combine `lesson_id` and `title` with hyphen separator
+   - **module**: Use `module_id` from lesson.json
+   - **phase**: Use `phase_id` from lesson.json
+   - **lesson_type**: Use `lesson_type` from lesson.json (conceptual, hands-on, project, or review)
+   - **estimated_time**: Format as "{number} minutes" (e.g., "75 minutes")
+   - **prerequisites**: 
+     - If empty array in lesson.json: write "none"
+     - If contains lesson IDs: write as comma-separated list or YAML array
+   - **key_terms**: YAML array format from `key_terms` in lesson.json
+   - **created**: Use `metadata.created_at` value from lesson.json (ISO date format)
+   - **tags**: Include standard tags (learning, catchbook, claude, lesson) plus contextual tags based on:
+     - Phase (e.g., "foundations", "frontend", "backend")
+     - Lesson type (e.g., "conceptual", "hands-on")
+     - Topic area (e.g., "git", "version-control", "workflow")
+
+3. **Table of Contents (TOC)**
+   - Placed immediately after metadata block
    - Use 📋 emoji prefix: `## 📋 Table of Contents`
    - Include ONLY major sections (## headers), not subsections
    - Use Obsidian wikilink format for anchors
    - Format: `- [[#Section Name]]`
 
-2. **Back to Top Links**
+4. **Back to Top Links**
    - Add after EACH major section (before next ## header)
    - Format: `[[#📋 Table of Contents|⬆ Back to Top]]`
    - Use ⬆ emoji prefix
    - Links back to TOC, not document top
 
-3. **Example Structure**
+5. **Complete Example Structure**
    ```markdown
-   # Lesson Title
-   
-   > Metadata block
-   
+   # Version Control Concepts and Why Git Matters
+   ---
+   lesson: P01-M01-L01 - Version Control Concepts and Why Git Matters
+   module: P01-M01
+   phase: P01
+   lesson_type: conceptual
+   estimated_time: 75 minutes
+   prerequisites: none
+   key_terms: [Version Control System (VCS), Repository (repo), Commit, Snapshot, Branch, Distributed Version Control System (DVCS), Centralized Version Control System (CVCS), Git, GitHub]
+   created: 2025-12-03
+   tags:
+      - learning
+      - catchbook
+      - claude
+      - lesson
+      - foundations
+      - git
+      - version-control
+      - conceptual
+   ---
+
    ## 📋 Table of Contents
    
    - [[#Introduction]]
@@ -121,7 +187,7 @@ All lesson documents MUST include:
    [[#📋 Table of Contents|⬆ Back to Top]]
    ```
 
-4. **TOC Generation Rules**
+6. **TOC Generation Rules**
    - Generate automatically for all documents
    - Never ask user if they want a TOC
    - Always include, even for short lessons
