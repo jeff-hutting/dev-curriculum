@@ -1,19 +1,12 @@
 {
-  "total_time_minutes": 90,
-  "lessons_completed": 1,
+  "total_time_minutes": 0,
+  "lessons_completed": 0,
   "modules_completed": 0,
   "phases_completed": 0,
   "catchbook_features_shipped": 0,
   "reflections_written": 0,
-  "average_confidence": 4.5,
-  "consistency_score": 1.0,
-  "last_updated": "2025-12-04T18:30:00Z",
-  "lesson_history": [
-    {
-      "lesson_id": "P01-M01-L01",
-      "completed_at": "2025-12-04T18:30:00Z",
-      "duration_minutes": 90,
-      "confidence": 4.5
-    }
-  ]
+  "average_confidence": 0,
+  "consistency_score": 0,
+  "last_updated": "2025-12-06T18:35:23Z",
+  "lesson_history": []
 }

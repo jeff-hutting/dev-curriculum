@@ -2,46 +2,64 @@
   "skills": {
     "git_basics": {
       "level": "novice",
-      "last_practiced": "2025-12-04",
-      "confidence": 4.5,
-      "modules_practiced": ["P01-M01"]
+      "last_practiced": null,
+      "confidence": 0,
+      "modules_practiced": []
     },
     "terminal_comfort": {
       "level": "novice",
-      "last_practiced": "2025-12-04",
-      "confidence": 3,
-      "modules_practiced": ["P01-M01"]
+      "last_practiced": null,
+      "confidence": 0,
+      "modules_practiced": []
     },
     "html_css": {
       "level": "novice",
-      "last_practiced": "2025-12-02",
-      "confidence": 2,
+      "last_practiced": null,
+      "confidence": 0,
       "modules_practiced": []
     },
     "javascript_basics": {
       "level": "novice",
-      "last_practiced": "2025-12-02",
-      "confidence": 2,
+      "last_practiced": null,
+      "confidence": 0,
       "modules_practiced": []
     },
     "python_basics": {
       "level": "novice",
-      "last_practiced": "2025-12-02",
-      "confidence": 2,
+      "last_practiced": null,
+      "confidence": 0,
+      "modules_practiced": []
+    },
+    "react_fundamentals": {
+      "level": "novice",
+      "last_practiced": null,
+      "confidence": 0,
+      "modules_practiced": []
+    },
+    "backend_api_development": {
+      "level": "novice",
+      "last_practiced": null,
+      "confidence": 0,
+      "modules_practiced": []
+    },
+    "database_design": {
+      "level": "novice",
+      "last_practiced": null,
+      "confidence": 0,
       "modules_practiced": []
     },
     "markdown_documentation": {
       "level": "novice",
-      "last_practiced": "2025-12-04",
-      "confidence": 4,
-      "modules_practiced": ["P01-M01"]
+      "last_practiced": null,
+      "confidence": 0,
+      "modules_practiced": []
     },
     "project_organization": {
       "level": "novice",
-      "last_practiced": "2025-12-04",
-      "confidence": 3,
-      "modules_practiced": ["P01-M01"]
+      "last_practiced": null,
+      "confidence": 0,
+      "modules_practiced": []
     }
   },
-  "last_updated": "2025-12-04T18:30:00Z"
+  "last_updated": "2025-12-06T18:35:23Z"
 }
