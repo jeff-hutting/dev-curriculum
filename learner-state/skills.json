@@ -1,13 +1,13 @@
 {
   "skills": {
     "git_basics": {
-      "level": "beginner",
+      "level": "novice",
       "last_practiced": "2025-12-04",
       "confidence": 4.5,
       "modules_practiced": ["P01-M01"]
     },
     "terminal_comfort": {
-      "level": "beginner",
+      "level": "novice",
       "last_practiced": "2025-12-04",
       "confidence": 3,
       "modules_practiced": ["P01-M01"]
@@ -31,13 +31,13 @@
       "modules_practiced": []
     },
     "markdown_documentation": {
-      "level": "beginner",
+      "level": "novice",
       "last_practiced": "2025-12-04",
       "confidence": 4,
       "modules_practiced": ["P01-M01"]
     },
     "project_organization": {
-      "level": "beginner",
+      "level": "novice",
       "last_practiced": "2025-12-04",
       "confidence": 3,
       "modules_practiced": ["P01-M01"]
