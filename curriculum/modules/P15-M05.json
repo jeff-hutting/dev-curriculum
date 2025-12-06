@@ -1,0 +1,107 @@
+{
+  "module_id": "P15-M05",
+  "module_name": "Claude Code for AI-assisted development",
+  "phase_id": "P15",
+  "estimated_hours": 12,
+  "catchbook_deliverable": "Automated species ID validation using Claude Code hooks",
+  "description": "Master advanced Claude Code workflows for AI-assisted development at scale. Build custom subagents, slash commands, and validation hooks specifically tailored to Catchbook's species identification pipeline. Integrate MCP (Model Context Protocol) for enhanced AI capabilities in your development workflow.",
+  "prerequisites": ["P15-M04", "P02-M01"],
+  "learning_objectives": [
+    "Design and implement agentic workflows using Claude Code subagents",
+    "Create custom slash commands for Catchbook-specific development patterns",
+    "Build validation hooks that automate species ID accuracy checks",
+    "Integrate MCP (Model Context Protocol) with Claude Code for enhanced context",
+    "Apply prompt engineering principles from P15-M04 to Claude Code workflows",
+    "Optimize Claude Code usage for cost efficiency and performance",
+    "Automate repetitive AI tasks in the species identification codebase"
+  ],
+  "skills_taught": [
+    "Claude Code subagent architecture and delegation",
+    "Custom slash command creation and configuration",
+    "Hook-based automation for validation workflows",
+    "MCP integration and context management",
+    "AI-assisted refactoring at scale",
+    "Cost monitoring and optimization for AI tools",
+    "Workflow automation for ML pipelines"
+  ],
+  "lessons": [
+    {
+      "lesson_id": "P15-M05-L01",
+      "title": "Agentic workflows: subagents and task delegation",
+      "lesson_type": "conceptual",
+      "estimated_minutes": 90
+    },
+    {
+      "lesson_id": "P15-M05-L02",
+      "title": "Custom slash commands for Catchbook patterns",
+      "lesson_type": "hands-on",
+      "estimated_minutes": 105
+    },
+    {
+      "lesson_id": "P15-M05-L03",
+      "title": "Validation hooks: automated species ID testing",
+      "lesson_type": "hands-on",
+      "estimated_minutes": 120
+    },
+    {
+      "lesson_id": "P15-M05-L04",
+      "title": "MCP integration with Claude Code",
+      "lesson_type": "hands-on",
+      "estimated_minutes": 90
+    },
+    {
+      "lesson_id": "P15-M05-L05",
+      "title": "Cost optimization strategies for AI workflows",
+      "lesson_type": "conceptual",
+      "estimated_minutes": 75
+    },
+    {
+      "lesson_id": "P15-M05-L06",
+      "title": "Project: species ID validation automation pipeline",
+      "lesson_type": "project",
+      "estimated_minutes": 150
+    }
+  ],
+  "catchbook_integration": {
+    "feature_area": "Species Identification AI Pipeline",
+    "repository_path": ".claude/, hooks/species-validation.sh, commands/validate-species.json",
+    "dependencies": [
+      "claude-code (CLI)",
+      "pytest",
+      "mcp-server (Model Context Protocol)",
+      "species-id-model (from P15-M02)"
+    ]
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Claude Code Advanced Features",
+      "url": "https://docs.claude.com/claude-code/advanced"
+    },
+    {
+      "type": "documentation",
+      "title": "Model Context Protocol (MCP)",
+      "url": "https://modelcontextprotocol.io/introduction"
+    },
+    {
+      "type": "guide",
+      "title": "Agentic Workflows with Claude",
+      "url": "https://www.anthropic.com/research/agentic-workflows"
+    },
+    {
+      "type": "tutorial",
+      "title": "Building Custom Slash Commands",
+      "url": "https://docs.claude.com/claude-code/custom-commands"
+    },
+    {
+      "type": "reference",
+      "title": "Claude API Cost Optimization",
+      "url": "https://docs.anthropic.com/claude/reference/costs-and-rate-limits"
+    }
+  ],
+  "metadata": {
+    "created_at": "2025-12-06",
+    "updated_at": "2025-12-06",
+    "generated_by": "Claude (Curriculum Designer)"
+  }
+}

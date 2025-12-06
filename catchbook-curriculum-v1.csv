@@ -3,10 +3,10 @@ Phase,Module,Focus,Catchbook Deliverable,EstHours
 1,1.2,Branching and PR workflow,First PR merged to Catchbook repo,6
 1,1.3,Commit conventions + PR templates,Professional repo hygiene for Catchbook,6
 1,1.4,GitHub Issues + Projects (Kanban),Catchbook feature board + milestones,6
-2,2.1,Professional tooling: ESLint Prettier pre-commit hooks,Linted Catchbook repo template,6
+2,2.1,Development tools: ESLint Prettier hooks Claude Code,Claude Code configured for Catchbook project with CLAUDE.md context,10
 2,2.2,Virtual environments (venv poetry) + package management,Python project template for Catchbook,6
 2,2.3,Environment variables + secrets management,.env-based config for Catchbook APIs,6
-2,2.4,.gitignore patterns + directory structure,Production-ready Catchbook file structure,6
+2,2.4,.gitignore patterns + directory structure,Production-ready Catchbook file structure,66
 3,3.1,HTML & CSS basics,Catchbook landing page (static),10
 3,3.2,Responsive design + mobile-first approach,Mobile-optimized landing page,8
 3,3.3,JavaScript basics: variables loops functions,Interactive elements on landing page,10
@@ -65,6 +65,7 @@ Phase,Module,Focus,Catchbook Deliverable,EstHours
 15,15.2,Image analysis with vision models,Photo→species detection,14
 15,15.3,Confidence scoring + fallback logic,Manual override for low-confidence IDs,10
 15,15.4,Prompt optimization for accuracy,Refined species ID prompts v2.0,8
+15,15.5,Claude Code for AI-assisted development,Automated species ID validation using Claude Code hooks,12
 16,16.1,RAG pipeline: embeddings + vector search,Catch similarity search,16
 16,16.2,LLM-powered recommendations,Fishing suggestion engine,14
 16,16.3,Function calling for structured outputs,AI-generated catch insights,12
@@ -92,6 +93,7 @@ Phase,Module,Focus,Catchbook Deliverable,EstHours
 21,21.3,Backend deployment (Railway Render Fly.io),Deployed API endpoint,10
 21,21.4,Frontend deployment (Vercel Netlify),Deployed React app,8
 21,21.5,Environment management (dev staging prod),Multi-environment setup,8
+21,21.6,Claude Code in CI/CD pipelines,CI pipeline with Claude Code automated code review,10
 22,22.1,Structured logging: JSON logs correlation IDs,Production-grade logging,10
 22,22.2,Error tracking with Sentry,Automated error alerts,8
 22,22.3,Metrics with Prometheus + Grafana,Monitoring dashboard,12

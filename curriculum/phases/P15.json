@@ -1,0 +1,61 @@
+{
+  "phase_id": "P15",
+  "phase_name": "Claude AI Integration",
+  "description": "Master Claude API integration for Catchbook's core AI features: species identification from photos and intelligent prompt engineering. Build production-ready AI pipelines with confidence scoring, fallback logic, and automated validation using Claude Code workflows.",
+  "catchbook_focus": "Implement Catchbook's species identification system using Claude's vision capabilities. Apply structured outputs, confidence scoring, and prompt optimization techniques. Automate AI validation workflows with Claude Code to ensure high accuracy and reliability in production.",
+  "entry_criteria": [
+    "Completed Phase 14 (Advanced SQL and data visualization)",
+    "FastAPI backend operational with image upload endpoints",
+    "Basic understanding of machine learning concepts",
+    "Catchbook photo upload workflow functional",
+    "Claude API key obtained and configured",
+    "Familiarity with Claude Code CLI from Phase 2"
+  ],
+  "exit_criteria": [
+    "Species identification endpoint deployed with >80% accuracy on test set",
+    "Confidence scoring system with manual override for low-confidence predictions",
+    "Prompt templates optimized for species ID accuracy (v2.0)",
+    "Fallback logic implemented for edge cases and rare species",
+    "Automated validation pipeline using Claude Code hooks",
+    "Custom Claude Code commands for species ID development patterns",
+    "Cost monitoring and optimization strategies documented",
+    "Comprehensive test suite for AI endpoints with >90% coverage"
+  ],
+  "estimated_hours": 56,
+  "modules": [
+    {
+      "module_id": "P15-M01",
+      "module_name": "Claude API basics + structured outputs",
+      "estimated_hours": 12,
+      "catchbook_deliverable": "Species ID prompt engineering"
+    },
+    {
+      "module_id": "P15-M02",
+      "module_name": "Image analysis with vision models",
+      "estimated_hours": 14,
+      "catchbook_deliverable": "Photo→species detection"
+    },
+    {
+      "module_id": "P15-M03",
+      "module_name": "Confidence scoring + fallback logic",
+      "estimated_hours": 10,
+      "catchbook_deliverable": "Manual override for low-confidence IDs"
+    },
+    {
+      "module_id": "P15-M04",
+      "module_name": "Prompt optimization for accuracy",
+      "estimated_hours": 8,
+      "catchbook_deliverable": "Refined species ID prompts v2.0"
+    },
+    {
+      "module_id": "P15-M05",
+      "module_name": "Claude Code for AI-assisted development",
+      "estimated_hours": 12,
+      "catchbook_deliverable": "Automated species ID validation using Claude Code hooks"
+    }
+  ],
+  "metadata": {
+    "created_at": "2025-12-06",
+    "updated_at": "2025-12-06"
+  }
+}
