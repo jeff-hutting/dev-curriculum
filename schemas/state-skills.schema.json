@@ -12,7 +12,7 @@
           "properties": {
             "level": {"type": "string", "enum": ["novice", "emerging", "competent", "proficient", "expert"]},
             "last_practiced": {"type": "string", "format": "date"},
-            "confidence": {"type": "integer", "minimum": 1, "maximum": 5},
+            "confidence": {"type": "number", "minimum": 1, "maximum": 5},
             "modules_practiced": {
               "type": "array",
               "items": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}$"}
