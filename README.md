@@ -162,31 +162,40 @@ dev-curriculum/
 ├── curriculum/
 │   ├── curriculum.json              # Top-level CatchBook curriculum design
 │   ├── phases/
-│   │   ├── P01.json                 # Phase files (28 total)
-│   │   └── ...
+│   │   ├── P01.json                 # Phase 1: Foundations
+│   │   ├── P02.json                 # Phase 2: Professional Tooling
+│   │   └── ...                      # P03-P28 (generated just-in-time)
 │   ├── modules/
-│   │   ├── P01-M01.json             # Module files (139 total)
-│   │   └── ...
+│   │   ├── P01-M01.json             # Module: Git fundamentals
+│   │   ├── P01-M02.json             # Module: Branching and PRs
+│   │   └── ...                      # Generated just-in-time as needed
 │   └── lessons/
-│       ├── P01-M01-L01.json         # Lesson files (generated just-in-time)
-│       └── ...
+│       ├── P01-M01-L01/             # Lesson directory (nested structure)
+│       │   ├── lesson.json          # Lesson schema/data
+│       │   ├── lesson.md            # Human-readable lesson document
+│       │   └── completion.md        # Checkpoint responses + evaluation
+│       ├── P01-M01-L02/
+│       │   ├── lesson.json
+│       │   ├── lesson.md
+│       │   └── completion.md
+│       └── ...                      # Generated just-in-time by Curriculum Designer
 ├── projects/
 │   ├── catchbook-product-spec.md    # Complete CatchBook specification
 │   └── supplementary/               # Additional projects if needed
+│       └── ...
 ├── learner-state/
 │   ├── current.json                 # Active position (phase/module/lesson)
 │   ├── completed/
-│   │   ├── .gitkeep
 │   │   ├── P01-M01-L01.json         # Per-lesson completion records
-│   │   └── ...
+│   │   ├── .gitkeep/
+|   |   └── ...
 │   ├── skills.json                  # Skill tracking
 │   └── metrics.json                 # Time, confidence, mastery data
 ├── reflections/
-│   └── YYYY-MM-DD.md                # Daily reflection entries
-├── lesson-summaries/
-│   └── P01-M01-L01-summary.md       # Per-lesson summaries
+│   ├── 2025-12-02.md                # Daily reflection entries
+│   └── ...
 ├── schemas/
-│   ├── curriculum.schema.json       # JSON Schema definitions
+│   ├── curriculum.schema.json
 │   ├── phase.schema.json
 │   ├── module.schema.json
 │   ├── lesson.schema.json
@@ -201,13 +210,15 @@ dev-curriculum/
 │   ├── advisor.md
 │   └── evaluator.md
 ├── templates/
-│   ├── lesson-summary.template.md
+│   ├── lesson-summary.template.md   # Deprecated (now completion.md)
 │   ├── reflection.template.md
 │   └── commit-message.template.txt
 ├── snapshots/
-│   └── YYYY-MM-DD-description.zip   # State backups for rollback
+│   ├── 2025-12-02-pre-module.zip    # State backups for rollback
+│   └── ...
 ├── tools/
-│   └── validate.py                  # Schema validation script
+│   ├── validate.py                  # Schema validation script
+│   └── migrate_lessons.py           # Migration script for nested structure
 ├── .github/
 │   └── workflows/
 │       └── validate.yml             # CI validation

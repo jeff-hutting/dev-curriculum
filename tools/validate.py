@@ -2,6 +2,7 @@
 """
 Schema validation script for CatchBook curriculum system.
 Validates all JSON files against their corresponding schemas.
+Updated to support nested lesson directory structure.
 """
 
 import json
@@ -49,9 +50,17 @@ def main():
         for module_file in module_dir.glob("P*-M*.json"):
             validations.append((module_file, repo_root / "schemas/module.schema.json"))
     
-    # Validate lesson files
+    # Validate lesson files (UPDATED: nested directory structure)
     lesson_dir = repo_root / "curriculum/lessons"
     if lesson_dir.exists():
+        # Check for nested directories (e.g., P01-M01-L01/)
+        for lesson_folder in lesson_dir.glob("P*-M*-L*"):
+            if lesson_folder.is_dir():
+                lesson_json = lesson_folder / "lesson.json"
+                if lesson_json.exists():
+                    validations.append((lesson_json, repo_root / "schemas/lesson.schema.json"))
+        
+        # Also check for legacy flat structure (P01-M01-L01.json)
         for lesson_file in lesson_dir.glob("P*-M*-L*.json"):
             validations.append((lesson_file, repo_root / "schemas/lesson.schema.json"))
     
@@ -83,3 +92,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
