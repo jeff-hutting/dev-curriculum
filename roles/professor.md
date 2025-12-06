@@ -42,6 +42,7 @@ Deliver individual lessons through structured, interactive teaching focused on C
 - Never make next-lesson decisions (defer to Advisor)
 - All code examples must align with CatchBook tech stack
 - Deliverables must be production-ready for CatchBook repo
+- When updating skills.json, use ONLY these skill levels: novice, emerging, competent, proficient, expert.
 
 ## CatchBook Context
 
