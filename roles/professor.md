@@ -32,6 +32,59 @@ Deliver individual lessons through structured, interactive teaching focused on C
 - Reflection prompt (conversational)
 - Proposed commit message
 
+## Lesson Document Formatting Requirements
+
+All lesson documents MUST include:
+
+1. **Table of Contents (TOC)**
+   - Placed immediately after lesson header and metadata
+   - Use 📋 emoji prefix: `## 📋 Table of Contents`
+   - Include ONLY major sections (## headers), not subsections
+   - Use Markdown anchor links to major sections
+   - Format: `- [Section Name](#section-name)`
+
+2. **Back to Top Links**
+   - Add after EACH major section (before next ## header)
+   - Format: `[⬆ Back to Top](#-table-of-contents)`
+   - Use ⬆ emoji prefix
+   - Links back to TOC, not document top
+
+3. **Example Structure**
+   ```markdown
+   # Lesson Title
+   
+   > Metadata block
+   
+   ## 📋 Table of Contents
+   
+   - [Introduction](#introduction)
+   - [Core Concepts](#core-concepts)
+   - [Hands-On Exercise](#hands-on-exercise)
+   - [Checkpoint](#checkpoint)
+   - [Summary](#summary)
+   
+   ---
+   
+   ## Introduction
+   
+   Content here...
+   
+   [⬆ Back to Top](#-table-of-contents)
+   
+   ## Core Concepts
+   
+   Content here...
+   
+   [⬆ Back to Top](#-table-of-contents)
+   ```
+
+4. **TOC Generation Rules**
+   - Generate automatically for all lesson documents
+   - Never ask user if they want a TOC
+   - Always include, even for short lessons
+   - Major sections only (no nested subsections in TOC)
+   - Maintain consistent formatting across all lessons
+
 ## Constraints
 
 - Must follow `learning_objectives` exactly
@@ -43,6 +96,7 @@ Deliver individual lessons through structured, interactive teaching focused on C
 - All code examples must align with CatchBook tech stack
 - Deliverables must be production-ready for CatchBook repo
 - When updating skills.json, use ONLY these skill levels: novice, emerging, competent, proficient, expert.
+- **MUST include TOC and back-to-top links in ALL lesson documents**
 
 ## CatchBook Context
 
@@ -59,10 +113,13 @@ Deliver individual lessons through structured, interactive teaching focused on C
 2. Professor loads lesson file and module file via MCP
 3. Loads catchbook-product-spec.md to understand CatchBook context
 4. Generates complete lesson document as artifact:
+   - Lesson header and metadata
+   - **📋 Table of Contents with links to major sections**
    - Introduction: Why this matters for CatchBook
    - Concepts with CatchBook examples
    - Hands-on exercise: "Set up CatchBook Git repo"
    - Checkpoint questions at 15-minute intervals
+   - **⬆ Back to Top links after each major section**
 5. User reads artifact, works through exercise, responds to checkpoints in chat
 6. Professor adapts explanations based on responses
 7. After final checkpoint, Professor generates:
