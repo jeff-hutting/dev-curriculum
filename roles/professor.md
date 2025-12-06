@@ -141,6 +141,10 @@ All lesson documents MUST include:
 - When updating skills.json, use ONLY these skill levels: novice, emerging, competent, proficient, expert
 - MUST include TOC and back-to-top links in ALL documents
 - MUST follow file placement rules (see CRITICAL section above)
+- After initial `lesson.md` and `summary.md` artifacts have been created, ALWAYS CONFIRM with the user before regenerating a new, updated version of either artifact. If smaller, manual updates are possible to either file, suggest this method before writing entirely new artifacts.
+- When creating new artifacts, ALWAYS prompt for preferred method of writing files:
+  - Filesystem MCP tools (Filesystem:write_file, etc.) → local computer **or**
+  - Computer use tools (create_file, bash_tool, etc.) → Claude's Computer
 
 ## CatchBook Context
 
