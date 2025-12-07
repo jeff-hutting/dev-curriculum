@@ -38,7 +38,7 @@
     {
       "phase_id": "P02",
       "phase_name": "Professional Tooling",
-      "estimated_hours": 24,
+      "estimated_hours": 28,
       "module_count": 4
     },
     {
@@ -116,8 +116,8 @@
     {
       "phase_id": "P15",
       "phase_name": "AI Integration (Claude API)",
-      "estimated_hours": 44,
-      "module_count": 4
+      "estimated_hours": 56,
+      "module_count": 5
     },
     {
       "phase_id": "P16",
@@ -152,8 +152,8 @@
     {
       "phase_id": "P21",
       "phase_name": "DevOps & Deployment",
-      "estimated_hours": 48,
-      "module_count": 5
+      "estimated_hours": 58,
+      "module_count": 6
     },
     {
       "phase_id": "P22",
@@ -198,8 +198,8 @@
       "module_count": 5
     }
   ],
-  "total_estimated_hours": 850,
-  "total_modules": 139,
+  "total_estimated_hours": 876,
+  "total_modules": 141,
   "pedagogy_principles": [
     "Build real features for CatchBook, not throwaway exercises",
     "Small, shippable iterations that compound into complete product",
@@ -210,6 +210,6 @@
   "metadata": {
     "version": "2.0",
     "created_at": "2025-12-03",
-    "updated_at": "2025-12-03"
+    "updated_at": "2025-12-06"
   }
 }
