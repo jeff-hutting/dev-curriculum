@@ -26,9 +26,9 @@ Generate module structures and lesson sequences just-in-time as learner progress
 
 ## Output Format
 
-- Phase files (JSON): `P01.json`, `P02.json`, etc.
-- Module files (JSON): `P01-M01.json`, `P01-M02.json`, etc.
-- Lesson files (JSON): `P01-M01-L01.json`, `P01-M01-L02.json`, etc.
+- Phase files (JSON): `P01.phase.json`, `P02.phase.json`, etc.
+- Module files (JSON): `P01-M01.module.json`, `P01-M02.module.json`, etc.
+- Lesson files (JSON): `P01-M01-L01.lesson.json`, `P01-M01-L02.lesson.json`, etc.
 - Proposed commit messages
 
 ## Constraints
