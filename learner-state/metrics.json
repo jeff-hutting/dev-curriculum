@@ -1,13 +1,13 @@
 {
-  "total_time_minutes": 75,
-  "lessons_completed": 1,
+  "total_time_minutes": 165,
+  "lessons_completed": 2,
   "modules_completed": 0,
   "phases_completed": 0,
-  "catchbook_features_shipped": 0,
+  "catchbook_features_shipped": 1,
   "reflections_written": 0,
-  "average_confidence": 75,
+  "average_confidence": 83,
   "consistency_score": 100,
-  "last_updated": "2025-12-07T23:45:00Z",
+  "last_updated": "2025-12-07T19:30:00Z",
   "lesson_history": [
     {
       "lesson_id": "P01-M01-L01",
@@ -16,33 +16,72 @@
       "confidence_level": 75,
       "checkpoints_completed": 5,
       "assessment_score": "exceptional"
+    },
+    {
+      "lesson_id": "P01-M01-L02",
+      "completed_at": "2025-12-07T19:30:00Z",
+      "duration_minutes": 90,
+      "confidence_level": 90,
+      "checkpoints_completed": 6,
+      "assessment_score": "exceptional"
     }
   ],
   "weekly_stats": {
     "current_week": "2025-W49",
-    "lessons_this_week": 1,
-    "time_this_week_minutes": 75,
+    "lessons_this_week": 2,
+    "time_this_week_minutes": 165,
     "target_weekly_hours": 10,
-    "progress_toward_target": 12.5
+    "progress_toward_target": 27.5
   },
   "skill_progression": {
     "git_basics": {
       "started": "2025-12-07",
+      "current_level": "competent",
+      "target_level": "proficient",
+      "progress_percentage": 60
+    },
+    "terminal_comfort": {
+      "started": "2025-12-07",
       "current_level": "emerging",
       "target_level": "competent",
-      "progress_percentage": 25
+      "progress_percentage": 40
+    },
+    "markdown_documentation": {
+      "started": "2025-12-07",
+      "current_level": "competent",
+      "target_level": "proficient",
+      "progress_percentage": 50
+    },
+    "project_organization": {
+      "started": "2025-12-07",
+      "current_level": "emerging",
+      "target_level": "competent",
+      "progress_percentage": 35
     },
     "technical_vocabulary": {
       "started": "2025-12-07",
       "current_level": "emerging",
       "target_level": "competent",
-      "progress_percentage": 30
+      "progress_percentage": 45
     },
     "systems_thinking": {
       "started": "2025-12-07",
       "current_level": "emerging",
       "target_level": "competent",
-      "progress_percentage": 20
+      "progress_percentage": 30
+    },
+    "commit_message_writing": {
+      "started": "2025-12-07",
+      "current_level": "competent",
+      "target_level": "proficient",
+      "progress_percentage": 60
     }
-  }
+  },
+  "catchbook_milestones": [
+    {
+      "milestone": "Repository initialization",
+      "completed_at": "2025-12-07T19:30:00Z",
+      "description": "CatchBook Git repository created with professional README.md, .gitignore, and 4 commits"
+    }
+  ]
 }

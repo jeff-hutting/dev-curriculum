@@ -1,17 +1,32 @@
 {
   "skills": {
     "git_basics": {
-      "level": "emerging",
-      "last_practiced": "2025-12-07T23:45:00Z",
-      "confidence": 75,
+      "level": "competent",
+      "last_practiced": "2025-12-07T19:30:00Z",
+      "confidence": 90,
       "modules_practiced": ["P01-M01"],
-      "notes": "Strong conceptual understanding of version control, Git architecture, and branching model. Ready for hands-on practice."
+      "notes": "Exceptional hands-on performance. Completed repository initialization, staging, committing, and history inspection with professional-grade commit messages. Understands three-state model deeply. Ready for advanced Git workflows (branching, merging, GitHub integration)."
     },
     "terminal_comfort": {
-      "level": "novice",
-      "last_practiced": null,
-      "confidence": 0,
-      "modules_practiced": []
+      "level": "emerging",
+      "last_practiced": "2025-12-07T19:30:00Z",
+      "confidence": 75,
+      "modules_practiced": ["P01-M01"],
+      "notes": "Demonstrated fluency with ls, cd, mkdir, echo, touch, git commands. Problem-solving flexibility shown (echo vs touch). Ready for more complex terminal workflows (pipes, redirects, scripting)."
+    },
+    "markdown_documentation": {
+      "level": "competent",
+      "last_practiced": "2025-12-07T19:30:00Z",
+      "confidence": 85,
+      "modules_practiced": ["P01-M01"],
+      "notes": "Created comprehensive README.md with proper markdown formatting (headers, lists, code blocks). Documented project vision, features, tech stack professionally. Portfolio-ready documentation skills."
+    },
+    "project_organization": {
+      "level": "emerging",
+      "last_practiced": "2025-12-07T19:30:00Z",
+      "confidence": 80,
+      "modules_practiced": ["P01-M01"],
+      "notes": "Proactively created .gitignore for Python/Node artifacts. Understands importance of repository cleanliness. Ready for more complex project structures (src/ directories, config files, documentation folders)."
     },
     "html_css": {
       "level": "novice",
@@ -49,32 +64,27 @@
       "confidence": 0,
       "modules_practiced": []
     },
-    "markdown_documentation": {
-      "level": "novice",
-      "last_practiced": null,
-      "confidence": 0,
-      "modules_practiced": []
-    },
-    "project_organization": {
-      "level": "novice",
-      "last_practiced": null,
-      "confidence": 0,
-      "modules_practiced": []
-    },
     "technical_vocabulary": {
       "level": "emerging",
-      "last_practiced": "2025-12-07T23:45:00Z",
-      "confidence": 80,
+      "last_practiced": "2025-12-07T19:30:00Z",
+      "confidence": 85,
       "modules_practiced": ["P01-M01"],
-      "notes": "Strong command of VCS terminology: commits, branches, distributed architecture, snapshots, etc."
+      "notes": "Expanded vocabulary: working directory, staging area, commit ID (SHA-1), HEAD, tracked/untracked files, Conventional Commits. Strong command of Git-specific terminology."
     },
     "systems_thinking": {
       "level": "emerging",
-      "last_practiced": "2025-12-07T23:45:00Z",
-      "confidence": 70,
+      "last_practiced": "2025-12-07T19:30:00Z",
+      "confidence": 75,
       "modules_practiced": ["P01-M01"],
-      "notes": "Demonstrated ability to understand architectural tradeoffs (centralized vs distributed), cumulative effects, and ecosystem thinking."
+      "notes": "Demonstrated understanding of Git's three-state model architecture. Recognized importance of staging area for logical history. Identified continuity patterns (notes.txt observation). Shows architectural awareness."
+    },
+    "commit_message_writing": {
+      "level": "competent",
+      "last_practiced": "2025-12-07T19:30:00Z",
+      "confidence": 90,
+      "modules_practiced": ["P01-M01"],
+      "notes": "Professional-grade commit messages following Conventional Commits format (feat, docs, chore types). Uses imperative mood, keeps messages concise (<50 chars), provides clear scope. Portfolio-ready commit history."
     }
   },
-  "last_updated": "2025-12-07T23:45:00Z"
+  "last_updated": "2025-12-07T19:30:00Z"
 }
