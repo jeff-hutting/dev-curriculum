@@ -1,10 +1,11 @@
 {
   "skills": {
     "git_basics": {
-      "level": "novice",
-      "last_practiced": null,
-      "confidence": 0,
-      "modules_practiced": []
+      "level": "emerging",
+      "last_practiced": "2025-12-07T23:45:00Z",
+      "confidence": 75,
+      "modules_practiced": ["P01-M01"],
+      "notes": "Strong conceptual understanding of version control, Git architecture, and branching model. Ready for hands-on practice."
     },
     "terminal_comfort": {
       "level": "novice",
@@ -59,7 +60,21 @@
       "last_practiced": null,
       "confidence": 0,
       "modules_practiced": []
+    },
+    "technical_vocabulary": {
+      "level": "emerging",
+      "last_practiced": "2025-12-07T23:45:00Z",
+      "confidence": 80,
+      "modules_practiced": ["P01-M01"],
+      "notes": "Strong command of VCS terminology: commits, branches, distributed architecture, snapshots, etc."
+    },
+    "systems_thinking": {
+      "level": "emerging",
+      "last_practiced": "2025-12-07T23:45:00Z",
+      "confidence": 70,
+      "modules_practiced": ["P01-M01"],
+      "notes": "Demonstrated ability to understand architectural tradeoffs (centralized vs distributed), cumulative effects, and ecosystem thinking."
     }
   },
-  "last_updated": "2025-12-06T18:35:23Z"
+  "last_updated": "2025-12-07T23:45:00Z"
 }

@@ -1,12 +1,48 @@
 {
-  "total_time_minutes": 0,
-  "lessons_completed": 0,
+  "total_time_minutes": 75,
+  "lessons_completed": 1,
   "modules_completed": 0,
   "phases_completed": 0,
   "catchbook_features_shipped": 0,
   "reflections_written": 0,
-  "average_confidence": 0,
-  "consistency_score": 0,
-  "last_updated": "2025-12-06T18:35:23Z",
-  "lesson_history": []
+  "average_confidence": 75,
+  "consistency_score": 100,
+  "last_updated": "2025-12-07T23:45:00Z",
+  "lesson_history": [
+    {
+      "lesson_id": "P01-M01-L01",
+      "completed_at": "2025-12-07T23:45:00Z",
+      "duration_minutes": 75,
+      "confidence_level": 75,
+      "checkpoints_completed": 5,
+      "assessment_score": "exceptional"
+    }
+  ],
+  "weekly_stats": {
+    "current_week": "2025-W49",
+    "lessons_this_week": 1,
+    "time_this_week_minutes": 75,
+    "target_weekly_hours": 10,
+    "progress_toward_target": 12.5
+  },
+  "skill_progression": {
+    "git_basics": {
+      "started": "2025-12-07",
+      "current_level": "emerging",
+      "target_level": "competent",
+      "progress_percentage": 25
+    },
+    "technical_vocabulary": {
+      "started": "2025-12-07",
+      "current_level": "emerging",
+      "target_level": "competent",
+      "progress_percentage": 30
+    },
+    "systems_thinking": {
+      "started": "2025-12-07",
+      "current_level": "emerging",
+      "target_level": "competent",
+      "progress_percentage": 20
+    }
+  }
 }
