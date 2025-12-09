@@ -223,7 +223,7 @@ Professor should load these templates via `view` tool when generating artifacts 
 
 - Place checkpoint questions **inline** within the lesson content
 - Insert checkpoints every **20 minutes** of estimated reading/learning time
-- Label each checkpoint: "### Checkpoint 1 (~20 minutes)", "### Checkpoint 2 (~40 minutes)", etc.
+- Label each checkpoint: "### Checkpoint 1 (20 minutes)", "### Checkpoint 2 (40 minutes)", etc.
 - For an 80-minute lesson, expect ~4 checkpoints (20, 40, 60, 80 minutes)
 
 ### Question Format
@@ -239,7 +239,7 @@ Professor should load these templates via `view` tool when generating artifacts 
 
 Each checkpoint should:
 
-1. Have a clear heading with time marker: `### Checkpoint 2 (~40 minutes)`
+1. Have a clear heading with time marker: `### Checkpoint 2 (40 minutes)`
 2. List 1-3 questions based on content covered so far
 3. Questions should test understanding, not memorization
 4. No answer key, no hints, no examples

@@ -271,7 +271,7 @@ Every worksheet follows this exact structure:
 
 ---
 
-## Checkpoint 1 (20 minutes)
+## Checkpoint 1 (~20 minutes)
 
 **Questions:**
 
