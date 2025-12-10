@@ -1,18 +1,18 @@
 {
   "skills": {
     "git_basics": {
-      "level": "competent",
-      "last_practiced": "2025-12-07T19:30:00Z",
-      "confidence": 90,
+      "level": "proficient",
+      "last_practiced": "2025-12-09T00:00:00Z",
+      "confidence": 95,
       "modules_practiced": ["P01-M01"],
-      "notes": "Exceptional hands-on performance. Completed repository initialization, staging, committing, and history inspection with professional-grade commit messages. Understands three-state model deeply. Ready for advanced Git workflows (branching, merging, GitHub integration)."
+      "notes": "Advanced to proficient after mastering remote workflows. Complete understanding of local vs remote operations (git remote, git push, git pull, git clone, git fetch). Demonstrates professional-level remote repository management with upstream tracking and multi-device synchronization. Ready for advanced Git workflows (branching strategies, merge conflicts, rebasing)."
     },
     "terminal_comfort": {
-      "level": "emerging",
-      "last_practiced": "2025-12-07T19:30:00Z",
-      "confidence": 75,
+      "level": "competent",
+      "last_practiced": "2025-12-09T00:00:00Z",
+      "confidence": 85,
       "modules_practiced": ["P01-M01"],
-      "notes": "Demonstrated fluency with ls, cd, mkdir, echo, touch, git commands. Problem-solving flexibility shown (echo vs touch). Ready for more complex terminal workflows (pipes, redirects, scripting)."
+      "notes": "Advanced to competent. Fluent with core commands (ls, cd, mkdir, echo, touch) and Git operations. Demonstrates understanding of file paths, directory navigation, and command-line workflows. Ready for more complex terminal operations (pipes, redirects, process management)."
     },
     "markdown_documentation": {
       "level": "competent",
@@ -65,18 +65,18 @@
       "modules_practiced": []
     },
     "technical_vocabulary": {
-      "level": "emerging",
-      "last_practiced": "2025-12-07T19:30:00Z",
-      "confidence": 85,
+      "level": "competent",
+      "last_practiced": "2025-12-09T00:00:00Z",
+      "confidence": 90,
       "modules_practiced": ["P01-M01"],
-      "notes": "Expanded vocabulary: working directory, staging area, commit ID (SHA-1), HEAD, tracked/untracked files, Conventional Commits. Strong command of Git-specific terminology."
+      "notes": "Advanced to competent. Expanded vocabulary: remote repository, origin, upstream, SSH key, Personal Access Token, ssh-agent, git fetch, git pull, git clone, git push. Strong command of Git-specific terminology and authentication concepts. Demonstrates ability to explain technical concepts clearly."
     },
     "systems_thinking": {
       "level": "emerging",
-      "last_practiced": "2025-12-07T19:30:00Z",
-      "confidence": 75,
+      "last_practiced": "2025-12-09T00:00:00Z",
+      "confidence": 80,
       "modules_practiced": ["P01-M01"],
-      "notes": "Demonstrated understanding of Git's three-state model architecture. Recognized importance of staging area for logical history. Identified continuity patterns (notes.txt observation). Shows architectural awareness."
+      "notes": "Strong understanding of local vs remote architecture. Recognized multi-device sync patterns and workflow discipline (pull-before-work). Identified vulnerability of unpushed commits (Lake Berryessa scenario). Shows architectural awareness and risk assessment thinking."
     },
     "commit_message_writing": {
       "level": "competent",
@@ -84,7 +84,35 @@
       "confidence": 90,
       "modules_practiced": ["P01-M01"],
       "notes": "Professional-grade commit messages following Conventional Commits format (feat, docs, chore types). Uses imperative mood, keeps messages concise (<50 chars), provides clear scope. Portfolio-ready commit history."
+    },
+    "github_workflow": {
+      "level": "competent",
+      "last_practiced": "2025-12-09T00:00:00Z",
+      "confidence": 90,
+      "modules_practiced": ["P01-M01"],
+      "notes": "NEW SKILL. Demonstrates professional GitHub workflow understanding: remote connection (git remote add), pushing with upstream tracking (git push -u), cloning repositories, multi-device synchronization (pull → work → commit → push). Understands disaster recovery, portfolio building, and collaboration benefits. Ready for GitHub collaboration features (pull requests, issues, code review)."
+    },
+    "ssh_authentication": {
+      "level": "competent",
+      "last_practiced": "2025-12-09T00:00:00Z",
+      "confidence": 95,
+      "modules_practiced": ["P01-M01"],
+      "notes": "NEW SKILL. Already had SSH configured from previous work (The Odin Project, dev-curriculum). Excellent understanding of ssh-agent purpose, SSH vs HTTPS tradeoffs, and Personal Access Token distinctions. Professional-level authentication setup. Ready for advanced scenarios (multiple SSH keys, SSH config management)."
+    },
+    "remote_repository_management": {
+      "level": "competent",
+      "last_practiced": "2025-12-09T00:00:00Z",
+      "confidence": 90,
+      "modules_practiced": ["P01-M01"],
+      "notes": "NEW SKILL. Complete understanding of remote operations: git remote add, git push -u (upstream tracking), git fetch vs git pull, git clone. Demonstrates multi-device workflow discipline and divergent history prevention. Ready for advanced remote scenarios (multiple remotes, force push, remote branch management)."
+    },
+    "multi_device_sync": {
+      "level": "competent",
+      "last_practiced": "2025-12-09T00:00:00Z",
+      "confidence": 90,
+      "modules_practiced": ["P01-M01"],
+      "notes": "NEW SKILL. Excellent visualization of two-computer workflow (pull → work → commit → push → repeat). Understands importance of pulling before starting work to avoid conflicts. Ready for real-world multi-device CatchBook development scenarios."
     }
   },
-  "last_updated": "2025-12-07T19:30:00Z"
+  "last_updated": "2025-12-09T00:00:00Z"
 }
