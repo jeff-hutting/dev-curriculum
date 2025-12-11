@@ -57,7 +57,7 @@ Every lesson document follows this exact structure:
 
 ```markdown
 ---
-
+> ## Properties
 > **Lesson:** {lesson_id} - {title}  
 > **Module:** {module_id}  
 > **Phase:** {phase_id}  
@@ -168,7 +168,7 @@ Every lesson document follows this exact structure:
 
 [Closing sentence on practical value]
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 ```
@@ -199,7 +199,7 @@ By the end of this lesson, you will be able to:
 4. [Objective 4 from lesson.json]
 5. [Objective 5 from lesson.json]
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 ```
@@ -238,7 +238,7 @@ Before moving on, answer these questions and paste your responses in chat:
 2. [Question 2]
 3. [Question 3]
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 ```
@@ -291,7 +291,7 @@ Before moving on, answer these questions and paste your responses in chat:
 
 [Closing paragraph — 2-3 sentences connecting this lesson to broader CatchBook journey]
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 ```
@@ -332,7 +332,7 @@ Before moving on, answer these questions and paste your responses in chat:
 ### Advanced Reading (for later)
 - **[Title](URL)**: Brief description (1 sentence)
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 ```
 
 **Content Rules:**
@@ -393,7 +393,7 @@ Before moving on, answer these questions and paste your responses in chat:
 
 [content here]
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -401,7 +401,7 @@ Before moving on, answer these questions and paste your responses in chat:
 
 [questions here]
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -409,7 +409,7 @@ Before moving on, answer these questions and paste your responses in chat:
 
 [content here]
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -417,7 +417,7 @@ Before moving on, answer these questions and paste your responses in chat:
 
 [summary here]
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -425,7 +425,7 @@ Before moving on, answer these questions and paste your responses in chat:
 
 [resources here]
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 ```
 
 **Consistency Rule:** Use the same pattern throughout the entire document — no exceptions.
@@ -433,7 +433,7 @@ Before moving on, answer these questions and paste your responses in chat:
 ### Back to Top Links
 
 **Purpose:** Easy navigation back to document top  
-**Format:** `[⬆ Back to Top](#)`  
+**Format:** `[⬆ Back to Top](#properties)`  
 **Emoji:** ⬆ (upward arrow)
 
 **Placement Rules:**
@@ -455,7 +455,7 @@ Before moving on, answer these questions and paste your responses in chat:
 
 [content]
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 ```
@@ -554,6 +554,7 @@ Expand to:
 
 ---
 
+> ## Properties
 > **Lesson:** P01-M01-L01 - Version Control Concepts and Why Git Matters  
 > **Module:** P01-M01  
 > **Phase:** P01  
@@ -578,7 +579,7 @@ Git is the industry-standard version control system used by millions of develope
 
 This lesson establishes the foundation for professional software development practices that will serve you throughout the entire CatchBook project and beyond.
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -592,7 +593,7 @@ By the end of this lesson, you will be able to:
 4. Identify the core concepts: repository, commit, branch, and snapshot
 5. Articulate how Git will support your CatchBook development workflow
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -600,7 +601,7 @@ By the end of this lesson, you will be able to:
 
 [20-40 lines of content explaining version control fundamentals with CatchBook examples]
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -612,7 +613,7 @@ Before moving on, answer these questions and paste your responses in chat:
 2. What problems might you encounter if you tried to build CatchBook without version control?
 3. How does version control enable experimentation during development?
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -620,7 +621,7 @@ Before moving on, answer these questions and paste your responses in chat:
 
 [40-60 lines covering CVS, SVN, Git evolution with timeline and examples]
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -632,7 +633,7 @@ Before moving on, answer these questions and paste your responses in chat:
 2. Why is Git's distributed architecture particularly valuable for CatchBook development?
 3. If you had to explain Git to someone who has never used version control, what would you say?
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -640,7 +641,7 @@ Before moving on, answer these questions and paste your responses in chat:
 
 [20-40 lines explaining distributed model with CatchBook workflow examples]
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -652,7 +653,7 @@ Before moving on, answer these questions and paste your responses in chat:
 2. What does it mean that every developer has a "full copy" of the repository?
 3. How will branching help you develop CatchBook features safely?
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -675,7 +676,7 @@ In the next lesson (P01-M01-L02), you'll learn the basic Git commands to initial
 
 This foundation in version control concepts will make the practical Git commands feel intuitive and purposeful, as you'll understand not just *how* to use Git, but *why* each operation matters for professional software development.
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -697,7 +698,7 @@ This foundation in version control concepts will make the practical Git commands
 - **[Conventional Commits](https://www.conventionalcommits.org/)**: Professional commit message standards (you'll learn these in P01-M03)
 - **[Git Branching Model](https://nvie.com/posts/a-successful-git-branching-model/)**: Industry-standard branching strategies (for later)
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 ```
 
 ---

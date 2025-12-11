@@ -68,6 +68,7 @@ Every feedback document follows this exact structure:
 ```markdown
 ---
 
+> ## Properties
 > **Lesson:** {lesson_id} - {title}  
 > **Completed:** {YYYY-MM-DD}  
 > **Tags:** {comma-separated tags}
@@ -133,7 +134,7 @@ Every feedback document follows this exact structure:
 - Clarifications provided
 - Encouragement and next steps}
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 ```
@@ -186,7 +187,7 @@ Every feedback document follows this exact structure:
 
 {Professor's answer from chat}
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -200,7 +201,7 @@ Every feedback document follows this exact structure:
 
 {Professor's answer from chat}
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 ```
@@ -211,7 +212,7 @@ Every feedback document follows this exact structure:
 
 No additional conversational exchanges occurred during this lesson. All questions were addressed through the checkpoint feedback above.
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 ```
@@ -249,7 +250,7 @@ No additional conversational exchanges occurred during this lesson. All question
 
 You can respond to this reflection conversationally in chat, or save your thoughts to `reflections/YYYY-MM-DD.md` using the reflection template.
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 ```
 
 **Content Guidelines:**
@@ -284,7 +285,7 @@ Take a few minutes to reflect on this lesson. Understanding version control conc
 
 You can respond to this reflection conversationally in chat, or save your thoughts to `reflections/YYYY-MM-DD.md` using the reflection template.
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 ```
 
 ---
@@ -310,6 +311,7 @@ You can respond to this reflection conversationally in chat, or save your though
 
 ---
 
+> ## Properties
 > **Lesson:** P01-M01-L01 - Version Control Concepts
 > **Completed:** 2025-12-08
 
@@ -319,7 +321,7 @@ You can respond to this reflection conversationally in chat, or save your though
 
 [content]
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -327,7 +329,7 @@ You can respond to this reflection conversationally in chat, or save your though
 
 [content]
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -337,7 +339,7 @@ You can respond to this reflection conversationally in chat, or save your though
 
 [content]
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -345,7 +347,7 @@ You can respond to this reflection conversationally in chat, or save your though
 
 [content]
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -353,12 +355,12 @@ You can respond to this reflection conversationally in chat, or save your though
 
 [content]
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 ```
 
 ### Back to Top Links
 
-**Format:** `[⬆ Back to Top](#)`
+**Format:** `[⬆ Back to Top](#properties)`
 
 **Placement:**
 - After EVERY checkpoint section (before horizontal rule)
@@ -399,6 +401,7 @@ You can respond to this reflection conversationally in chat, or save your though
 
 ---
 
+> ## Properties
 > **Lesson:** P01-M01-L01 - Version Control Concepts and Why Git Matters  
 > **Completed:** 2025-12-08  
 > **Tags:** feedback, checkpoint-responses, P01-M01-L01, P01, P01-M01
@@ -427,7 +430,7 @@ One additional benefit to keep in mind: version control also enables you to work
 
 You're ready to move forward to the next section!
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -467,7 +470,7 @@ One small note: when you said "commits go back to that central server" in SVN, t
 
 Excellent work. Continue to the next section!
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -508,7 +511,7 @@ One thing to look forward to: you'll find that creating and switching branches i
 
 Excellent work on this lesson! You're ready to move into hands-on practice.
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -546,7 +549,7 @@ For CatchBook, you'll:
 
 There are also alternatives to GitHub (GitLab, Bitbucket, Gitea), but GitHub is by far the most popular for open source and personal projects.
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -591,7 +594,7 @@ The beauty of Git: your repository is completely self-contained in that `.git/` 
 
 We'll cover this step-by-step in the hands-on lesson. For now, just decide where you want your code projects to live (I recommend `~/dev/` or `~/projects/`).
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 
 ---
 
@@ -607,7 +610,7 @@ Take a few minutes to reflect on this lesson. Understanding version control conc
 
 You can respond to this reflection conversationally in chat, or save your thoughts to `reflections/YYYY-MM-DD.md` using the reflection template.
 
-[⬆ Back to Top](#)
+[⬆ Back to Top](#properties)
 ```
 
 ---
