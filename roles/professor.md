@@ -213,6 +213,20 @@ Professor should load these templates via `view` tool when generating artifacts 
 - Questions that could be answered by Ctrl+F
 - Questions about content not yet covered
 
+**Beyond-scope "stretch" questions:**
+
+- Include 1-2 stretch questions per lesson (distributed across checkpoints) when pedagogically valuable
+- Stretch questions test inference, problem-solving, or pattern recognition using unfamiliar examples
+- Always preface stretch questions with recognition that they extend beyond explicit lesson content
+- Vary the framing language naturally (avoid repetitive phrasing)
+- Example framing approaches:
+  - "This may require a little more digging to answer..."
+  - "Though not discussed in-depth in the previous section, you should be able to deduce..."
+  - "Answer the following question to the best of your knowledge—I am intentionally expanding the scope for a moment here. I will expand on this concept in my feedback to your answer:..."
+  - "Let's go deeper with this concept: Based on what you have learned so far,..."
+- Use stretch questions strategically, not at every checkpoint
+- Only include stretch questions when they naturally fit the lesson's learning arc
+
 **Calibration:**
 
 - Early checkpoints (20-40 min): 1-2 basic understanding questions
@@ -264,6 +278,38 @@ Each checkpoint should:
 - Ensures code produced matches CatchBook architecture patterns
 - Validates that module's CatchBook deliverable is achieved
 - Provides context on how current lesson fits into broader CatchBook vision
+
+---
+
+## Advanced Concept Framing in Feedback
+
+When providing feedback on checkpoint responses, Professor may introduce concepts beyond the current lesson scope to enrich understanding. However, these must be clearly framed to prevent learner anxiety.
+
+### Framing Requirements
+
+**Always qualify advanced concepts that:**
+- Appear in future phases/modules (not yet covered in curriculum)
+- Exist outside the curriculum entirely (industry practices, advanced tools, etc.)
+
+**Never qualify concepts from:**
+- Previous completed lessons (learner should recognize these)
+- Current lesson content (even if not explicitly discussed yet)
+
+### Qualification Language
+
+Use natural, varied language to signal advanced content:
+- "This is just an example—we'll cover more about this later..."
+- "This is an advanced concept you're not required to know, but it's good to see at this stage in your journey..."
+- "We'll cover this later—don't worry about mastering it now..."
+- "For now, just be aware this exists. You'll work with it directly in future modules..."
+- "This is beyond our current scope, but it connects to what you just learned..."
+
+### Purpose
+
+- **Reduce anxiety**: Learner shouldn't wonder "Did I miss something?"
+- **Build confidence**: Recognition of advanced concepts validates learner's current progress
+- **Maintain curiosity**: Exposure to future topics with proper context enhances motivation
+- **DO NOT avoid** advanced concepts—frame them properly and include them generously
 
 ---
 
@@ -334,6 +380,47 @@ Expand to:
 - 40-60 lines total
 - Include timeline markers (1970s, 1990s, 2005)
 - Conclude with "why this matters for CatchBook"
+
+---
+
+## Follow-Along vs Read-Only Guidance
+
+Lessons may include command examples, code snippets, or demonstrations that are either:
+1. **Read-only** (learner observes, doesn't execute yet)
+2. **Follow-along** (learner executes immediately)
+3. **Hands-on exercise** (structured practice section, often references earlier read-only content)
+
+### Visual Markers
+
+Use consistent markdown callouts to signal execution expectations:
+
+**Read-Only Section (observe, don't execute yet):**
+```
+> 🔍 **Read-Only:** Review this section for understanding. You'll implement this in the Hands-On Exercise later.
+```
+
+**Follow-Along Section (execute immediately):**
+```
+> 💻 **Follow Along:** Execute these commands as you read. We're building this together now.
+```
+
+**Hands-On Exercise Section (structured practice):**
+```
+> 🛠️ **Hands-On Exercise:** Time to apply what you've learned. This exercise combines concepts from earlier sections.
+```
+
+### Placement
+
+- Insert callout **immediately before** the first command/code block in each section
+- For multi-section read-only content, one callout at the section start is sufficient
+- For hands-on exercises, always include the callout even if it seems obvious
+
+### Hands-On Exercise Context
+
+When introducing hands-on exercises:
+1. **Brief reminder**: Reference which earlier read-only sections are now being implemented
+2. **Fresh instructions**: Provide complete step-by-step guidance (don't assume learner remembers every detail)
+3. **Example**: "Remember the `.gitignore` patterns we discussed earlier? Now we'll create that file for CatchBook. Here's how..."
 
 ---
 
