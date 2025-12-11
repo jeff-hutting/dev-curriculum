@@ -1,0 +1,88 @@
+{
+  "lesson_id": "P01-M02-L01",
+  "title": "Git Branching Fundamentals",
+  "module_id": "P01-M02",
+  "phase_id": "P01",
+  "estimated_minutes": 75,
+  "lesson_type": "hands-on",
+  "prerequisites": ["P01-M01-L01", "P01-M01-L02", "P01-M01-L03", "P01-M01-L04"],
+  "learning_objectives": [
+    "Explain what Git branches are and why they enable parallel development",
+    "Create new branches using `git branch` and `git checkout -b`",
+    "Switch between branches and understand HEAD pointer behavior",
+    "List branches with `git branch` and identify the active branch",
+    "Understand branch naming conventions (feature/, bugfix/, hotfix/)",
+    "Visualize branch structure using `git log --graph --all`",
+    "Apply feature branch workflow to CatchBook development"
+  ],
+  "outline": [
+    "Introduction: Why branches matter for CatchBook development",
+    "What are branches? Understanding pointers and commit history divergence",
+    "Creating branches: `git branch <name>` vs `git checkout -b <name>`",
+    "Switching branches: `git checkout` and `git switch` (modern alternative)",
+    "The HEAD pointer: tracking your current location",
+    "Branch naming conventions: feature/add-species-model, bugfix/fix-login",
+    "Listing branches: `git branch`, `git branch -a`, `git branch -v`",
+    "Visualizing branches: `git log --graph --all --oneline`",
+    "Hands-on: Create feature branch for CatchBook documentation update",
+    "Understanding detached HEAD state (common pitfall)",
+    "Deleting branches: `git branch -d` vs `git branch -D`"
+  ],
+  "key_terms": [
+    "branch",
+    "HEAD pointer",
+    "feature branch",
+    "main branch",
+    "checkout",
+    "switch",
+    "detached HEAD",
+    "branch pointer",
+    "commit graph",
+    "parallel development"
+  ],
+  "catchbook_context": {
+    "feature": "Branching strategy for CatchBook features",
+    "deliverable": "Create feature/update-readme branch with enhanced CatchBook documentation",
+    "code_location": "catchbook/README.md"
+  },
+  "assessment": {
+    "type": "hands-on-exercise",
+    "criteria": [
+      "Successfully create feature/update-readme branch",
+      "Make commits on feature branch without affecting main",
+      "Switch between branches and verify different working tree states",
+      "Use git log --graph to visualize branch structure",
+      "Explain why branches are essential for multi-developer CatchBook work"
+    ]
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Git Branching Basics",
+      "url": "https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging"
+    },
+    {
+      "type": "interactive",
+      "title": "Learn Git Branching (Interactive Tutorial)",
+      "url": "https://learngitbranching.js.org/"
+    },
+    {
+      "type": "article",
+      "title": "Git Branch Naming Conventions",
+      "url": "https://dev.to/varbsan/a-simplified-convention-for-naming-branches-and-commits-in-git-il4"
+    }
+  ],
+  "professor_constraints": [
+    "Use CatchBook repository for all examples",
+    "Emphasize that branches enable fearless experimentation",
+    "Show git log --graph visualization at least 3 times during lesson",
+    "Address detached HEAD confusion proactively",
+    "Demonstrate branch switching changes working directory files",
+    "Connect branching to real CatchBook development scenarios (species model, photo upload, etc.)",
+    "Avoid overwhelming with rebase/cherry-pick (defer to P01-M02-L04)"
+  ],
+  "metadata": {
+    "created_at": "2025-12-11",
+    "generated_by": "Curriculum Designer (Claude)"
+  }
+}

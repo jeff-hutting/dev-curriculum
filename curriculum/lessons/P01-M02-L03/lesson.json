@@ -1,0 +1,97 @@
+{
+  "lesson_id": "P01-M02-L03",
+  "title": "Code Review & Collaboration",
+  "module_id": "P01-M02",
+  "phase_id": "P01",
+  "estimated_minutes": 90,
+  "lesson_type": "hands-on",
+  "prerequisites": ["P01-M02-L02"],
+  "learning_objectives": [
+    "Understand the purpose and benefits of code review for software quality",
+    "Leave constructive comments on GitHub PRs (line comments, review comments)",
+    "Use GitHub review tools: approve, request changes, comment",
+    "Apply code review best practices (kind, specific, actionable feedback)",
+    "Respond to review feedback professionally and implement requested changes",
+    "Push additional commits to update an open PR",
+    "Understand when a PR is ready to merge vs needs more work"
+  ],
+  "outline": [
+    "Introduction: Code review as quality gate and learning opportunity",
+    "Why code review matters: catching bugs, knowledge sharing, consistency",
+    "GitHub PR review interface walkthrough",
+    "Types of review feedback: approve, request changes, comment",
+    "Leaving line comments: specific, actionable suggestions",
+    "Writing review comments: constructive tone, examples, alternatives",
+    "Code review best practices: compliment good work, suggest don't demand",
+    "Common review focus areas: logic errors, edge cases, readability, documentation",
+    "Responding to review feedback: gratitude, clarification, implementation",
+    "Pushing additional commits to update PR",
+    "Hands-on: Self-review exercise using CatchBook PR",
+    "Simulated peer review: reviewing your own PR with fresh eyes",
+    "Re-requesting review after changes",
+    "When to merge: all checks pass, reviews approved, no unresolved threads"
+  ],
+  "key_terms": [
+    "code review",
+    "review comment",
+    "line comment",
+    "approve",
+    "request changes",
+    "unresolved conversation",
+    "review thread",
+    "re-request review",
+    "constructive feedback",
+    "PR iteration"
+  ],
+  "catchbook_context": {
+    "feature": "Code review culture for CatchBook quality assurance",
+    "deliverable": "Complete review cycle on CatchBook PR: receive feedback, make changes, update PR",
+    "code_location": "catchbook/ (PR conversation thread, updated commits)"
+  },
+  "assessment": {
+    "type": "hands-on-exercise",
+    "criteria": [
+      "Leave at least 3 constructive review comments on own PR (simulate reviewer)",
+      "Identify potential improvements in CatchBook documentation",
+      "Make changes based on simulated feedback",
+      "Push additional commits to update the open PR",
+      "Explain how code review improves CatchBook development velocity long-term",
+      "Demonstrate professional response to critical feedback (simulated scenario)"
+    ]
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Reviewing Proposed Changes - GitHub Docs",
+      "url": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests"
+    },
+    {
+      "type": "article",
+      "title": "How to Make Your Code Reviewer Fall in Love with You",
+      "url": "https://mtlynch.io/code-review-love/"
+    },
+    {
+      "type": "guide",
+      "title": "Google Engineering Practices: Code Review",
+      "url": "https://google.github.io/eng-practices/review/"
+    },
+    {
+      "type": "article",
+      "title": "Unlearning Toxic Behaviors in Code Review",
+      "url": "https://medium.com/@sandya.sankarram/unlearning-toxic-behaviors-in-a-code-review-culture-b7c295452a3c"
+    }
+  ],
+  "professor_constraints": [
+    "Model constructive review language ('Consider...', 'What if...', 'I wonder...')",
+    "Emphasize empathy: reviewer and author are on same team",
+    "Show examples of good vs bad review comments",
+    "Address imposter syndrome: everyone makes mistakes, review helps everyone learn",
+    "Connect to CatchBook: 'This review catches the bug before users see it'",
+    "Practice self-review as skill (reading your own code critically)",
+    "Avoid bikeshedding discussion (defer style debates to linters in Phase 2)"
+  ],
+  "metadata": {
+    "created_at": "2025-12-11",
+    "generated_by": "Curriculum Designer (Claude)"
+  }
+}

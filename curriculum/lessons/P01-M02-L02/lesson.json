@@ -1,0 +1,91 @@
+{
+  "lesson_id": "P01-M02-L02",
+  "title": "Creating Pull Requests",
+  "module_id": "P01-M02",
+  "phase_id": "P01",
+  "estimated_minutes": 90,
+  "lesson_type": "hands-on",
+  "prerequisites": ["P01-M02-L01"],
+  "learning_objectives": [
+    "Understand what pull requests are and why they're essential for code review",
+    "Push feature branches to GitHub remote repository",
+    "Open a pull request through GitHub web interface",
+    "Write clear PR titles and descriptions using best practices",
+    "Link PRs to GitHub issues for traceability",
+    "Understand PR status checks and continuous integration basics",
+    "Apply PR workflow to CatchBook feature development"
+  ],
+  "outline": [
+    "Introduction: Pull requests as collaboration and quality gates",
+    "What is a pull request? Proposing changes for review before merge",
+    "The GitHub Flow: branch → commit → push → PR → review → merge",
+    "Pushing feature branches: `git push -u origin <branch-name>`",
+    "Opening a PR on GitHub: web interface walkthrough",
+    "Writing effective PR descriptions: what, why, how, testing",
+    "PR title conventions: aligning with Conventional Commits",
+    "Linking PRs to issues: 'Closes #42' syntax",
+    "Understanding PR diff view: changed files, line-by-line comparison",
+    "Draft PRs: work-in-progress visibility",
+    "Hands-on: Push feature/update-readme and open CatchBook PR",
+    "PR etiquette: reviewers, assignees, labels",
+    "Status checks preview: CI/CD integration (detailed in Phase 21)"
+  ],
+  "key_terms": [
+    "pull request (PR)",
+    "base branch",
+    "compare branch",
+    "PR description",
+    "draft PR",
+    "status checks",
+    "GitHub Flow",
+    "code review",
+    "merge button",
+    "PR diff"
+  ],
+  "catchbook_context": {
+    "feature": "Pull request workflow for CatchBook feature integration",
+    "deliverable": "Open PR to merge feature/update-readme into main with professional description",
+    "code_location": "catchbook/ (remote: origin/feature/update-readme → origin/main)"
+  },
+  "assessment": {
+    "type": "hands-on-exercise",
+    "criteria": [
+      "Push feature branch to GitHub successfully",
+      "Open PR with clear title following Conventional Commits format",
+      "Write PR description with context, changes, and testing notes",
+      "Link PR to a GitHub issue (create issue if needed)",
+      "Verify PR diff shows expected changes only",
+      "Explain why PRs improve CatchBook code quality and team collaboration"
+    ]
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "About Pull Requests - GitHub Docs",
+      "url": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests"
+    },
+    {
+      "type": "article",
+      "title": "How to Write the Perfect Pull Request",
+      "url": "https://github.blog/developer-skills/github/how-to-write-the-perfect-pull-request/"
+    },
+    {
+      "type": "template",
+      "title": "Pull Request Template Example",
+      "url": "https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository"
+    }
+  ],
+  "professor_constraints": [
+    "Show actual GitHub interface screenshots or live demo",
+    "Emphasize PR descriptions as documentation (explain the 'why')",
+    "Demonstrate PR diff view interpretation (green/red lines)",
+    "Address common mistake: pushing to main instead of feature branch",
+    "Connect to CatchBook: 'This PR adds species identification documentation'",
+    "Preview merge strategies but defer details to P01-M02-L04",
+    "Mention CI/CD briefly but avoid deep dive (covered Phase 21)"
+  ],
+  "metadata": {
+    "created_at": "2025-12-11",
+    "generated_by": "Curriculum Designer (Claude)"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "lesson_id": "P01-M02-L04",
+  "title": "Merge Strategies & Conflict Resolution",
+  "module_id": "P01-M02",
+  "phase_id": "P01",
+  "estimated_minutes": 105,
+  "lesson_type": "hands-on",
+  "prerequisites": ["P01-M02-L03"],
+  "learning_objectives": [
+    "Understand three merge strategies: merge commit, squash, rebase",
+    "Identify when merge conflicts occur and why they happen",
+    "Resolve merge conflicts using VS Code or command-line tools",
+    "Choose appropriate merge strategy for different CatchBook scenarios",
+    "Execute merge via GitHub web interface and command line",
+    "Understand fast-forward merges vs three-way merges",
+    "Clean up merged branches locally and remotely",
+    "Complete first feature branch merge to CatchBook main"
+  ],
+  "outline": [
+    "Introduction: Merging strategies and their tradeoffs",
+    "What is merging? Integrating divergent branch histories",
+    "Merge strategy 1: Merge commit (preserves full history)",
+    "Merge strategy 2: Squash and merge (clean linear history)",
+    "Merge strategy 3: Rebase and merge (linear history, preserves commits)",
+    "When to use each strategy: CatchBook examples",
+    "Fast-forward merges: when branches haven't diverged",
+    "Three-way merges: when branches have diverged",
+    "What are merge conflicts? Same file, same lines, different changes",
+    "Anatomy of a conflict marker: <<<<<<<, =======, >>>>>>>",
+    "Resolving conflicts in VS Code: choose incoming, current, or both",
+    "Resolving conflicts on command line: manual editing + git add",
+    "Hands-on: Create intentional conflict in CatchBook README",
+    "Resolving the conflict and completing merge",
+    "Testing after merge: always verify functionality",
+    "Merging PR via GitHub interface",
+    "Cleaning up: `git branch -d feature/branch-name`, `git push -d origin feature/branch-name`",
+    "Post-merge workflow: pull main, verify, delete local branch",
+    "Hands-on: Complete CatchBook PR merge workflow end-to-end"
+  ],
+  "key_terms": [
+    "merge",
+    "merge commit",
+    "squash and merge",
+    "rebase and merge",
+    "fast-forward merge",
+    "three-way merge",
+    "merge conflict",
+    "conflict markers",
+    "conflict resolution",
+    "branch cleanup"
+  ],
+  "catchbook_context": {
+    "feature": "Safe merge workflows for CatchBook feature integration",
+    "deliverable": "Merge feature/update-readme PR to main, resolve conflicts if any, clean up branches",
+    "code_location": "catchbook/main (post-merge state)"
+  },
+  "assessment": {
+    "type": "hands-on-exercise",
+    "criteria": [
+      "Successfully merge feature branch into main via GitHub PR",
+      "Intentionally create and resolve a merge conflict",
+      "Explain when to use squash vs merge commit for CatchBook",
+      "Clean up local and remote feature branches post-merge",
+      "Verify main branch contains merged changes",
+      "Articulate merge strategy tradeoffs (history preservation vs clean log)"
+    ]
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Git Merge Strategies",
+      "url": "https://git-scm.com/docs/git-merge#_merge_strategies"
+    },
+    {
+      "type": "article",
+      "title": "About Merge Methods on GitHub",
+      "url": "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/about-merge-methods-on-github"
+    },
+    {
+      "type": "tutorial",
+      "title": "Resolving Merge Conflicts",
+      "url": "https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts"
+    },
+    {
+      "type": "video",
+      "title": "Git Merge Conflicts (The Net Ninja)",
+      "url": "https://www.youtube.com/watch?v=QmKdodJU-js"
+    }
+  ],
+  "professor_constraints": [
+    "Show conflict markers visually before explaining",
+    "Demonstrate VS Code merge conflict UI (most beginner-friendly)",
+    "Create realistic CatchBook conflict scenario (two people editing README)",
+    "Emphasize testing after merge (never merge blindly)",
+    "Explain squash is preferred for CatchBook feature branches (clean history)",
+    "Show git log --graph before and after merge to visualize",
+    "Address common fear: conflicts are normal, not disasters",
+    "Preview rebase but defer deep coverage to advanced Git topics (Phase 25)"
+  ],
+  "metadata": {
+    "created_at": "2025-12-11",
+    "generated_by": "Curriculum Designer (Claude)"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "module_id": "P01-M02",
+  "module_name": "Branching and PR workflow",
+  "phase_id": "P01",
+  "estimated_hours": 6,
+  "catchbook_deliverable": "First feature branch merged to CatchBook via pull request",
+  "description": "Master Git branching strategies and GitHub pull request workflows. Learn to create feature branches, collaborate through code review, and merge changes safely. Build the collaborative development patterns essential for multi-phase CatchBook development.",
+  "prerequisites": ["P01-M01"],
+  "learning_objectives": [
+    "Create and switch between Git branches for isolated feature development",
+    "Understand branching strategies (feature branches, main/develop patterns)",
+    "Open pull requests on GitHub with clear descriptions and context",
+    "Conduct effective code reviews using GitHub PR tools",
+    "Resolve merge conflicts when branches diverge",
+    "Merge feature branches using different strategies (merge commit, squash, rebase)",
+    "Apply professional PR workflow to CatchBook repository"
+  ],
+  "skills_taught": [
+    "git_branching",
+    "pull_request_workflow",
+    "code_review",
+    "merge_conflict_resolution",
+    "github_collaboration",
+    "feature_branch_strategy"
+  ],
+  "lessons": [
+    {
+      "lesson_id": "P01-M02-L01",
+      "title": "Git Branching Fundamentals",
+      "lesson_type": "hands-on",
+      "estimated_minutes": 75
+    },
+    {
+      "lesson_id": "P01-M02-L02",
+      "title": "Creating Pull Requests",
+      "lesson_type": "hands-on",
+      "estimated_minutes": 90
+    },
+    {
+      "lesson_id": "P01-M02-L03",
+      "title": "Code Review & Collaboration",
+      "lesson_type": "hands-on",
+      "estimated_minutes": 90
+    },
+    {
+      "lesson_id": "P01-M02-L04",
+      "title": "Merge Strategies & Conflict Resolution",
+      "lesson_type": "hands-on",
+      "estimated_minutes": 105
+    }
+  ],
+  "catchbook_integration": {
+    "feature_area": "Repository workflow and collaboration infrastructure",
+    "repository_path": "catchbook/",
+    "dependencies": [
+      "CatchBook repository initialized (P01-M01)",
+      "GitHub remote configured",
+      "README.md present"
+    ]
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Git Branching - Git Book",
+      "url": "https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell"
+    },
+    {
+      "type": "documentation",
+      "title": "GitHub Pull Requests Documentation",
+      "url": "https://docs.github.com/en/pull-requests"
+    },
+    {
+      "type": "tutorial",
+      "title": "Understanding the GitHub Flow",
+      "url": "https://guides.github.com/introduction/flow/"
+    },
+    {
+      "type": "article",
+      "title": "Merge Strategies Explained",
+      "url": "https://www.atlassian.com/git/tutorials/using-branches/merge-strategy"
+    },
+    {
+      "type": "video",
+      "title": "Git Branching and Merging (MIT Missing Semester)",
+      "url": "https://missing.csail.mit.edu/2020/version-control/"
+    }
+  ],
+  "metadata": {
+    "created_at": "2025-12-11",
+    "updated_at": "2025-12-11",
+    "generated_by": "Curriculum Designer (Claude)"
+  }
+}
