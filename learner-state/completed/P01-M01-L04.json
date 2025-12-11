@@ -20,7 +20,7 @@
     "checkpoint_3": {
       "questions_answered": 3,
       "understanding_level": "exceptional",
-      "notes": "Perfect understanding of why node_modules/ shouldn't be committed (size, efficiency, manifest files as documentation). Minor syntax correction on git rm --cached (single star vs double star). Excellent inference on .pyc files despite lesson not explaining them explicitly—correctly identified as compiled bytecode, machine-specific, automatically generated, and understood cross-platform implications. Strong systems thinking demonstrated."
+      "notes": "Perfect understanding of why node_modules/ shouldn't be committed (size, efficiency, manifest files as documentation). Minor syntax correction on git rm --cached (single star vs double star). Excellent inference on .pyc files despite lesson not explaining them explicitly\u2014correctly identified as compiled bytecode, machine-specific, automatically generated, and understood cross-platform implications. Strong systems thinking demonstrated."
     },
     "checkpoint_4": {
       "questions_answered": 3,
@@ -45,7 +45,7 @@
     "Professional commit messages follow format: <type>(<scope>): <subject> with optional body explaining what and why",
     "Atomic commits contain one logical change each, enabling surgical reverts and maintainable history",
     "Reviewing changes with git diff --staged before committing prevents security issues (API keys) and quality problems (debug statements, unintended changes)",
-    "Dependency manifest files (package.json, requirements.txt) are the documentation—commit these, not node_modules/ or venv/",
+    "Dependency manifest files (package.json, requirements.txt) are the documentation\u2014commit these, not node_modules/ or venv/",
     "Compiled/generated files (.pyc, *.class, *.o) are machine-specific and should be excluded via .gitignore"
   ],
   "catchbook_deliverable": {
@@ -58,5 +58,6 @@
   },
   "confidence_level": "high",
   "readiness_for_next_lesson": true,
-  "professor_notes": "Exceptional performance throughout lesson. Jeff demonstrated professional-level understanding of Git history navigation, security awareness, and commit hygiene. His 'surgical operations' analogy for atomic commits shows deep conceptual grasp. Made excellent inferences about .pyc files despite lesson not explaining them explicitly. Commit message for .gitignore update was professional-grade (minor template artifact harmless). Ready to advance beyond Git fundamentals—has internalized workflow discipline and professional practices. Module P01-M01 (Git Fundamentals) complete with distinction."
+  "professor_notes": "Exceptional performance throughout lesson. Jeff demonstrated professional-level understanding of Git history navigation, security awareness, and commit hygiene. His 'surgical operations' analogy for atomic commits shows deep conceptual grasp. Made excellent inferences about .pyc files despite lesson not explaining them explicitly. Commit message for .gitignore update was professional-grade (minor template artifact harmless). Ready to advance beyond Git fundamentals\u2014has internalized workflow discipline and professional practices. Module P01-M01 (Git Fundamentals) complete with distinction.",
+  "confidence_rating": 5
 }

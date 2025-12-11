@@ -3,29 +3,37 @@
     "git_basics": {
       "level": "expert",
       "last_practiced": "2025-12-10T00:00:00Z",
-      "confidence": 98,
-      "modules_practiced": ["P01-M01"],
-      "notes": "Advanced to expert after completing Git Fundamentals module. Demonstrates mastery of all core Git operations: initialization, staging, committing, remote workflows, history navigation (git log, git diff, git show), and repository hygiene (.gitignore). Professional-level understanding of commit hashes, atomic commits, and distributed architecture implications. Commands are second nature—no longer just executing recipes but understanding strategic 'why' behind each operation. Ready for advanced Git topics (branching strategies, merge conflicts, rebasing, cherry-picking)."
+      "confidence": 5,
+      "modules_practiced": [
+        "P01-M01"
+      ],
+      "notes": "Advanced to expert after completing Git Fundamentals module. Demonstrates mastery of all core Git operations: initialization, staging, committing, remote workflows, history navigation (git log, git diff, git show), and repository hygiene (.gitignore). Professional-level understanding of commit hashes, atomic commits, and distributed architecture implications. Commands are second nature\u2014no longer just executing recipes but understanding strategic 'why' behind each operation. Ready for advanced Git topics (branching strategies, merge conflicts, rebasing, cherry-picking)."
     },
     "terminal_comfort": {
       "level": "proficient",
       "last_practiced": "2025-12-10T00:00:00Z",
-      "confidence": 90,
-      "modules_practiced": ["P01-M01"],
+      "confidence": 5,
+      "modules_practiced": [
+        "P01-M01"
+      ],
       "notes": "Advanced to proficient. Fluent with Git command-line operations, file path navigation, and command chaining. Demonstrates comfort with terminal workflows and understands output interpretation. Ready for more complex terminal operations and scripting."
     },
     "markdown_documentation": {
       "level": "competent",
       "last_practiced": "2025-12-07T19:30:00Z",
-      "confidence": 85,
-      "modules_practiced": ["P01-M01"],
+      "confidence": 5,
+      "modules_practiced": [
+        "P01-M01"
+      ],
       "notes": "Created comprehensive README.md with proper markdown formatting (headers, lists, code blocks). Documented project vision, features, tech stack professionally. Portfolio-ready documentation skills."
     },
     "project_organization": {
       "level": "competent",
       "last_practiced": "2025-12-10T00:00:00Z",
-      "confidence": 85,
-      "modules_practiced": ["P01-M01"],
+      "confidence": 5,
+      "modules_practiced": [
+        "P01-M01"
+      ],
       "notes": "Advanced confidence to 85. Proactively created comprehensive .gitignore for Python/Node artifacts during L02 bonus challenge, then enhanced with L04 patterns. Understands repository cleanliness importance and implements preventive measures. Ready for more complex project structures (src/ directories, config files, documentation folders, monorepo patterns)."
     },
     "html_css": {
@@ -67,78 +75,100 @@
     "technical_vocabulary": {
       "level": "proficient",
       "last_practiced": "2025-12-10T00:00:00Z",
-      "confidence": 95,
-      "modules_practiced": ["P01-M01"],
+      "confidence": 5,
+      "modules_practiced": [
+        "P01-M01"
+      ],
       "notes": "Advanced to proficient. Expanded vocabulary: commit hash (SHA-1), working tree, index/staging area, HEAD, diff, patch, atomic commit, .gitignore patterns, git log flags (--oneline, --graph, --all), git diff modes (working vs staging vs repository), git show, git rm --cached. Excellent command of Git-specific terminology with ability to explain technical concepts clearly and accurately. Demonstrated understanding of nuanced distinctions (git diff vs git diff --staged vs git diff HEAD)."
     },
     "systems_thinking": {
       "level": "competent",
       "last_practiced": "2025-12-10T00:00:00Z",
-      "confidence": 85,
-      "modules_practiced": ["P01-M01"],
+      "confidence": 5,
+      "modules_practiced": [
+        "P01-M01"
+      ],
       "notes": "Advanced to competent. Strong understanding of local vs remote architecture, multi-device sync patterns. Demonstrated excellent inference skills (.pyc files, cross-platform implications). Recognizes efficiency problems (500MB node_modules/), understands manifest files as shared documentation. Shows architectural awareness and risk assessment thinking. 'Surgical operations' analogy for atomic commits demonstrates professional-level strategic thinking about long-term maintainability."
     },
     "commit_message_writing": {
       "level": "expert",
       "last_practiced": "2025-12-10T00:00:00Z",
-      "confidence": 98,
-      "modules_practiced": ["P01-M01"],
-      "notes": "Advanced to expert. Demonstrates complete mastery of Conventional Commits format (type, scope, subject, body, footer). Excellent .gitignore commit message with proper structure, imperative mood, clear scope, and well-organized body. Can critique bad messages and rewrite them professionally. Understands 50/72 character rules, atomic commit principles, and 'what/why not how' philosophy. Portfolio-ready commit discipline—every commit tells a clear story."
+      "confidence": 5,
+      "modules_practiced": [
+        "P01-M01"
+      ],
+      "notes": "Advanced to expert. Demonstrates complete mastery of Conventional Commits format (type, scope, subject, body, footer). Excellent .gitignore commit message with proper structure, imperative mood, clear scope, and well-organized body. Can critique bad messages and rewrite them professionally. Understands 50/72 character rules, atomic commit principles, and 'what/why not how' philosophy. Portfolio-ready commit discipline\u2014every commit tells a clear story."
     },
     "github_workflow": {
       "level": "proficient",
       "last_practiced": "2025-12-10T00:00:00Z",
-      "confidence": 95,
-      "modules_practiced": ["P01-M01"],
+      "confidence": 5,
+      "modules_practiced": [
+        "P01-M01"
+      ],
       "notes": "Advanced to proficient. Demonstrates professional GitHub workflow: remote connection, pushing with upstream tracking, cloning, multi-device synchronization. Proactive repository hygiene (created .gitignore early, maintains clean history). Understands disaster recovery, portfolio building, and collaboration benefits. Ready for advanced GitHub collaboration features (pull requests, issues, code review, branch protection, GitHub Actions)."
     },
     "ssh_authentication": {
       "level": "competent",
       "last_practiced": "2025-12-09T00:00:00Z",
-      "confidence": 95,
-      "modules_practiced": ["P01-M01"],
+      "confidence": 5,
+      "modules_practiced": [
+        "P01-M01"
+      ],
       "notes": "Already had SSH configured from previous work (The Odin Project, dev-curriculum). Excellent understanding of ssh-agent purpose, SSH vs HTTPS tradeoffs, and Personal Access Token distinctions. Professional-level authentication setup. Ready for advanced scenarios (multiple SSH keys, SSH config management)."
     },
     "remote_repository_management": {
       "level": "proficient",
       "last_practiced": "2025-12-10T00:00:00Z",
-      "confidence": 95,
-      "modules_practiced": ["P01-M01"],
+      "confidence": 5,
+      "modules_practiced": [
+        "P01-M01"
+      ],
       "notes": "Advanced to proficient. Complete understanding of remote operations: git remote add, git push -u (upstream tracking), git fetch vs git pull, git clone. Demonstrates multi-device workflow discipline and divergent history prevention. Professional-level remote repository hygiene. Ready for advanced remote scenarios (multiple remotes, force push awareness, remote branch management, upstream tracking modifications)."
     },
     "multi_device_sync": {
       "level": "competent",
       "last_practiced": "2025-12-09T00:00:00Z",
-      "confidence": 90,
-      "modules_practiced": ["P01-M01"],
-      "notes": "Excellent visualization of two-computer workflow (pull → work → commit → push → repeat). Understands importance of pulling before starting work to avoid conflicts. Ready for real-world multi-device CatchBook development scenarios."
+      "confidence": 5,
+      "modules_practiced": [
+        "P01-M01"
+      ],
+      "notes": "Excellent visualization of two-computer workflow (pull \u2192 work \u2192 commit \u2192 push \u2192 repeat). Understands importance of pulling before starting work to avoid conflicts. Ready for real-world multi-device CatchBook development scenarios."
     },
     "atomic_commits": {
       "level": "expert",
       "last_practiced": "2025-12-10T00:00:00Z",
-      "confidence": 98,
-      "modules_practiced": ["P01-M01"],
+      "confidence": 5,
+      "modules_practiced": [
+        "P01-M01"
+      ],
       "notes": "NEW SKILL. Demonstrates exceptional understanding of atomic commit principles: one logical change per commit, complete and reversible, testable. Excellent 'surgical operations' analogy showing grasp of revert implications. Correctly identified 4 separate commits from mixed changes. Understands relationship to debugging (git bisect), code review, and release notes. Professional-level commit discipline for long-term project maintainability."
     },
     "git_history_navigation": {
       "level": "expert",
       "last_practiced": "2025-12-10T00:00:00Z",
-      "confidence": 98,
-      "modules_practiced": ["P01-M01"],
+      "confidence": 5,
+      "modules_practiced": [
+        "P01-M01"
+      ],
       "notes": "NEW SKILL. Complete mastery of git log variations (--oneline, --graph, --all, time-based filters, author filters). Perfect understanding of git diff modes (working vs staging vs repository). Fluent with git show for commit inspection. Understands commit hash architecture (SHA-1, content-based, immutability, distributed benefits). Ready for advanced history operations (git bisect, git blame, git reflog)."
     },
     "gitignore_configuration": {
       "level": "expert",
       "last_practiced": "2025-12-10T00:00:00Z",
-      "confidence": 95,
-      "modules_practiced": ["P01-M01"],
-      "notes": "NEW SKILL. Proactively created .gitignore during L02 bonus challenge, enhanced with comprehensive patterns in L04. Understands why files should be ignored (secrets, dependencies, build artifacts, OS files, IDE configs). Correct pattern syntax knowledge. Excellent understanding of git rm --cached for retroactive exclusion. Strong security awareness—immediately recognized API key prevention as critical use case. Portfolio-ready repository hygiene."
+      "confidence": 5,
+      "modules_practiced": [
+        "P01-M01"
+      ],
+      "notes": "NEW SKILL. Proactively created .gitignore during L02 bonus challenge, enhanced with comprehensive patterns in L04. Understands why files should be ignored (secrets, dependencies, build artifacts, OS files, IDE configs). Correct pattern syntax knowledge. Excellent understanding of git rm --cached for retroactive exclusion. Strong security awareness\u2014immediately recognized API key prevention as critical use case. Portfolio-ready repository hygiene."
     },
     "security_awareness": {
       "level": "competent",
       "last_practiced": "2025-12-10T00:00:00Z",
-      "confidence": 90,
-      "modules_practiced": ["P01-M01"],
+      "confidence": 5,
+      "modules_practiced": [
+        "P01-M01"
+      ],
       "notes": "NEW SKILL. Demonstrates professional-level security thinking: immediately identified API key/secret prevention as primary reason to review changes before committing. Understands that committed secrets in Git history are permanent even if deleted. Knows git rm --cached workflow for removing accidentally staged secrets. Proactive .gitignore configuration to prevent issues. Ready for advanced security topics (environment variable management, secret rotation, .env.example patterns, security scanning tools)."
     }
   },
