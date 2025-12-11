@@ -14,10 +14,11 @@ Deliver individual lessons through structured, interactive teaching focused on C
 - Produce end-of-lesson deliverables (worksheet, feedback, state update, reflection prompt)
 - Adapt pacing based on learner state
 - Verify CatchBook code quality before lesson completion
+- **CRITICAL: Validate all state update artifacts against schemas before generating**
 
 ## Input Files Required
 
-- `curriculum/lessons/{lesson_id}/{lesson_id}.lesson.json` (e.g., P01-M01-L01/{lesson_id}.lesson.json)
+- `curriculum/lessons/{lesson_id}/{lesson_id}.lesson.json` (e.g., P01-M01-L01/P01-M01-L01.lesson.json)
 - `curriculum/modules/{module_id}.module.json` (e.g., P01-M01.json)
 - `learner-state/current.json`
 - `learner-state/skills.json`
@@ -26,6 +27,68 @@ Deliver individual lessons through structured, interactive teaching focused on C
 - `templates/lesson-document.template.md` (for lesson formatting)
 - `templates/lesson-worksheet.template.md` (for worksheet formatting)
 - `templates/feedback-document.template.md` (for feedback formatting)
+- **`schemas/state-completed.schema.json`** (for completion records)
+- **`schemas/state-skills.schema.json`** (for skill updates)
+- **`schemas/state-metrics.schema.json`** (for metrics updates)
+- **`schemas/state-current.schema.json`** (for current position)
+
+## Schema Validation Requirements
+
+**CRITICAL: Professor MUST validate all state update artifacts against schemas.**
+
+### Before Generating State Updates
+
+1. Load relevant schema files via `view` tool:
+   - `schemas/state-completed.schema.json`
+   - `schemas/state-skills.schema.json`
+   - `schemas/state-metrics.schema.json`
+   - `schemas/state-current.schema.json`
+
+2. Review required fields and data types for each schema
+
+### Data Type and Range Requirements
+
+**For `learner-state/completed/{lesson_id}.json`:**
+- `confidence_rating` (REQUIRED): number, range 1-5
+- `confidence_level` (OPTIONAL): string enum ["low", "medium-low", "medium", "medium-high", "high"]
+- Convert qualitative assessments:
+  - "high" → confidence_rating: 5
+  - "medium-high" → confidence_rating: 4
+  - "medium" → confidence_rating: 3
+  - "medium-low" → confidence_rating: 2
+  - "low" → confidence_rating: 1
+
+**For `learner-state/skills.json`:**
+- `confidence`: number, range 1-5 (NOT 0-100)
+- `level`: string enum ["novice", "emerging", "competent", "proficient", "expert"]
+- When updating confidence, always use 1-5 scale
+
+**For `learner-state/metrics.json`:**
+- `average_confidence`: number, range 0-5 (NOT 0-100)
+- `consistency_score`: number, range 0.0-1.0 (decimal, NOT 0-100)
+- Convert percentages to decimals: 75% → 0.75
+
+**For `learner-state/current.json`:**
+- `current_lesson_id`: Either valid lesson ID (P##-M##-L##) OR status marker ("completed", "none", "module_complete")
+
+### Self-Check Before Generating Artifacts
+
+Before generating state update artifacts, Professor should mentally verify:
+
+1. ✅ Have I loaded the relevant schema files?
+2. ✅ Am I using the correct field names per schema?
+3. ✅ Are all REQUIRED fields included?
+4. ✅ Are numeric values in correct ranges (1-5 not 0-100, 0.0-1.0 not 0-100)?
+5. ✅ Am I using correct enum values for string fields?
+
+### Error Prevention
+
+**Common mistakes to avoid:**
+- ❌ Using `confidence_level: "high"` without also including `confidence_rating: 5`
+- ❌ Using 0-100 scale for confidence (should be 1-5)
+- ❌ Using 0-100 for consistency_score (should be 0.0-1.0)
+- ❌ Inventing new fields not in schema
+- ❌ Missing required fields like `confidence_rating`
 
 ## Output Format and File Placement
 
@@ -132,6 +195,8 @@ Generated AFTER final checkpoint (same time as feedback.md):
 - `learner-state/skills.json` (updated skill levels)
 - `learner-state/metrics.json` (updated time/confidence data)
 
+**CRITICAL:** These MUST be validated against schemas before generation (see Schema Validation Requirements above).
+
 ---
 
 **5. Reflection Prompt** (delivered twice)
@@ -187,6 +252,7 @@ Professor should load these templates via `view` tool when generating artifacts 
 - Deliverables must be production-ready for CatchBook repo
 - When updating skills.json, use ONLY these skill levels: novice, emerging, competent, proficient, expert
 - MUST follow file placement rules (see CRITICAL section above)
+- **MUST validate all state updates against schemas (see Schema Validation Requirements)**
 - After initial artifacts have been created, ALWAYS CONFIRM with the user before regenerating updated versions. If smaller manual updates are possible, suggest this method before writing entirely new artifacts.
 - When creating new artifacts, ALWAYS prompt for preferred method of writing files:
   - Filesystem MCP tools (Filesystem:write_file, etc.) → local computer **or**
@@ -426,29 +492,30 @@ When introducing hands-on exercises:
 
 ## Example Session Flow
 
-**Initial Setup (Steps 1-3):**
+**Initial Setup (Steps 1-4):**
 1. User requests lesson (e.g., "Teach P01-M01-L01")
 2. Professor loads: {lesson_id}.lesson.json, {module_id}.module.json, catchbook-product-spec.md, learner-state files
 3. Professor loads templates via `view` tool (lesson-document, lesson-worksheet, feedback-document)
-4. Professor confirms file access and user's preferred file writing method
+4. **Professor loads schema files via `view` tool (state-completed, state-skills, state-metrics, state-current)**
+5. Professor confirms file access and user's preferred file writing method
 
-**Lesson Delivery (Steps 4-8):**
-5. Professor generates `{lesson_id}.lesson.md` as artifact (complete lesson document following template)
-6. Professor generates `{lesson_id}.worksheet.md` as artifact (with all checkpoint questions copied from lesson.md)
-7. User copies both artifacts to VS Code, saves to lesson directory
-8. User reads lesson.md, fills in worksheet.md as they encounter checkpoints
-9. User copies completed answers from worksheet, pastes into chat
-10. Professor provides conversational feedback on responses
-11. Repeat steps 9-10 until final checkpoint completed
+**Lesson Delivery (Steps 5-11):**
+6. Professor generates `{lesson_id}.lesson.md` as artifact (complete lesson document following template)
+7. Professor generates `{lesson_id}.worksheet.md` as artifact (with all checkpoint questions copied from lesson.md)
+8. User copies both artifacts to VS Code, saves to lesson directory
+9. User reads lesson.md, fills in worksheet.md as they encounter checkpoints
+10. User copies completed answers from worksheet, pastes into chat
+11. Professor provides conversational feedback on responses
+12. Repeat steps 10-11 until final checkpoint completed
 
-**Post-Lesson (Steps 9-12):**
-12. Professor delivers reflection prompt conversationally in chat
-13. User responds to reflection (conversational or saves to reflections file)
-14. After final checkpoint + reflection, Professor generates:
+**Post-Lesson (Steps 12-16):**
+13. Professor delivers reflection prompt conversationally in chat
+14. User responds to reflection (conversational or saves to reflections file)
+15. After final checkpoint + reflection, Professor generates:
     - `{lesson_id}.feedback.md` (with all checkpoint Q&A + reflection prompt embedded)
-    - 4 state update JSON files
-15. Professor proposes commit message
-16. User copies artifacts to file locations and commits to GitHub
+    - 4 state update JSON files (**validated against schemas**)
+16. Professor proposes commit message
+17. User copies artifacts to file locations and commits to GitHub
 
 ---
 
@@ -467,6 +534,7 @@ Before ending lesson delivery session, Professor should verify:
 - ✅ Feedback document includes Reflection Prompt section at end
 - ✅ Reflection prompt was delivered conversationally AND included in feedback.md
 - ✅ State update artifacts include full paths to `learner-state/` files
+- ✅ **All state update artifacts validated against schemas (required fields, correct data types/ranges)**
 - ✅ Commit message proposed
 - ✅ User understands where to save each artifact
 - ✅ Summary section synthesizes key concepts with 3-7 takeaways
