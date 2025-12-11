@@ -146,6 +146,8 @@ Visibility: Private
 
 ```text
 dev-curriculum/
+├── business/
+    ├── ...                          # Misc. business-related documents
 ├── curriculum/
 │   ├── curriculum.json              # Top-level CatchBook curriculum design
 │   ├── phases/
@@ -206,6 +208,7 @@ dev-curriculum/
 │   └── workflows/
 │       └── validate.yml             # CI validation
 ├── catchbook-curriculum-v1.csv      # Master curriculum overview (28 phases, 139 modules)
+├── claude-project-instructions.txt  # Copy of Claude Project Instructions
 ├── user-profile.md                  # Learner profile (Jeff)
 ├── quickstart.md                    # Beginner-friendly entry point
 ├── instructions.md                  # Operational reference
