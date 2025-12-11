@@ -3,14 +3,71 @@
   "type": "object",
   "required": ["total_time_minutes", "lessons_completed", "modules_completed", "phases_completed", "reflections_written", "last_updated"],
   "properties": {
-    "total_time_minutes": {"type": "integer", "minimum": 0},
-    "lessons_completed": {"type": "integer", "minimum": 0},
-    "modules_completed": {"type": "integer", "minimum": 0},
-    "phases_completed": {"type": "integer", "minimum": 0},
-    "catchbook_features_shipped": {"type": "integer", "minimum": 0},
-    "reflections_written": {"type": "integer", "minimum": 0},
-    "average_confidence": {"type": "number", "minimum": 0, "maximum": 5},
-    "consistency_score": {"type": "number", "minimum": 0, "maximum": 1},
-    "last_updated": {"type": "string", "format": "date-time"}
+    "total_time_minutes": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "lessons_completed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "modules_completed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "phases_completed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "catchbook_features_shipped": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "reflections_written": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "average_confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 5,
+      "description": "Average confidence on 1-5 scale (0 if no data)"
+    },
+    "consistency_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Decimal proportion (0.0-1.0) of weeks with 2+ lessons"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "lesson_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "lesson_id": {"type": "string"},
+          "completed_at": {"type": "string", "format": "date-time"},
+          "duration_minutes": {"type": "integer"},
+          "confidence_level": {"type": "number"},
+          "checkpoints_completed": {"type": "integer"},
+          "assessment_score": {"type": "string"}
+        }
+      }
+    },
+    "weekly_stats": {
+      "type": "object"
+    },
+    "skill_progression": {
+      "type": "object"
+    },
+    "catchbook_milestones": {
+      "type": "array"
+    },
+    "module_completion": {
+      "type": "array"
+    }
   }
 }

@@ -3,10 +3,38 @@
   "type": "object",
   "required": ["learner_id", "current_phase_id", "current_module_id", "current_lesson_id", "last_updated"],
   "properties": {
-    "learner_id": {"type": "string"},
-    "current_phase_id": {"type": "string", "pattern": "^P[0-9]{2}$"},
-    "current_module_id": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}$"},
-    "current_lesson_id": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}-L[0-9]{2}$"},
-    "last_updated": {"type": "string", "format": "date-time"}
+    "learner_id": {
+      "type": "string"
+    },
+    "current_phase_id": {
+      "type": "string",
+      "pattern": "^P[0-9]{2}$"
+    },
+    "current_module_id": {
+      "type": "string",
+      "pattern": "^P[0-9]{2}-M[0-9]{2}$"
+    },
+    "current_lesson_id": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^P[0-9]{2}-M[0-9]{2}-L[0-9]{2}$",
+          "description": "Active lesson ID"
+        },
+        {
+          "type": "string",
+          "enum": ["completed", "none", "module_complete"],
+          "description": "Status markers for between-lesson states"
+        }
+      ]
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional context about current position"
+    }
   }
 }

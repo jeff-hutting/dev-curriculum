@@ -10,22 +10,38 @@
           "type": "object",
           "required": ["level", "last_practiced"],
           "properties": {
-            "level": {"type": "string", "enum": ["novice", "emerging", "competent", "proficient", "expert"]},
+            "level": {
+              "type": "string",
+              "enum": ["novice", "emerging", "competent", "proficient", "expert"]
+            },
             "last_practiced": {
               "oneOf": [
                 {"type": "string", "format": "date"},
+                {"type": "string", "format": "date-time"},
                 {"type": "null"}
               ]
             },
-            "confidence": {"type": "number", "minimum": 1, "maximum": 5},
+            "confidence": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 5,
+              "description": "Confidence rating on 1-5 scale"
+            },
             "modules_practiced": {
               "type": "array",
               "items": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}$"}
+            },
+            "notes": {
+              "type": "string",
+              "description": "Optional detailed notes on skill development"
             }
           }
         }
       }
     },
-    "last_updated": {"type": "string", "format": "date-time"}
+    "last_updated": {
+      "type": "string",
+      "format": "date-time"
+    }
   }
 }
