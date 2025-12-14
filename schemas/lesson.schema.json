@@ -1,50 +1,105 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Lesson Schema",
+  "description": "Schema for lesson definition files. Note: This schema validates lesson content (JSON structure), not file paths. Files should be organized hierarchically (curriculum/lessons/P01/M01/L01/P01-M01-L01.lesson.json) and named with .lesson.json extension.",
   "type": "object",
   "required": ["lesson_id", "title", "module_id", "phase_id", "lesson_type", "learning_objectives", "outline", "assessment"],
   "properties": {
-    "lesson_id": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}-L[0-9]{2}$"},
-    "title": {"type": "string"},
-    "module_id": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}$"},
-    "phase_id": {"type": "string", "pattern": "^P[0-9]{2}$"},
-    "estimated_minutes": {"type": "integer", "minimum": 15},
-    "lesson_type": {"type": "string", "enum": ["conceptual", "hands-on", "project", "review"]},
+    "lesson_id": {
+      "type": "string",
+      "pattern": "^P[0-9]{2}-M[0-9]{2}-L[0-9]{2}$",
+      "description": "Unique lesson identifier (e.g., P01-M01-L01)"
+    },
+    "title": {
+      "type": "string",
+      "description": "Lesson title"
+    },
+    "module_id": {
+      "type": "string",
+      "pattern": "^P[0-9]{2}-M[0-9]{2}$",
+      "description": "Parent module identifier (e.g., P01-M01)"
+    },
+    "phase_id": {
+      "type": "string",
+      "pattern": "^P[0-9]{2}$",
+      "description": "Parent phase identifier (e.g., P01)"
+    },
+    "estimated_minutes": {
+      "type": "integer",
+      "minimum": 15,
+      "description": "Estimated time to complete lesson (15-90 minutes)"
+    },
+    "lesson_type": {
+      "type": "string",
+      "enum": ["conceptual", "hands-on", "project", "review"],
+      "description": "Primary lesson type"
+    },
     "prerequisites": {
       "type": "array",
-      "items": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}-L[0-9]{2}$"}
+      "items": {
+        "type": "string",
+        "pattern": "^P[0-9]{2}-M[0-9]{2}-L[0-9]{2}$"
+      },
+      "description": "List of prerequisite lesson IDs that must be completed first"
     },
     "learning_objectives": {
       "type": "array",
       "items": {"type": "string"},
-      "minItems": 1
+      "minItems": 1,
+      "description": "What the learner will be able to do after completing this lesson"
     },
     "outline": {
       "type": "array",
       "items": {"type": "string"},
-      "minItems": 1
+      "minItems": 1,
+      "description": "Ordered list of lesson sections. CRITICAL: Conceptual sections must come first, hands-on exercises must come last."
+    },
+    "outline_structure_notes": {
+      "type": "string",
+      "description": "Optional guidance on outline organization (e.g., 'Sections 1-6 are conceptual, sections 7-8 are hands-on exercises')"
+    },
+    "checkpoint_placement_guidance": {
+      "type": "string",
+      "description": "Optional guidance for Professor on where to place checkpoints (e.g., 'After section 3, after section 6, after final exercise')"
     },
     "key_terms": {
       "type": "array",
-      "items": {"type": "string"}
+      "items": {"type": "string"},
+      "description": "Important vocabulary introduced in this lesson"
     },
     "catchbook_context": {
       "type": "object",
       "properties": {
-        "feature": {"type": "string"},
-        "deliverable": {"type": "string"},
-        "code_location": {"type": "string"}
-      }
+        "feature": {
+          "type": "string",
+          "description": "Which CatchBook feature this lesson contributes to"
+        },
+        "deliverable": {
+          "type": "string",
+          "description": "What the learner will build/ship for CatchBook"
+        },
+        "code_location": {
+          "type": "string",
+          "description": "Where in the CatchBook codebase this work will live"
+        }
+      },
+      "description": "How this lesson integrates with CatchBook project"
     },
     "assessment": {
       "type": "object",
       "required": ["type", "criteria"],
       "properties": {
-        "type": {"type": "string"},
+        "type": {
+          "type": "string",
+          "description": "Assessment method (e.g., 'checkpoint-questions', 'code-review', 'written-reflection')"
+        },
         "criteria": {
           "type": "array",
-          "items": {"type": "string"}
+          "items": {"type": "string"},
+          "description": "What learner must demonstrate to pass assessment"
         }
-      }
+      },
+      "description": "How lesson completion is evaluated"
     },
     "resources": {
       "type": "array",
@@ -52,23 +107,48 @@
         "type": "object",
         "required": ["type", "title", "url"],
         "properties": {
-          "type": {"type": "string"},
-          "title": {"type": "string"},
-          "url": {"type": "string", "format": "uri"}
+          "type": {
+            "type": "string",
+            "description": "Resource category (e.g., 'documentation', 'tutorial', 'video', 'article')"
+          },
+          "title": {
+            "type": "string",
+            "description": "Resource title"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Resource URL"
+          }
         }
-      }
+      },
+      "description": "Supplementary learning resources"
     },
     "professor_constraints": {
       "type": "array",
-      "items": {"type": "string"}
+      "items": {"type": "string"},
+      "description": "Special instructions for Professor role (tone, examples to include/avoid, pacing, etc.)"
     },
     "metadata": {
       "type": "object",
       "required": ["created_at"],
       "properties": {
-        "created_at": {"type": "string", "format": "date"},
-        "generated_by": {"type": "string"}
-      }
+        "created_at": {
+          "type": "string",
+          "format": "date",
+          "description": "Date lesson was created (YYYY-MM-DD)"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date",
+          "description": "Date lesson was last updated (YYYY-MM-DD)"
+        },
+        "generated_by": {
+          "type": "string",
+          "description": "Who/what created this lesson (e.g., 'curriculum-designer', 'manual')"
+        }
+      },
+      "description": "Lesson metadata"
     }
   }
 }

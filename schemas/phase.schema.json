@@ -1,41 +1,90 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Phase Schema",
+  "description": "Schema for phase definition files. Note: This schema validates phase content (JSON structure), not file paths. Files should be named with .phase.json extension (e.g., P01.phase.json) and placed in curriculum/phases/ directory.",
   "type": "object",
   "required": ["phase_id", "phase_name", "modules", "metadata"],
   "properties": {
-    "phase_id": {"type": "string", "pattern": "^P[0-9]{2}$"},
-    "phase_name": {"type": "string"},
-    "description": {"type": "string"},
-    "catchbook_focus": {"type": "string"},
+    "phase_id": {
+      "type": "string",
+      "pattern": "^P[0-9]{2}$",
+      "description": "Unique phase identifier (e.g., P01)"
+    },
+    "phase_name": {
+      "type": "string",
+      "description": "Phase title (e.g., 'Foundations', 'Backend Development')"
+    },
+    "description": {
+      "type": "string",
+      "description": "Phase overview and purpose"
+    },
+    "catchbook_focus": {
+      "type": "string",
+      "description": "What aspect of CatchBook is built in this phase"
+    },
     "entry_criteria": {
       "type": "array",
-      "items": {"type": "string"}
+      "items": {"type": "string"},
+      "description": "Prerequisites or skills needed to start this phase"
     },
     "exit_criteria": {
       "type": "array",
-      "items": {"type": "string"}
+      "items": {"type": "string"},
+      "description": "What learner can do after completing this phase"
     },
-    "estimated_hours": {"type": "integer", "minimum": 1},
+    "estimated_hours": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Total estimated time for all modules in this phase"
+    },
     "modules": {
       "type": "array",
       "items": {
         "type": "object",
         "required": ["module_id", "module_name", "estimated_hours", "catchbook_deliverable"],
         "properties": {
-          "module_id": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}$"},
-          "module_name": {"type": "string"},
-          "estimated_hours": {"type": "integer", "minimum": 1},
-          "catchbook_deliverable": {"type": "string"}
+          "module_id": {
+            "type": "string",
+            "pattern": "^P[0-9]{2}-M[0-9]{2}$",
+            "description": "Unique module identifier (e.g., P01-M01)"
+          },
+          "module_name": {
+            "type": "string",
+            "description": "Module title"
+          },
+          "estimated_hours": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Estimated time to complete this module"
+          },
+          "catchbook_deliverable": {
+            "type": "string",
+            "description": "What concrete CatchBook feature/component will be built in this module"
+          }
         }
-      }
+      },
+      "description": "Modules within this phase (ordered sequence)"
     },
     "metadata": {
       "type": "object",
       "required": ["created_at", "updated_at"],
       "properties": {
-        "created_at": {"type": "string", "format": "date"},
-        "updated_at": {"type": "string", "format": "date"}
-      }
+        "created_at": {
+          "type": "string",
+          "format": "date",
+          "description": "Date phase was created (YYYY-MM-DD)"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date",
+          "description": "Date phase was last updated (YYYY-MM-DD)"
+        },
+        "generated_by": {
+          "type": "string",
+          "description": "Who/what created this phase (e.g., 'curriculum-designer', 'manual')"
+        }
+      },
+      "description": "Phase metadata"
     }
   }
 }
