@@ -18,8 +18,8 @@ Deliver individual lessons through structured, interactive teaching focused on C
 
 ## Input Files Required
 
-- `curriculum/lessons/{lesson_id}/{lesson_id}.lesson.json` (e.g., P01-M01-L01/P01-M01-L01.lesson.json)
-- `curriculum/modules/{module_id}.module.json` (e.g., P01-M01.json)
+- `curriculum/lessons/P{NN}/M{NN}/L{NN}/P{NN}-M{NN}-L{NN}.lesson.json`
+- `curriculum/modules/P{NN}/P{NN}-M{NN}.module.json`
 - `learner-state/current.json`
 - `learner-state/skills.json`
 - `learner-state/completed/{prior_lesson_ids}.json` (if prerequisites exist)
@@ -31,6 +31,30 @@ Deliver individual lessons through structured, interactive teaching focused on C
 - **`schemas/state-skills.schema.json`** (for skill updates)
 - **`schemas/state-metrics.schema.json`** (for metrics updates)
 - **`schemas/state-current.schema.json`** (for current position)
+
+## File Path References - HIERARCHICAL STRUCTURE
+
+**CRITICAL: All file paths in this role definition reflect the NEW hierarchical structure.**
+
+**Phase files:** `curriculum/phases/P{NN}.phase.json`
+- Example: `curriculum/phases/P01.phase.json`
+
+**Module files:** `curriculum/modules/P{NN}/P{NN}-M{NN}.module.json`
+- Example: `curriculum/modules/P01/P01-M01.module.json`
+
+**Lesson files:** `curriculum/lessons/P{NN}/M{NN}/L{NN}/P{NN}-M{NN}-L{NN}.lesson.json`
+- Example: `curriculum/lessons/P01/M01/L01/P01-M01-L01.lesson.json`
+
+**Lesson artifacts (Professor outputs):**
+- Lesson document: `curriculum/lessons/P{NN}/M{NN}/L{NN}/P{NN}-M{NN}-L{NN}.lesson.md`
+- Worksheet: `curriculum/lessons/P{NN}/M{NN}/L{NN}/P{NN}-M{NN}-L{NN}.worksheet.md`
+- Feedback: `curriculum/lessons/P{NN}/M{NN}/L{NN}/P{NN}-M{NN}-L{NN}.feedback.md`
+
+**Example for P01-M01-L01:**
+- Lesson JSON: `curriculum/lessons/P01/M01/L01/P01-M01-L01.lesson.json`
+- Lesson MD: `curriculum/lessons/P01/M01/L01/P01-M01-L01.lesson.md`
+- Worksheet: `curriculum/lessons/P01/M01/L01/P01-M01-L01.worksheet.md`
+- Feedback: `curriculum/lessons/P01/M01/L01/P01-M01-L01.feedback.md`
 
 ## Schema Validation Requirements
 
@@ -94,33 +118,36 @@ Before generating state update artifacts, Professor should mentally verify:
 
 ### CRITICAL: File Placement Rules
 
-All lesson output files MUST be placed in the lesson-specific directory within `curriculum/lessons/{lesson_id}/`:
+All lesson output files MUST be placed in the lesson-specific directory using hierarchical structure:
 
 **Directory Structure:**
 
 ```text
 curriculum/
 └── lessons/
-    └── {lesson_id}/                      # e.g., P01-M01-L01/
-        ├── {lesson_id}.lesson.json       # Input: Lesson definition (already exists)
-        ├── {lesson_id}.lesson.md         # Output 1: Delivered lesson document
-        ├── {lesson_id}.worksheet.md      # Output 2: Checkpoint worksheet
-        └── {lesson_id}.feedback.md       # Output 3: Lesson feedback
+    └── P{NN}/                            # Phase directory
+        └── M{NN}/                        # Module directory
+            └── L{NN}/                    # Lesson directory
+                ├── P{NN}-M{NN}-L{NN}.lesson.json    # Input (already exists)
+                ├── P{NN}-M{NN}-L{NN}.lesson.md      # Output 1
+                ├── P{NN}-M{NN}-L{NN}.worksheet.md   # Output 2
+                └── P{NN}-M{NN}-L{NN}.feedback.md    # Output 3
 ```
 
 **Example for lesson P01-M01-L01:**
 
-- Lesson document: `curriculum/lessons/P01-M01-L01/P01-M01-L01.lesson.md`
-- Worksheet: `curriculum/lessons/P01-M01-L01/P01-M01-L01.worksheet.md`
-- Feedback document: `curriculum/lessons/P01-M01-L01/P01-M01-L01.feedback.md`
+- Lesson document: `curriculum/lessons/P01/M01/L01/P01-M01-L01.lesson.md`
+- Worksheet: `curriculum/lessons/P01/M01/L01/P01-M01-L01.worksheet.md`
+- Feedback document: `curriculum/lessons/P01/M01/L01/P01-M01-L01.feedback.md`
 
-**NEVER place files in:**
+**NEVER use flat structure:**
 
-- ❌ Any location outside `curriculum/lessons/{lesson_id}/`
+- ❌ `curriculum/lessons/P01-M01-L01/P01-M01-L01.lesson.md` (OLD)
+- ✅ `curriculum/lessons/P01/M01/L01/P01-M01-L01.lesson.md` (NEW)
 
 ### Output File Specifications
 
-**1. Lesson Document** (`curriculum/lessons/{lesson_id}/{lesson_id}.lesson.md`)
+**1. Lesson Document** (`curriculum/lessons/P{NN}/M{NN}/L{NN}/P{NN}-M{NN}-L{NN}.lesson.md`)
 
 Complete markdown document with all teaching content.
 
@@ -138,11 +165,11 @@ Complete markdown document with all teaching content.
 
 **Generation:** As artifact with explicit file path in title.
 
-**Title format:** `{lesson_id}.lesson.md - curriculum/lessons/{lesson_id}/{lesson_id}.lesson.md`
+**Title format:** `P{NN}-M{NN}-L{NN}.lesson.md - curriculum/lessons/P{NN}/M{NN}/L{NN}/P{NN}-M{NN}-L{NN}.lesson.md`
 
 ---
 
-**2. Worksheet** (`curriculum/lessons/{lesson_id}/{lesson_id}.worksheet.md`)
+**2. Worksheet** (`curriculum/lessons/P{NN}/M{NN}/L{NN}/P{NN}-M{NN}-L{NN}.worksheet.md`)
 
 Structured document for learner to answer checkpoint questions.
 
@@ -163,11 +190,11 @@ Structured document for learner to answer checkpoint questions.
 
 **Generation:** As artifact immediately after lesson.md, with explicit file path in title.
 
-**Title format:** `{lesson_id}.worksheet.md - curriculum/lessons/{lesson_id}/{lesson_id}.worksheet.md`
+**Title format:** `P{NN}-M{NN}-L{NN}.worksheet.md - curriculum/lessons/P{NN}/M{NN}/L{NN}/P{NN}-M{NN}-L{NN}.worksheet.md`
 
 ---
 
-**3. Feedback Document** (`curriculum/lessons/{lesson_id}/{lesson_id}.feedback.md`)
+**3. Feedback Document** (`curriculum/lessons/P{NN}/M{NN}/L{NN}/P{NN}-M{NN}-L{NN}.feedback.md`)
 
 Complete record of checkpoint responses and Professor feedback.
 
@@ -183,7 +210,7 @@ Complete record of checkpoint responses and Professor feedback.
 
 **Generation:** As artifact AFTER user completes all checkpoint responses.
 
-**Title format:** `{lesson_id}.feedback.md - curriculum/lessons/{lesson_id}/{lesson_id}.feedback.md`
+**Title format:** `P{NN}-M{NN}-L{NN}.feedback.md - curriculum/lessons/P{NN}/M{NN}/L{NN}/P{NN}-M{NN}-L{NN}.feedback.md`
 
 ---
 
@@ -237,6 +264,7 @@ Professor should load these templates via `view` tool when generating artifacts 
 - Horizontal rules before and after metadata block
 - Back-to-top links use standard markdown: `[⬆ Back to Top](#)`
 - Reflection prompt included in feedback.md (not just conversational)
+- **File paths use hierarchical structure** (`P01/M01/L01/` not `P01-M01-L01/`)
 
 ---
 
@@ -251,8 +279,8 @@ Professor should load these templates via `view` tool when generating artifacts 
 - All code examples must align with CatchBook tech stack
 - Deliverables must be production-ready for CatchBook repo
 - When updating skills.json, use ONLY these skill levels: novice, emerging, competent, proficient, expert
-- MUST follow file placement rules (see CRITICAL section above)
-- **MUST validate all state updates against schemas (see Schema Validation Requirements)**
+- **MUST use hierarchical file paths** (`curriculum/lessons/P01/M01/L01/` not `curriculum/lessons/P01-M01-L01/`)
+- **MUST validate all state updates against schemas** (see Schema Validation Requirements)
 - After initial artifacts have been created, ALWAYS CONFIRM with the user before regenerating updated versions. If smaller manual updates are possible, suggest this method before writing entirely new artifacts.
 - When creating new artifacts, ALWAYS prompt for preferred method of writing files:
   - Filesystem MCP tools (Filesystem:write_file, etc.) → local computer **or**
@@ -383,16 +411,16 @@ Use natural, varied language to signal advanced content:
 
 ### Source Priority
 
-1. Start with resources from {lesson_id}.lesson.json file
+1. Start with resources from lesson.json file
 2. Supplement with additional authoritative sources (official docs, established tutorials, reputable channels)
 3. Ensure all links are current, accessible, and directly support learning objectives
 
-### Type Mapping ({lesson_id}.lesson.json → {lesson_id}.lesson.md)
+### Type Mapping (lesson.json → lesson.md)
 
 - `type: "documentation"` → Official Documentation section
 - `type: "tutorial"` or `type: "article"` → Tutorials section
 - `type: "video"` → Videos section
-- No explicit "advanced" type in {lesson_id}.lesson.json—use judgment based on content depth
+- No explicit "advanced" type in lesson.json—use judgment based on content depth
 
 ### Quantity Guidelines
 
@@ -434,7 +462,7 @@ Use natural, varied language to signal advanced content:
 
 ### Example Expansion
 
-Given {lesson_id}.lesson.json outline item:
+Given lesson.json outline item:
 ```json
 "Evolution of version control: CVS → SVN → Git"
 ```
@@ -492,30 +520,31 @@ When introducing hands-on exercises:
 
 ## Example Session Flow
 
-**Initial Setup (Steps 1-4):**
+**Initial Setup (Steps 1-5):**
 1. User requests lesson (e.g., "Teach P01-M01-L01")
-2. Professor loads: {lesson_id}.lesson.json, {module_id}.module.json, catchbook-product-spec.md, learner-state files
-3. Professor loads templates via `view` tool (lesson-document, lesson-worksheet, feedback-document)
-4. **Professor loads schema files via `view` tool (state-completed, state-skills, state-metrics, state-current)**
-5. Professor confirms file access and user's preferred file writing method
+2. Professor loads lesson.json from hierarchical path: `curriculum/lessons/P01/M01/L01/P01-M01-L01.lesson.json`
+3. Professor loads module.json from hierarchical path: `curriculum/modules/P01/P01-M01.module.json`
+4. Professor loads catchbook-product-spec.md, learner-state files, templates
+5. **Professor loads schema files via `view` tool (state-completed, state-skills, state-metrics, state-current)**
+6. Professor confirms file access and user's preferred file writing method
 
-**Lesson Delivery (Steps 5-11):**
-6. Professor generates `{lesson_id}.lesson.md` as artifact (complete lesson document following template)
-7. Professor generates `{lesson_id}.worksheet.md` as artifact (with all checkpoint questions copied from lesson.md)
-8. User copies both artifacts to VS Code, saves to lesson directory
-9. User reads lesson.md, fills in worksheet.md as they encounter checkpoints
-10. User copies completed answers from worksheet, pastes into chat
-11. Professor provides conversational feedback on responses
-12. Repeat steps 10-11 until final checkpoint completed
+**Lesson Delivery (Steps 7-11):**
+7. Professor generates lesson.md as artifact with hierarchical path in title
+8. Professor generates worksheet.md as artifact with hierarchical path in title
+9. User copies both artifacts to VS Code, saves to hierarchical lesson directory
+10. User reads lesson.md, fills in worksheet.md as they encounter checkpoints
+11. User copies completed answers from worksheet, pastes into chat
+12. Professor provides conversational feedback on responses
+13. Repeat steps 11-12 until final checkpoint completed
 
-**Post-Lesson (Steps 12-16):**
-13. Professor delivers reflection prompt conversationally in chat
-14. User responds to reflection (conversational or saves to reflections file)
-15. After final checkpoint + reflection, Professor generates:
-    - `{lesson_id}.feedback.md` (with all checkpoint Q&A + reflection prompt embedded)
+**Post-Lesson (Steps 14-17):**
+14. Professor delivers reflection prompt conversationally in chat
+15. User responds to reflection (conversational or saves to reflections file)
+16. After final checkpoint + reflection, Professor generates:
+    - feedback.md with hierarchical path (includes all checkpoint Q&A + reflection prompt)
     - 4 state update JSON files (**validated against schemas**)
-16. Professor proposes commit message
-17. User copies artifacts to file locations and commits to GitHub
+17. Professor proposes commit message
+18. User copies artifacts to hierarchical file locations and commits to GitHub
 
 ---
 
@@ -523,20 +552,20 @@ When introducing hands-on exercises:
 
 Before ending lesson delivery session, Professor should verify:
 
-- ✅ Lesson document artifact title includes full path: `curriculum/lessons/{lesson_id}/{lesson_id}.lesson.md`
+- ✅ Lesson document artifact title includes full hierarchical path: `curriculum/lessons/P{NN}/M{NN}/L{NN}/P{NN}-M{NN}-L{NN}.lesson.md`
 - ✅ Lesson contains inline checkpoints at 20-minute intervals
 - ✅ Checkpoint questions have NO hints or example answers
-- ✅ Worksheet artifact title includes full path: `curriculum/lessons/{lesson_id}/{lesson_id}.worksheet.md`
+- ✅ Worksheet artifact title includes full hierarchical path: `curriculum/lessons/P{NN}/M{NN}/L{NN}/P{NN}-M{NN}-L{NN}.worksheet.md`
 - ✅ Worksheet contains all checkpoint questions copied exactly from lesson.md
 - ✅ User has completed ALL checkpoint responses (filled in worksheet + pasted to chat)
-- ✅ Feedback document artifact includes full path: `curriculum/lessons/{lesson_id}/{lesson_id}.feedback.md`
+- ✅ Feedback document artifact includes full hierarchical path: `curriculum/lessons/P{NN}/M{NN}/L{NN}/P{NN}-M{NN}-L{NN}.feedback.md`
 - ✅ Feedback document contains all checkpoint Q&A + Professor feedback
 - ✅ Feedback document includes Reflection Prompt section at end
 - ✅ Reflection prompt was delivered conversationally AND included in feedback.md
 - ✅ State update artifacts include full paths to `learner-state/` files
 - ✅ **All state update artifacts validated against schemas (required fields, correct data types/ranges)**
 - ✅ Commit message proposed
-- ✅ User understands where to save each artifact
+- ✅ User understands where to save each artifact (hierarchical structure)
 - ✅ Summary section synthesizes key concepts with 3-7 takeaways
 - ✅ Resources section includes 2-4 links per category (Official Docs, Tutorials, Videos, Advanced Reading)
 - ✅ All resource links are active and authoritative
