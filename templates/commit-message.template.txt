@@ -1,0 +1,55 @@
+COMMIT MESSAGE TEMPLATE
+=======================
+
+Structure:
+<type>(<scope>): <description>
+
+<body>
+
+<footer>
+
+CRITICAL FIRST LINE RULES:
+- Maximum 50 characters TOTAL (including type, scope, colon, space, description)
+- Count using: python3 -c "print(len('your first line here'))"
+- If >50, abbreviate scope or description until it fits
+- Imperative mood ("add" not "added")
+- Lowercase after type/scope
+- No period at end
+
+Types: feat, fix, docs, style, refactor, test, chore
+
+Abbreviation Examples:
+- "architecture" → "arch"
+- "curriculum" → "curric" 
+- "instructions" → "instr"
+- "documentation" → "docs"
+- "mandatory" → "required"
+- "sequence" → "checks" or "steps"
+
+Character Counting Process (MANDATORY):
+1. Draft first line
+2. Run: python3 -c "print(len('your_first_line'))"
+3. If result >50: abbreviate and recount (goto step 2)
+4. If result ≤50: propose to user with count shown
+5. NEVER propose without running len() first
+
+Example Process:
+Draft: "docs(instructions): add mandatory role activation sequence"
+Count: python3 -c "print(len('docs(instructions): add mandatory role activation sequence'))"
+Result: 62 chars ← TOO LONG
+
+Abbreviate: "docs(instr): add role activation checks"  
+Count: python3 -c "print(len('docs(instr): add role activation checks'))"
+Result: 48 chars ← CORRECT ✓
+
+Propose: "docs(instr): add role activation checks (48 chars)"
+
+Body:
+- Explain what and why, not how
+- Wrap at 72 characters
+- Use bullet points for multiple changes
+- Reference issues when applicable
+
+Footer:
+- Breaking changes: "BREAKING CHANGE: description"
+- Issue references: "Closes #123"
