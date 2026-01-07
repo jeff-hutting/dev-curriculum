@@ -9,7 +9,7 @@ CORE PRINCIPLES
 - Evidence-based reasoning: Reference explicit file contents only
 
 REPOSITORY ACCESS
-GitHub MCP and Filesystem MCP are configured. Repository branch is "main" (not "master"). Never use the "+" upload button—always read via MCP. Filesystem MCP is scoped to /Users/jeffhutting/dev/dev-curriculum for local file operations. Use Filesystem MCP for bulk operations and local script execution.
+GitHub MCP and Filesystem MCP are configured. Repository branch is "main" (not "master"). Never use the "+" upload button—always read via MCP. Filesystem MCP is scoped to /Users/jeffhuttingdev/dev/dev-curriculum for local file operations. Use Filesystem MCP for bulk operations and local script execution.
 
 If repository access fails, instruct user to check MCP configuration.
 
@@ -33,7 +33,7 @@ MANDATORY ROLE ACTIVATION SEQUENCE
 CRITICAL: When ANY role is activated, Claude MUST complete this sequence BEFORE generating any content:
 
 1. STOP and acknowledge role activation
-2. READ the role definition file via Filesystem MCP: /Users/jeffhutting/dev/dev-curriculum/roles/{role-name}.md
+2. READ the role definition file via Filesystem MCP: /Users/jeffhuttingdev/dev/dev-curriculum/roles/{role-name}.md
 3. CHECK for relevant skills: view /mnt/skills/public/ and /mnt/skills/examples/
 4. READ all template files mentioned in the role definition or relevant to the task
 5. CONFIRM with user: "I've loaded {role}.md and templates X, Y, Z. Ready to proceed with {specific task}?"
@@ -272,6 +272,69 @@ feat(auth): add JWT authentication
 
 - Implement JWT-based auth with bcrypt hashing
 - Add protected routes for user data
+
+**MANDATORY CHARACTER COUNT ENFORCEMENT:**
+Before proposing ANY commit message, Claude MUST:
+1. Draft the first line completely
+2. Execute: python3 -c "print(len('first_line_here'))"
+3. If result >50: abbreviate scope/description and repeat step 2
+4. If result ≤50: propose to user showing the character count
+5. Format proposal: "type(scope): description (NN chars)"
+
+Example bash_tool invocation:
+
+bash_tool command:
+python3 -c "print(len('docs(instructions): add role activation checks'))"
+
+Expected output:
+46
+
+(If result ≤50, propose to user with character count shown)
+
+Claude's proposal format:
+"Proposed commit message: `docs(instructions): add role activation checks` (46 chars)"
+
+**VIOLATION DETECTION:**
+If Claude proposes a commit message without showing the character count,
+this is a CRITICAL PROTOCOL VIOLATION.
+
+The commit message proposal MUST include the character count in parentheses
+after the first line, like this:
+
+docs(templates): add commit template (44 chars)
+
+NOT like this:
+
+docs(templates): add commit message template
+
+Without the character count verification, Claude has not followed the 
+mandatory enforcement protocol.
+
+**ABBREVIATION STRATEGY:**
+When first line exceeds 50 characters, use these abbreviations:
+- "architecture" → "arch"
+- "curriculum" → "curric" 
+- "instructions" → "instr"
+- "documentation" → "docs"
+- "mandatory" → "required"
+- "sequence" → "checks", "steps", "flow"
+- Remove articles: "the", "a", "an"
+- Shorter verbs: "create" → "add", "modify" → "update", "remove" → "drop"
+
+**ITERATION PROCESS:**
+If first attempt exceeds 50 chars, abbreviate and recount:
+
+Iteration 1:
+Draft: "docs(instructions): add mandatory role activation sequence"
+Count: python3 -c "print(len('docs(instructions): add mandatory role activation sequence'))"
+Result: 62 chars ← TOO LONG
+
+Iteration 2:
+Draft: "docs(instr): add role activation checks"
+Count: python3 -c "print(len('docs(instr): add role activation checks'))"
+Result: 48 chars ← CORRECT ✓
+
+Propose: "docs(instr): add role activation checks (48 chars)"
 
 COMMUNICATION STYLE
 - Direct, concise, structured, practical
