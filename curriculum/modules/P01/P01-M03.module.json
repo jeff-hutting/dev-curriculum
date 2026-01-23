@@ -1,0 +1,101 @@
+{
+  "module_id": "P01-M03",
+  "module_name": "Commit conventions + PR templates",
+  "phase_id": "P01",
+  "estimated_hours": 6,
+  "catchbook_deliverable": "Professional repo hygiene for CatchBook with Conventional Commits and PR template",
+  "description": "Master professional commit message conventions and pull request templates. Learn to write clear, consistent commit messages following the Conventional Commits specification. Create PR templates that streamline code review and maintain high-quality documentation. Establish the repository hygiene patterns that will support CatchBook's evolution across all 28 phases.",
+  "prerequisites": ["P01-M01", "P01-M02"],
+  "learning_objectives": [
+    "Understand the value of consistent commit message format for project history",
+    "Write commit messages following Conventional Commits specification",
+    "Structure commit messages with type, scope, subject, body, and footer",
+    "Use semantic commit types (feat, fix, docs, style, refactor, test, chore)",
+    "Create GitHub PR templates with consistent structure",
+    "Write clear PR descriptions that facilitate code review",
+    "Link commits and PRs to issues using GitHub syntax",
+    "Apply commit conventions to all CatchBook development work"
+  ],
+  "skills_taught": [
+    "conventional_commits",
+    "commit_message_quality",
+    "pr_templates",
+    "pr_descriptions",
+    "issue_linking",
+    "repository_hygiene",
+    "semantic_versioning_awareness",
+    "changelog_generation"
+  ],
+  "lessons": [
+    {
+      "lesson_id": "P01-M03-L01",
+      "title": "Conventional Commits Format",
+      "lesson_type": "conceptual",
+      "estimated_minutes": 75
+    },
+    {
+      "lesson_id": "P01-M03-L02",
+      "title": "Writing Effective Commit Messages",
+      "lesson_type": "hands-on",
+      "estimated_minutes": 90
+    },
+    {
+      "lesson_id": "P01-M03-L03",
+      "title": "Pull Request Templates",
+      "lesson_type": "hands-on",
+      "estimated_minutes": 90
+    },
+    {
+      "lesson_id": "P01-M03-L04",
+      "title": "Integrating Conventions into Workflow",
+      "lesson_type": "hands-on",
+      "estimated_minutes": 105
+    }
+  ],
+  "catchbook_integration": {
+    "feature_area": "Repository documentation and commit hygiene infrastructure",
+    "repository_path": "catchbook/",
+    "dependencies": [
+      "CatchBook repository initialized (P01-M01)",
+      "PR workflow established (P01-M02)",
+      "Feature branches created (P01-M02)"
+    ]
+  },
+  "resources": [
+    {
+      "type": "specification",
+      "title": "Conventional Commits Official Specification",
+      "url": "https://www.conventionalcommits.org/en/v1.0.0/"
+    },
+    {
+      "type": "article",
+      "title": "How to Write a Git Commit Message",
+      "url": "https://chris.beams.io/posts/git-commit/"
+    },
+    {
+      "type": "documentation",
+      "title": "GitHub Pull Request Templates",
+      "url": "https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository"
+    },
+    {
+      "type": "tool",
+      "title": "Commitizen - Commit Message Helper",
+      "url": "https://github.com/commitizen/cz-cli"
+    },
+    {
+      "type": "article",
+      "title": "Semantic Commit Messages",
+      "url": "https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716"
+    },
+    {
+      "type": "video",
+      "title": "Git Commit Best Practices (MIT Missing Semester)",
+      "url": "https://missing.csail.mit.edu/2020/version-control/"
+    }
+  ],
+  "metadata": {
+    "created_at": "2025-01-22",
+    "updated_at": "2025-01-22",
+    "generated_by": "Curriculum Designer (Claude)"
+  }
+}

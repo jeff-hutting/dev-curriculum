@@ -1,0 +1,99 @@
+{
+  "lesson_id": "P01-M03-L02",
+  "title": "Writing Effective Commit Messages",
+  "module_id": "P01-M03",
+  "phase_id": "P01",
+  "estimated_minutes": 90,
+  "lesson_type": "hands-on",
+  "prerequisites": ["P01-M03-L01"],
+  "learning_objectives": [
+    "Write commit messages following Conventional Commits format",
+    "Craft clear, concise commit descriptions under 50 characters",
+    "Compose commit bodies that explain what and why, not how",
+    "Use imperative mood correctly in commit subjects",
+    "Choose appropriate commit types for different kinds of changes",
+    "Reference GitHub issues in commit footers",
+    "Amend commits to fix message mistakes before pushing",
+    "Apply commit message best practices to CatchBook development"
+  ],
+  "outline": [
+    "Review: Conventional Commits structure from L01",
+    "The 50/72 rule: subject line and body formatting",
+    "Imperative mood: 'Add feature' not 'Added feature' or 'Adds feature'",
+    "Subject line guidelines: capitalize first word, no period, be specific",
+    "When to include a commit body: complex changes, non-obvious decisions",
+    "Writing effective bodies: explain motivation and context",
+    "Commit footer syntax: issue references (Closes #123, Refs #456)",
+    "Common mistakes: vague descriptions, mixed concerns, missing type",
+    "The art of atomic commits: one logical change per commit",
+    "Amending commits: git commit --amend for message fixes",
+    "Interactive examples: improve bad commit messages",
+    "Hands-on: Write 5 conventional commits for CatchBook README improvements",
+    "Hands-on: Amend a commit message to follow conventions",
+    "Hands-on: Write commit with body explaining design decision"
+  ],
+  "outline_structure_notes": "Sections 1-11 are conceptual/examples. Sections 12-14 are hands-on exercises.",
+  "checkpoint_placement_guidance": "After section 5 (body writing), after section 9 (atomic commits), after section 11 (examples), after final hands-on exercise (section 14).",
+  "key_terms": [
+    "50/72 rule",
+    "imperative mood",
+    "atomic commit",
+    "commit body",
+    "commit footer",
+    "git commit --amend",
+    "issue reference",
+    "closes syntax"
+  ],
+  "catchbook_context": {
+    "feature": "Professional commit messages for all CatchBook changes",
+    "deliverable": "Series of well-formatted commits improving CatchBook README documentation",
+    "code_location": "catchbook/README.md"
+  },
+  "assessment": {
+    "type": "hands-on-exercise",
+    "criteria": [
+      "All commits follow Conventional Commits format",
+      "Commit subjects are under 50 characters",
+      "Imperative mood used correctly",
+      "Appropriate commit types selected for each change",
+      "At least one commit includes well-written body",
+      "Demonstrate git commit --amend successfully",
+      "Issue references formatted correctly in footers"
+    ]
+  },
+  "resources": [
+    {
+      "type": "article",
+      "title": "How to Write a Git Commit Message (Chris Beams)",
+      "url": "https://chris.beams.io/posts/git-commit/"
+    },
+    {
+      "type": "guide",
+      "title": "The Seven Rules of a Great Git Commit Message",
+      "url": "https://cbea.ms/git-commit/"
+    },
+    {
+      "type": "documentation",
+      "title": "Git Commit Amend",
+      "url": "https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History"
+    },
+    {
+      "type": "article",
+      "title": "Linking Pull Requests to Issues",
+      "url": "https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue"
+    }
+  ],
+  "professor_constraints": [
+    "Provide 10-15 'bad commit message' examples for learner to improve",
+    "Use actual CatchBook feature work for commit examples (species model, photo upload, etc.)",
+    "Show git log output before and after adopting conventions",
+    "Demonstrate git commit --amend workflow carefully (emphasize 'before pushing' caveat)",
+    "Address anxiety about 'overthinking' commit messages with efficiency tips",
+    "Show how descriptive commits help future debugging",
+    "Encourage learner to write commit messages as if explaining to teammate"
+  ],
+  "metadata": {
+    "created_at": "2025-01-22",
+    "generated_by": "Curriculum Designer (Claude)"
+  }
+}

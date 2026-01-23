@@ -1,0 +1,112 @@
+{
+  "lesson_id": "P01-M03-L04",
+  "title": "Integrating Conventions into Workflow",
+  "module_id": "P01-M03",
+  "phase_id": "P01",
+  "estimated_minutes": 105,
+  "lesson_type": "hands-on",
+  "prerequisites": ["P01-M03-L03"],
+  "learning_objectives": [
+    "Apply conventional commits and PR templates to complete feature development cycle",
+    "Configure git commit message template for consistent formatting",
+    "Use git hooks to validate commit messages (optional: commitlint)",
+    "Write conventional commits for multi-file changes",
+    "Create PR with template for feature branch merge",
+    "Review commit history for convention compliance",
+    "Establish personal commit and PR workflow for all future CatchBook work",
+    "Understand when to batch commits vs atomic commits"
+  ],
+  "outline": [
+    "Review: Conventional Commits + PR templates workflow",
+    "Complete feature cycle: branch → commits → PR → merge",
+    "Configuring git commit.template for message skeleton",
+    "Git hooks introduction: client-side automation",
+    "Optional: Setting up commitlint and husky for validation",
+    "Planning commits: grouping related changes logically",
+    "Multi-file commits: when one commit affects multiple files",
+    "Commit message editor workflow: writing longer bodies efficiently",
+    "PR workflow integration: template → commits → description",
+    "Reviewing commit history: git log --oneline with conventional format",
+    "Generating changelogs from conventional commits",
+    "Team adoption strategies: consistency in collaborative projects",
+    "Hands-on: Complete CatchBook feature (add contributing guidelines)",
+    "Hands-on: Make 4-6 conventional commits for CONTRIBUTING.md",
+    "Hands-on: Create PR with template linking commits to rationale",
+    "Hands-on: Merge PR and review final commit history",
+    "Reflection: Commit and PR hygiene as CatchBook grows"
+  ],
+  "outline_structure_notes": "Sections 1-12 are conceptual/setup. Sections 13-17 are hands-on exercises.",
+  "checkpoint_placement_guidance": "After section 6 (planning commits), after section 10 (changelog generation), after section 12 (team adoption), after final hands-on exercise (section 17).",
+  "key_terms": [
+    "git commit.template",
+    "git hooks",
+    "commitlint",
+    "husky",
+    "changelog generation",
+    "commit history",
+    "multi-file commit",
+    "atomic commit",
+    "pre-commit hook",
+    "conventional changelog"
+  ],
+  "catchbook_context": {
+    "feature": "Complete feature development with professional commit and PR hygiene",
+    "deliverable": "CONTRIBUTING.md file added to CatchBook with conventional commits and templated PR",
+    "code_location": "catchbook/CONTRIBUTING.md, catchbook/.github/"
+  },
+  "assessment": {
+    "type": "hands-on-exercise",
+    "criteria": [
+      "Feature branch created with 4-6 conventional commits",
+      "All commits follow Conventional Commits format",
+      "Commits are logically grouped (atomic where appropriate)",
+      "PR created using template with complete sections",
+      "PR description clearly explains CONTRIBUTING.md additions",
+      "PR merged successfully with clean commit history",
+      "Demonstrate git log shows professional commit messages",
+      "Articulate workflow for future CatchBook features"
+    ]
+  },
+  "resources": [
+    {
+      "type": "tool",
+      "title": "Commitlint - Lint Commit Messages",
+      "url": "https://github.com/conventional-changelog/commitlint"
+    },
+    {
+      "type": "tool",
+      "title": "Husky - Git Hooks Made Easy",
+      "url": "https://github.com/typicode/husky"
+    },
+    {
+      "type": "documentation",
+      "title": "Git Commit Template Configuration",
+      "url": "https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration"
+    },
+    {
+      "type": "tool",
+      "title": "Standard Version - Automated Changelog",
+      "url": "https://github.com/conventional-changelog/standard-version"
+    },
+    {
+      "type": "article",
+      "title": "Contributing Guidelines Best Practices",
+      "url": "https://opensource.guide/how-to-contribute/#anatomy-of-an-open-source-project"
+    }
+  ],
+  "professor_constraints": [
+    "This is the module capstone - learner should feel confident in workflow",
+    "Demonstrate complete cycle from branch creation to merge",
+    "Show git log --oneline --graph output at multiple stages",
+    "Address workflow efficiency: conventions shouldn't slow down development",
+    "Optional sections on automation (commitlint/husky) should be clearly marked optional",
+    "Emphasize habit formation: these patterns will be used 140+ more modules",
+    "Connect to future modules: how conventions enable collaboration in Phases 2-28",
+    "CONTRIBUTING.md content should reference commit conventions and PR template usage",
+    "Celebrate completion of P01-M03 - repository hygiene foundation established"
+  ],
+  "metadata": {
+    "created_at": "2025-01-22",
+    "generated_by": "Curriculum Designer (Claude)"
+  }
+}

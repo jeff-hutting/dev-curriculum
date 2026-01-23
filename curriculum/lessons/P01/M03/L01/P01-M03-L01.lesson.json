@@ -1,0 +1,98 @@
+{
+  "lesson_id": "P01-M03-L01",
+  "title": "Conventional Commits Format",
+  "module_id": "P01-M03",
+  "phase_id": "P01",
+  "estimated_minutes": 75,
+  "lesson_type": "conceptual",
+  "prerequisites": ["P01-M02-L04"],
+  "learning_objectives": [
+    "Explain the purpose and benefits of Conventional Commits specification",
+    "Identify the three required parts of a conventional commit: type, scope, description",
+    "Recognize valid commit types (feat, fix, docs, style, refactor, test, chore)",
+    "Understand when to use each commit type based on the nature of changes",
+    "Differentiate between breaking and non-breaking changes in commits",
+    "Parse commit messages to extract type, scope, and description",
+    "Explain how conventional commits enable automated changelog generation"
+  ],
+  "outline": [
+    "Introduction: Why commit message consistency matters for CatchBook",
+    "The problem: inconsistent commit messages in real projects",
+    "Conventional Commits specification overview",
+    "Commit message anatomy: type(scope): description",
+    "Required commit types: feat and fix (semantic versioning connection)",
+    "Supporting commit types: docs, style, refactor, test, chore, perf",
+    "Understanding scope: what area of code is affected",
+    "Writing the description: imperative mood, lowercase, no period",
+    "Breaking changes: the ! syntax and BREAKING CHANGE footer",
+    "Optional commit body: explaining what and why, not how",
+    "Optional commit footer: issue references and metadata",
+    "Real-world examples from popular open-source projects",
+    "How conventional commits enable automated tools (semantic-release, changelog generation)",
+    "CatchBook commit strategy: planning our conventions"
+  ],
+  "outline_structure_notes": "All 14 sections are conceptual. No hands-on exercises in this lesson.",
+  "checkpoint_placement_guidance": "After section 4 (anatomy), after section 8 (description rules), after section 11 (footers), after section 14 (CatchBook strategy).",
+  "key_terms": [
+    "Conventional Commits",
+    "commit type",
+    "commit scope",
+    "semantic versioning",
+    "breaking change",
+    "imperative mood",
+    "commit footer",
+    "changelog",
+    "semantic-release",
+    "commit message anatomy"
+  ],
+  "catchbook_context": {
+    "feature": "Commit message standards for CatchBook repository",
+    "deliverable": "Understanding of Conventional Commits format to be applied in L02-L04",
+    "code_location": "catchbook/ (all commits)"
+  },
+  "assessment": {
+    "type": "checkpoint-questions",
+    "criteria": [
+      "Correctly identify commit type for given code changes",
+      "Parse commit messages to extract type, scope, and description",
+      "Distinguish breaking vs non-breaking changes",
+      "Explain when to use each commit type (feat, fix, docs, etc.)",
+      "Articulate benefits of conventional commits for CatchBook development"
+    ]
+  },
+  "resources": [
+    {
+      "type": "specification",
+      "title": "Conventional Commits 1.0.0",
+      "url": "https://www.conventionalcommits.org/en/v1.0.0/"
+    },
+    {
+      "type": "article",
+      "title": "Understanding Semantic Versioning",
+      "url": "https://semver.org/"
+    },
+    {
+      "type": "tool",
+      "title": "Commitlint - Enforce Commit Conventions",
+      "url": "https://github.com/conventional-changelog/commitlint"
+    },
+    {
+      "type": "examples",
+      "title": "Angular Commit Message Guidelines",
+      "url": "https://github.com/angular/angular/blob/main/CONTRIBUTING.md#commit"
+    }
+  ],
+  "professor_constraints": [
+    "Use CatchBook-specific examples for all commit types (e.g., feat(auth): add user registration)",
+    "Show both good and bad commit message examples side-by-side",
+    "Emphasize that conventions reduce cognitive load over project lifetime",
+    "Connect commit types to semantic versioning (feat=minor, fix=patch, breaking=major)",
+    "Demonstrate parsing commits with regex or visual highlighting",
+    "Address common objection: 'This seems like bureaucracy' with long-term benefits",
+    "Preview how these conventions will benefit CatchBook as it grows to 28 phases"
+  ],
+  "metadata": {
+    "created_at": "2025-01-22",
+    "generated_by": "Curriculum Designer (Claude)"
+  }
+}
