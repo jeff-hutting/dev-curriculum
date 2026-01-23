@@ -1,19 +1,19 @@
 {
-  "total_time_minutes": 495,
-  "lessons_completed": 6,
+  "total_time_minutes": 615,
+  "lessons_completed": 7,
   "modules_completed": 1,
   "phases_completed": 0,
   "catchbook_features_shipped": 5,
   "reflections_written": 0,
   "average_confidence": 5.0,
   "consistency_score": 1.0,
-  "last_updated": "2025-01-07T23:30:00Z",
+  "last_updated": "2025-01-08T00:00:00Z",
   "lesson_history": [
     {
       "lesson_id": "P01-M01-L01",
       "completed_at": "2025-12-07T23:45:00Z",
       "duration_minutes": 75,
-      "confidence_level": 75,
+      "confidence_level": 5,
       "checkpoints_completed": 5,
       "assessment_score": "exceptional"
     },
@@ -21,7 +21,7 @@
       "lesson_id": "P01-M01-L02",
       "completed_at": "2025-12-07T19:30:00Z",
       "duration_minutes": 90,
-      "confidence_level": 90,
+      "confidence_level": 5,
       "checkpoints_completed": 6,
       "assessment_score": "exceptional"
     },
@@ -29,7 +29,7 @@
       "lesson_id": "P01-M01-L03",
       "completed_at": "2025-12-09T00:00:00Z",
       "duration_minutes": 90,
-      "confidence_level": 95,
+      "confidence_level": 5,
       "checkpoints_completed": 4,
       "assessment_score": "exceptional"
     },
@@ -37,7 +37,7 @@
       "lesson_id": "P01-M01-L04",
       "completed_at": "2025-12-10T00:00:00Z",
       "duration_minutes": 75,
-      "confidence_level": 98,
+      "confidence_level": 5,
       "checkpoints_completed": 4,
       "assessment_score": "exceptional"
     },
@@ -45,7 +45,7 @@
       "lesson_id": "P01-M02-L01",
       "completed_at": "2025-12-13T00:00:00Z",
       "duration_minutes": 75,
-      "confidence_level": 100,
+      "confidence_level": 5,
       "checkpoints_completed": 4,
       "assessment_score": "exceptional"
     },
@@ -53,17 +53,25 @@
       "lesson_id": "P01-M02-L02",
       "completed_at": "2025-01-07T23:30:00Z",
       "duration_minutes": 90,
-      "confidence_level": 100,
+      "confidence_level": 5,
       "checkpoints_completed": 4,
+      "assessment_score": "exceptional"
+    },
+    {
+      "lesson_id": "P01-M02-L03",
+      "completed_at": "2025-01-08T00:00:00Z",
+      "duration_minutes": 120,
+      "confidence_level": 5,
+      "checkpoints_completed": 5,
       "assessment_score": "exceptional"
     }
   ],
   "weekly_stats": {
     "current_week": "2025-W02",
-    "lessons_this_week": 1,
-    "time_this_week_minutes": 90,
+    "lessons_this_week": 2,
+    "time_this_week_minutes": 210,
     "target_weekly_hours": 10,
-    "progress_toward_target": 15.0
+    "progress_toward_target": 35.0
   },
   "skill_progression": {
     "git_basics": {
@@ -220,6 +228,55 @@
       "target_level": "competent",
       "progress_percentage": 100,
       "exceeded_target": true
+    },
+    "code_review": {
+      "started": "2025-01-08",
+      "current_level": "proficient",
+      "target_level": "competent",
+      "progress_percentage": 100,
+      "exceeded_target": true
+    },
+    "constructive_feedback": {
+      "started": "2025-01-08",
+      "current_level": "proficient",
+      "target_level": "competent",
+      "progress_percentage": 100,
+      "exceeded_target": true
+    },
+    "github_pr_review_tools": {
+      "started": "2025-01-08",
+      "current_level": "proficient",
+      "target_level": "competent",
+      "progress_percentage": 100,
+      "exceeded_target": true
+    },
+    "self_review": {
+      "started": "2025-01-08",
+      "current_level": "proficient",
+      "target_level": "competent",
+      "progress_percentage": 100,
+      "exceeded_target": true
+    },
+    "pr_iteration": {
+      "started": "2025-01-08",
+      "current_level": "proficient",
+      "target_level": "competent",
+      "progress_percentage": 100,
+      "exceeded_target": true
+    },
+    "psychological_safety": {
+      "started": "2025-01-08",
+      "current_level": "proficient",
+      "target_level": "competent",
+      "progress_percentage": 100,
+      "exceeded_target": true
+    },
+    "technical_communication": {
+      "started": "2025-01-08",
+      "current_level": "proficient",
+      "target_level": "competent",
+      "progress_percentage": 100,
+      "exceeded_target": true
     }
   },
   "catchbook_milestones": [
@@ -256,7 +313,7 @@
       "completed_at": "2025-12-10T00:00:00Z",
       "lessons_completed": 4,
       "total_duration_minutes": 330,
-      "average_confidence": 89.5,
+      "average_confidence": 5.0,
       "assessment_average": "exceptional",
       "notes": "All 4 lessons completed with exceptional performance. Demonstrated professional-level mastery of Git workflows, commit hygiene, and repository management. Exceeded target skill levels in 8 areas (git_basics, terminal_comfort, technical_vocabulary, commit_message_writing, github_workflow, remote_repository_management, atomic_commits, git_history_navigation, gitignore_configuration)."
     }
