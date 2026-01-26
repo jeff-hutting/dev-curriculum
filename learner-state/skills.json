@@ -6,9 +6,10 @@
       "confidence": 5,
       "modules_practiced": [
         "P01-M01",
-        "P01-M02"
+        "P01-M02",
+        "P01-M03"
       ],
-      "notes": "Maintained expert level. Applied Git fundamentals in merge conflict and resolution context."
+      "notes": "Maintained expert level. Applied Git fundamentals in Conventional Commits context."
     },
     "terminal_comfort": {
       "level": "proficient",
@@ -18,7 +19,7 @@
         "P01-M01",
         "P01-M02"
       ],
-      "notes": "Maintained proficient level. Executed complete merge workflow via terminal commands."
+      "notes": "Maintained proficient level. Not directly practiced in this lesson."
     },
     "markdown_documentation": {
       "level": "competent",
@@ -28,7 +29,7 @@
         "P01-M01",
         "P01-M02"
       ],
-      "notes": "Maintained competent level. Modified README markdown in hands-on exercises."
+      "notes": "Maintained competent level. Not directly practiced in this lesson."
     },
     "project_organization": {
       "level": "competent",
@@ -36,9 +37,10 @@
       "confidence": 5,
       "modules_practiced": [
         "P01-M01",
-        "P01-M02"
+        "P01-M02",
+        "P01-M03"
       ],
-      "notes": "Maintained competent level. Understanding of how merge strategies affect long-term project organization and history readability."
+      "notes": "Maintained competent level. Understanding of how commit message standards contribute to long-term project organization and maintainability."
     },
     "html_css": {
       "level": "novice",
@@ -82,9 +84,10 @@
       "confidence": 5,
       "modules_practiced": [
         "P01-M01",
-        "P01-M02"
+        "P01-M02",
+        "P01-M03"
       ],
-      "notes": "Maintained proficient level. Expanded vocabulary: merge, merge commit, squash and merge, rebase and merge, fast-forward merge, three-way merge, merge conflict, conflict markers, conflict resolution, branch cleanup, HEAD, common ancestor, divergent branches, convergent branches."
+      "notes": "Maintained proficient level. Expanded vocabulary: Conventional Commits, semantic versioning, SemVer, MAJOR/MINOR/PATCH, breaking change, imperative mood, commit type, commit scope, commit description, commit body, commit footer, changelog, trailers."
     },
     "systems_thinking": {
       "level": "expert",
@@ -92,9 +95,10 @@
       "confidence": 5,
       "modules_practiced": [
         "P01-M01",
-        "P01-M02"
+        "P01-M02",
+        "P01-M03"
       ],
-      "notes": "UPGRADED from proficient to expert. Exceptional demonstration: independently derived Single Responsibility Principle through first-principles reasoning when analyzing Python conflict scenario. Recognized merge strategy tradeoffs (history preservation vs clean log, housekeeping overhead, future reference needs). Articulated mental model transformation from 'tangled web' to structured understanding of collaborative development. Understanding that merges happen sequentially, not simultaneously. Recognition of risk-appropriate merge strategies (security features need detailed history, cosmetic features can be squashed)."
+      "notes": "Maintained expert level. Exceptional demonstration: immediately grasped that commit messages are dual-purpose infrastructure (human documentation + machine automation). Connected commit messages to SemVer automation, changelog generation, git log queries, and collaborative context. Recognized that commit types communicate intent (why) not just mechanics (what). Understood cascade effects: consistent commit messages now enable automation tools later. Flagged curriculum design issue showing quality-control systems thinking."
     },
     "commit_message_writing": {
       "level": "expert",
@@ -102,9 +106,10 @@
       "confidence": 5,
       "modules_practiced": [
         "P01-M01",
-        "P01-M02"
+        "P01-M02",
+        "P01-M03"
       ],
-      "notes": "Maintained expert level. Applied commit message skills in merge commit context and hands-on exercises."
+      "notes": "Maintained expert level. Now applying Conventional Commits standard: type(scope): description format, imperative mood, 50-character header limit, 72-character body wrapping."
     },
     "github_workflow": {
       "level": "expert",
@@ -114,7 +119,7 @@
         "P01-M01",
         "P01-M02"
       ],
-      "notes": "Maintained expert level. Completed full GitHub PR merge workflow including squash-and-merge, branch deletion, and remote cleanup."
+      "notes": "Maintained expert level. Not directly practiced in this lesson."
     },
     "ssh_authentication": {
       "level": "competent",
@@ -133,7 +138,7 @@
         "P01-M01",
         "P01-M02"
       ],
-      "notes": "Maintained expert level. Complete understanding of remote branch lifecycle: push, merge, delete, prune."
+      "notes": "Maintained expert level. Not directly practiced in this lesson."
     },
     "multi_device_sync": {
       "level": "competent",
@@ -150,9 +155,10 @@
       "confidence": 5,
       "modules_practiced": [
         "P01-M01",
-        "P01-M02"
+        "P01-M02",
+        "P01-M03"
       ],
-      "notes": "Maintained expert level. Understanding of how atomic commits interact with merge strategies (squashing messy commits, preserving meaningful ones)."
+      "notes": "Maintained expert level. Recognized that Conventional Commits structure enforces atomic thinking: if description is long/complex, commit is too big. Type/scope/short description forces single-purpose commits."
     },
     "git_history_navigation": {
       "level": "expert",
@@ -160,9 +166,10 @@
       "confidence": 5,
       "modules_practiced": [
         "P01-M01",
-        "P01-M02"
+        "P01-M02",
+        "P01-M03"
       ],
-      "notes": "Maintained expert level. Used git log --graph to visualize merge commits and understand history structure."
+      "notes": "Maintained expert level. Understanding of how Conventional Commits enables powerful git log queries: --grep for types, scopes, or descriptions; automated changelog generation; semantic versioning automation."
     },
     "gitignore_configuration": {
       "level": "expert",
@@ -179,9 +186,10 @@
       "confidence": 5,
       "modules_practiced": [
         "P01-M01",
-        "P01-M02"
+        "P01-M02",
+        "P01-M03"
       ],
-      "notes": "Maintained competent level. Recognized that authentication/security features require detailed commit history for audit trails and compliance."
+      "notes": "Maintained competent level. Recognized that breaking changes in authentication/security require ! syntax and detailed BREAKING CHANGE body for audit trails."
     },
     "git_branching": {
       "level": "expert",
@@ -190,7 +198,7 @@
       "modules_practiced": [
         "P01-M02"
       ],
-      "notes": "Maintained expert level. Complete mastery of branch creation, switching, merging, and cleanup workflows."
+      "notes": "Maintained expert level. Not directly practiced in this lesson."
     },
     "command_line_fluency": {
       "level": "proficient",
@@ -199,16 +207,17 @@
       "modules_practiced": [
         "P01-M02"
       ],
-      "notes": "Maintained proficient level. Executed complex multi-step workflows (conflict creation, resolution, merge, cleanup) via command line."
+      "notes": "Maintained proficient level. Not directly practiced in this lesson."
     },
     "professional_workflow_patterns": {
       "level": "expert",
       "last_practiced": "2025-01-12",
       "confidence": 5,
       "modules_practiced": [
-        "P01-M02"
+        "P01-M02",
+        "P01-M03"
       ],
-      "notes": "UPGRADED from proficient to expert. Identified and internalized critical post-merge ritual (checkout/pull/delete/checkout) as muscle-memory priority. Understanding that consistent rituals prevent entire categories of errors. Recognition that professional workflows eliminate decision fatigue through standardization."
+      "notes": "Maintained expert level. Conventional Commits is industry-standard professional workflow pattern. Understanding that standardization eliminates decision fatigue and enables team collaboration."
     },
     "pull_request_workflow": {
       "level": "expert",
@@ -217,7 +226,7 @@
       "modules_practiced": [
         "P01-M02"
       ],
-      "notes": "Maintained expert level. Complete end-to-end PR workflow: create branch → make changes → commit → push → open PR → merge via GitHub → pull main → delete branches → verify clean state."
+      "notes": "Maintained expert level. Not directly practiced in this lesson."
     },
     "github_issue_management": {
       "level": "proficient",
@@ -235,7 +244,7 @@
       "modules_practiced": [
         "P01-M02"
       ],
-      "notes": "Maintained proficient level. Wrote clear PR description for hands-on exercise including What/Why/Testing sections."
+      "notes": "Maintained proficient level. Not directly practiced in this lesson."
     },
     "diff_review": {
       "level": "competent",
@@ -244,16 +253,17 @@
       "modules_practiced": [
         "P01-M02"
       ],
-      "notes": "Maintained competent level. Reviewed diffs during conflict resolution to understand both versions."
+      "notes": "Maintained competent level. Not directly practiced in this lesson."
     },
     "issue_pr_linking": {
       "level": "proficient",
-      "last_practiced": "2025-01-07",
+      "last_practiced": "2025-01-12",
       "confidence": 5,
       "modules_practiced": [
-        "P01-M02"
+        "P01-M02",
+        "P01-M03"
       ],
-      "notes": "Previously established. Not practiced in this lesson."
+      "notes": "Maintained proficient level. Understanding of Closes #N footer syntax in Conventional Commits for automatic issue linking."
     },
     "code_review": {
       "level": "proficient",
@@ -325,7 +335,7 @@
       "modules_practiced": [
         "P01-M02"
       ],
-      "notes": "NEW SKILL. Strong understanding of three merge strategies: merge commit (preserves full history, two parents), squash and merge (combines all commits into one, clean linear history), rebase and merge (linear history with preserved commits, deferred to Phase 25). Excellent judgment about when to use each: squash for most CatchBook features (clean history), merge commit for security/authentication/major architectural changes (audit trail preservation). Understanding of fast-forward vs three-way merges. Recognition that squash-and-merge is GitHub's recommended default and appropriate for 90% of CatchBook workflow."
+      "notes": "Previously established. Not practiced in this lesson."
     },
     "merge_conflict_resolution": {
       "level": "proficient",
@@ -334,7 +344,7 @@
       "modules_practiced": [
         "P01-M02"
       ],
-      "notes": "NEW SKILL. Excellent understanding of conflict mechanics: occur when two branches modify same lines in same file, adjacent lines with incompatibilities, or one deletes what other modifies. Successfully completed intentional conflict creation/resolution exercise. Mastery of conflict marker anatomy (<<<<<<< HEAD, =======, >>>>>>> branch-name). Proficient with VS Code conflict resolution UI (Accept Current, Accept Incoming, Accept Both, Compare Changes). Understanding of command-line resolution workflow (git status, manual editing, git add, git commit). Key insight: conflicts aren't disasters, they're decision points requiring synthesis. Recognition that best resolutions often combine both versions rather than choosing binary winner."
+      "notes": "Previously established. Not practiced in this lesson."
     },
     "git_merge_mechanics": {
       "level": "proficient",
@@ -343,7 +353,7 @@
       "modules_practiced": [
         "P01-M02"
       ],
-      "notes": "NEW SKILL. Complete understanding of merge process: Git identifies common ancestor (divergence point), compares changes in each branch since divergence, combines changes into new state. Understanding of fast-forward merge (no divergence, target branch just moves forward) vs three-way merge (both branches have new commits, explicit merge commit created). Recognition that three-way merge examines three commits: common ancestor, feature branch tip, target branch tip. Understanding that Git auto-merges far more than expected (different files, different sections, non-overlapping changes) and only stops for ambiguous conflicts."
+      "notes": "Previously established. Not practiced in this lesson."
     },
     "branch_cleanup": {
       "level": "proficient",
@@ -352,7 +362,7 @@
       "modules_practiced": [
         "P01-M02"
       ],
-      "notes": "NEW SKILL. Complete mastery of local and remote branch cleanup: git branch -d (safe delete, requires merge), git branch -D (force delete, discards work), git push -d origin branch-name (delete remote branch), git fetch --prune (remove stale remote references). Understanding of when to use safe vs force delete. Recognition that cleanup prevents branch clutter and confusion about active work. Successfully troubleshot branch cleanup issues (stale remote references, ahead/behind warnings). Understanding that GitHub can auto-delete branches on PR merge."
+      "notes": "Previously established. Not practiced in this lesson."
     },
     "post_merge_workflow": {
       "level": "proficient",
@@ -361,7 +371,7 @@
       "modules_practiced": [
         "P01-M02"
       ],
-      "notes": "NEW SKILL. Identified critical post-merge ritual as top muscle-memory priority: checkout main → pull origin main → delete merged branch → checkout new feature branch. Understanding that skipping 'pull main' causes working from outdated base, leading to unnecessary conflicts with own merged work. Recognition that this sequence should become automatic like Cmd+S. Understanding that consistent rituals eliminate entire categories of errors and decision fatigue. Plans to create shell aliases to reduce typing (gitsync for checkout + pull). Demonstrated this workflow successfully in hands-on exercise."
+      "notes": "Previously established. Not practiced in this lesson."
     },
     "testing_after_merge": {
       "level": "competent",
@@ -370,7 +380,7 @@
       "modules_practiced": [
         "P01-M02"
       ],
-      "notes": "NEW SKILL. Understanding of critical post-merge testing principle: never merge without verifying functionality. Recognition that resolved conflicts might: run perfectly, have syntax errors (leftover conflict markers), have logical errors (changes conflict when combined), break tests (incompatible changes). Post-merge testing checklist understood: visual inspection of resolved files, grep for leftover conflict markers, run application, check for console errors, run automated tests (when available), manual smoke test of affected features. Understanding that testing catches integration issues that weren't obvious during conflict resolution. Concept understood, needs to become automatic habit through repetition."
+      "notes": "Previously established. Not practiced in this lesson."
     },
     "github_pr_merge_interface": {
       "level": "proficient",
@@ -379,7 +389,7 @@
       "modules_practiced": [
         "P01-M02"
       ],
-      "notes": "NEW SKILL. Complete understanding of GitHub PR merge interface: green 'Merge pull request' button with dropdown for three strategies (Create merge commit, Squash and merge, Rebase and merge). Successfully executed squash-and-merge in hands-on exercise. Understanding of customizing squash commit message (GitHub pre-fills with PR title and all commits, can edit to clean message). Recognition that GitHub option to delete branch after merge prevents manual cleanup. Understanding that merge via GitHub interface is preferred over local command-line merge for team collaboration and PR documentation preservation."
+      "notes": "Previously established. Not practiced in this lesson."
     },
     "conflict_synthesis": {
       "level": "proficient",
@@ -388,8 +398,71 @@
       "modules_practiced": [
         "P01-M02"
       ],
-      "notes": "NEW SKILL. Exceptional understanding that best conflict resolutions often combine both versions rather than choosing binary winner. Key insight from intentional conflict exercise: 'sometimes the correct decision isn't binary (one is right and the other is wrong). Sometimes the best decision is a combination of both changes.' Successfully synthesized README conflict by combining 'AI-powered fishing journal' (feature branch) with 'automatically logs your catches' (main) plus additional context. Understanding of when to synthesize (both add different value, one has better structure/other better content) vs when to choose (typos, bugs, outdated code). Recognition that collaborative conflicts often represent convergent problem-solving where two valid approaches should be integrated. This demonstrates mature engineering judgment beyond typical junior-level binary thinking."
+      "notes": "Previously established. Not practiced in this lesson."
+    },
+    "conventional_commits": {
+      "level": "expert",
+      "last_practiced": "2025-01-12",
+      "confidence": 5,
+      "modules_practiced": [
+        "P01-M03"
+      ],
+      "notes": "NEW SKILL. Exceptional mastery of Conventional Commits standard. Complete understanding of type(scope): description structure with syntactic precision (colon placement, spacing). Mastery of 11 commit types with excellent pattern recognition: feat (new functionality, MINOR bump), fix (bug correction, PATCH bump), refactor (internal structure, no behavior change), perf (performance optimization), docs (documentation), style (formatting), test (test code), chore (build/tooling), ci (CI config), build (build system), revert (revert previous commit). Perfect imperative mood usage with grammatical and practical rationale ('If applied, this commit will...'). Understanding of 50-character header limit and 72-character body wrapping. Excellent type selection judgment based on intent (why) not mechanics (what). Breaking change syntax (!) and BREAKING CHANGE body usage understood. Commit body judgment: when to include (complex reasoning, trade-offs, implementation details) vs when header suffices."
+    },
+    "semantic_versioning": {
+      "level": "proficient",
+      "last_practiced": "2025-01-12",
+      "confidence": 5,
+      "modules_practiced": [
+        "P01-M03"
+      ],
+      "notes": "NEW SKILL. Strong understanding of SemVer (MAJOR.MINOR.PATCH) and how Conventional Commits drive automatic version bumps: feat → MINOR (1.2.0 → 1.3.0), fix → PATCH (1.2.0 → 1.2.1), feat! or BREAKING CHANGE → MAJOR (1.2.0 → 2.0.0). Understanding that tools like semantic-release read commit messages and automatically determine next version number. Recognition that commit messages become source of truth for versioning strategy. Understanding of backward compatibility implications: PATCH (bug fixes, safe to auto-update), MINOR (new features, backward compatible), MAJOR (breaking changes, review before updating)."
+    },
+    "commit_type_selection": {
+      "level": "expert",
+      "last_practiced": "2025-01-12",
+      "confidence": 5,
+      "modules_practiced": [
+        "P01-M03"
+      ],
+      "notes": "NEW SKILL. Exceptional pattern recognition for commit type selection based on intent rather than mechanics. Correctly distinguished: feat vs fix (user-facing impact, SemVer bump), refactor vs perf (motivation: organization/structure vs performance optimization), docs vs style (code functionality vs formatting), chore vs build (general maintenance vs build system changes). Understanding that same code change can have different types based on primary motivation (e.g., extracting queries for organization = refactor, extracting queries to reduce roundtrips = perf). Six months later, someone debugging uses type to determine investigation strategy. Demonstrated mature judgment: when multiple types apply, choose based on primary intent and user perspective."
+    },
+    "imperative_mood_writing": {
+      "level": "expert",
+      "last_practiced": "2025-01-12",
+      "confidence": 5,
+      "modules_practiced": [
+        "P01-M03"
+      ],
+      "notes": "NEW SKILL. Perfect understanding of imperative mood for commit descriptions. Grammatical rationale: completes 'If applied, this commit will [description]' correctly (add, fix, update vs added, fixed, updated). Practical rationale: saves characters within 50-char limit (every character counts). Convention rationale: aligns with Git's own commit messages (Git uses imperative). Identified and corrected imperative mood violations across all exercises. Understanding that imperative mood is command form (add feature, fix bug) not past tense (added feature, fixed bug) or present continuous (adding feature, fixing bug). This is industry standard followed by Git, Linux kernel, and all major open-source projects."
+    },
+    "breaking_change_documentation": {
+      "level": "proficient",
+      "last_practiced": "2025-01-12",
+      "confidence": 5,
+      "modules_practiced": [
+        "P01-M03"
+      ],
+      "notes": "NEW SKILL. Strong understanding of breaking change syntax and requirements. Breaking change defined as: any modification requiring user/developer action to maintain existing functionality (removing features, changing API signatures, modifying config formats, renaming env vars, changing default behavior, updating minimum dependencies). Two syntaxes understood: type(scope)! or BREAKING CHANGE: in commit body (both trigger MAJOR version bump). Understanding of what makes changes breaking vs non-breaking: changing config format/structure = breaking, changing config values = usually not breaking; adding optional features = not breaking, removing features = breaking; deprecating but not removing = not breaking (gives migration time). Real CatchBook examples generated for API endpoint changes, authentication config changes, and dependency version requirements."
+    },
+    "commit_body_formatting": {
+      "level": "proficient",
+      "last_practiced": "2025-01-12",
+      "confidence": 5,
+      "modules_practiced": [
+        "P01-M03"
+      ],
+      "notes": "NEW SKILL. Strong understanding of when and how to write commit bodies. When to include: complex 'why' reasoning, breaking changes, multiple related changes, implementation details (non-obvious), trade-offs/decisions explained. When to skip: header is self-explanatory, change is trivial, code diff is obvious. Formatting rules understood: 72-character line wrapping (terminals display 80, Git adds 8 indent = 72 for content), blank line separates header from body, multiple paragraphs allowed, bullet points for lists. Structure recommendations understood: technical changes section (what changed), user impact section (why care), test coverage (thoroughness), quantified improvements (numbers not adjectives). 'Would Future Me Understand?' test for deciding body inclusion."
+    },
+    "git_footer_syntax": {
+      "level": "proficient",
+      "last_practiced": "2025-01-12",
+      "confidence": 5,
+      "modules_practiced": [
+        "P01-M03"
+      ],
+      "notes": "NEW SKILL. Understanding of Git commit footer syntax for metadata and issue linking. Closes #N syntax for automatic issue closing when commit is merged. Footer separated from body by blank line. Multiple footers allowed (Closes #123, Co-authored-by: Name <email>). Understanding that GitHub parses footers for automation: Closes/Fixes/Resolves keywords close issues, Co-authored-by adds contributors to commit. Trailers format: Key: Value with colon separator. Common trailers: Reviewed-by, Tested-by, Signed-off-by, Acked-by. Footer used in all checkpoint 4 exercises showing proper issue linking."
     }
   },
-  "last_updated": "2025-01-12T20:15:00Z"
+  "last_updated": "2025-01-12T21:45:00Z"
 }
