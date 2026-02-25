@@ -141,19 +141,19 @@ Every lesson document follows this exact structure:
 
 **These two sections are REQUIRED after metadata block, in this order:**
 
-#### Section 1: Why This Lesson Matters for CatchBook
+#### Section 1: Why This Lesson Matters for Helm
 
-**Purpose:** Connect lesson content to CatchBook development  
-**Length:** 10-15 lines  
+**Purpose:** Connect lesson content to Helm development
+**Length:** 10-15 lines
 **Content:**
-- Explain lesson's relevance to CatchBook
+- Explain lesson's relevance to Helm
 - Preview what learner will build/learn
-- Connect to real project needs
+- Connect to real project needs (task management, time-blocking, Google Calendar sync)
 - Show practical application
 
 **Heading Format:**
 ```markdown
-## Why This Lesson Matters for CatchBook
+## Why This Lesson Matters for Helm
 ```
 
 **Example Structure:**
@@ -708,11 +708,12 @@ This foundation in version control concepts will make the practical Git commands
 1. **Load this template** via `view` tool when generating first lesson artifact in a session
 2. **Follow specifications exactly** — this is the authoritative formatting reference
 3. **Expand outline items** from lesson.json into full sections using content guidelines
-4. **Insert checkpoints** every 20 minutes of estimated reading time
+4. **Insert checkpoints** at the 15-minute mark for 30-min lessons; every 20 minutes for longer lessons
 5. **Always include** Summary and Resources sections
 6. **Maintain consistency** — use same patterns throughout document
-7. **Connect to CatchBook** — every section should relate to actual CatchBook development
+7. **Connect to Helm** — every section should relate to actual Helm development (task management, time-blocking, Google Calendar sync)
 8. **GitHub and Obsidian will auto-generate navigation** — no manual TOC required
+9. **30-minute target, 45-minute absolute maximum** — if content exceeds this, flag it for the Curriculum Designer to split into two lessons
 
 ---
 

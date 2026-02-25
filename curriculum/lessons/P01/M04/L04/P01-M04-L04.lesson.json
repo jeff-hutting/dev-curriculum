@@ -1,0 +1,59 @@
+{
+  "lesson_id": "P01-M04-L04",
+  "title": "Linking Issues to Code — Branches, PRs, and Auto-Close",
+  "module_id": "P01-M04",
+  "phase_id": "P01",
+  "estimated_minutes": 30,
+  "lesson_type": "hands-on",
+  "prerequisites": ["P01-M04-L03"],
+  "learning_objectives": [
+    "Create feature branches named with issue numbers for traceability",
+    "Use closing keywords in PRs to auto-close issues on merge",
+    "See an issue move from In Progress to Done automatically via board automation",
+    "Understand the full loop: issue → branch → commits → PR → merge → closed issue"
+  ],
+  "outline": [
+    "Branch naming conventions that reference issues: feat/42-add-task-list",
+    "How GitHub Projects automation works: PR merged → issue closed → card moves to Done",
+    "Configuring the automation: setting up the workflow in GitHub Projects",
+    "The full loop demonstrated: open issue → branch → commits → PR → merge → Done",
+    "Hands-on: Pick one issue from the board, create a branch, make a small commit, open PR, merge, watch the board update"
+  ],
+  "key_terms": [
+    "branch naming convention",
+    "issue number",
+    "GitHub Projects automation",
+    "auto-close",
+    "workflow automation"
+  ],
+  "helm_context": {
+    "feature": "Automated issue lifecycle tied to code in Helm",
+    "deliverable": "One issue moved from Backlog → In Progress → Done via actual code merge",
+    "code_location": "helm/ (branch, PR, GitHub Projects)"
+  },
+  "assessment": {
+    "type": "hands-on-exercise",
+    "criteria": [
+      "Branch name includes issue number",
+      "PR uses Closes #N to link the issue",
+      "After merge, the issue is automatically closed and the board card moves to Done",
+      "Can explain why this automation matters for maintaining an accurate backlog"
+    ]
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Automating Projects",
+      "url": "https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/using-the-built-in-automations"
+    }
+  ],
+  "professor_constraints": [
+    "Use a real (small) Helm change for the hands-on — don't use a dummy commit",
+    "Walk through the automation setup step by step — it's easy to miss",
+    "This lesson ties together P01-M03 and P01-M04 — reinforce the full workflow"
+  ],
+  "metadata": {
+    "created_at": "2026-02-25",
+    "generated_by": "Curriculum Designer (Claude)"
+  }
+}

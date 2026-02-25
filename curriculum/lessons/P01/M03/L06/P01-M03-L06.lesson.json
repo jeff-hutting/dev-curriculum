@@ -1,0 +1,66 @@
+{
+  "lesson_id": "P01-M03-L06",
+  "title": "Creating GitHub PR Templates",
+  "module_id": "P01-M03",
+  "phase_id": "P01",
+  "estimated_minutes": 30,
+  "lesson_type": "hands-on",
+  "prerequisites": ["P01-M03-L05"],
+  "learning_objectives": [
+    "Create a GitHub pull request template file in the correct location",
+    "Structure a PR template with essential sections and checklist items",
+    "Format template markdown so GitHub renders interactive checkboxes",
+    "Verify the template auto-populates when opening a new PR"
+  ],
+  "outline": [
+    "GitHub PR template file location: .github/pull_request_template.md",
+    "Essential sections: Overview, Changes, How to Test, Checklist",
+    "Checklist items: what quality gates matter for Helm (tests pass, docs updated, etc.)",
+    "Markdown formatting: headers, lists, code blocks in templates",
+    "How GitHub renders the template in the PR creation UI",
+    "Hands-on: Create and commit Helm's PR template, then open a PR to verify it"
+  ],
+  "key_terms": [
+    "pull_request_template.md",
+    ".github directory",
+    "PR template",
+    "checklist",
+    "markdown rendering"
+  ],
+  "helm_context": {
+    "feature": "PR template for all Helm feature development",
+    "deliverable": ".github/pull_request_template.md committed to the Helm repository",
+    "code_location": "helm/.github/pull_request_template.md"
+  },
+  "assessment": {
+    "type": "hands-on-exercise",
+    "criteria": [
+      "PR template file created in correct location (.github/pull_request_template.md)",
+      "Template includes essential sections (Overview, Changes, How to Test, Checklist)",
+      "Checklist items render as interactive checkboxes in GitHub",
+      "A test PR opened confirms the template auto-populates the description field"
+    ]
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Creating a Pull Request Template",
+      "url": "https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository"
+    },
+    {
+      "type": "examples",
+      "title": "Awesome GitHub Templates",
+      "url": "https://github.com/devspace/awesome-github-templates"
+    }
+  ],
+  "professor_constraints": [
+    "Show the split view: raw markdown in editor vs. rendered template in GitHub UI",
+    "Demonstrate how - [ ] syntax becomes an interactive checkbox in GitHub",
+    "Keep the template focused — don't over-engineer it for a personal project",
+    "Confirm the template works by opening a real (draft or test) PR as the final step"
+  ],
+  "metadata": {
+    "created_at": "2026-02-25",
+    "generated_by": "Curriculum Designer (Claude)"
+  }
+}

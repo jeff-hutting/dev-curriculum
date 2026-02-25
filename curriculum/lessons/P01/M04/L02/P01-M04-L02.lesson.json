@@ -1,0 +1,62 @@
+{
+  "lesson_id": "P01-M04-L02",
+  "title": "Writing Effective Issues — Bugs, Features, and Tasks",
+  "module_id": "P01-M04",
+  "phase_id": "P01",
+  "estimated_minutes": 30,
+  "lesson_type": "hands-on",
+  "prerequisites": ["P01-M04-L01"],
+  "learning_objectives": [
+    "Write a bug report issue with enough context for a reviewer (or future-you) to act on it",
+    "Write a feature request issue that captures the user story and acceptance criteria",
+    "Write a task issue for technical work with a clear definition of done",
+    "Apply labels, milestones, and assignees correctly to each issue type"
+  ],
+  "outline": [
+    "The three issue types: bug report, feature request, task",
+    "Bug report anatomy: steps to reproduce, expected vs. actual behavior, environment",
+    "Feature request anatomy: user story, why it matters, acceptance criteria",
+    "Task anatomy: what needs doing, definition of done",
+    "Writing for future-you: issues you'll understand 3 months from now",
+    "Hands-on: Write one bug, one feature, and one task issue for Helm"
+  ],
+  "key_terms": [
+    "bug report",
+    "feature request",
+    "task",
+    "user story",
+    "acceptance criteria",
+    "definition of done",
+    "steps to reproduce"
+  ],
+  "helm_context": {
+    "feature": "Helm issue backlog with well-structured entries",
+    "deliverable": "Three Helm issues (one bug, one feature, one task) with proper labels and milestone",
+    "code_location": "helm/ (GitHub Issues)"
+  },
+  "assessment": {
+    "type": "hands-on-exercise",
+    "criteria": [
+      "Bug issue includes steps to reproduce and expected vs. actual behavior",
+      "Feature issue includes a user story and at least 2 acceptance criteria",
+      "Task issue has a clear definition of done",
+      "All issues have appropriate labels and are assigned to the MVP v1 milestone"
+    ]
+  },
+  "resources": [
+    {
+      "type": "article",
+      "title": "How to Write Good GitHub Issues",
+      "url": "https://medium.com/nyc-planning-digital/writing-a-proper-github-issue-97427d62a20f"
+    }
+  ],
+  "professor_constraints": [
+    "Use real Helm features for the hands-on: drag-to-schedule task, Google Calendar sync, task list, etc.",
+    "Emphasize 'writing for future-you' — these issues will be the roadmap for months of development",
+    "The bug report can be hypothetical (a bug that could exist in a task app)"
+  ],
+  "metadata": {
+    "created_at": "2026-02-25",
+    "generated_by": "Curriculum Designer (Claude)"
+  }
+}

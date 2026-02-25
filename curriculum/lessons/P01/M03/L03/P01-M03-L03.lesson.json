@@ -1,105 +1,70 @@
 {
   "lesson_id": "P01-M03-L03",
-  "title": "Pull Request Templates",
+  "title": "Commit Bodies and Footers — Explaining the Why",
   "module_id": "P01-M03",
   "phase_id": "P01",
-  "estimated_minutes": 90,
+  "estimated_minutes": 30,
   "lesson_type": "hands-on",
   "prerequisites": ["P01-M03-L02"],
   "learning_objectives": [
-    "Explain the purpose of PR templates in maintaining code quality",
-    "Create a GitHub pull request template file",
-    "Design PR template sections (description, changes, testing, checklist)",
-    "Write clear PR descriptions that facilitate code review",
-    "Link PRs to issues using GitHub keywords (Closes, Fixes, Resolves)",
-    "Use PR templates consistently for all CatchBook PRs",
-    "Customize PR templates for different types of changes",
-    "Understand how PR templates integrate with team workflows"
+    "Identify when a commit body is necessary vs. when the subject line is enough",
+    "Write a commit body that explains motivation and context, not implementation",
+    "Format commit bodies using the 72-character line wrap rule",
+    "Use commit footers to reference GitHub issues (Closes #N, Refs #N)",
+    "Write a complete, well-structured commit with subject, body, and footer"
   ],
   "outline": [
-    "Introduction: Why PR templates improve collaboration",
-    "Anatomy of a good PR description",
-    "GitHub PR template location and file naming (.github/pull_request_template.md)",
-    "Essential PR template sections: Overview, Changes, Testing, Screenshots",
-    "Optional sections: Related Issues, Breaking Changes, Deployment Notes",
-    "Writing the 'Why' and 'What': motivation and implementation summary",
-    "Checklist items: common quality gates (tests pass, docs updated, etc.)",
-    "Linking PRs to issues: Closes #123, Fixes #456, Resolves #789",
-    "PR template markdown formatting: headers, lists, code blocks",
-    "Multiple PR templates for different change types (feature, bugfix, docs)",
-    "Real-world examples from popular open-source projects",
-    "Hands-on: Create CatchBook PR template with standard sections",
-    "Hands-on: Open PR using template for README improvements",
-    "Hands-on: Customize template for CatchBook feature PRs vs bugfix PRs"
+    "When to write a body: complex changes, non-obvious decisions, breaking changes",
+    "What goes in a body: motivation, context, trade-offs — not what the diff shows",
+    "The 72-character wrap rule for body lines",
+    "Blank line separator: subject → blank line → body",
+    "Footer syntax: Closes #N, Fixes #N, Refs #N, BREAKING CHANGE:",
+    "Hands-on: Write one complete commit (subject + body + footer) for a Helm change"
   ],
-  "outline_structure_notes": "Sections 1-11 are conceptual/examples. Sections 12-14 are hands-on exercises.",
-  "checkpoint_placement_guidance": "After section 5 (sections overview), after section 9 (markdown formatting), after section 11 (real-world examples), after final hands-on exercise (section 14).",
   "key_terms": [
-    "pull request template",
-    "PR description",
-    "issue linking",
-    "closes keyword",
-    "fixes keyword",
-    "PR checklist",
-    "markdown template",
-    ".github directory",
-    "pull_request_template.md"
+    "commit body",
+    "commit footer",
+    "72-character wrap",
+    "Closes keyword",
+    "Refs keyword",
+    "BREAKING CHANGE",
+    "blank line separator"
   ],
-  "catchbook_context": {
-    "feature": "PR template for all CatchBook feature development",
-    "deliverable": "GitHub PR template file committed to CatchBook repository",
-    "code_location": "catchbook/.github/pull_request_template.md"
+  "helm_context": {
+    "feature": "Documented design decisions in Helm commit history",
+    "deliverable": "One commit with a well-written body explaining a Helm architectural decision",
+    "code_location": "helm/ (README or initial project structure)"
   },
   "assessment": {
     "type": "hands-on-exercise",
     "criteria": [
-      "PR template file created in correct location (.github/pull_request_template.md)",
-      "Template includes essential sections (description, changes, testing, checklist)",
-      "PR opened using template with all sections completed",
-      "PR correctly links to related issue using GitHub keywords",
-      "Template markdown is well-formatted and readable",
-      "Demonstrate creating custom template for feature vs bugfix PRs"
+      "Subject line meets 50-char rule and imperative mood (from L02)",
+      "Blank line correctly separates subject from body",
+      "Body explains motivation or context, not just what changed",
+      "Body lines wrap at 72 characters",
+      "Footer includes at least one issue reference using correct syntax"
     ]
   },
   "resources": [
     {
-      "type": "documentation",
-      "title": "Creating a Pull Request Template",
-      "url": "https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository"
-    },
-    {
-      "type": "examples",
-      "title": "Awesome PR Template Examples",
-      "url": "https://github.com/devspace/awesome-github-templates"
-    },
-    {
       "type": "article",
-      "title": "Writing Better Pull Request Descriptions",
-      "url": "https://www.pullrequest.com/blog/writing-a-great-pull-request-description/"
+      "title": "How to Write a Git Commit Message (Chris Beams)",
+      "url": "https://cbea.ms/git-commit/"
     },
     {
       "type": "documentation",
-      "title": "Linking PRs to Issues",
-      "url": "https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue"
-    },
-    {
-      "type": "examples",
-      "title": "React PR Template",
-      "url": "https://github.com/facebook/react/blob/main/.github/PULL_REQUEST_TEMPLATE.md"
+      "title": "Conventional Commits — Body and Footer",
+      "url": "https://www.conventionalcommits.org/en/v1.0.0/#specification"
     }
   ],
   "professor_constraints": [
-    "Show PR template rendering in GitHub UI (split view: raw markdown vs rendered)",
-    "Demonstrate how template auto-populates PR description field",
-    "Provide 3-5 real PR descriptions from popular projects as examples",
-    "Emphasize template as guideline, not rigid requirement",
-    "Show how checklist items become interactive checkboxes in GitHub",
-    "Address 'template overhead' concern by showing long-term time savings",
-    "Connect PR template to code review process from P01-M02-L03",
-    "Use CatchBook feature examples for all template demonstrations"
+    "Use Helm-specific examples — a design decision about data model, Google Calendar sync approach, etc.",
+    "Emphasize: 'explain why you made this choice, not what the code does'",
+    "Show a before/after: same change with only a subject vs. with a full body",
+    "Keep the hands-on exercise to one commit — quality over quantity"
   ],
   "metadata": {
-    "created_at": "2025-01-22",
+    "created_at": "2026-02-25",
     "generated_by": "Curriculum Designer (Claude)"
   }
 }

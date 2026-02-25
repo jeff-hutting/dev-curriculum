@@ -1,15 +1,14 @@
 {
   "curriculum_name": "Full-Stack Software Engineering – Jeff Hutting Edition",
   "project": {
-    "name": "CatchBook",
-    "description": "AI-powered fishing journal that auto-populates catch data using photo capture, EXIF metadata, and computer vision. Target: log catches in 10 seconds vs 3-5 minutes in competing apps.",
-    "spec_file": "projects/catchbook-product-spec.md",
+    "name": "Helm",
+    "description": "Personal productivity tool with task management and time-blocking calendar. Drag tasks from a sidebar onto a weekly calendar view, synced with Google Calendar. Designed to replace ClickUp's planner tab — without the bloat.",
+    "spec_file": "projects/helm-product-spec.md",
     "tech_stack": {
-      "frontend": ["React", "TypeScript", "React Native"],
+      "frontend": ["React", "TypeScript", "Tailwind CSS"],
       "backend": ["Python", "FastAPI"],
-      "database": ["PostgreSQL", "PostGIS"],
-      "mobile": ["Progressive Web App", "React Native", "SwiftUI"],
-      "ai_ml": ["Claude API", "TensorFlow", "MobileNetV2", "XGBoost"]
+      "database": ["PostgreSQL"],
+      "mobile": ["Progressive Web App"]
     }
   },
   "audience": "Self-directed adult learner transitioning toward professional software engineering",
@@ -201,15 +200,16 @@
   "total_estimated_hours": 876,
   "total_modules": 141,
   "pedagogy_principles": [
-    "Build real features for CatchBook, not throwaway exercises",
-    "Small, shippable iterations that compound into complete product",
+    "Build real features for Helm, not throwaway exercises",
+    "Small, shippable iterations that compound into a complete product",
     "Just-in-time learning aligned with immediate project needs",
     "Production-quality code from day 1 (testing, docs, best practices)",
-    "Architecture-first thinking: understand the 'why' before the 'how'"
+    "Architecture-first thinking: understand the 'why' before the 'how'",
+    "Lessons target 30 minutes; 45 minutes absolute maximum"
   ],
   "metadata": {
-    "version": "2.0",
+    "version": "3.0",
     "created_at": "2025-12-03",
-    "updated_at": "2025-12-06"
+    "updated_at": "2026-02-25"
   }
 }

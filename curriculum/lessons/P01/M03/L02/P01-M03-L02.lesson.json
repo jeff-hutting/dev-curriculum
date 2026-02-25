@@ -1,99 +1,71 @@
 {
   "lesson_id": "P01-M03-L02",
-  "title": "Writing Effective Commit Messages",
+  "title": "The 50/72 Rule — Writing Clear Commit Subject Lines",
   "module_id": "P01-M03",
   "phase_id": "P01",
-  "estimated_minutes": 90,
+  "estimated_minutes": 30,
   "lesson_type": "hands-on",
   "prerequisites": ["P01-M03-L01"],
   "learning_objectives": [
-    "Write commit messages following Conventional Commits format",
-    "Craft clear, concise commit descriptions under 50 characters",
-    "Compose commit bodies that explain what and why, not how",
-    "Use imperative mood correctly in commit subjects",
-    "Choose appropriate commit types for different kinds of changes",
-    "Reference GitHub issues in commit footers",
-    "Amend commits to fix message mistakes before pushing",
-    "Apply commit message best practices to CatchBook development"
+    "Apply the 50-character subject line limit and understand why it matters",
+    "Write commit subjects in imperative mood correctly",
+    "Follow subject line capitalization rules and avoid trailing periods",
+    "Identify and fix vague or over-broad commit descriptions",
+    "Distinguish good from bad subject lines at a glance"
   ],
   "outline": [
-    "Review: Conventional Commits structure from L01",
-    "The 50/72 rule: subject line and body formatting",
-    "Imperative mood: 'Add feature' not 'Added feature' or 'Adds feature'",
-    "Subject line guidelines: capitalize first word, no period, be specific",
-    "When to include a commit body: complex changes, non-obvious decisions",
-    "Writing effective bodies: explain motivation and context",
-    "Commit footer syntax: issue references (Closes #123, Refs #456)",
-    "Common mistakes: vague descriptions, mixed concerns, missing type",
-    "The art of atomic commits: one logical change per commit",
-    "Amending commits: git commit --amend for message fixes",
-    "Interactive examples: improve bad commit messages",
-    "Hands-on: Write 5 conventional commits for CatchBook README improvements",
-    "Hands-on: Amend a commit message to follow conventions",
-    "Hands-on: Write commit with body explaining design decision"
+    "Quick review: Conventional Commits structure (type, scope, subject)",
+    "The 50-character rule: why 50 and what happens past 72",
+    "Imperative mood: 'Add feature' not 'Added' or 'Adding'",
+    "The 'if applied' test: a mental shortcut for imperative mood",
+    "Subject line rules: capitalize first word, no trailing period, be specific",
+    "Common anti-patterns: 'fix bug', 'update stuff', 'WIP', 'changes'",
+    "Hands-on: Rewrite 5 bad commit subject lines for Helm"
   ],
-  "outline_structure_notes": "Sections 1-11 are conceptual/examples. Sections 12-14 are hands-on exercises.",
-  "checkpoint_placement_guidance": "After section 5 (body writing), after section 9 (atomic commits), after section 11 (examples), after final hands-on exercise (section 14).",
   "key_terms": [
     "50/72 rule",
     "imperative mood",
-    "atomic commit",
-    "commit body",
-    "commit footer",
-    "git commit --amend",
-    "issue reference",
-    "closes syntax"
+    "subject line",
+    "commit type",
+    "conventional commits"
   ],
-  "catchbook_context": {
-    "feature": "Professional commit messages for all CatchBook changes",
-    "deliverable": "Series of well-formatted commits improving CatchBook README documentation",
-    "code_location": "catchbook/README.md"
+  "helm_context": {
+    "feature": "Professional commit history for Helm repository",
+    "deliverable": "5 improved commit subject lines applied to real Helm commits",
+    "code_location": "helm/ (README, initial project files)"
   },
   "assessment": {
     "type": "hands-on-exercise",
     "criteria": [
-      "All commits follow Conventional Commits format",
-      "Commit subjects are under 50 characters",
-      "Imperative mood used correctly",
-      "Appropriate commit types selected for each change",
-      "At least one commit includes well-written body",
-      "Demonstrate git commit --amend successfully",
-      "Issue references formatted correctly in footers"
+      "All subject lines are 50 characters or fewer",
+      "Imperative mood used correctly in every subject",
+      "Appropriate Conventional Commits type prefix on each",
+      "Subjects are specific — no vague 'fix', 'update', or 'changes'",
+      "First word capitalized, no trailing period"
     ]
   },
   "resources": [
     {
       "type": "article",
       "title": "How to Write a Git Commit Message (Chris Beams)",
-      "url": "https://chris.beams.io/posts/git-commit/"
-    },
-    {
-      "type": "guide",
-      "title": "The Seven Rules of a Great Git Commit Message",
       "url": "https://cbea.ms/git-commit/"
     },
     {
-      "type": "documentation",
-      "title": "Git Commit Amend",
-      "url": "https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History"
-    },
-    {
-      "type": "article",
-      "title": "Linking Pull Requests to Issues",
-      "url": "https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue"
+      "type": "specification",
+      "title": "Conventional Commits Official Specification",
+      "url": "https://www.conventionalcommits.org/en/v1.0.0/"
     }
   ],
   "professor_constraints": [
-    "Provide 10-15 'bad commit message' examples for learner to improve",
-    "Use actual CatchBook feature work for commit examples (species model, photo upload, etc.)",
-    "Show git log output before and after adopting conventions",
-    "Demonstrate git commit --amend workflow carefully (emphasize 'before pushing' caveat)",
-    "Address anxiety about 'overthinking' commit messages with efficiency tips",
-    "Show how descriptive commits help future debugging",
-    "Encourage learner to write commit messages as if explaining to teammate"
+    "Keep the CC format review to 2-3 minutes max — learner completed L01",
+    "Use Helm-specific examples (tasks, time blocks, Google Calendar sync) not CatchBook",
+    "Provide exactly 5 bad commit subject lines for the hands-on exercise",
+    "Show git log --oneline output to demonstrate how subject lines appear in practice",
+    "Address the 'what if my change is complex' concern: that's what commit bodies are for (covered in L03)"
   ],
   "metadata": {
-    "created_at": "2025-01-22",
-    "generated_by": "Curriculum Designer (Claude)"
+    "created_at": "2026-02-25",
+    "generated_by": "Curriculum Designer (Claude)",
+    "note": "Redesigned from 90-min lesson covering full commit message craft. Now focused solely on subject lines. Bodies/footers → L03, atomic commits/amend → L04."
   }
 }

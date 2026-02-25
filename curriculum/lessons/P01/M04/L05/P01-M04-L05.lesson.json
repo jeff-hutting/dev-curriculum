@@ -1,0 +1,62 @@
+{
+  "lesson_id": "P01-M04-L05",
+  "title": "Building Helm's Initial Feature Backlog",
+  "module_id": "P01-M04",
+  "phase_id": "P01",
+  "estimated_minutes": 45,
+  "lesson_type": "project",
+  "prerequisites": ["P01-M04-L04"],
+  "learning_objectives": [
+    "Translate the Helm product spec into well-structured GitHub Issues",
+    "Prioritize issues by MVP scope, labeling appropriately",
+    "Assign all MVP issues to the v1 milestone",
+    "Have a working Kanban board ready to drive Phase 2 development"
+  ],
+  "outline": [
+    "Review: Helm product spec and MVP success criteria",
+    "Breaking the spec into issues: one issue per user-facing feature or infrastructure piece",
+    "Writing issues for each MVP component: task list, time-blocking calendar, Google Calendar sync, PWA install",
+    "Prioritizing: P1 (MVP required) vs. P2 (nice to have) labels",
+    "Populating the board: all MVP issues in Backlog, assigned to MVP v1 milestone",
+    "Review and refine: is the backlog complete enough to start building?"
+  ],
+  "key_terms": [
+    "product backlog",
+    "MVP scope",
+    "issue decomposition",
+    "prioritization",
+    "sprint planning"
+  ],
+  "helm_context": {
+    "feature": "Complete Helm MVP backlog",
+    "deliverable": "10-15 well-structured issues in GitHub, labeled and assigned to MVP v1 milestone, visible on the Kanban board",
+    "code_location": "helm/ (GitHub Issues + Projects)"
+  },
+  "assessment": {
+    "type": "project",
+    "criteria": [
+      "At least 10 issues created covering all Helm MVP features",
+      "Each issue follows the quality standards from L02 (clear title, body, acceptance criteria)",
+      "All MVP issues labeled P1 and assigned to MVP v1 milestone",
+      "Board is populated and visually represents the full MVP scope",
+      "Learner can walk through the board and explain each issue's purpose"
+    ]
+  },
+  "resources": [
+    {
+      "type": "internal",
+      "title": "Helm Product Spec",
+      "url": "projects/helm-product-spec.md"
+    }
+  ],
+  "professor_constraints": [
+    "Reference the Helm product spec directly — this is the source of truth for what to build",
+    "Coach the learner through decomposition: 'the drag-to-time-block feature probably needs 3 issues, not 1'",
+    "The goal is a backlog good enough to start building in Phase 2, not perfect",
+    "Celebrate P01 completion — this marks the transition from setup to actual development"
+  ],
+  "metadata": {
+    "created_at": "2026-02-25",
+    "generated_by": "Curriculum Designer (Claude)"
+  }
+}

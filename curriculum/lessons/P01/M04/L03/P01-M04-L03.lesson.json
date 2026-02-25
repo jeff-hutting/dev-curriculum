@@ -1,0 +1,66 @@
+{
+  "lesson_id": "P01-M04-L03",
+  "title": "GitHub Projects — Setting Up a Kanban Board",
+  "module_id": "P01-M04",
+  "phase_id": "P01",
+  "estimated_minutes": 30,
+  "lesson_type": "hands-on",
+  "prerequisites": ["P01-M04-L02"],
+  "learning_objectives": [
+    "Create a GitHub Project linked to the Helm repository",
+    "Configure a Kanban board with columns appropriate for a solo developer",
+    "Add issues to the board and move them through columns",
+    "Understand how GitHub Projects integrates with Issues and PRs"
+  ],
+  "outline": [
+    "GitHub Projects overview: board vs. table vs. roadmap views",
+    "Creating a project and linking it to the Helm repository",
+    "Column setup for a solo developer: Backlog, In Progress, Done (keep it lean)",
+    "Adding issues to the board: bulk add and individual add",
+    "Moving issues between columns manually and via automation",
+    "Hands-on: Set up Helm's Kanban board with the issues from L02"
+  ],
+  "key_terms": [
+    "GitHub Projects",
+    "Kanban board",
+    "column",
+    "project automation",
+    "board view",
+    "backlog"
+  ],
+  "helm_context": {
+    "feature": "Helm project management Kanban board",
+    "deliverable": "GitHub Project board created and populated with Helm issues",
+    "code_location": "helm/ (GitHub Projects)"
+  },
+  "assessment": {
+    "type": "hands-on-exercise",
+    "criteria": [
+      "GitHub Project created and linked to Helm repo",
+      "Board has at least 3 columns (Backlog, In Progress, Done)",
+      "Issues from L02 appear on the board in Backlog",
+      "Can demonstrate moving an issue between columns"
+    ]
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "GitHub Projects Documentation",
+      "url": "https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects"
+    },
+    {
+      "type": "documentation",
+      "title": "Quickstart for GitHub Projects",
+      "url": "https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/quickstart-for-projects"
+    }
+  ],
+  "professor_constraints": [
+    "Keep the board simple — this is a personal project, not a team Jira setup",
+    "Show table view as an alternative but recommend board view for daily use",
+    "Don't deep-dive into GitHub Projects automation — mention it exists, cover in depth later if needed"
+  ],
+  "metadata": {
+    "created_at": "2026-02-25",
+    "generated_by": "Curriculum Designer (Claude)"
+  }
+}

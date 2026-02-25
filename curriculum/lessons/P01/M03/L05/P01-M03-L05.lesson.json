@@ -1,0 +1,66 @@
+{
+  "lesson_id": "P01-M03-L05",
+  "title": "Anatomy of an Effective Pull Request",
+  "module_id": "P01-M03",
+  "phase_id": "P01",
+  "estimated_minutes": 30,
+  "lesson_type": "conceptual",
+  "prerequisites": ["P01-M03-L04"],
+  "learning_objectives": [
+    "Explain the difference between what a PR is and what makes one effective",
+    "Identify the essential sections of a well-structured PR description",
+    "Understand the reviewer's perspective: what they need to evaluate a PR",
+    "Distinguish between the commit body (the why) and the PR description (the what and how to review)"
+  ],
+  "outline": [
+    "What is a PR in context: a request for a human code review, not just a merge",
+    "The reviewer's perspective: what do they need to say yes?",
+    "Essential PR sections: Overview, What Changed, How to Test, Screenshots/Evidence",
+    "Optional sections: Related Issues, Breaking Changes, Deployment Notes",
+    "Writing the 'Why': motivation belongs in the PR description as well as commit bodies",
+    "Real-world examples: annotated PRs from well-maintained open-source projects"
+  ],
+  "key_terms": [
+    "pull request",
+    "PR description",
+    "code review",
+    "reviewer",
+    "PR checklist",
+    "overview section"
+  ],
+  "helm_context": {
+    "feature": "PR quality for all Helm feature development",
+    "deliverable": "Understanding of PR anatomy, applied in L06-L07",
+    "code_location": "helm/"
+  },
+  "assessment": {
+    "type": "conceptual-check",
+    "criteria": [
+      "Can name the essential sections of a PR description from memory",
+      "Can articulate what a reviewer needs to efficiently evaluate a PR",
+      "Can explain the difference between commit body and PR description purpose"
+    ]
+  },
+  "resources": [
+    {
+      "type": "article",
+      "title": "Writing Better Pull Request Descriptions",
+      "url": "https://www.pullrequest.com/blog/writing-a-great-pull-request-description/"
+    },
+    {
+      "type": "examples",
+      "title": "React PR Template (real-world example)",
+      "url": "https://github.com/facebook/react/blob/main/.github/PULL_REQUEST_TEMPLATE.md"
+    }
+  ],
+  "professor_constraints": [
+    "Keep this conceptual — no hands-on exercise, just understanding",
+    "Use 2-3 annotated real PR examples from open-source projects",
+    "Helm-specific examples: what would a PR description look like for adding the drag-to-time-block feature?",
+    "Set up the 'why' for L06: this lesson is the blueprint, L06 is building the template"
+  ],
+  "metadata": {
+    "created_at": "2026-02-25",
+    "generated_by": "Curriculum Designer (Claude)"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "lesson_id": "P01-M04-L01",
+  "title": "GitHub Issues 101 — Labels, Milestones, and Assignees",
+  "module_id": "P01-M04",
+  "phase_id": "P01",
+  "estimated_minutes": 30,
+  "lesson_type": "conceptual",
+  "prerequisites": ["P01-M03"],
+  "learning_objectives": [
+    "Explain what GitHub Issues are and how they fit into a development workflow",
+    "Understand the purpose of labels, milestones, and assignees",
+    "Configure standard labels for a personal project (bug, feature, docs, etc.)",
+    "Create a milestone to group related issues by goal or timeframe"
+  ],
+  "outline": [
+    "What GitHub Issues are: the connective tissue between ideas and code",
+    "Anatomy of an issue: title, body, labels, milestone, assignee, comments",
+    "Labels: categorizing by type (bug, feature, docs) and priority (high, low)",
+    "Default GitHub labels vs. custom label sets for personal projects",
+    "Milestones: grouping issues into goals or releases",
+    "Assignees: relevant even for solo projects (self-accountability)",
+    "Hands-on: Configure Helm's label set and create the first milestone (MVP v1)"
+  ],
+  "key_terms": [
+    "GitHub Issues",
+    "label",
+    "milestone",
+    "assignee",
+    "issue triage"
+  ],
+  "helm_context": {
+    "feature": "Issue tracking infrastructure for Helm",
+    "deliverable": "Helm label set configured and MVP v1 milestone created",
+    "code_location": "helm/ (GitHub Issues settings)"
+  },
+  "assessment": {
+    "type": "hands-on-exercise",
+    "criteria": [
+      "At least 6 labels configured (covering type and priority)",
+      "MVP v1 milestone created with a target date",
+      "Can explain what each label and milestone represents in the context of Helm"
+    ]
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "GitHub Issues Documentation",
+      "url": "https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues"
+    },
+    {
+      "type": "documentation",
+      "title": "Managing Labels",
+      "url": "https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels"
+    }
+  ],
+  "professor_constraints": [
+    "Keep this high-level and practical — no deep dives into GitHub API or automation",
+    "Use Helm MVP features to motivate the label/milestone setup (task management, calendar sync, etc.)",
+    "Suggest a lean label set appropriate for a solo project — don't over-engineer"
+  ],
+  "metadata": {
+    "created_at": "2026-02-25",
+    "generated_by": "Curriculum Designer (Claude)"
+  }
+}

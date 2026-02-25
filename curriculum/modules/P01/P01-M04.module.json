@@ -1,0 +1,90 @@
+{
+  "module_id": "P01-M04",
+  "module_name": "GitHub Issues + Projects (Kanban)",
+  "phase_id": "P01",
+  "estimated_hours": 4,
+  "catchbook_deliverable": "Helm feature board with milestones, labels, and initial issue backlog",
+  "description": "Master GitHub's project management tools to organize and track Helm's development. Learn to write effective issues, configure labels and milestones, set up a Kanban board with GitHub Projects, and link issues to code through branches and PRs. By the end, Helm will have a structured, professional backlog ready to drive all future development.",
+  "prerequisites": ["P01-M01", "P01-M02", "P01-M03"],
+  "learning_objectives": [
+    "Understand the role of GitHub Issues in professional project management",
+    "Create well-structured issues for bugs, features, and tasks",
+    "Configure labels and milestones for organizing work",
+    "Set up a GitHub Projects Kanban board for Helm",
+    "Link issues to branches and PRs using GitHub keywords",
+    "Use auto-close syntax (Closes #N) to keep the board current",
+    "Build and prioritize Helm's initial feature backlog"
+  ],
+  "skills_taught": [
+    "github_issues",
+    "issue_writing",
+    "labels_and_milestones",
+    "kanban_workflow",
+    "github_projects",
+    "issue_linking",
+    "backlog_management"
+  ],
+  "lessons": [
+    {
+      "lesson_id": "P01-M04-L01",
+      "title": "GitHub Issues 101 — Labels, Milestones, and Assignees",
+      "lesson_type": "conceptual",
+      "estimated_minutes": 30
+    },
+    {
+      "lesson_id": "P01-M04-L02",
+      "title": "Writing Effective Issues — Bugs, Features, and Tasks",
+      "lesson_type": "hands-on",
+      "estimated_minutes": 30
+    },
+    {
+      "lesson_id": "P01-M04-L03",
+      "title": "GitHub Projects — Setting Up a Kanban Board",
+      "lesson_type": "hands-on",
+      "estimated_minutes": 30
+    },
+    {
+      "lesson_id": "P01-M04-L04",
+      "title": "Linking Issues to Code — Branches, PRs, and Auto-Close",
+      "lesson_type": "hands-on",
+      "estimated_minutes": 30
+    },
+    {
+      "lesson_id": "P01-M04-L05",
+      "title": "Building Helm's Initial Feature Backlog",
+      "lesson_type": "project",
+      "estimated_minutes": 45
+    }
+  ],
+  "catchbook_integration": {
+    "feature_area": "Project management and issue tracking infrastructure",
+    "repository_path": "helm/",
+    "dependencies": [
+      "Helm repository initialized (P01-M01)",
+      "PR workflow established (P01-M02)",
+      "Commit conventions applied (P01-M03)"
+    ]
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "GitHub Issues Documentation",
+      "url": "https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues"
+    },
+    {
+      "type": "documentation",
+      "title": "GitHub Projects Documentation",
+      "url": "https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects"
+    },
+    {
+      "type": "article",
+      "title": "How to Write Good GitHub Issues",
+      "url": "https://medium.com/nyc-planning-digital/writing-a-proper-github-issue-97427d62a20f"
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-25",
+    "generated_by": "Curriculum Designer (Claude)",
+    "note": "New module created with 30-45 min lesson format from the start."
+  }
+}

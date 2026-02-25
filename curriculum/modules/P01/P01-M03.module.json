@@ -2,61 +2,88 @@
   "module_id": "P01-M03",
   "module_name": "Commit conventions + PR templates",
   "phase_id": "P01",
-  "estimated_hours": 6,
-  "catchbook_deliverable": "Professional repo hygiene for CatchBook with Conventional Commits and PR template",
-  "description": "Master professional commit message conventions and pull request templates. Learn to write clear, consistent commit messages following the Conventional Commits specification. Create PR templates that streamline code review and maintain high-quality documentation. Establish the repository hygiene patterns that will support CatchBook's evolution across all 28 phases.",
+  "estimated_hours": 4,
+  "catchbook_deliverable": "Professional repo hygiene for Helm with Conventional Commits, commit best practices, and PR template",
+  "description": "Master professional commit message conventions and pull request templates. Learn to write clear, concise commit messages following the Conventional Commits specification. Create PR templates that streamline code review and maintain high-quality documentation. Establish the repository hygiene patterns that will support Helm's evolution across all phases.",
   "prerequisites": ["P01-M01", "P01-M02"],
   "learning_objectives": [
     "Understand the value of consistent commit message format for project history",
     "Write commit messages following Conventional Commits specification",
-    "Structure commit messages with type, scope, subject, body, and footer",
-    "Use semantic commit types (feat, fix, docs, style, refactor, test, chore)",
+    "Apply the 50/72 rule for subject lines and body formatting",
+    "Use imperative mood correctly in commit subjects",
+    "Write commit bodies that explain motivation and context",
+    "Understand atomic commits and use git commit --amend",
     "Create GitHub PR templates with consistent structure",
     "Write clear PR descriptions that facilitate code review",
     "Link commits and PRs to issues using GitHub syntax",
-    "Apply commit conventions to all CatchBook development work"
+    "Apply all conventions to Helm development work"
   ],
   "skills_taught": [
     "conventional_commits",
     "commit_message_quality",
+    "atomic_commits",
     "pr_templates",
     "pr_descriptions",
     "issue_linking",
     "repository_hygiene",
-    "semantic_versioning_awareness",
-    "changelog_generation"
+    "semantic_versioning_awareness"
   ],
   "lessons": [
     {
       "lesson_id": "P01-M03-L01",
       "title": "Conventional Commits Format",
       "lesson_type": "conceptual",
-      "estimated_minutes": 75
+      "estimated_minutes": 30,
+      "status": "completed"
     },
     {
       "lesson_id": "P01-M03-L02",
-      "title": "Writing Effective Commit Messages",
+      "title": "The 50/72 Rule — Writing Clear Commit Subject Lines",
       "lesson_type": "hands-on",
-      "estimated_minutes": 90
+      "estimated_minutes": 30
     },
     {
       "lesson_id": "P01-M03-L03",
-      "title": "Pull Request Templates",
+      "title": "Commit Bodies and Footers — Explaining the Why",
       "lesson_type": "hands-on",
-      "estimated_minutes": 90
+      "estimated_minutes": 30
     },
     {
       "lesson_id": "P01-M03-L04",
-      "title": "Integrating Conventions into Workflow",
+      "title": "Atomic Commits and git commit --amend",
       "lesson_type": "hands-on",
-      "estimated_minutes": 105
+      "estimated_minutes": 30
+    },
+    {
+      "lesson_id": "P01-M03-L05",
+      "title": "Anatomy of an Effective Pull Request",
+      "lesson_type": "conceptual",
+      "estimated_minutes": 30
+    },
+    {
+      "lesson_id": "P01-M03-L06",
+      "title": "Creating GitHub PR Templates",
+      "lesson_type": "hands-on",
+      "estimated_minutes": 30
+    },
+    {
+      "lesson_id": "P01-M03-L07",
+      "title": "Linking Issues, Commits, and PRs",
+      "lesson_type": "hands-on",
+      "estimated_minutes": 30
+    },
+    {
+      "lesson_id": "P01-M03-L08",
+      "title": "Repository Hygiene Capstone — Putting It All Together",
+      "lesson_type": "project",
+      "estimated_minutes": 45
     }
   ],
   "catchbook_integration": {
     "feature_area": "Repository documentation and commit hygiene infrastructure",
-    "repository_path": "catchbook/",
+    "repository_path": "helm/",
     "dependencies": [
-      "CatchBook repository initialized (P01-M01)",
+      "Helm repository initialized (P01-M01)",
       "PR workflow established (P01-M02)",
       "Feature branches created (P01-M02)"
     ]
@@ -69,33 +96,18 @@
     },
     {
       "type": "article",
-      "title": "How to Write a Git Commit Message",
-      "url": "https://chris.beams.io/posts/git-commit/"
+      "title": "How to Write a Git Commit Message (Chris Beams)",
+      "url": "https://cbea.ms/git-commit/"
     },
     {
       "type": "documentation",
       "title": "GitHub Pull Request Templates",
       "url": "https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository"
-    },
-    {
-      "type": "tool",
-      "title": "Commitizen - Commit Message Helper",
-      "url": "https://github.com/commitizen/cz-cli"
-    },
-    {
-      "type": "article",
-      "title": "Semantic Commit Messages",
-      "url": "https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716"
-    },
-    {
-      "type": "video",
-      "title": "Git Commit Best Practices (MIT Missing Semester)",
-      "url": "https://missing.csail.mit.edu/2020/version-control/"
     }
   ],
   "metadata": {
-    "created_at": "2025-01-22",
-    "updated_at": "2025-01-22",
-    "generated_by": "Curriculum Designer (Claude)"
+    "created_at": "2025-12-03",
+    "updated_at": "2026-02-25",
+    "note": "Redesigned from 4 lessons (75-105 min each) to 8 lessons (30-45 min each) to support sustainable study sessions."
   }
 }

@@ -1,0 +1,64 @@
+{
+  "lesson_id": "P01-M03-L08",
+  "title": "Repository Hygiene Capstone — Putting It All Together",
+  "module_id": "P01-M03",
+  "phase_id": "P01",
+  "estimated_minutes": 45,
+  "lesson_type": "project",
+  "prerequisites": ["P01-M03-L07"],
+  "learning_objectives": [
+    "Execute a complete feature workflow from issue to merged PR using all P01-M03 conventions",
+    "Write atomic conventional commits with clear subject lines, bodies where needed, and issue footers",
+    "Open a PR using the Helm PR template with a complete, reviewer-friendly description",
+    "Review the resulting commit history and articulate what makes it professional"
+  ],
+  "outline": [
+    "Capstone task: add CONTRIBUTING.md to the Helm repo",
+    "Phase 1 — Setup: create issue, create branch using naming conventions",
+    "Phase 2 — Commits: make 3-4 atomic conventional commits building CONTRIBUTING.md",
+    "Phase 3 — PR: open PR using Helm template, fill all sections, link to issue",
+    "Phase 4 — Review: examine git log --oneline, confirm conventions throughout",
+    "Phase 5 — Merge: merge PR, confirm issue auto-closes, review final history"
+  ],
+  "key_terms": [
+    "CONTRIBUTING.md",
+    "end-to-end workflow",
+    "git log --oneline",
+    "professional commit history"
+  ],
+  "helm_context": {
+    "feature": "Complete professional repo hygiene infrastructure for Helm",
+    "deliverable": "CONTRIBUTING.md merged to main via a fully conventional PR with linked issue",
+    "code_location": "helm/CONTRIBUTING.md, helm/.github/"
+  },
+  "assessment": {
+    "type": "project",
+    "criteria": [
+      "Issue created and linked to the PR",
+      "Branch name follows convention (feat/, docs/, etc.)",
+      "3-4 atomic conventional commits with correct subjects",
+      "At least one commit includes a well-written body",
+      "PR description uses Helm template with all sections complete",
+      "PR uses Closes #N to auto-close the issue",
+      "CONTRIBUTING.md content references commit conventions and PR template",
+      "Merged PR auto-closes the issue — confirmed in GitHub UI"
+    ]
+  },
+  "resources": [
+    {
+      "type": "article",
+      "title": "How to Write a Good CONTRIBUTING.md",
+      "url": "https://opensource.guide/how-to-contribute/#anatomy-of-an-open-source-project"
+    }
+  ],
+  "professor_constraints": [
+    "This is the module capstone — learner should feel the workflow click together",
+    "Let the learner lead; offer guidance only when they're stuck",
+    "The CONTRIBUTING.md content should reference what they built: commit conventions, PR template, issue linking",
+    "Celebrate completion — P01-M03 is the foundation for all 27+ remaining phases"
+  ],
+  "metadata": {
+    "created_at": "2026-02-25",
+    "generated_by": "Curriculum Designer (Claude)"
+  }
+}

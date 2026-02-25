@@ -1,0 +1,63 @@
+{
+  "lesson_id": "P01-M03-L07",
+  "title": "Linking Issues, Commits, and PRs",
+  "module_id": "P01-M03",
+  "phase_id": "P01",
+  "estimated_minutes": 30,
+  "lesson_type": "hands-on",
+  "prerequisites": ["P01-M03-L06"],
+  "learning_objectives": [
+    "Use GitHub's closing keywords (Closes, Fixes, Resolves) in PRs to auto-close issues on merge",
+    "Use Refs in commit footers to cross-reference without auto-closing",
+    "Understand how linking ties together the full workflow: issue → branch → commits → PR → merge",
+    "Trace a complete change through GitHub from issue to merged PR"
+  ],
+  "outline": [
+    "Why linking matters: traceability from business need to code",
+    "Closing keywords: Closes #N, Fixes #N, Resolves #N — syntax and behavior",
+    "Reference without closing: Refs #N in commit footers",
+    "Where to put links: PR description body vs. commit footer",
+    "GitHub UI: what happens to an issue when its linked PR merges",
+    "Hands-on: Create an issue, make a branch, commit with Refs #N, open PR with Closes #N, merge and verify"
+  ],
+  "key_terms": [
+    "Closes keyword",
+    "Fixes keyword",
+    "Resolves keyword",
+    "Refs keyword",
+    "auto-close",
+    "issue linking",
+    "traceability"
+  ],
+  "helm_context": {
+    "feature": "Issue-to-code traceability for Helm development",
+    "deliverable": "A merged PR that auto-closes a Helm issue via keyword",
+    "code_location": "helm/ (GitHub Issues + PR)"
+  },
+  "assessment": {
+    "type": "hands-on-exercise",
+    "criteria": [
+      "Issue created and visible on Helm repo",
+      "Branch and commit reference the issue using Refs #N in footer",
+      "PR description uses Closes #N",
+      "After merge, the linked issue is automatically closed",
+      "Can explain the difference between Closes and Refs"
+    ]
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Linking a Pull Request to an Issue",
+      "url": "https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue"
+    }
+  ],
+  "professor_constraints": [
+    "Walk through the full lifecycle in a single hands-on exercise",
+    "Show the GitHub UI at each step — issue open, PR linked, issue auto-closed after merge",
+    "Use a real (small) Helm improvement as the subject, not a dummy change"
+  ],
+  "metadata": {
+    "created_at": "2026-02-25",
+    "generated_by": "Curriculum Designer (Claude)"
+  }
+}
