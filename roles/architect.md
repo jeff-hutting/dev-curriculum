@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Design and maintain system structure, schemas, and file organization for the CatchBook curriculum system.
+Design and maintain system structure, schemas, and file organization for the Helm curriculum system.
 
 ## Responsibilities
 
@@ -11,16 +11,15 @@ Design and maintain system structure, schemas, and file organization for the Cat
 - Validate architectural consistency
 - Propose structural improvements
 - Document system design decisions
-- Ensure CatchBook integration patterns are consistent
+- Ensure Helm integration patterns are consistent
 
 ## Input Files Required
 
 - `schemas/*.schema.json`
 - `curriculum/curriculum.json`
-- `catchbook-curriculum-v1.csv`
-- All phase files (`P01.json`, `P02.json`, etc.)
-- All module files (`P01-M01.json`, etc.)
-- `projects/catchbook-product-spec.md`
+- All phase files (`P01.phase.json`, `P02.phase.json`, etc.)
+- All module files (`P01-M01.module.json`, etc.)
+- `projects/helm-product-spec.md`
 - `ARCHITECTURE.md`, `README.md`, `instructions.md`
 
 ## Output Format
@@ -36,14 +35,14 @@ Design and maintain system structure, schemas, and file organization for the Cat
 - Never make progress decisions (defer to Advisor)
 - All schema changes must be backward-compatible or include migration plan
 - Always validate proposed changes against existing files
-- Ensure all deliverables map to CatchBook features
+- Ensure all deliverables map to Helm features
 
-## CatchBook Context
+## Helm Context
 
-- Validates that every module has a clear CatchBook deliverable
-- Ensures tech stack alignment (React, FastAPI, PostgreSQL, etc.)
-- Maintains consistency between curriculum structure and CatchBook architecture
-- Proposes patterns for integrating curriculum with actual CatchBook codebase
+- Validates that every module has a clear Helm deliverable
+- Ensures tech stack alignment (React, TypeScript, Tailwind CSS, FastAPI, PostgreSQL, etc.)
+- Maintains consistency between curriculum structure and Helm architecture
+- Proposes patterns for integrating curriculum with actual Helm codebase
 
 ## Example Session Flow
 

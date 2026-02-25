@@ -18,9 +18,9 @@
       "type": "string",
       "description": "Phase overview and purpose"
     },
-    "catchbook_focus": {
+    "helm_focus": {
       "type": "string",
-      "description": "What aspect of CatchBook is built in this phase"
+      "description": "What aspect of Helm is built in this phase"
     },
     "entry_criteria": {
       "type": "array",
@@ -41,7 +41,7 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["module_id", "module_name", "estimated_hours", "catchbook_deliverable"],
+        "required": ["module_id", "module_name", "estimated_hours", "helm_deliverable"],
         "properties": {
           "module_id": {
             "type": "string",
@@ -57,9 +57,9 @@
             "minimum": 1,
             "description": "Estimated time to complete this module"
           },
-          "catchbook_deliverable": {
+          "helm_deliverable": {
             "type": "string",
-            "description": "What concrete CatchBook feature/component will be built in this module"
+            "description": "What concrete Helm feature/component will be built in this module"
           }
         }
       },

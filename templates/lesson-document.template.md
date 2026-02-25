@@ -15,7 +15,7 @@ Every lesson document follows this exact structure:
 1. **Lesson Header** — `# {title}` from lesson.json
 2. **Metadata Block** — Indented blockquote with lesson metadata
 3. **Standard Opening Sections** (required, in order):
-   - Why This Lesson Matters for CatchBook
+   - Why This Lesson Matters for Helm
    - Learning Objectives
 4. **Content Sections** — Derived from lesson.json outline
 5. **Checkpoints** — Inline assessments every 20 minutes
@@ -89,7 +89,7 @@ Every lesson document follows this exact structure:
 
 **Standard Tags (always include):**
 - `learning`
-- `catchbook`
+- `helm`
 - `claude`
 - `lesson`
 
@@ -130,7 +130,7 @@ Every lesson document follows this exact structure:
 
 **Example:**
 ```markdown
-> **Tags:** learning, catchbook, claude, lesson, foundations, git, version-control, conceptual
+> **Tags:** learning, helm, claude, lesson, foundations, git, version-control, conceptual
 ```
 
 ---
@@ -158,13 +158,13 @@ Every lesson document follows this exact structure:
 
 **Example Structure:**
 ```markdown
-## Why This Lesson Matters for CatchBook
+## Why This Lesson Matters for Helm
 
 [Opening sentence establishing relevance]
 
 [2-3 sentences explaining what they'll build]
 
-[2-3 sentences connecting to CatchBook features]
+[2-3 sentences connecting to Helm features]
 
 [Closing sentence on practical value]
 
@@ -212,7 +212,7 @@ By the end of this lesson, you will be able to:
 **Section Guidelines:**
 - **Depth:** 20-40 lines per concept section
 - **Subsections:** Break into ### subsections as needed
-- **Examples:** Include CatchBook-specific examples
+- **Examples:** Include Helm-specific examples
 - **Progression:** Start simple, add complexity gradually
 
 **Heading Format:**
@@ -249,7 +249,7 @@ Before moving on, answer these questions and paste your responses in chat:
 - Questions must test understanding, not memorization
 - 1-3 questions per checkpoint
 - Questions based only on content covered so far
-- Connect questions to CatchBook when possible
+- Connect questions to Helm when possible
 
 **Checkpoint Timing:**
 - 20-minute checkpoint → Checkpoint 1 (20 minutes)
@@ -289,7 +289,7 @@ Before moving on, answer these questions and paste your responses in chat:
 
 [1-2 sentences listing upcoming lessons or modules]
 
-[Closing paragraph — 2-3 sentences connecting this lesson to broader CatchBook journey]
+[Closing paragraph — 2-3 sentences connecting this lesson to broader Helm journey]
 
 [⬆ Back to Top](#properties)
 
@@ -301,7 +301,7 @@ Before moving on, answer these questions and paste your responses in chat:
 - Each concept: 1-2 sentences
 - Use "You've learned:" or "Key takeaways:" heading
 - Always include "Next steps:" subsection
-- Close with CatchBook context
+- Close with Helm context
 
 ### Resources Section
 
@@ -481,7 +481,7 @@ Before moving on, answer these questions and paste your responses in chat:
 | Why This Matters | 10-15 lines | Context and relevance |
 | Learning Objectives | 10-15 lines | 3-5 objectives total |
 | Concept sections | 20-40 lines | Break into subsections if needed |
-| Real-world scenarios | 15-25 lines | Concrete CatchBook examples |
+| Real-world scenarios | 15-25 lines | Concrete Helm examples |
 | Summary | 15-25 lines | 3-7 key takeaways |
 | Resources | Variable | 2-4 links per category |
 
@@ -493,11 +493,11 @@ Before moving on, answer these questions and paste your responses in chat:
 - Maintain technical accuracy
 - Avoid condescension or oversimplification
 
-**CatchBook Integration:**
-- Every abstract concept needs a CatchBook example
-- Show how concept applies to actual CatchBook features
-- Reference CatchBook product spec when relevant
-- Connect current lesson to CatchBook roadmap
+**Helm Integration:**
+- Every abstract concept needs a Helm example
+- Show how concept applies to actual Helm features
+- Reference Helm product spec when relevant
+- Connect current lesson to Helm roadmap
 
 **Progression:**
 - Start simple, add complexity gradually
@@ -543,7 +543,7 @@ Expand to:
 - **Each subsection:** What it is, how it works, advantages, problems it solved
 - **Total length:** 40-60 lines
 - **Include:** Timeline markers (1970s, 1990s, 2005)
-- **Conclude:** "Why this matters for CatchBook"
+- **Conclude:** "Why this matters for Helm"
 
 ---
 
@@ -563,21 +563,21 @@ Expand to:
 > **Prerequisites:** None  
 > **Key Terms:** Version Control System (VCS), Repository (repo), Commit, Snapshot, Branch, Distributed Version Control System (DVCS), Centralized Version Control System (CVCS), Git, GitHub  
 > **Created:** 2025-12-03  
-> **Tags:** learning, catchbook, claude, lesson, foundations, git, version-control, conceptual
+> **Tags:** learning, helm, claude, lesson, foundations, git, version-control, conceptual
 
 ---
 
-## Why This Lesson Matters for CatchBook
+## Why This Lesson Matters for Helm
 
-When you build CatchBook, you'll be writing thousands of lines of code across multiple files, making changes daily, experimenting with new features, and potentially collaborating with others. Without version control, one mistake could erase hours of work, and you'd have no way to recover.
+When you build Helm, you'll be writing thousands of lines of code across multiple files, making changes daily, experimenting with new features, and potentially collaborating with others. Without version control, one mistake could erase hours of work, and you'd have no way to recover.
 
-Git is the industry-standard version control system used by millions of developers worldwide. By mastering Git fundamentals now, you'll build CatchBook with confidence, knowing you can:
+Git is the industry-standard version control system used by millions of developers worldwide. By mastering Git fundamentals now, you'll build Helm with confidence, knowing you can:
 - Safely experiment with new features without breaking working code
 - Track every change you make to the codebase
 - Revert mistakes instantly
 - Document your development journey
 
-This lesson establishes the foundation for professional software development practices that will serve you throughout the entire CatchBook project and beyond.
+This lesson establishes the foundation for professional software development practices that will serve you throughout the entire Helm project and beyond.
 
 [⬆ Back to Top](#properties)
 
@@ -591,7 +591,7 @@ By the end of this lesson, you will be able to:
 2. Describe the evolution of version control systems from local to distributed architectures
 3. Understand Git's distributed model and how it differs from centralized systems like SVN
 4. Identify the core concepts: repository, commit, branch, and snapshot
-5. Articulate how Git will support your CatchBook development workflow
+5. Articulate how Git will support your Helm development workflow
 
 [⬆ Back to Top](#properties)
 
@@ -599,7 +599,7 @@ By the end of this lesson, you will be able to:
 
 ## What is Version Control
 
-[20-40 lines of content explaining version control fundamentals with CatchBook examples]
+[20-40 lines of content explaining version control fundamentals with Helm examples]
 
 [⬆ Back to Top](#properties)
 
@@ -609,8 +609,8 @@ By the end of this lesson, you will be able to:
 
 Before moving on, answer these questions and paste your responses in chat:
 
-1. In your own words, explain why version control is important for the CatchBook project.
-2. What problems might you encounter if you tried to build CatchBook without version control?
+1. In your own words, explain why version control is important for the Helm project.
+2. What problems might you encounter if you tried to build Helm without version control?
 3. How does version control enable experimentation during development?
 
 [⬆ Back to Top](#properties)
@@ -630,7 +630,7 @@ Before moving on, answer these questions and paste your responses in chat:
 Before moving on, answer these questions and paste your responses in chat:
 
 1. What is the key difference between centralized and distributed version control systems?
-2. Why is Git's distributed architecture particularly valuable for CatchBook development?
+2. Why is Git's distributed architecture particularly valuable for Helm development?
 3. If you had to explain Git to someone who has never used version control, what would you say?
 
 [⬆ Back to Top](#properties)
@@ -639,7 +639,7 @@ Before moving on, answer these questions and paste your responses in chat:
 
 ## Git's Distributed Architecture
 
-[20-40 lines explaining distributed model with CatchBook workflow examples]
+[20-40 lines explaining distributed model with Helm workflow examples]
 
 [⬆ Back to Top](#properties)
 
@@ -651,7 +651,7 @@ Before moving on, answer these questions and paste your responses in chat:
 
 1. How does Git's snapshot model differ from the delta-based approach of older systems?
 2. What does it mean that every developer has a "full copy" of the repository?
-3. How will branching help you develop CatchBook features safely?
+3. How will branching help you develop Helm features safely?
 
 [⬆ Back to Top](#properties)
 
@@ -659,7 +659,7 @@ Before moving on, answer these questions and paste your responses in chat:
 
 ## Summary
 
-This lesson introduced you to version control concepts that will be fundamental to your entire CatchBook development journey. Understanding these foundations now will make every future lesson easier and your development process more professional.
+This lesson introduced you to version control concepts that will be fundamental to your entire Helm development journey. Understanding these foundations now will make every future lesson easier and your development process more professional.
 
 **You've learned:**
 
@@ -668,11 +668,11 @@ This lesson introduced you to version control concepts that will be fundamental 
 3. **Git uses a distributed architecture** where every developer has a complete copy of the repository, enabling offline work, faster operations, and more flexible workflows.
 4. **Core Git concepts** include repositories (project storage), commits (snapshots of changes), branches (parallel development paths), and the staging area (change preparation).
 5. **Git's snapshot model** stores complete file states at each commit rather than deltas, making operations like branching and merging fast and reliable.
-6. **For CatchBook development**, Git will enable you to experiment with new features, maintain multiple versions, document your progress, and build a portfolio-worthy project history.
+6. **For Helm development**, Git will enable you to experiment with new features, maintain multiple versions, document your progress, and build a portfolio-worthy project history.
 
 **Next steps:**
 
-In the next lesson (P01-M01-L02), you'll learn the basic Git commands to initialize a repository, make commits, and view history. You'll set up your actual CatchBook repository and make your first commit.
+In the next lesson (P01-M01-L02), you'll learn the basic Git commands to initialize a repository, make commits, and view history. You'll set up your actual Helm repository and make your first commit.
 
 This foundation in version control concepts will make the practical Git commands feel intuitive and purposeful, as you'll understand not just *how* to use Git, but *why* each operation matters for professional software development.
 

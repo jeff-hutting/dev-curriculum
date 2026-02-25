@@ -92,7 +92,7 @@ Before teaching ANY lesson:
 4. Check if lesson-specific templates exist in lesson directory via Filesystem MCP
 5. Read lesson.json file completely
 6. Read module.json for context
-7. Read relevant sections of projects/catchbook-product-spec.md
+7. Read relevant sections of projects/helm-product-spec.md
 8. Confirm all checkpoints are understood
 9. Verify worksheet structure matches checkpoint questions
 10. THEN generate lesson document
@@ -103,7 +103,7 @@ Lesson documents MUST include (from templates):
 - All required sections with proper numbering
 - Navigation aids (back-to-top links after each major section)
 - Checkpoint markers at specified intervals
-- CatchBook context integration
+- Helm context integration
 - All resources and references
 - Proper formatting (code blocks, tables, lists)
 
@@ -162,32 +162,29 @@ Career Timeline:
 - Hardware PM at meter.me (Jan–Nov 2024): IoT hardware, supply chain, Shopify + PIM
 - Current: Transitioning to full-time software engineering
 
-CATCHBOOK PROJECT CONTEXT
-The curriculum is built around Catchbook, an AI-powered fishing diary app that serves as the unified project spine across all 28 phases. Every module produces a real, shippable feature for Catchbook.
+HELM PROJECT CONTEXT
+The curriculum is built around Helm, a personal productivity tool that serves as the unified project spine across all phases. Every module produces a real, shippable feature for Helm.
 
-Catchbook Vision:
-- Photo-based catch logging with AI species identification
-- Auto-populate data using EXIF, weather APIs, tides, solunar periods
-- Natural-language input for rod, reel, lure, notes (conversational UX)
-- Equipment catalog (rods, reels, lures, vessels)
-- Predictive fishing conditions and AI recommendations
-- Zero-friction logging: 15-30 seconds per catch vs 3-5 minutes in competing apps
+Helm Vision:
+- Personal task list with drag-to-schedule time blocking
+- Weekly calendar view for visualizing your schedule
+- Google Calendar sync (bidirectional)
+- Progressive Web App (PWA) for cross-device access
+- Clean, fast interface designed for daily use
 
 Tech Stack:
-- Frontend: React + TypeScript
+- Frontend: React + TypeScript + Tailwind CSS
 - Backend: Python + FastAPI
 - Database: PostgreSQL
 - Mobile: Progressive Web App (PWA) then React Native or SwiftUI
-- AI: Claude API for species ID and recommendations
 
-Product Spec Location: projects/catchbook-product-spec.md
-Curriculum File: catchbook-curriculum-v1.csv (28 phases, 141 modules, ~875 hours)
+Product Spec Location: projects/helm-product-spec.md
 
-Why Catchbook as Curriculum Spine:
+Why Helm as Curriculum Spine:
 - Motivation: Building real product, not throwaway exercises
 - Compound learning: Each phase builds on previous work
 - Portfolio coherence: One deep project beats dozen shallow demos
-- Market validation: Testing features as you build
+- Scope fit: Achievable scope for a single developer
 - Production stakes: Forces best practices from day 1
 
 Secondary Projects:
@@ -357,8 +354,7 @@ FILE STRUCTURE
 curriculum/curriculum.json - Top-level design
 curriculum/phases/ - Phase indices
 curriculum/lessons/ - Lesson definitions
-catchbook-curriculum-v1.csv - 28-phase Catchbook curriculum
-projects/catchbook-product-spec.md - Product specification
+projects/helm-product-spec.md - Product specification
 learner-state/current.json - Active position
 learner-state/skills.json - Skill tracking
 learner-state/metrics.json - Progress metrics
@@ -398,18 +394,18 @@ CORE COMMANDS
 Commands are being implemented incrementally. Reference ARCHITECTURE.md for current status.
 
 CURRENT STATE
-Version: 2.0 (Active Development)
+Version: 3.0 (Active Development)
 Current Phase: P1 (Foundations)
 Current Lesson: P1-L01
 Completed Lessons: 0
 Repository: Private, accessible via GitHub MCP and Filesystem MCP
-Branch: master
+Branch: main
 
 KEY DESIGN DECISIONS
 File naming: Kebab-case directories, snake_case files, hyphens in IDs (P1-L01.json)
 State management: Decomposed (current.json, skills.json, metrics.json, completed/)
 Validation: Pre-commit (Claude) + CI (GitHub Actions)
-Curriculum generation: Phase 1 pre-generated, rest just-in-time
+Curriculum generation: just-in-time (phases/modules generated on demand)
 Lesson delivery: Document + guided checkpoints model
 Recovery: Snapshots, rollback, redo commands
 
@@ -451,8 +447,7 @@ claude-project-instructions.txt - This text (to be placed in Claude Project's 'I
 README.md - Repository overview (read via MCP)
 roles/*.md - Role definitions (read via MCP as needed)
 schemas/*.json - Data structure definitions (read via MCP for validation)
-catchbook-curriculum-v1.csv - Full curriculum overview
-projects/catchbook-product-spec.md - Catchbook product specification
+projects/helm-product-spec.md - Helm product specification
 
 TROUBLESHOOTING
 Repository access fails: Instruct user to verify MCP config, restart Claude Desktop

@@ -1,10 +1,10 @@
-# CatchBook Curriculum — Quick Start
+# Helm Curriculum — Quick Start
 
-**Goal:** Complete your first lesson and make your first CatchBook commit in 60 minutes.
+**Goal:** Complete your first lesson and make your first Helm commit in 60 minutes.
 
 ## What You're Building
 
-**CatchBook** is an AI-powered fishing journal app. Over 28 phases, you'll build it from scratch: mobile UI, backend API, database, AI species identification, and more.
+**Helm** is an AI-powered fishing journal app. Over 28 phases, you'll build it from scratch: mobile UI, backend API, database, AI species identification, and more.
 
 This curriculum isn't about throwaway exercises—you're shipping real features that compound into a production app.
 
@@ -18,7 +18,7 @@ Open Claude Desktop and type:
 /bootstrap
 ```
 
-Claude will load your curriculum and show your current position within the 28-phase CatchBook roadmap.
+Claude will load your curriculum and show your current position within the 28-phase Helm roadmap.
 
 ---
 
@@ -38,9 +38,9 @@ Claude will activate Professor mode and load the lesson on Git fundamentals.
 
 Claude will generate a lesson document as an artifact. This contains:
 
-- **Why this matters for CatchBook** (context)
+- **Why this matters for Helm** (context)
 - **Concepts to learn** (theory)
-- **Hands-on exercise** (practice with CatchBook repo)
+- **Hands-on exercise** (practice with Helm repo)
 - **Checkpoint questions** (verify understanding)
 
 Read through it at your own pace.
@@ -52,7 +52,7 @@ Read through it at your own pace.
 When you reach a checkpoint, answer the question in the chat.
 
 **Example checkpoint:**
-> **Checkpoint 1:** In your own words, why is version control important for the CatchBook project?
+> **Checkpoint 1:** In your own words, why is version control important for the Helm project?
 
 Type your answer. Claude will adapt the next section based on your response.
 
@@ -62,11 +62,11 @@ Type your answer. Claude will adapt the next section based on your response.
 
 Follow the instructions to:
 
-1. Create a CatchBook repository
+1. Create a Helm repository
 2. Write a README describing the project
 3. Make your first Git commit
 
-This is your first **real CatchBook deliverable**—not a toy example.
+This is your first **real Helm deliverable**—not a toy example.
 
 ---
 
@@ -106,9 +106,9 @@ Type:
 
 Claude will activate Advisor and recommend your next lesson based on:
 
-- Your progress in the CatchBook curriculum
+- Your progress in the Helm curriculum
 - Skills you've mastered
-- Which CatchBook features are ready to build next
+- Which Helm features are ready to build next
 
 ---
 
@@ -116,9 +116,9 @@ Claude will activate Advisor and recommend your next lesson based on:
 
 **28 Phases. 139 Modules. ~850 Hours. One Real Product.**
 
-You're not just learning full-stack development—you're building **CatchBook** from day 1 to production launch.
+You're not just learning full-stack development—you're building **Helm** from day 1 to production launch.
 
-Every lesson ships a feature. Every module completes a major component. Every phase advances CatchBook toward launch.
+Every lesson ships a feature. Every module completes a major component. Every phase advances Helm toward launch.
 
 ---
 

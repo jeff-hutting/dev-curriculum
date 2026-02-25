@@ -3,17 +3,17 @@
   "module_name": "Git fundamentals: init add commit push",
   "phase_id": "P01",
   "estimated_hours": 6,
-  "catchbook_deliverable": "CatchBook repository initialized on GitHub with professional README, .gitignore, and initial project structure. First meaningful commit demonstrates version control proficiency.",
-  "description": "Master the core Git workflow for version control. Learn to initialize repositories, track changes, write meaningful commit messages, and sync work with GitHub. Apply these skills immediately by setting up the CatchBook project repository with proper documentation and structure.",
+  "helm_deliverable": "Helm repository initialized on GitHub with professional README, .gitignore, and initial project structure. First meaningful commit demonstrates version control proficiency.",
+  "description": "Master the core Git workflow for version control. Learn to initialize repositories, track changes, write meaningful commit messages, and sync work with GitHub. Apply these skills immediately by setting up the Helm project repository with proper documentation and structure.",
   "prerequisites": [],
   "learning_objectives": [
-    "Explain the purpose of version control and why it's essential for CatchBook development",
+    "Explain the purpose of version control and why it's essential for Helm development",
     "Initialize a Git repository and configure user settings",
     "Stage and commit changes with clear, descriptive messages",
     "Connect local repository to GitHub and push commits",
-    "Write a professional README that communicates CatchBook's vision and setup instructions",
+    "Write a professional README that communicates Helm's vision and setup instructions",
     "Create a .gitignore file to exclude unnecessary files from version control",
-    "Establish a clean initial project structure for CatchBook"
+    "Establish a clean initial project structure for Helm"
   ],
   "skills_taught": [
     "git_basics",
@@ -42,14 +42,14 @@
     },
     {
       "lesson_id": "P01-M01-L04",
-      "title": "Connecting to GitHub and pushing your first CatchBook commit",
+      "title": "Connecting to GitHub and pushing your first Helm commit",
       "lesson_type": "project",
       "estimated_minutes": 90
     }
   ],
-  "catchbook_integration": {
+  "helm_integration": {
     "feature_area": "Project Infrastructure",
-    "repository_path": "github.com/jeff-hutting/catchbook",
+    "repository_path": "github.com/jeff-hutting/helm",
     "dependencies": [
       "GitHub account",
       "Git installed locally",

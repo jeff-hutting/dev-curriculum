@@ -1,9 +1,9 @@
-# ARCHITECTURE.md — CatchBook Curriculum Edition v2.0
+# ARCHITECTURE.md — Helm Curriculum Edition v2.0
 
 > **Status:** Active Development (v2.0)  
 > **Platform:** Claude Desktop + GitHub MCP + Filesystem MCP + VS Code  
 > **Philosophy:** File-backed state, artifact-first delivery, Git-native workflow  
-> **Project Spine:** CatchBook AI Fishing Journal (28 phases, 139 modules, ~850 hours)
+> **Project Spine:** Helm AI Fishing Journal (28 phases, 139 modules, ~850 hours)
 
 ---
 
@@ -22,7 +22,7 @@
 - [Phase 10: Validation Pipeline](#phase-10-validation-pipeline)
 - [Phase 11: Recovery & Rollback System](#phase-11-recovery--rollback-system)
 - [Phase 12: Success Metrics](#phase-12-success-metrics)
-- [Appendix A: CatchBook Curriculum Overview](#appendix-a-catchbook-curriculum-overview)
+- [Appendix A: Helm Curriculum Overview](#appendix-a-helm-curriculum-overview)
 - [Appendix B: File Naming Conventions](#appendix-b-file-naming-conventions)
 - [Appendix C: Curriculum Generation Strategy](#appendix-c-curriculum-generation-strategy)
 - [Appendix D: Roadmap](#appendix-d-roadmap)
@@ -33,9 +33,9 @@
 
 ### What This System Is
 
-A **local-first, Git-managed, GitHub-backed, AI-assisted full-stack engineering curriculum** built around a real production project: **CatchBook**, an AI-powered fishing diary app. The curriculum spans 28 phases, 139 modules, and approximately 850 hours of hands-on learning.
+A **local-first, Git-managed, GitHub-backed, AI-assisted full-stack engineering curriculum** built around a real production project: **Helm**, an AI-powered fishing diary app. The curriculum spans 28 phases, 139 modules, and approximately 850 hours of hands-on learning.
 
-**Core Innovation:** Every module produces a real, shippable feature for Catchbook. No throwaway exercises—only production code that compounds into a complete application.
+**Core Innovation:** Every module produces a real, shippable feature for Helm. No throwaway exercises—only production code that compounds into a complete application.
 
 ### Core Principles
 
@@ -44,12 +44,12 @@ A **local-first, Git-managed, GitHub-backed, AI-assisted full-stack engineering 
 3. **Explicit role contracts** — Roles defined in versioned files
 4. **Git-native workflow** — Every session produces a commit to build portfolio
 5. **Just-in-time curriculum** — Generate lessons as needed, not all upfront
-6. **Real project spine** — CatchBook drives every learning module
+6. **Real project spine** — Helm drives every learning module
 7. **Progressive disclosure** — Quick start path for beginners, comprehensive docs for depth
 
-### CatchBook as Curriculum Spine
+### Helm as Curriculum Spine
 
-**Why CatchBook?**
+**Why Helm?**
 
 - **Motivation:** Building a real product users will actually use
 - **Compound learning:** Each phase builds on previous work
@@ -58,8 +58,8 @@ A **local-first, Git-managed, GitHub-backed, AI-assisted full-stack engineering 
 - **Production stakes:** Forces best practices from day 1
 - **Full-stack coverage:** Touches every layer from mobile UI to ML models
 
-**What is CatchBook?**
-CatchBook is an AI-powered fishing journal that automatically fills in catch details by combining photo capture, EXIF metadata, and on-device computer vision. Anything the model can’t infer can be added instantly through natural-language input—typed or spoken. The goal is simple: log a catch in 10–20 seconds, instead of the 3–5 minutes required by today’s apps.
+**What is Helm?**
+Helm is an AI-powered fishing journal that automatically fills in catch details by combining photo capture, EXIF metadata, and on-device computer vision. Anything the model can’t infer can be added instantly through natural-language input—typed or spoken. The goal is simple: log a catch in 10–20 seconds, instead of the 3–5 minutes required by today’s apps.
 
 **Tech Stack:**
 
@@ -69,7 +69,7 @@ CatchBook is an AI-powered fishing journal that automatically fills in catch det
 - AI: Claude API for species ID and recommendations
 - Mobile: PWA → React Native or SwiftUI
 
-**Product Spec:** See `projects/catchbook-product-spec.md` for complete specification.
+**Product Spec:** See `projects/helm-product-spec.md` for complete specification.
 
 ### Curriculum Structure
 
@@ -100,11 +100,11 @@ CatchBook is an AI-powered fishing journal that automatically fills in catch det
 
 **Curriculum Components:**
 
-- `Curriculum` — Top-level design (28-phase CatchBook roadmap)
+- `Curriculum` — Top-level design (28-phase Helm roadmap)
 - `Phase` — Major section (e.g., P01: Foundations)
 - `Module` — Skill cluster (e.g., P01-M01: Git fundamentals)
 - `Lesson` — Teaching unit (e.g., P01-M01-L01: Version control concepts)
-- `Project` — CatchBook (primary), with supplementary projects as needed
+- `Project` — Helm (primary), with supplementary projects as needed
 
 **State Components:**
 
@@ -126,11 +126,11 @@ CatchBook is an AI-powered fishing journal that automatically fills in catch det
 1. **Advisor recommends** next module/lesson based on progress
 2. **Curriculum Designer generates** lesson files if not yet created
 3. **Professor delivers** lesson with guided checkpoints
-4. **User produces** CatchBook feature or code artifact
+4. **User produces** Helm feature or code artifact
 5. **User commits** work to Git with proper message
 6. **System updates** learner state (skills, metrics, completed)
 7. **Evaluator assesses** (optional) to validate mastery
-8. **Repeat** until CatchBook v1.0 is complete
+8. **Repeat** until Helm v1.0 is complete
 
 ---
 
@@ -173,7 +173,7 @@ dev-curriculum/
 │                   ├── P01-M01-L02.worksheet.md
 │                   └── P01-M01-L02.feedback.md
 ├── projects/
-│   ├── catchbook-product-spec.md    # Complete CatchBook specification
+│   ├── helm-product-spec.md    # Complete Helm specification
 │   └── supplementary/               # Additional projects if needed
 │       └── ...
 ├── learner-state/
@@ -217,7 +217,7 @@ dev-curriculum/
 ├── .github/
 │   └── workflows/
 │       └── validate.yml             # CI validation
-├── catchbook-curriculum-v1.csv      # Master curriculum overview (28 phases, 139 modules)
+├── curriculum.json      # Master curriculum overview (28 phases, 139 modules)
 ├── claude-project-instructions.txt  # Copy of Claude Project Instructions
 ├── user-profile.md                  # Learner profile (Jeff)
 ├── quickstart.md                    # Beginner-friendly entry point
@@ -231,7 +231,7 @@ dev-curriculum/
 ```bash
 git init
 git add .
-git commit -m "feat(init): create CatchBook curriculum system structure"
+git commit -m "feat(init): create Helm curriculum system structure"
 git branch -M master
 git remote add origin git@github.com:jeff-hutting/dev-curriculum.git
 git push -u origin master
@@ -316,7 +316,7 @@ All schemas enforce strict structure for machine-readable files. Schemas validat
 
 - Curriculum hierarchy (phases → modules → lessons)
 - Learner state decomposition
-- CatchBook project integration
+- Helm project integration
 - Completion tracking
 
 ### 3.2 `schemas/curriculum.schema.json`
@@ -399,7 +399,7 @@ All schemas enforce strict structure for machine-readable files. Schemas validat
     "phase_id": {"type": "string", "pattern": "^P[0-9]{2}$"},
     "phase_name": {"type": "string"},
     "description": {"type": "string"},
-    "catchbook_focus": {"type": "string"},
+    "helm_focus": {"type": "string"},
     "entry_criteria": {
       "type": "array",
       "items": {"type": "string"}
@@ -413,12 +413,12 @@ All schemas enforce strict structure for machine-readable files. Schemas validat
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["module_id", "module_name", "estimated_hours", "catchbook_deliverable"],
+        "required": ["module_id", "module_name", "estimated_hours", "helm_deliverable"],
         "properties": {
           "module_id": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}$"},
           "module_name": {"type": "string"},
           "estimated_hours": {"type": "integer", "minimum": 1},
-          "catchbook_deliverable": {"type": "string"}
+          "helm_deliverable": {"type": "string"}
         }
       }
     },
@@ -440,13 +440,13 @@ All schemas enforce strict structure for machine-readable files. Schemas validat
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "required": ["module_id", "module_name", "phase_id", "estimated_hours", "catchbook_deliverable", "learning_objectives", "lessons"],
+  "required": ["module_id", "module_name", "phase_id", "estimated_hours", "helm_deliverable", "learning_objectives", "lessons"],
   "properties": {
     "module_id": {"type": "string", "pattern": "^P[0-9]{2}-M[0-9]{2}$"},
     "module_name": {"type": "string"},
     "phase_id": {"type": "string", "pattern": "^P[0-9]{2}$"},
     "estimated_hours": {"type": "integer", "minimum": 1},
-    "catchbook_deliverable": {"type": "string"},
+    "helm_deliverable": {"type": "string"},
     "description": {"type": "string"},
     "prerequisites": {
       "type": "array",
@@ -474,7 +474,7 @@ All schemas enforce strict structure for machine-readable files. Schemas validat
         }
       }
     },
-    "catchbook_integration": {
+    "helm_integration": {
       "type": "object",
       "properties": {
         "feature_area": {"type": "string"},
@@ -539,7 +539,7 @@ All schemas enforce strict structure for machine-readable files. Schemas validat
       "type": "array",
       "items": {"type": "string"}
     },
-    "catchbook_context": {
+    "helm_context": {
       "type": "object",
       "properties": {
         "feature": {"type": "string"},
@@ -619,7 +619,7 @@ All schemas enforce strict structure for machine-readable files. Schemas validat
     "completed_at": {"type": "string", "format": "date-time"},
     "duration_minutes": {"type": "integer", "minimum": 1},
     "confidence_rating": {"type": "integer", "minimum": 1, "maximum": 5},
-    "catchbook_deliverable": {"type": "string"},
+    "helm_deliverable": {"type": "string"},
     "code_committed": {"type": "boolean"},
     "objectives_met": {
       "type": "array",
@@ -680,7 +680,7 @@ All schemas enforce strict structure for machine-readable files. Schemas validat
     "lessons_completed": {"type": "integer", "minimum": 0},
     "modules_completed": {"type": "integer", "minimum": 0},
     "phases_completed": {"type": "integer", "minimum": 0},
-    "catchbook_features_shipped": {"type": "integer", "minimum": 0},
+    "helm_features_shipped": {"type": "integer", "minimum": 0},
     "reflections_written": {"type": "integer", "minimum": 0},
     "average_confidence": {"type": "number", "minimum": 1, "maximum": 5},
     "consistency_score": {"type": "number", "minimum": 0, "maximum": 1},
@@ -693,7 +693,7 @@ All schemas enforce strict structure for machine-readable files. Schemas validat
 
 ```bash
 git add schemas/
-git commit -m "feat(schemas): add JSON schemas for CatchBook curriculum structure"
+git commit -m "feat(schemas): add JSON schemas for Helm curriculum structure"
 git push
 ```
 
@@ -703,7 +703,7 @@ git push
 
 ### 4.1 Role Definition Pattern
 
-Each role is defined in a Markdown file under `roles/`. Claude loads the role file to understand its responsibilities within the CatchBook curriculum context.
+Each role is defined in a Markdown file under `roles/`. Claude loads the role file to understand its responsibilities within the Helm curriculum context.
 
 **Structure:**
 
@@ -727,9 +727,9 @@ One-sentence description of role responsibility.
 - Rules this role must follow
 - When to defer to other roles
 
-## CatchBook Context
-- How this role relates to CatchBook development
-- Examples of CatchBook-specific outputs
+## Helm Context
+- How this role relates to Helm development
+- Examples of Helm-specific outputs
 
 ## Example Session Flow
 1. Step-by-step workflow
@@ -745,7 +745,7 @@ One-sentence description of role responsibility.
 
 ## Purpose
 
-Design and maintain system structure, schemas, and file organization for the CatchBook curriculum system.
+Design and maintain system structure, schemas, and file organization for the Helm curriculum system.
 
 ## Responsibilities
 
@@ -754,16 +754,16 @@ Design and maintain system structure, schemas, and file organization for the Cat
 - Validate architectural consistency
 - Propose structural improvements
 - Document system design decisions
-- Ensure CatchBook integration patterns are consistent
+- Ensure Helm integration patterns are consistent
 
 ## Input Files Required
 
 - `schemas/*.schema.json`
 - `curriculum/curriculum.json`
-- `catchbook-curriculum-v1.csv`
+- `curriculum.json`
 - All phase files (`P01.json`, `P02.json`, etc.)
 - All module files (`P01-M01.json`, etc.)
-- `projects/catchbook-product-spec.md`
+- `projects/helm-product-spec.md`
 - `ARCHITECTURE.md`, `README.md`, `instructions.md`
 
 ## Output Format
@@ -779,14 +779,14 @@ Design and maintain system structure, schemas, and file organization for the Cat
 - Never make progress decisions (defer to Advisor)
 - All schema changes must be backward-compatible or include migration plan
 - Always validate proposed changes against existing files
-- Ensure all deliverables map to CatchBook features
+- Ensure all deliverables map to Helm features
 
-## CatchBook Context
+## Helm Context
 
-- Validates that every module has a clear CatchBook deliverable
+- Validates that every module has a clear Helm deliverable
 - Ensures tech stack alignment (React, FastAPI, PostgreSQL, etc.)
-- Maintains consistency between curriculum structure and CatchBook architecture
-- Proposes patterns for integrating curriculum with actual CatchBook codebase
+- Maintains consistency between curriculum structure and Helm architecture
+- Proposes patterns for integrating curriculum with actual Helm codebase
 
 ## Example Session Flow
 
@@ -805,23 +805,23 @@ Design and maintain system structure, schemas, and file organization for the Cat
 
 ## Purpose
 
-Generate module structures and lesson sequences just-in-time as learner progresses through CatchBook development.
+Generate module structures and lesson sequences just-in-time as learner progresses through Helm development.
 
 ## Responsibilities
 
-- Generate phase files with module lists (from catchbook-curriculum-v1.csv)
+- Generate phase files with module lists (from curriculum.json)
 - Create individual module JSON files with lesson outlines
 - Generate lesson JSON files when requested by Professor or Advisor
 - Ensure prerequisite chains are valid
-- Design CatchBook feature integration for each module
+- Design Helm feature integration for each module
 - Break down large modules into manageable lessons (45-90 min each)
 - Maintain pedagogical coherence across phases
 
 ## Input Files Required
 
-- `catchbook-curriculum-v1.csv` (master curriculum overview)
+- `curriculum.json` (master curriculum overview)
 - `curriculum/curriculum.json`
-- `projects/catchbook-product-spec.md`
+- `projects/helm-product-spec.md`
 - `schemas/phase.schema.json`
 - `schemas/module.schema.json`
 - `schemas/lesson.schema.json`
@@ -841,21 +841,21 @@ Generate module structures and lesson sequences just-in-time as learner progress
 - All files must validate against schemas
 - Prerequisites must reference only existing lessons
 - Estimated times must be realistic (lessons: 45-90 min, modules: 6-16 hrs)
-- Every module must specify concrete CatchBook deliverable
-- Lessons within a module must build toward module's CatchBook deliverable
+- Every module must specify concrete Helm deliverable
+- Lessons within a module must build toward module's Helm deliverable
 
-## CatchBook Context
+## Helm Context
 
-- Maps CSV modules to actual CatchBook features from product spec
+- Maps CSV modules to actual Helm features from product spec
 - Ensures each lesson produces shippable code or documentation
-- Sequences lessons to build CatchBook incrementally (MVP → full product)
-- References specific sections of CatchBook-product-spec.md
-- Aligns tech stack choices with CatchBook architecture
+- Sequences lessons to build Helm incrementally (MVP → full product)
+- References specific sections of Helm-product-spec.md
+- Aligns tech stack choices with Helm architecture
 
 ## Example Session Flow
 
 1. User requests "Generate Phase 1 modules"
-2. Designer loads catchbook-curriculum-v1.csv and filters Phase 1 rows
+2. Designer loads curriculum.json and filters Phase 1 rows
 3. Generates P01.json with all 4 modules listed
 4. Generates P01-M01.json (Git fundamentals) with lesson outline
 5. When Professor needs lessons, generates P01-M01-L01.json, P01-M01-L02.json, etc.
@@ -873,18 +873,18 @@ Generate module structures and lesson sequences just-in-time as learner progress
 
 ## Purpose
 
-Deliver individual lessons through structured, interactive teaching focused on CatchBook development.
+Deliver individual lessons through structured, interactive teaching focused on Helm development.
 
 ## Responsibilities
 
 - Load lesson file and follow its structure
-- Teach concepts step-by-step with CatchBook examples
+- Teach concepts step-by-step with Helm examples
 - Generate lesson documents as artifacts
 - Facilitate checkpoint discussions
-- Guide hands-on CatchBook coding exercises
+- Guide hands-on Helm coding exercises
 - Produce end-of-lesson deliverables (summary, state update, reflection prompt)
 - Adapt pacing based on learner state
-- Verify CatchBook code quality before lesson completion
+- Verify Helm code quality before lesson completion
 
 ## Input Files Required
 
@@ -893,7 +893,7 @@ Deliver individual lessons through structured, interactive teaching focused on C
 - `learner-state/current.json`
 - `learner-state/skills.json`
 - `learner-state/completed/{prior_lesson_ids}.json` (if prerequisites exist)
-- `projects/catchbook-product-spec.md` (for feature context)
+- `projects/helm-product-spec.md` (for feature context)
 
 ## Output Format
 
@@ -911,37 +911,37 @@ Deliver individual lessons through structured, interactive teaching focused on C
 - Never skip assessment criteria
 - Never modify curriculum structure (defer to Designer)
 - Never make next-lesson decisions (defer to Advisor)
-- All code examples must align with CatchBook tech stack
-- Deliverables must be production-ready for CatchBook repo
+- All code examples must align with Helm tech stack
+- Deliverables must be production-ready for Helm repo
 
-## CatchBook Context
+## Helm Context
 
-- Every lesson includes CatchBook-specific examples and exercises
-- Guides learner to implement actual CatchBook features
-- References CatchBook-product-spec.md for feature requirements
-- Ensures code produced matches CatchBook architecture patterns
-- Validates that module's CatchBook deliverable is achieved
-- Provides context on how current lesson fits into broader CatchBook vision
+- Every lesson includes Helm-specific examples and exercises
+- Guides learner to implement actual Helm features
+- References Helm-product-spec.md for feature requirements
+- Ensures code produced matches Helm architecture patterns
+- Validates that module's Helm deliverable is achieved
+- Provides context on how current lesson fits into broader Helm vision
 
 ## Example Session Flow
 
 1. User requests "Teach P01-M01-L01"
 2. Professor loads lesson file and module file via MCP
-3. Loads catchbook-product-spec.md to understand CatchBook context
+3. Loads helm-product-spec.md to understand Helm context
 4. Generates complete lesson document as artifact:
-   - Introduction: Why this matters for CatchBook
-   - Concepts with CatchBook examples
-   - Hands-on exercise: "Set up CatchBook Git repo"
+   - Introduction: Why this matters for Helm
+   - Concepts with Helm examples
+   - Hands-on exercise: "Set up Helm Git repo"
    - Checkpoint questions at 15-minute intervals
 5. User reads artifact, works through exercise, responds to checkpoints in chat
 6. Professor adapts explanations based on responses
 7. After final checkpoint, Professor generates:
    - Lesson summary artifact (based on template)
    - State update artifacts (4 JSON files)
-   - Reflection prompt: "How does Git workflow apply to your CatchBook development?"
+   - Reflection prompt: "How does Git workflow apply to your Helm development?"
 8. User copies artifacts to VS Code, saves files
 9. Professor proposes commit message: "feat(lesson): complete P01-M01-L01 Git fundamentals"
-10. User commits CatchBook repo changes + curriculum state updates
+10. User commits Helm repo changes + curriculum state updates
 
 ```
 
@@ -952,28 +952,28 @@ Deliver individual lessons through structured, interactive teaching focused on C
 
 ## Purpose
 
-Recommend next learning activities based on progress, skills, CatchBook feature priorities, and timeline goals.
+Recommend next learning activities based on progress, skills, Helm feature priorities, and timeline goals.
 
 ## Responsibilities
 
 - Analyze learner state (current position, completed lessons, skills, metrics)
 - Recommend next lesson, module, or review activity
 - Flag skills needing reinforcement
-- Propose weekly learning plans aligned with CatchBook milestones
+- Propose weekly learning plans aligned with Helm milestones
 - Identify prerequisite gaps
-- Track CatchBook feature completion vs. curriculum progress
+- Track Helm feature completion vs. curriculum progress
 - Adjust pacing recommendations based on 10-20 hrs/week availability
 
 ## Input Files Required
 
-- `catchbook-curriculum-v1.csv` (master curriculum overview)
+- `curriculum.json` (master curriculum overview)
 - `curriculum/curriculum.json`
 - All phase and module files
 - `learner-state/current.json`
 - `learner-state/completed/*.json`
 - `learner-state/skills.json`
 - `learner-state/metrics.json`
-- `projects/catchbook-product-spec.md` (to understand feature priorities)
+- `projects/helm-product-spec.md` (to understand feature priorities)
 
 ## Output Format
 
@@ -988,28 +988,28 @@ Recommend next learning activities based on progress, skills, CatchBook feature 
 - Recommendations must respect prerequisite chains
 - Must justify recommendations with evidence from state files
 - Cannot make decisions for user — only recommend
-- Must consider CatchBook feature dependencies (e.g., can't build API endpoints before backend setup)
+- Must consider Helm feature dependencies (e.g., can't build API endpoints before backend setup)
 
-## CatchBook Context
+## Helm Context
 
-- Tracks which CatchBook features are completed vs. planned
-- Recommends modules that unblock high-priority CatchBook features
-- Suggests review if recent CatchBook code quality is low
+- Tracks which Helm features are completed vs. planned
+- Recommends modules that unblock high-priority Helm features
+- Suggests review if recent Helm code quality is low
 - Proposes skipping modules if learner already has skill (validated against completed projects)
-- Aligns weekly plans with CatchBook milestones (e.g., "MVP by Month 4")
+- Aligns weekly plans with Helm milestones (e.g., "MVP by Month 4")
 
 ## Example Session Flow
 
 1. User requests "What should I do next?"
 2. Advisor loads all learner-state files via MCP
-3. Loads catchbook-curriculum-v1.csv to understand remaining modules
+3. Loads curriculum.json to understand remaining modules
 4. Analyzes completed lessons, skills, and metrics
-5. Checks CatchBook product spec to see which features are priorities
+5. Checks Helm product spec to see which features are priorities
 6. Generates recommendation artifact with:
-   - Suggested next lesson with justification: "Complete P01-M01-L02 to finish Git fundamentals module, which unlocks CatchBook repo setup"
+   - Suggested next lesson with justification: "Complete P01-M01-L02 to finish Git fundamentals module, which unlocks Helm repo setup"
    - Skills to review (if any): "Git branching confidence is 2/5, recommend reviewing P01-M01-L01 before continuing"
-   - Weekly plan (if requested): "This week: Complete Module 1.1 (6 hours), set up CatchBook repo, write first commit"
-   - CatchBook milestone context: "This puts you on track for Phase 1 completion in 4 weeks"
+   - Weekly plan (if requested): "This week: Complete Module 1.1 (6 hours), set up Helm repo, write first commit"
+   - Helm milestone context: "This puts you on track for Phase 1 completion in 4 weeks"
 7. User reviews recommendation
 8. If user agrees, activates Professor for suggested lesson
 
@@ -1022,17 +1022,17 @@ Recommend next learning activities based on progress, skills, CatchBook feature 
 
 ## Purpose
 
-Assess lesson quality, learning outcomes, CatchBook code quality, and system effectiveness.
+Assess lesson quality, learning outcomes, Helm code quality, and system effectiveness.
 
 ## Responsibilities
 
 - Validate that completed lessons met stated objectives
 - Review lesson summaries for gaps or misconceptions
 - Assess skill progression over time
-- Evaluate CatchBook code quality (architecture, best practices, functionality)
+- Evaluate Helm code quality (architecture, best practices, functionality)
 - Identify curriculum weaknesses
 - Propose lesson improvements
-- Verify that module deliverables are production-ready for CatchBook
+- Verify that module deliverables are production-ready for Helm
 
 ## Input Files Required
 
@@ -1040,15 +1040,15 @@ Assess lesson quality, learning outcomes, CatchBook code quality, and system eff
 - Corresponding completed state file
 - Lesson summary file
 - Reflection file (if exists)
-- CatchBook codebase (if evaluating code quality)
-- `projects/catchbook-product-spec.md` (for feature requirements)
+- Helm codebase (if evaluating code quality)
+- `projects/helm-product-spec.md` (for feature requirements)
 
 ## Output Format
 
 - Evaluation report (Markdown artifact)
 - Optional: proposed lesson updates (JSON artifact)
 - Optional: proposed skill adjustments (JSON artifact)
-- Optional: CatchBook code review findings (Markdown)
+- Optional: Helm code review findings (Markdown)
 
 ## Constraints
 
@@ -1058,28 +1058,28 @@ Assess lesson quality, learning outcomes, CatchBook code quality, and system eff
 - All assessments must reference specific evidence from files
 - Code evaluations must be constructive and reference best practices
 
-## CatchBook Context
+## Helm Context
 
-- Evaluates if CatchBook deliverables meet product spec requirements
-- Checks code quality against CatchBook architecture patterns
+- Evaluates if Helm deliverables meet product spec requirements
+- Checks code quality against Helm architecture patterns
 - Validates that features are shippable (not just "learning exercises")
-- Proposes improvements to align curriculum with real-world CatchBook needs
-- Identifies where curriculum should add CatchBook-specific guidance
+- Proposes improvements to align curriculum with real-world Helm needs
+- Identifies where curriculum should add Helm-specific guidance
 
 ## Example Session Flow
 
 1. User requests "Evaluate P01-M01-L01"
 2. Evaluator loads lesson file, completed state, summary, reflection
-3. If module has CatchBook deliverable, loads relevant code from CatchBook repo
+3. If module has Helm deliverable, loads relevant code from Helm repo
 4. Generates evaluation report as artifact:
    - Were objectives met? (evidence from summary)
    - Were misconceptions addressed? (evidence from reflection)
    - Is skill level update justified? (evidence from checkpoint responses)
-   - CatchBook code quality: "Repo setup follows best practices, README is clear"
+   - Helm code quality: "Repo setup follows best practices, README is clear"
    - Recommendations for lesson improvement: "Add checkpoint on .gitignore patterns"
 5. User reviews evaluation
 6. If lesson needs updates, user activates Designer to modify lesson file
-7. If CatchBook code needs revision, user refactors with Professor guidance
+7. If Helm code needs revision, user refactors with Professor guidance
 
 ```
 
@@ -1087,7 +1087,7 @@ Assess lesson quality, learning outcomes, CatchBook code quality, and system eff
 
 ```bash
 git add roles/
-git commit -m "feat(roles): update role definitions for CatchBook curriculum"
+git commit -m "feat(roles): update role definitions for Helm curriculum"
 git push
 ```
 
@@ -1110,15 +1110,15 @@ Every Claude Desktop session starts with a bootstrap to load context.
 1. Detect dev-curriculum repository (via GitHub MCP or Filesystem MCP)
 2. Read `user-profile.md`
 3. Read `learner-state/current.json`
-4. Read `catchbook-curriculum-v1.csv` (to show progress within 28-phase structure)
+4. Read `curriculum.json` (to show progress within 28-phase structure)
 5. Display:
 
 ```text
-=== CatchBook Curriculum System Bootstrap ===
+=== Helm Curriculum System Bootstrap ===
 
 Repository: dev-curriculum
 Learner: Jeff
-Project: CatchBook AI Fishing Journal
+Project: Helm AI Fishing Journal
 
 Current Position:
   Phase: P01 - Foundations (Module 1 of 4)
@@ -1130,7 +1130,7 @@ Progress:
   Modules Completed: 0/139
   Lessons Completed: 0
   Total Time: 0 hours
-  CatchBook Features Shipped: 0
+  Helm Features Shipped: 0
   
 Last Updated: 2025-12-02
 
@@ -1170,7 +1170,7 @@ Role: Professor activated.
 Ready to teach lesson P01-M01-L01: Version control concepts
 
 Module Context: Git fundamentals (6 hours total)
-CatchBook Deliverable: CatchBook repo setup + README
+Helm Deliverable: Helm repo setup + README
 
 Type /begin to start the lesson, or ask questions first.
 ```
@@ -1182,13 +1182,13 @@ Type /begin to start the lesson, or ask questions first.
 ### 6.1 Create `quickstart.md`
 
 ````markdown
-# CatchBook Curriculum — Quick Start
+# Helm Curriculum — Quick Start
 
-**Goal:** Complete your first lesson and make your first CatchBook commit in 60 minutes.
+**Goal:** Complete your first lesson and make your first Helm commit in 60 minutes.
 
 ## What You're Building
 
-**CatchBook** is an AI-powered fishing journal app. Over 28 phases, you'll build it from scratch: mobile UI, backend API, database, AI species identification, and more.
+**Helm** is an AI-powered fishing journal app. Over 28 phases, you'll build it from scratch: mobile UI, backend API, database, AI species identification, and more.
 
 This curriculum isn't about throwaway exercises—you're shipping real features that compound into a production app.
 
@@ -1202,7 +1202,7 @@ Open Claude Desktop and type:
 /bootstrap
 ```
 
-Claude will load your curriculum and show your current position within the 28-phase CatchBook roadmap.
+Claude will load your curriculum and show your current position within the 28-phase Helm roadmap.
 
 ---
 
@@ -1222,9 +1222,9 @@ Claude will activate Professor mode and load the lesson on Git fundamentals.
 
 Claude will generate a lesson document as an artifact. This contains:
 
-- **Why this matters for CatchBook** (context)
+- **Why this matters for Helm** (context)
 - **Concepts to learn** (theory)
-- **Hands-on exercise** (practice with CatchBook repo)
+- **Hands-on exercise** (practice with Helm repo)
 - **Checkpoint questions** (verify understanding)
 
 Read through it at your own pace.
@@ -1236,7 +1236,7 @@ Read through it at your own pace.
 When you reach a checkpoint, answer the question in the chat.
 
 **Example checkpoint:**
-> **Checkpoint 1:** In your own words, why is version control important for the CatchBook project?
+> **Checkpoint 1:** In your own words, why is version control important for the Helm project?
 
 Type your answer. Claude will adapt the next section based on your response.
 
@@ -1246,11 +1246,11 @@ Type your answer. Claude will adapt the next section based on your response.
 
 Follow the instructions to:
 
-1. Create a CatchBook repository
+1. Create a Helm repository
 2. Write a README describing the project
 3. Make your first Git commit
 
-This is your first **real CatchBook deliverable**—not a toy example.
+This is your first **real Helm deliverable**—not a toy example.
 
 ---
 
@@ -1288,9 +1288,9 @@ Type:
 ```
 
 Claude will activate Advisor and recommend your next lesson based on:
-- Your progress in the CatchBook curriculum
+- Your progress in the Helm curriculum
 - Skills you've mastered
-- Which CatchBook features are ready to build next
+- Which Helm features are ready to build next
 
 ---
 
@@ -1298,9 +1298,9 @@ Claude will activate Advisor and recommend your next lesson based on:
 
 **28 Phases. 139 Modules. ~850 Hours. One Real Product.**
 
-You're not just learning full-stack development—you're building **CatchBook** from day 1 to production launch.
+You're not just learning full-stack development—you're building **Helm** from day 1 to production launch.
 
-Every lesson ships a feature. Every module completes a major component. Every phase advances CatchBook toward launch.
+Every lesson ships a feature. Every module completes a major component. Every phase advances Helm toward launch.
 
 ---
 
@@ -1381,7 +1381,7 @@ For advanced features, see `instructions.md`.
   "lessons_completed": 0,
   "modules_completed": 0,
   "phases_completed": 0,
-  "catchbook_features_shipped": 0,
+  "helm_features_shipped": 0,
   "reflections_written": 0,
   "average_confidence": 0,
   "consistency_score": 0,
@@ -1397,7 +1397,7 @@ Empty directory placeholder for completed lesson records.
 
 ```bash
 git add learner-state/
-git commit -m "feat(state): initialize learner state for CatchBook curriculum"
+git commit -m "feat(state): initialize learner state for Helm curriculum"
 git push
 ```
 
@@ -1406,9 +1406,9 @@ git push
 After each lesson, Professor generates 4 artifacts:
 
 1. **current.json update** — new current_lesson_id (and module_id if transitioning)
-2. **completed/{lesson_id}.json** — completion record with CatchBook deliverable
+2. **completed/{lesson_id}.json** — completion record with Helm deliverable
 3. **skills.json update** — skill level changes + modules_practiced tracking
-4. **metrics.json update** — time, confidence, count increments (including catchbook_features_shipped)
+4. **metrics.json update** — time, confidence, count increments (including helm_features_shipped)
 
 User copies these artifacts to appropriate files and commits atomically:
 
@@ -1422,7 +1422,7 @@ git push
 
 ## Phase 8: Lesson Delivery Model
 
-### 8.1 Lesson Format: Document + Guided Checkpoints + CatchBook Integration
+### 8.1 Lesson Format: Document + Guided Checkpoints + Helm Integration
 
 **Structure:**
 
@@ -1436,11 +1436,11 @@ git push
 
 ---
 
-## CatchBook Context
+## Helm Context
 
-**What You're Building:** {Brief description of CatchBook feature this lesson contributes to}
+**What You're Building:** {Brief description of Helm feature this lesson contributes to}
 
-**Why It Matters:** {How this skill applies to CatchBook development}
+**Why It Matters:** {How this skill applies to Helm development}
 
 **Module Deliverable:** {What you'll ship by end of module}
 
@@ -1457,23 +1457,23 @@ By the end of this lesson, you will be able to:
 
 ## Introduction
 
-{2-3 paragraphs setting context and motivation with CatchBook examples}
+{2-3 paragraphs setting context and motivation with Helm examples}
 
 ---
 
 ## Section 1: {Topic}
 
-{Explanation with CatchBook-specific examples}
+{Explanation with Helm-specific examples}
 
-### Example (CatchBook)
+### Example (Helm)
 
 ```javascript
-// Real CatchBook code example
+// Real Helm code example
 ```
 
 ---
 
-**CHECKPOINT 1:** {Question to verify understanding in CatchBook context}
+**CHECKPOINT 1:** {Question to verify understanding in Helm context}
 
 {Pause here and answer in chat before continuing}
 
@@ -1503,9 +1503,9 @@ By the end of this lesson, you will be able to:
 
 ---
 
-## Hands-On Exercise: Build for CatchBook
+## Hands-On Exercise: Build for Helm
 
-{Step-by-step instructions to implement actual CatchBook feature}
+{Step-by-step instructions to implement actual Helm feature}
 
 **Deliverable:** {Specific file, commit, or feature to produce}
 
@@ -1518,7 +1518,7 @@ By the end of this lesson, you will be able to:
 
 ## Summary
 
-{Recap of key concepts and how they apply to CatchBook}
+{Recap of key concepts and how they apply to Helm}
 
 ---
 
@@ -1551,7 +1551,7 @@ By the end of this lesson, you will be able to:
 ## Next Steps
 
 **Next Lesson:** {next_lesson_id} - {next_lesson_title}  
-**CatchBook Progress:** {What CatchBook features are now possible}
+**Helm Progress:** {What Helm features are now possible}
 
 ---
 
@@ -1563,17 +1563,17 @@ By the end of this lesson, you will be able to:
 1. User: `/teach P01-M01-L01`
 2. Professor loads `curriculum/lessons/P01-M01-L01.json` via MCP
 3. Professor loads `curriculum/modules/P01-M01.json` for module context
-4. Professor loads `projects/catchbook-product-spec.md` for feature context
+4. Professor loads `projects/helm-product-spec.md` for feature context
 5. Professor generates lesson document as artifact (following structure above)
 6. User reads document, completes hands-on exercise, answers checkpoint questions in chat
 7. Professor adapts explanations based on answers
 8. After final checkpoint, Professor generates:
     - Lesson summary artifact
     - 4 state update artifacts (JSON)
-    - Reflection prompt (conversational, CatchBook-focused)
+    - Reflection prompt (conversational, Helm-focused)
 9. User copies artifacts to VS Code, saves
 10. Professor proposes commit message following Conventional Commits
-11. User commits CatchBook repo changes (if any) + curriculum state updates
+11. User commits Helm repo changes (if any) + curriculum state updates
 
 ### 8.3 Lesson Summary Template
 
@@ -1587,7 +1587,7 @@ phase_id: {{phase_id}}
 completed_at: {{iso_timestamp}}
 duration_minutes: {{duration}}
 confidence_rating: {{1-5}}
-catchbook_deliverable: {{description}}
+helm_deliverable: {{description}}
 ---
 
 # Lesson Summary — {{lesson_id}}
@@ -1600,9 +1600,9 @@ catchbook_deliverable: {{description}}
 
 {{module_name}} ({{module_id}})
 
-## CatchBook Feature
+## Helm Feature
 
-{{catchbook_feature_description}}
+{{helm_feature_description}}
 
 ## Objectives Met
 
@@ -1629,7 +1629,7 @@ catchbook_deliverable: {{description}}
 - {{skill_1}}: {{novice|emerging|competent|proficient|expert}}
 - {{skill_2}}: {{novice|emerging|competent|proficient|expert}}
 
-## CatchBook Deliverable
+## Helm Deliverable
 
 {{description_of_what_was_built_or_shipped}}
 
@@ -1668,9 +1668,9 @@ energy_level: {{1-10}}
 
 {{lesson_title}}
 
-## CatchBook Context
+## Helm Context
 
-{{what_catchbook_feature_or_capability_this_enabled}}
+{{what_helm_feature_or_capability_this_enabled}}
 
 ## How It Felt
 
@@ -1678,7 +1678,7 @@ energy_level: {{1-10}}
 
 ## What Clicked
 
-{{What concepts made sense, especially in CatchBook context}}
+{{What concepts made sense, especially in Helm context}}
 
 ## What's Still Fuzzy
 
@@ -1686,7 +1686,7 @@ energy_level: {{1-10}}
 
 ## Real-World Application
 
-{{How this lesson applies to building CatchBook or other real projects}}
+{{How this lesson applies to building Helm or other real projects}}
 
 ## Mood After Lesson
 
@@ -1701,7 +1701,7 @@ energy_level: {{1-10}}
 
 ```bash
 git add templates/
-git commit -m "feat(templates): add CatchBook-focused lesson summary and reflection templates"
+git commit -m "feat(templates): add Helm-focused lesson summary and reflection templates"
 git push
 ```
 
@@ -1724,46 +1724,46 @@ git push
 #### `/bootstrap`
 
 **Input:** None  
-**Output:** Session initialization message + current position + CatchBook progress + command list  
-**Files Read:** `user-profile.md`, `learner-state/current.json`, `catchbook-curriculum-v1.csv`
+**Output:** Session initialization message + current position + Helm progress + command list  
+**Files Read:** `user-profile.md`, `learner-state/current.json`, `curriculum.json`
 
 #### `/teach {lesson_id}`
 
 **Input:** Lesson ID (e.g., `P01-M01-L01`)  
-**Output:** Activates Professor, loads lesson, generates lesson document artifact with CatchBook context  
+**Output:** Activates Professor, loads lesson, generates lesson document artifact with Helm context  
 **Files Read:**
 
 - `curriculum/lessons/{lesson_id}.json`
 - `curriculum/modules/{module_id}.json`
 - All learner-state files
-- `projects/catchbook-product-spec.md`
+- `projects/helm-product-spec.md`
 - `roles/professor.md`
 
 #### `/next`
 
 **Input:** None  
-**Output:** Activates Advisor, generates recommendation artifact with CatchBook milestone context  
+**Output:** Activates Advisor, generates recommendation artifact with Helm milestone context  
 **Files Read:**
 
-- `catchbook-curriculum-v1.csv`
+- `curriculum.json`
 - `curriculum/curriculum.json`
 - All phase and module files
 - All learner-state files
-- `projects/catchbook-product-spec.md`
+- `projects/helm-product-spec.md`
 - `roles/advisor.md`
 
 #### `/status`
 
 **Input:** None  
-**Output:** Progress dashboard with Catchbook feature completion tracking  
+**Output:** Progress dashboard with Helm feature completion tracking  
 **Files Read:** All learner-state files, curriculum files
 
 **Example output:**
 
 ```text
-=== CatchBook Curriculum Progress Dashboard ===
+=== Helm Curriculum Progress Dashboard ===
 
-Project: CatchBook AI Fishing Journal
+Project: Helm AI Fishing Journal
 Current Phase: P01 — Foundations (Module 1 of 4)
 Current Module: P01-M01 — Git fundamentals
 Current Lesson: P01-M01-L01 — Version control concepts
@@ -1775,7 +1775,7 @@ Overall Progress:
 ├─ Phases: 0/28 completed (0%)
 ├─ Modules: 0/139 completed (0%)
 ├─ Lessons: 0 completed
-└─ CatchBook Features Shipped: 0
+└─ Helm Features Shipped: 0
 
 Time Investment:
 ├─ Total Time: 0 hours
@@ -1792,9 +1792,9 @@ Skill Levels:
 Average Confidence: N/A
 Reflections Written: 0
 
-Next Milestone: Complete P01-M01 (Git fundamentals) → Unlock CatchBook repo setup
+Next Milestone: Complete P01-M01 (Git fundamentals) → Unlock Helm repo setup
 
-CatchBook Progress:
+Helm Progress:
 ├─ Repo Setup: Not started
 ├─ README Documentation: Not started
 └─ First Commit: Not started
@@ -1889,7 +1889,7 @@ jobs:
 ```python
 #!/usr/bin/env python3
 """
-Schema validation script for CatchBook curriculum system.
+Schema validation script for Helm curriculum system.
 Validates all JSON files against their corresponding schemas.
 """
 
@@ -1984,7 +1984,7 @@ chmod +x tools/validate.py
 
 ```bash
 git add .github/workflows/validate.yml tools/validate.py
-git commit -m "feat(validation): add CI validation pipeline for CatchBook curriculum"
+git commit -m "feat(validation): add CI validation pipeline for Helm curriculum"
 git push
 ```
 
@@ -2059,7 +2059,7 @@ User types:
     - `current.json`: sets `current_lesson_id` to `P01-M01-L02`
     - Removes `P01-M01-L02.json` from `completed/`
     - Reverts skill levels to pre-lesson values (if recorded)
-    - Decrements metrics (lessons_completed, total_time, catchbook_features_shipped)
+    - Decrements metrics (lessons_completed, total_time, helm_features_shipped)
 4. User copies artifacts and commits
 5. User can now run `/teach P01-M01-L02` fresh
 
@@ -2090,7 +2090,7 @@ git push
 2. **Lessons Completed** (`lessons_completed`)
 3. **Modules Completed** (`modules_completed`)
 4. **Phases Completed** (`phases_completed`)
-5. **CatchBook Features Shipped** (`catchbook_features_shipped`)
+5. **Helm Features Shipped** (`helm_features_shipped`)
 6. **Reflections Written** (`reflections_written`)
 7. **Average Confidence** (`average_confidence`)
 8. **Consistency Score** (`consistency_score`)
@@ -2099,15 +2099,15 @@ git push
 
 | Milestone | Target | Significance |
 |-----------|--------|--------------|
-| First Commit | Week 1 | CatchBook repo initialized |
+| First Commit | Week 1 | Helm repo initialized |
 | Module 1 Complete | Week 2 | Git proficiency established |
 | Phase 1 Complete | Week 4 | Foundations mastery |
-| Phase 3 Complete (Frontend Basics) | Week 10 | CatchBook landing page live |
-| Phase 8 Complete (Backend API) | Week 20 | CatchBook API functional |
-| Phase 11 Complete (React) | Week 30 | CatchBook SPA prototype |
+| Phase 3 Complete (Frontend Basics) | Week 10 | Helm landing page live |
+| Phase 8 Complete (Backend API) | Week 20 | Helm API functional |
+| Phase 11 Complete (React) | Week 30 | Helm SPA prototype |
 | Phase 15 Complete (AI Integration) | Week 40 | Species ID working |
-| Phase 21 Complete (Deployment) | Week 50 | CatchBook MVP live |
-| Phase 28 Complete | Week 60-80 | CatchBook v1.0 launched |
+| Phase 21 Complete (Deployment) | Week 50 | Helm MVP live |
+| Phase 28 Complete | Week 60-80 | Helm v1.0 launched |
 
 ### 12.3 Timeline Estimates
 
@@ -2118,26 +2118,26 @@ git push
 - **At 15 hrs/week:** 57 weeks (~13 months)
 - **At 20 hrs/week:** 43 weeks (~10 months)
 
-**Recommended Pace:** 15 hours/week = CatchBook launch in ~1 year
+**Recommended Pace:** 15 hours/week = Helm launch in ~1 year
 
 ---
 
-## Appendix A: CatchBook Curriculum Overview
+## Appendix A: Helm Curriculum Overview
 
 ### A.1 Full Curriculum Structure
 
-See `catchbook-curriculum-v1.csv` for complete breakdown.
+See `curriculum.json` for complete breakdown.
 
 **Summary:**
 
 - **28 Phases**
 - **139 Modules**
 - **Estimated 850 hours**
-- **Single Project Spine:** CatchBook
+- **Single Project Spine:** Helm
 
 ### A.2 Phase Breakdown
 
-| Phase | Name | Modules | Hours | Key CatchBook Deliverables |
+| Phase | Name | Modules | Hours | Key Helm Deliverables |
 |-------|------|---------|-------|----------------------------|
 | P01 | Foundations | 4 | 24 | Repo setup, Git workflow, tooling |
 | P02 | Professional Tooling | 4 | 24 | Linting, environment config, project structure |
@@ -2207,7 +2207,7 @@ See `catchbook-curriculum-v1.csv` for complete breakdown.
 **lesson.json**
 - Schema-validated lesson structure
 - Required for system operation (Professor, Curriculum Designer)
-- Contains: objectives, outline, assessment, CatchBook context
+- Contains: objectives, outline, assessment, Helm context
 
 **lesson.md**
 - Human-readable lesson document generated by Professor
@@ -2320,21 +2320,21 @@ All existing lessons successfully migrated with Git history preserved.
 
 ### C.4 CSV as Source of Truth
 
-`catchbook-curriculum-v1.csv` contains:
+`curriculum.json` contains:
 
 - All 28 phases
 - All 139 modules
-- Module names, focus areas, CatchBook deliverables, estimated hours
+- Module names, focus areas, Helm deliverables, estimated hours
 
 **Curriculum Designer** uses CSV as reference when generating JSON files.
 
 **Workflow:**
 
 1. Read CSV row for target module
-2. Extract: phase, module name, focus, CatchBook deliverable, hours
+2. Extract: phase, module name, focus, Helm deliverable, hours
 3. Generate JSON file following schema
 4. Break down module into 3-5 lessons (if not already specified)
-5. Ensure each lesson contributes to module's CatchBook deliverable
+5. Ensure each lesson contributes to module's Helm deliverable
 6. Validate against schema
 7. Output as artifact for user to save
 
@@ -2342,17 +2342,17 @@ All existing lessons successfully migrated with Git history preserved.
 
 ## Appendix D: Roadmap
 
-### v2.0 — CatchBook Curriculum Foundation (Current)
+### v2.0 — Helm Curriculum Foundation (Current)
 
-**Goal:** Core system operational with CatchBook-first workflow
+**Goal:** Core system operational with Helm-first workflow
 
 **Deliverables:**
 
-- ✅ Repository structure updated for CatchBook
+- ✅ Repository structure updated for Helm
 - ✅ Schemas for phases/modules/lessons
-- ✅ Role definitions updated for CatchBook context
+- ✅ Role definitions updated for Helm context
 - ✅ State tracking for phases/modules/lessons
-- ✅ catchbook-curriculum-v1.csv integrated
+- ✅ curriculum.json integrated
 - ✅ Just-in-time curriculum generation strategy
 - ⏳ Generate Phase 1 files (P01.json + 4 modules + initial lessons)
 - ⏳ Complete first module end-to-end (P01-M01: Git fundamentals)
@@ -2374,13 +2374,13 @@ All existing lessons successfully migrated with Git history preserved.
   - P01-M02: Branching and PR workflow (6 hours)
   - P01-M03: Commit conventions + PR templates (6 hours)
   - P01-M04: GitHub Issues + Projects (6 hours)
-- Set up CatchBook repository with proper structure
-- Write CatchBook README and first documentation
-- Establish Git workflow for CatchBook development
+- Set up Helm repository with proper structure
+- Write Helm README and first documentation
+- Establish Git workflow for Helm development
 - Validate lesson quality and pacing
 - Refine templates based on actual usage
 
-**Outcome:** Phase 1 complete, CatchBook repo operational, workflow validated
+**Outcome:** Phase 1 complete, Helm repo operational, workflow validated
 
 ---
 
@@ -2392,11 +2392,11 @@ All existing lessons successfully migrated with Git history preserved.
 
 - Complete Phase 2 (Professional Tooling): 24 hours
 - Complete Phase 3 (Frontend Basics): 46 hours
-- CatchBook landing page live (static)
+- Helm landing page live (static)
 - Photo gallery prototype
-- Linting and tooling configured for CatchBook
+- Linting and tooling configured for Helm
 
-**Outcome:** Frontend fundamentals mastered, visual CatchBook prototype
+**Outcome:** Frontend fundamentals mastered, visual Helm prototype
 
 ---
 
@@ -2432,12 +2432,12 @@ All existing lessons successfully migrated with Git history preserved.
 
 **Deliverables:**
 
-- CatchBook API fully functional (FastAPI + PostgreSQL)
+- Helm API fully functional (FastAPI + PostgreSQL)
 - User authentication working
 - Species ID via Claude API operational
 - Catch logging end-to-end (photo → database → display)
 
-**Outcome:** CatchBook MVP functional (core features work)
+**Outcome:** Helm MVP functional (core features work)
 
 ---
 
@@ -2453,7 +2453,7 @@ All existing lessons successfully migrated with Git history preserved.
 - Monitoring and logging in place
 - Performance optimized
 
-**Outcome:** CatchBook production-ready
+**Outcome:** Helm production-ready
 
 ---
 
@@ -2469,7 +2469,7 @@ All existing lessons successfully migrated with Git history preserved.
 - Technical blog series
 - Open source library releases
 
-**Outcome:** CatchBook v1.0 launched, public product
+**Outcome:** Helm v1.0 launched, public product
 
 ---
 
@@ -2477,11 +2477,11 @@ All existing lessons successfully migrated with Git history preserved.
 
 This architecture is designed to:
 
-- **Eliminate throwaway learning:** Every module ships a CatchBook feature
+- **Eliminate throwaway learning:** Every module ships a Helm feature
 - **Provide clean artifact-based workflows:** GitHub MCP + Filesystem MCP replace file sync overhead
 - **Scale from v2.0 (manual) → v6.0 (production app):** Without curriculum rework
 - **Maintain Git-native discipline throughout:** Every session = commit
-- **Build a real product users want:** CatchBook isn't a learning exercise, it's a launchable app
+- **Build a real product users want:** Helm isn't a learning exercise, it's a launchable app
 
 **Current State:** Architecture complete, ready to generate Phase 1 curriculum files.
 
@@ -2495,4 +2495,4 @@ This architecture is designed to:
 
 ---
 
-## End of ARCHITECTURE.md — CatchBook Curriculum Edition v2.0
+## End of ARCHITECTURE.md — Helm Curriculum Edition v2.0

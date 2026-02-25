@@ -3,7 +3,7 @@
 **Version:** 1.1.0  
 **Last Updated:** 2024-12-03  
 **Profile Type:** Dynamic (updates as patterns emerge)  
-**Related Files:** `learner-state/`, `projects/catchbook-product-spec.md`
+**Related Files:** `learner-state/`, `projects/helm-product-spec.md`
 
 ---
 
@@ -11,7 +11,7 @@
 
 This profile captures learner-specific cognitive traits, constraints, and strategic goals not covered in the Claude Project Instructions. It enables role-agnostic adaptation across all curriculum interactions.
 
-**Note:** For identity, background, technical environment, communication style, and Catchbook context, see Claude Project Instructions.
+**Note:** For identity, background, technical environment, communication style, and Helm context, see Claude Project Instructions.
 
 ---
 
@@ -70,7 +70,7 @@ I trust the curriculum system to calibrate pacing and depth. Intervene if pacing
 ## Strategic Goals
 
 1. Transition fully into tech/software/automation engineering
-2. Ship Catchbook v1 with core feature set
+2. Ship Helm v1 with core feature set
 3. Build compounding revenue through apps, automation, and content
 4. Grow YouTube education platform with monetization
 5. Develop mastery in engineering fundamentals

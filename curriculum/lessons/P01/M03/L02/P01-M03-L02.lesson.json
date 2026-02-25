@@ -58,7 +58,7 @@
   ],
   "professor_constraints": [
     "Keep the CC format review to 2-3 minutes max — learner completed L01",
-    "Use Helm-specific examples (tasks, time blocks, Google Calendar sync) not CatchBook",
+    "Use Helm-specific examples (tasks, time blocks, Google Calendar sync) not some other project",
     "Provide exactly 5 bad commit subject lines for the hands-on exercise",
     "Show git log --oneline output to demonstrate how subject lines appear in practice",
     "Address the 'what if my change is complex' concern: that's what commit bodies are for (covered in L03)"

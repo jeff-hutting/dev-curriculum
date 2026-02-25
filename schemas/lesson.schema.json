@@ -67,23 +67,23 @@
       "items": {"type": "string"},
       "description": "Important vocabulary introduced in this lesson"
     },
-    "catchbook_context": {
+    "helm_context": {
       "type": "object",
       "properties": {
         "feature": {
           "type": "string",
-          "description": "Which CatchBook feature this lesson contributes to"
+          "description": "Which Helm feature this lesson contributes to"
         },
         "deliverable": {
           "type": "string",
-          "description": "What the learner will build/ship for CatchBook"
+          "description": "What the learner will build/ship for Helm"
         },
         "code_location": {
           "type": "string",
-          "description": "Where in the CatchBook codebase this work will live"
+          "description": "Where in the Helm codebase this work will live"
         }
       },
-      "description": "How this lesson integrates with CatchBook project"
+      "description": "How this lesson integrates with Helm project"
     },
     "assessment": {
       "type": "object",

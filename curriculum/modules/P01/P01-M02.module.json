@@ -3,8 +3,8 @@
   "module_name": "Branching and PR workflow",
   "phase_id": "P01",
   "estimated_hours": 6,
-  "catchbook_deliverable": "First feature branch merged to CatchBook via pull request",
-  "description": "Master Git branching strategies and GitHub pull request workflows. Learn to create feature branches, collaborate through code review, and merge changes safely. Build the collaborative development patterns essential for multi-phase CatchBook development.",
+  "helm_deliverable": "First feature branch merged to Helm via pull request",
+  "description": "Master Git branching strategies and GitHub pull request workflows. Learn to create feature branches, collaborate through code review, and merge changes safely. Build the collaborative development patterns essential for multi-phase Helm development.",
   "prerequisites": ["P01-M01"],
   "learning_objectives": [
     "Create and switch between Git branches for isolated feature development",
@@ -13,7 +13,7 @@
     "Conduct effective code reviews using GitHub PR tools",
     "Resolve merge conflicts when branches diverge",
     "Merge feature branches using different strategies (merge commit, squash, rebase)",
-    "Apply professional PR workflow to CatchBook repository"
+    "Apply professional PR workflow to Helm repository"
   ],
   "skills_taught": [
     "git_branching",
@@ -49,11 +49,11 @@
       "estimated_minutes": 105
     }
   ],
-  "catchbook_integration": {
+  "helm_integration": {
     "feature_area": "Repository workflow and collaboration infrastructure",
-    "repository_path": "catchbook/",
+    "repository_path": "helm/",
     "dependencies": [
-      "CatchBook repository initialized (P01-M01)",
+      "Helm repository initialized (P01-M01)",
       "GitHub remote configured",
       "README.md present"
     ]

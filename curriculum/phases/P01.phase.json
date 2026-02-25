@@ -2,7 +2,7 @@
   "phase_id": "P01",
   "phase_name": "Foundations",
   "description": "Establish core development workflow and tooling fundamentals. Master version control, professional repository hygiene, and project organization patterns that will support Helm development throughout all 28 phases.",
-  "catchbook_focus": "Set up Helm repository with professional Git workflow, documentation standards, and project management infrastructure. Establish the foundation for collaborative development and continuous deployment.",
+  "helm_focus": "Set up Helm repository with professional Git workflow, documentation standards, and project management infrastructure. Establish the foundation for collaborative development and continuous deployment.",
   "entry_criteria": [
     "Basic computer literacy (file management, web browsing)",
     "Terminal/command line familiarity (ability to navigate directories, run commands)",
@@ -24,25 +24,25 @@
       "module_id": "P01-M01",
       "module_name": "Git fundamentals: init add commit push",
       "estimated_hours": 6,
-      "catchbook_deliverable": "Helm repository setup with README and initial commit"
+      "helm_deliverable": "Helm repository setup with README and initial commit"
     },
     {
       "module_id": "P01-M02",
       "module_name": "Branching and PR workflow",
       "estimated_hours": 6,
-      "catchbook_deliverable": "First feature branch merged to Helm via pull request"
+      "helm_deliverable": "First feature branch merged to Helm via pull request"
     },
     {
       "module_id": "P01-M03",
       "module_name": "Commit conventions + PR templates",
       "estimated_hours": 6,
-      "catchbook_deliverable": "Professional repo hygiene with Conventional Commits and PR template"
+      "helm_deliverable": "Professional repo hygiene with Conventional Commits and PR template"
     },
     {
       "module_id": "P01-M04",
       "module_name": "GitHub Issues + Projects (Kanban)",
       "estimated_hours": 4,
-      "catchbook_deliverable": "Helm feature board with milestones and issue tracking"
+      "helm_deliverable": "Helm feature board with milestones and issue tracking"
     }
   ],
   "metadata": {

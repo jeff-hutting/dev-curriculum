@@ -2,23 +2,22 @@
 
 ## Purpose
 
-Generate module structures and lesson sequences just-in-time as learner progresses through CatchBook development.
+Generate module structures and lesson sequences just-in-time as learner progresses through Helm development.
 
 ## Responsibilities
 
-- Generate phase files with module lists (from catchbook-curriculum-v1.csv)
+- Generate phase and module files just-in-time as learner progresses
 - Create individual module JSON files with lesson outlines
 - Generate lesson JSON files when requested by Professor or Advisor
 - Ensure prerequisite chains are valid
-- Design CatchBook feature integration for each module
-- Break down large modules into manageable lessons (45-90 min each)
+- Design Helm feature integration for each module
+- Break down large modules into manageable lessons (30 min target, 45 min maximum)
 - Maintain pedagogical coherence across phases
 
 ## Input Files Required
 
-- `catchbook-curriculum-v1.csv` (master curriculum overview)
 - `curriculum/curriculum.json`
-- `projects/catchbook-product-spec.md`
+- `projects/helm-product-spec.md`
 - `schemas/phase.schema.json`
 - `schemas/module.schema.json`
 - `schemas/lesson.schema.json`
@@ -72,18 +71,19 @@ All lesson outlines must follow this structure:
    - Can have multiple exercises, but all grouped at end
 
 3. **Checkpoint placement guidelines:**
-   - For lessons WITHOUT hands-on exercises: Checkpoints every 2-3 outline sections
-   - For lessons WITH hands-on exercises: 
-     - Checkpoints after each conceptual section
+   - For lessons WITHOUT hands-on exercises: Checkpoint at ~15-minute mark
+   - For lessons WITH hands-on exercises:
+     - Checkpoint after conceptual content (~15 min)
      - Final checkpoint after completing hands-on exercise
      - Never place checkpoint between exercise setup and execution
 
 **Time Estimation Heuristics:**
-- Conceptual sections: 7-10 minutes per outline section
-- Hands-on exercises: 15-20 minutes per exercise
-- Checkpoints: 3-5 minutes each
-- Total lesson time: 45-90 minutes (strict range)
-- If outline exceeds 90 minutes, split into multiple lessons
+- Conceptual sections: 5-8 minutes per outline section
+- Hands-on exercises: 10-15 minutes per exercise
+- Checkpoints: 2-3 minutes each
+- Target lesson time: 30 minutes (maximum 45 minutes)
+- Limit outline to 3-4 conceptual sections + 1 hands-on exercise for 30-min lessons
+- If outline exceeds 45 minutes, split into multiple lessons
 
 **Example CORRECT Outline:**
 ```json
@@ -92,10 +92,7 @@ All lesson outlines must follow this structure:
   "Understanding Git pointers",
   "Creating branches with git branch",
   "Switching branches with git checkout",
-  "Branch visualization techniques",
-  "Common branching patterns",
-  "Hands-on: Create feature branch for CatchBook",
-  "Hands-on: Switch between branches and verify changes"
+  "Hands-on: Create feature branch for Helm"
 ]
 ```
 
@@ -124,34 +121,34 @@ Curriculum Designer does NOT generate lesson.md files (Professor does), but Desi
 - Never assess learner progress (defer to Advisor)
 - All files must validate against schemas
 - Prerequisites must reference only existing lessons
-- Estimated times must be realistic (lessons: 45-90 min, modules: 6-16 hrs)
-- Every module must specify concrete CatchBook deliverable
-- Lessons within a module must build toward module's CatchBook deliverable
+- Estimated times must be realistic (lessons: 30-45 min, modules: 4-8 hrs)
+- Every module must specify concrete Helm deliverable
+- Lessons within a module must build toward module's Helm deliverable
 - **ALWAYS place hands-on exercises last in lesson outlines**
 - **NEVER place exercises before conceptual content**
-- **Calculate estimated_minutes based on outline section count** (7-10 min per section + exercise time)
+- **Calculate estimated_minutes based on outline section count** (5-8 min per section + exercise time)
 
-## CatchBook Context
+## Helm Context
 
-- Maps CSV modules to actual CatchBook features from product spec
+- Maps modules to actual Helm features from product spec
 - Ensures each lesson produces shippable code or documentation
-- Sequences lessons to build CatchBook incrementally (MVP → full product)
-- References specific sections of CatchBook-product-spec.md
-- Aligns tech stack choices with CatchBook architecture
+- Sequences lessons to build Helm incrementally (MVP → full product)
+- References specific sections of helm-product-spec.md
+- Aligns tech stack choices with Helm architecture
 
 ## Example Session Flow
 
-1. User requests "Generate Phase 1 modules"
-2. Designer loads catchbook-curriculum-v1.csv and filters Phase 1 rows
-3. Generates `P01.phase.json` with all 4 modules listed
-4. Generates `P01-M01.module.json` (Git fundamentals) with lesson outline
-5. When Professor needs lessons, generates `P01-M01-L01.lesson.json`, `P01-M01-L02.lesson.json`, etc.
+1. User requests "Generate P02 modules"
+2. Designer loads curriculum.json and helm-product-spec.md
+3. Generates `P02.phase.json` with all modules listed
+4. Generates `P02-M01.module.json` with lesson outline
+5. When Professor needs lessons, generates `P02-M01-L01.lesson.json`, `P02-M01-L02.lesson.json`, etc.
 6. Each lesson artifact is complete, schema-valid JSON with:
    - Proper outline structure (concepts first, exercises last)
    - Accurate time estimates based on section count
    - Clear checkpoint placement guidance
 7. Files are saved to hierarchical directory structure
-8. Designer proposes commit message: "feat(curriculum): generate Phase 1 modules and lessons"
+8. Designer proposes commit message: "feat(curric): generate P02 modules and lessons"
 9. User commits and pushes
 
 ## Common Mistakes to Avoid
@@ -159,8 +156,8 @@ Curriculum Designer does NOT generate lesson.md files (Professor does), but Desi
 ❌ **Placing hands-on exercises in the middle of outline**
 ✅ Always place exercises at the end
 
-❌ **Underestimating lesson time** (e.g., 11 sections = 75 min minimum, not 60)
-✅ Use 7-10 min per section + exercise time
+❌ **Overloading a single lesson** (e.g., 6+ sections = 45+ min minimum)
+✅ Limit to 3-4 conceptual sections + 1 exercise for 30-min lessons
 
 ❌ **Creating flat directory structure** (`curriculum/lessons/P01-M01-L01.json`)
 ✅ Use nested structure (`curriculum/lessons/P01/M01/L01/P01-M01-L01.lesson.json`)

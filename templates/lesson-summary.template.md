@@ -5,7 +5,7 @@ phase_id: {{phase_id}}
 completed_at: {{iso_timestamp}}
 duration_minutes: {{duration}}
 confidence_rating: {{1-5}}
-catchbook_deliverable: {{description}}
+helm_deliverable: {{description}}
 ---
 
 # Lesson Summary — {{lesson_id}}
@@ -18,9 +18,9 @@ catchbook_deliverable: {{description}}
 
 {{module_name}} ({{module_id}})
 
-## CatchBook Feature
+## Helm Feature
 
-{{catchbook_feature_description}}
+{{helm_feature_description}}
 
 ## Objectives Met
 
@@ -47,7 +47,7 @@ catchbook_deliverable: {{description}}
 - {{skill_1}}: {{novice|emerging|competent|proficient|expert}}
 - {{skill_2}}: {{novice|emerging|competent|proficient|expert}}
 
-## CatchBook Deliverable
+## Helm Deliverable
 
 {{description_of_what_was_built_or_shipped}}
 

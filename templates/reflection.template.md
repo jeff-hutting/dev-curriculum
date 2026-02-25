@@ -12,9 +12,9 @@ energy_level: {{1-10}}
 
 {{lesson_title}}
 
-## CatchBook Context
+## Helm Context
 
-{{what_catchbook_feature_or_capability_this_enabled}}
+{{what_helm_feature_or_capability_this_enabled}}
 
 ## How It Felt
 
@@ -22,7 +22,7 @@ energy_level: {{1-10}}
 
 ## What Clicked
 
-{{What concepts made sense, especially in CatchBook context}}
+{{What concepts made sense, especially in Helm context}}
 
 ## What's Still Fuzzy
 
@@ -30,7 +30,7 @@ energy_level: {{1-10}}
 
 ## Real-World Application
 
-{{How this lesson applies to building CatchBook or other real projects}}
+{{How this lesson applies to building Helm or other real projects}}
 
 ## Mood After Lesson
 

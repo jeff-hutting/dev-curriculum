@@ -231,10 +231,9 @@ Every worksheet follows this exact structure:
 ### Number of Checkpoints
 
 **Determine from lesson.json:**
-- Calculate: `estimated_minutes / 20` = number of checkpoints
-- 75-minute lesson = 4 checkpoints (20, 40, 60, 75 minutes)
-- 60-minute lesson = 3 checkpoints (20, 40, 60 minutes)
-- 45-minute lesson = 3 checkpoints (20, 40, 45 minutes)
+- For 30-min lessons: 1 checkpoint at ~15 minutes. For 45-min lessons: 2 checkpoints at ~20 and ~40 minutes.
+- 30-minute lesson = 1 checkpoint (15 minutes)
+- 45-minute lesson = 2 checkpoints (20, 40 minutes)
 
 **Include all checkpoints** in worksheet, even if last checkpoint is not exactly at 20-minute interval
 
@@ -275,8 +274,8 @@ Every worksheet follows this exact structure:
 
 **Questions:**
 
-1. In your own words, explain why version control is important for the CatchBook project.
-2. What problems might you encounter if you tried to build CatchBook without version control?
+1. In your own words, explain why version control is important for the Helm project.
+2. What problems might you encounter if you tried to build Helm without version control?
 3. How does version control enable experimentation during development?
 
 **Answers:**
@@ -294,7 +293,7 @@ Every worksheet follows this exact structure:
 **Questions:**
 
 1. What is the key difference between centralized and distributed version control systems?
-2. Why is Git's distributed architecture particularly valuable for CatchBook development?
+2. Why is Git's distributed architecture particularly valuable for Helm development?
 3. If you had to explain Git to someone who has never used version control, what would you say?
 
 **Answers:**
@@ -313,7 +312,7 @@ Every worksheet follows this exact structure:
 
 1. How does Git's snapshot model differ from the delta-based approach of older systems?
 2. What does it mean that every developer has a "full copy" of the repository?
-3. How will branching help you develop CatchBook features safely?
+3. How will branching help you develop Helm features safely?
 
 **Answers:**
 

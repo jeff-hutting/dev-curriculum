@@ -19,7 +19,7 @@
       "type": "integer",
       "minimum": 0
     },
-    "catchbook_features_shipped": {
+    "helm_features_shipped": {
       "type": "integer",
       "minimum": 0
     },
@@ -63,7 +63,7 @@
     "skill_progression": {
       "type": "object"
     },
-    "catchbook_milestones": {
+    "helm_milestones": {
       "type": "array"
     },
     "module_completion": {

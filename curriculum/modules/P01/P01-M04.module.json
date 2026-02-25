@@ -3,7 +3,7 @@
   "module_name": "GitHub Issues + Projects (Kanban)",
   "phase_id": "P01",
   "estimated_hours": 4,
-  "catchbook_deliverable": "Helm feature board with milestones, labels, and initial issue backlog",
+  "helm_deliverable": "Helm feature board with milestones, labels, and initial issue backlog",
   "description": "Master GitHub's project management tools to organize and track Helm's development. Learn to write effective issues, configure labels and milestones, set up a Kanban board with GitHub Projects, and link issues to code through branches and PRs. By the end, Helm will have a structured, professional backlog ready to drive all future development.",
   "prerequisites": ["P01-M01", "P01-M02", "P01-M03"],
   "learning_objectives": [
@@ -56,7 +56,7 @@
       "estimated_minutes": 45
     }
   ],
-  "catchbook_integration": {
+  "helm_integration": {
     "feature_area": "Project management and issue tracking infrastructure",
     "repository_path": "helm/",
     "dependencies": [

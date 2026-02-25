@@ -3,7 +3,7 @@
   "module_name": "Commit conventions + PR templates",
   "phase_id": "P01",
   "estimated_hours": 4,
-  "catchbook_deliverable": "Professional repo hygiene for Helm with Conventional Commits, commit best practices, and PR template",
+  "helm_deliverable": "Professional repo hygiene for Helm with Conventional Commits, commit best practices, and PR template",
   "description": "Master professional commit message conventions and pull request templates. Learn to write clear, concise commit messages following the Conventional Commits specification. Create PR templates that streamline code review and maintain high-quality documentation. Establish the repository hygiene patterns that will support Helm's evolution across all phases.",
   "prerequisites": ["P01-M01", "P01-M02"],
   "learning_objectives": [
@@ -79,7 +79,7 @@
       "estimated_minutes": 45
     }
   ],
-  "catchbook_integration": {
+  "helm_integration": {
     "feature_area": "Repository documentation and commit hygiene infrastructure",
     "repository_path": "helm/",
     "dependencies": [

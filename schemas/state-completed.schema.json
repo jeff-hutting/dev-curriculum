@@ -60,12 +60,12 @@
       "type": "array",
       "items": {"type": "string"}
     },
-    "catchbook_deliverable": {
+    "helm_deliverable": {
       "oneOf": [
         {"type": "string"},
         {"type": "object"}
       ],
-      "description": "CatchBook feature or artifact produced"
+      "description": "Helm feature or artifact produced"
     },
     "code_committed": {
       "type": "boolean"

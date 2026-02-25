@@ -245,7 +245,7 @@ No additional conversational exchanges occurred during this lesson. All question
 **Suggested reflection questions:**
 
 1. {Question 1 - specific to lesson content}
-2. {Question 2 - connects to CatchBook development}
+2. {Question 2 - connects to Helm development}
 3. {Question 3 - broader application or next steps}
 
 You can respond to this reflection conversationally in chat, or save your thoughts to `reflections/YYYY-MM-DD.md` using the reflection template.
@@ -264,7 +264,7 @@ You can respond to this reflection conversationally in chat, or save your though
 *Reflection Questions:*
 - 3 questions that prompt deeper thinking
 - Question 1: What clicked or felt challenging
-- Question 2: How this applies to CatchBook
+- Question 2: How this applies to Helm
 - Question 3: What to explore further or practice
 
 *Closing Text:*
@@ -275,12 +275,12 @@ You can respond to this reflection conversationally in chat, or save your though
 ```markdown
 ## Reflection Prompt
 
-Take a few minutes to reflect on this lesson. Understanding version control concepts is foundational to everything you'll build with CatchBook, so it's worth processing what resonated and what might need more practice.
+Take a few minutes to reflect on this lesson. Understanding version control concepts is foundational to everything you'll build with Helm, so it's worth processing what resonated and what might need more practice.
 
 **Suggested reflection questions:**
 
 1. What aspect of version control made the most sense to you? What still feels a bit fuzzy?
-2. How do you anticipate using Git's branching feature as you develop CatchBook? What experiments might you want to try?
+2. How do you anticipate using Git's branching feature as you develop Helm? What experiments might you want to try?
 3. Thinking about your past experiences managing files or projects, how might version control have helped? How will it change your workflow going forward?
 
 You can respond to this reflection conversationally in chat, or save your thoughts to `reflections/YYYY-MM-DD.md` using the reflection template.
@@ -412,17 +412,17 @@ You can respond to this reflection conversationally in chat, or save your though
 
 **Your Response:**
 
-In my own words, version control is essential for CatchBook because:
+In my own words, version control is essential for Helm because:
 
 1. It lets me track every change I make to the code, so if something breaks, I can see exactly what changed and revert it
 2. It enables me to experiment with new features (like testing different UI layouts for the catch logging screen) without risking the working codebase
-3. It creates a documented history of CatchBook's development, which will be valuable for my portfolio
+3. It creates a documented history of Helm's development, which will be valuable for my portfolio
 
-Without version control, I'd probably end up with dozens of backup folders like "catchbook_backup_dec8" and "catchbook_FINAL_v3" and eventually lose track of which version was actually working.
+Without version control, I'd probably end up with dozens of backup folders like "helm_backup_dec8" and "helm_FINAL_v3" and eventually lose track of which version was actually working.
 
 **Professor Feedback:**
 
-Excellent response — you've clearly grasped the core value of version control! Your three points are spot-on, and I especially like how you connected them directly to CatchBook development scenarios.
+Excellent response — you've clearly grasped the core value of version control! Your three points are spot-on, and I especially like how you connected them directly to Helm development scenarios.
 
 Your insight about the "backup folder chaos" is very real. That's exactly the problem that version control solves, and it's something many developers have experienced before discovering Git.
 
@@ -454,7 +454,7 @@ In distributed systems like Git:
 - Work can continue offline without any network access
 - Multiple "remotes" can exist (not just one central server)
 
-For CatchBook, Git's distributed nature is valuable because:
+For Helm, Git's distributed nature is valuable because:
 1. I can work on the airplane (offline) and still commit changes locally
 2. I can experiment freely without affecting any shared repository
 3. I can maintain multiple remotes (personal GitHub, work backup, etc.)
@@ -464,7 +464,7 @@ For CatchBook, Git's distributed nature is valuable because:
 
 Outstanding! This is a textbook-quality explanation of the centralized vs. distributed distinction. You've not only understood the technical differences but also articulated *why* those differences matter in practice.
 
-Your CatchBook examples are particularly strong. The offline work scenario is spot-on — one of Git's superpowers is that 99% of operations are local and don't require network access. You only need the network when pushing/pulling changes to/from remote repositories.
+Your Helm examples are particularly strong. The offline work scenario is spot-on — one of Git's superpowers is that 99% of operations are local and don't require network access. You only need the network when pushing/pulling changes to/from remote repositories.
 
 One small note: when you said "commits go back to that central server" in SVN, that's accurate, but it's worth noting that in SVN, a commit IS the act of sending changes to the server. In Git, you commit locally first, then push later — these are two separate operations. This distinction becomes more clear when we get to hands-on practice in the next lesson.
 
@@ -490,7 +490,7 @@ Having a "full copy" of the repository means:
 - I can view any previous version instantly without network access
 - Operations like branching and merging are fast because Git doesn't need to recalculate deltas
 
-For CatchBook feature development, branching helps me:
+For Helm feature development, branching helps me:
 1. Create a separate "workspace" for each new feature (e.g., a species-id branch)
 2. Work on that feature without affecting the stable main branch
 3. Test thoroughly before merging the feature into main
@@ -503,9 +503,9 @@ This is an *excellent* response that demonstrates deep understanding! Your expla
 
 The photography analogy is perfect — I may steal that for future lessons! And your point about delta-based systems having to "replay" changes sequentially to reconstruct a version is the key reason why Git's snapshot model makes operations like checkout and branch creation nearly instantaneous.
 
-Your understanding of "full copy" is spot-on. When you clone a CatchBook repository, you're not just getting the current files — you're getting the entire development history. This is why Git is so resilient: every clone is a complete backup.
+Your understanding of "full copy" is spot-on. When you clone a Helm repository, you're not just getting the current files — you're getting the entire development history. This is why Git is so resilient: every clone is a complete backup.
 
-Your five points about branching for CatchBook are exactly how professional developers work. You've clearly connected the conceptual material to real-world practice. This understanding will serve you well as you begin hands-on Git work in the next lesson.
+Your five points about branching for Helm are exactly how professional developers work. You've clearly connected the conceptual material to real-world practice. This understanding will serve you well as you begin hands-on Git work in the next lesson.
 
 One thing to look forward to: you'll find that creating and switching branches in Git is so fast and easy that you'll probably create branches far more often than you expect. It's common to create a branch, try something for 10 minutes, then either merge it or delete it. The overhead is minimal, so experimentation is cheap.
 
@@ -542,7 +542,7 @@ Think of it this way:
 
 You can use Git completely locally without ever touching GitHub. Many developers do. But GitHub makes sharing code and collaborating with others much easier.
 
-For CatchBook, you'll:
+For Helm, you'll:
 1. Use Git locally to track your changes
 2. Push your repository to GitHub for backup and portfolio visibility
 3. Use GitHub features like Issues to track bugs and feature ideas
@@ -557,7 +557,7 @@ There are also alternatives to GitHub (GitLab, Bitbucket, Gitea), but GitHub is 
 
 **Your Question:**
 
-Where exactly will the CatchBook repository live on my computer? Should I create it in a specific location?
+Where exactly will the Helm repository live on my computer? Should I create it in a specific location?
 
 **Professor Response:**
 
@@ -565,12 +565,12 @@ Good practical question! The repository will live wherever you create it. Best p
 
 **Recommended location:**
 ```
-~/dev/catchbook/
+~/dev/helm/
 ```
 
 Or if you prefer organizing by project type:
 ```
-~/projects/catchbook/
+~/projects/helm/
 ```
 
 **Things to avoid:**
@@ -582,8 +582,8 @@ Or if you prefer organizing by project type:
 **Directory structure you'll build:**
 ```
 ~/dev/
-├── catchbook/              ← Your main CatchBook repository
-├── catchbook-api/          ← Backend (if you separate it later)
+├── helm/              ← Your main Helm repository
+├── helm-api/          ← Backend (if you separate it later)
 └── other-projects/
 ```
 
@@ -600,12 +600,12 @@ We'll cover this step-by-step in the hands-on lesson. For now, just decide where
 
 ## Reflection Prompt
 
-Take a few minutes to reflect on this lesson. Understanding version control concepts is foundational to everything you'll build with CatchBook, so it's worth processing what resonated and what might need more practice.
+Take a few minutes to reflect on this lesson. Understanding version control concepts is foundational to everything you'll build with Helm, so it's worth processing what resonated and what might need more practice.
 
 **Suggested reflection questions:**
 
 1. What aspect of version control made the most sense to you? What still feels a bit fuzzy?
-2. How do you anticipate using Git's branching feature as you develop CatchBook? What experiments might you want to try?
+2. How do you anticipate using Git's branching feature as you develop Helm? What experiments might you want to try?
 3. Thinking about your past experiences managing files or projects, how might version control have helped? How will it change your workflow going forward?
 
 You can respond to this reflection conversationally in chat, or save your thoughts to `reflections/YYYY-MM-DD.md` using the reflection template.

@@ -1,16 +1,16 @@
 # dev-curriculum
 
-A Git-native, Claude-assisted full-stack engineering curriculum system built around **CatchBook**, a real production project. This system transforms learning from passive consumption into active building—every lesson produces shippable code, every module completes a feature, and every phase advances CatchBook toward launch.
+A Git-native, Claude-assisted full-stack engineering curriculum system built around **Helm**, a real production project. This system transforms learning from passive consumption into active building—every lesson produces shippable code, every module completes a feature, and every phase advances Helm toward launch.
 
 ---
 
 ## Overview
 
-**CatchBook** is an AI-powered fishing journal app that uses photo capture + EXIF data + computer vision to auto-populate catch details. Target: 10 seconds to log a catch vs. 3-5 minutes in competing apps.
+**Helm** is an AI-powered fishing journal app that uses photo capture + EXIF data + computer vision to auto-populate catch details. Target: 10 seconds to log a catch vs. 3-5 minutes in competing apps.
 
-This curriculum spans **28 phases, 139 modules, and approximately 850 hours** of hands-on learning. At 10-20 hours per week, you'll build CatchBook from concept to production launch in 10-20 months.
+This curriculum spans **28 phases, 139 modules, and approximately 850 hours** of hands-on learning. At 10-20 hours per week, you'll build Helm from concept to production launch in 10-20 months.
 
-**Core Innovation:** No throwaway exercises. Every module produces a real, shippable feature for CatchBook. You're not just learning full-stack development—you're building a launchable product from day 1.
+**Core Innovation:** No throwaway exercises. Every module produces a real, shippable feature for Helm. You're not just learning full-stack development—you're building a launchable product from day 1.
 
 ---
 
@@ -28,7 +28,7 @@ This curriculum spans **28 phases, 139 modules, and approximately 850 hours** of
 
 - **File-backed state:** Repository is source of truth, not AI memory
 - **Artifact-first delivery:** Clean copy/paste workflow via Claude artifacts
-- **Real project spine:** CatchBook drives every lesson (no throwaway code)
+- **Real project spine:** Helm drives every lesson (no throwaway code)
 - **Git-native workflow:** Every session produces commits with proper messages
 - **Just-in-time curriculum:** Generate lessons as needed, adapt based on progress
 - **Role-based operation:** Specialized AI roles for teaching, advising, designing, evaluating
@@ -55,7 +55,7 @@ Phases (28) → Modules (139) → Lessons (variable)
 **Example:**
 
 - Phase 1: Foundations
-  - Module 1.1: Git fundamentals (6 hours) → CatchBook repo setup
+  - Module 1.1: Git fundamentals (6 hours) → Helm repo setup
   - Module 1.2: Branching and PRs (6 hours) → First PR workflow
   - Module 1.3: Commit conventions (6 hours) → Professional repo hygiene
   - Module 1.4: GitHub Issues + Projects (6 hours) → Feature board + milestones
@@ -86,7 +86,7 @@ Claude operates in specialized roles, each defined in `roles/*.md`:
 
 ---
 
-## CatchBook: The Project Spine
+## Helm: The Project Spine
 
 ### Tech Stack
 
@@ -100,7 +100,7 @@ Claude operates in specialized roles, each defined in `roles/*.md`:
 
 **Problem:** Existing fishing apps require excessive manual data entry (3-5 minutes per catch).
 
-**Solution:** CatchBook uses AI to auto-populate 90% of catch data from photos:
+**Solution:** Helm uses AI to auto-populate 90% of catch data from photos:
 
 - Snap photo → AI identifies species
 - EXIF data → GPS location, timestamp, camera settings
@@ -114,9 +114,9 @@ Claude operates in specialized roles, each defined in `roles/*.md`:
 - Equipment tracking (which lures work when/where)
 - Privacy-first (location sharing is opt-in)
 
-### CatchBook Curriculum Roadmap
+### Helm Curriculum Roadmap
 
-| Phase | Focus | Hours | Key CatchBook Deliverables |
+| Phase | Focus | Hours | Key Helm Deliverables |
 |-------|-------|-------|----------------------------|
 | P01 | Foundations | 24 | Repo setup, Git workflow, tooling |
 | P02 | Professional Tooling | 24 | Linting, environment config, project structure |
@@ -149,9 +149,9 @@ Claude operates in specialized roles, each defined in `roles/*.md`:
 
 **Total:** ~850 hours
 
-See `catchbook-curriculum-v1.csv` for complete module breakdown.
+See `curriculum.json` for complete module breakdown.
 
-See `projects/catchbook-product-spec.md` for full product specification.
+See `projects/helm-product-spec.md` for full product specification.
 
 ---
 
@@ -160,7 +160,7 @@ See `projects/catchbook-product-spec.md` for full product specification.
 ```text
 dev-curriculum/
 ├── curriculum/
-│   ├── curriculum.json              # Top-level CatchBook curriculum design
+│   ├── curriculum.json              # Top-level Helm curriculum design
 │   ├── phases/
 │   │   ├── P01.json                 # Phase 1: Foundations
 │   │   ├── P02.json                 # Phase 2: Professional Tooling
@@ -180,7 +180,7 @@ dev-curriculum/
 │       │   └── completion.md
 │       └── ...                      # Generated just-in-time by Curriculum Designer
 ├── projects/
-│   ├── catchbook-product-spec.md    # Complete CatchBook specification
+│   ├── helm-product-spec.md    # Complete Helm specification
 │   └── supplementary/               # Additional projects if needed
 │       └── ...
 ├── learner-state/
@@ -222,7 +222,7 @@ dev-curriculum/
 ├── .github/
 │   └── workflows/
 │       └── validate.yml             # CI validation
-├── catchbook-curriculum-v1.csv      # Master curriculum (28 phases, 139 modules)
+├── curriculum.json      # Master curriculum (28 phases, 139 modules)
 ├── user-profile.md                  # Learner profile (Jeff)
 ├── quickstart.md                    # Beginner-friendly entry point
 ├── instructions.md                  # Operational reference
@@ -311,7 +311,7 @@ In Claude Desktop:
 /bootstrap
 ```
 
-Claude will load your curriculum and show current position within the 28-phase CatchBook roadmap.
+Claude will load your curriculum and show current position within the 28-phase Helm roadmap.
 
 ### 2. Start Your First Lesson
 
@@ -325,7 +325,7 @@ Claude activates Professor mode and generates a lesson document as an artifact.
 
 - Read lesson document (concepts + examples)
 - Answer checkpoint questions in chat
-- Complete hands-on exercise (e.g., create CatchBook repo)
+- Complete hands-on exercise (e.g., create Helm repo)
 - Review lesson summary artifact
 
 ### 4. Save State Updates
@@ -352,7 +352,7 @@ git push
 /next
 ```
 
-Claude activates Advisor and recommends your next lesson based on progress and CatchBook priorities.
+Claude activates Advisor and recommends your next lesson based on progress and Helm priorities.
 
 ---
 
@@ -420,7 +420,7 @@ Curriculum files are generated as needed, not all upfront:
 - **Focus:** Keep repository lean
 - **Iteration:** Lessons improve based on actual experience
 
-**Curriculum Designer** (separate chat) generates files using `catchbook-curriculum-v1.csv` as source of truth.
+**Curriculum Designer** (separate chat) generates files using `curriculum.json` as source of truth.
 
 ### Git-Native Workflow
 
@@ -458,21 +458,21 @@ Each role has specific constraints and outputs defined in `roles/*.md`.
 
 **At 20 hrs/week:** 43 weeks (~10 months)
 
-**Recommended Pace:** 15 hours/week = CatchBook launch in ~1 year
+**Recommended Pace:** 15 hours/week = Helm launch in ~1 year
 
 ### Major Milestones
 
 | Milestone | Target Week | Significance |
 |-----------|-------------|--------------|
-| First Commit | Week 1 | CatchBook repo initialized |
+| First Commit | Week 1 | Helm repo initialized |
 | Module 1 Complete | Week 2 | Git proficiency established |
 | Phase 1 Complete | Week 4 | Foundations mastery |
-| Phase 3 Complete | Week 10 | CatchBook landing page live |
-| Phase 8 Complete | Week 20 | CatchBook API functional |
-| Phase 11 Complete | Week 30 | CatchBook SPA prototype |
+| Phase 3 Complete | Week 10 | Helm landing page live |
+| Phase 8 Complete | Week 20 | Helm API functional |
+| Phase 11 Complete | Week 30 | Helm SPA prototype |
 | Phase 15 Complete | Week 40 | Species ID working |
-| Phase 21 Complete | Week 50 | CatchBook MVP live |
-| Phase 28 Complete | Week 60-80 | CatchBook v1.0 launched |
+| Phase 21 Complete | Week 50 | Helm MVP live |
+| Phase 28 Complete | Week 60-80 | Helm v1.0 launched |
 
 ---
 
@@ -484,7 +484,7 @@ Tracked in `learner-state/metrics.json`:
 - **Lessons Completed** (count)
 - **Modules Completed** (count)
 - **Phases Completed** (count)
-- **CatchBook Features Shipped** (count)
+- **Helm Features Shipped** (count)
 - **Reflections Written** (count)
 - **Average Confidence** (1-5 scale)
 - **Consistency Score** (0-1, based on weekly activity)
@@ -671,7 +671,7 @@ git checkout {commit_hash} -- learner-state/
 
 Want to modify the curriculum?
 
-1. Edit `catchbook-curriculum-v1.csv`
+1. Edit `curriculum.json`
 2. Activate Curriculum Designer (separate chat)
 3. Request regeneration of affected files
 4. Validate with `/validate`
@@ -679,7 +679,7 @@ Want to modify the curriculum?
 
 ### Multiple Projects
 
-CatchBook is the primary spine, but you can add supplementary projects:
+Helm is the primary spine, but you can add supplementary projects:
 
 1. Add project spec to `projects/supplementary/`
 2. Create module files that reference new project
@@ -703,7 +703,7 @@ python tools/export_metrics.py
 This is a personal learning system, but if you're building something similar:
 
 1. Fork the repository
-2. Adapt for your project (replace CatchBook with your app)
+2. Adapt for your project (replace Helm with your app)
 3. Modify schemas to match your needs
 4. Share learnings and improvements
 
@@ -725,10 +725,10 @@ This is a personal learning system, but if you're building something similar:
 - `roles/advisor.md`
 - `roles/evaluator.md`
 
-### CatchBook Documentation
+### Helm Documentation
 
-- `projects/catchbook-product-spec.md` — Full product specification
-- `catchbook-curriculum-v1.csv` — Master curriculum breakdown
+- `projects/helm-product-spec.md` — Full product specification
+- `curriculum.json` — Master curriculum breakdown
 
 ### External Resources
 
@@ -761,7 +761,7 @@ Don't collect tutorials—ship features.
 
 ### Small, Shippable Steps
 
-Every lesson produces a commit. Every commit advances CatchBook.
+Every lesson produces a commit. Every commit advances Helm.
 
 ### Process Over Memory
 
@@ -773,7 +773,7 @@ Design decisions documented before code written. Prevents rework.
 
 ### Compounding Over Intensity
 
-Sustainable pace (15 hrs/week) beats burnout sprints. Build CatchBook in 1 year, not 3 months of chaos.
+Sustainable pace (15 hrs/week) beats burnout sprints. Build Helm in 1 year, not 3 months of chaos.
 
 ---
 
@@ -787,6 +787,6 @@ Sustainable pace (15 hrs/week) beats burnout sprints. Build CatchBook in 1 year,
 
 ---
 
-**Ready to build CatchBook?** Start with `quickstart.md` or dive into `ARCHITECTURE.md`.
+**Ready to build Helm?** Start with `quickstart.md` or dive into `ARCHITECTURE.md`.
 
 **Let's ship.**
