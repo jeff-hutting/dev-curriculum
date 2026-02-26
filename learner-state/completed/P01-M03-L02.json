@@ -1,0 +1,47 @@
+{
+  "lesson_id": "P01-M03-L02",
+  "title": "The 50/72 Rule — Writing Clear Commit Subject Lines",
+  "module_id": "P01-M03",
+  "phase_id": "P01",
+  "completed_at": "2026-02-25T00:00:00Z",
+  "duration_minutes": 30,
+  "confidence_rating": 5,
+  "confidence_level": "high",
+  "checkpoints_completed": 1,
+  "assessment_results": {
+    "checkpoint_1": {
+      "q1_50_char_rationale": "Correctly identified git log --oneline truncation and the 'doing too much' signal. Missed the 50/72 two-tier distinction and GitHub display contexts.",
+      "q2_subject_line_exercise": "Strong: correct type (feat), scope (tasks), imperative mood, length (38 chars), no trailing period. Initially lowercase — pushed back on capitalization correction (correctly).",
+      "hands_on_rewrites": "All five rewrites demonstrated solid command of rules. Notable: #5 (wip) correctly identified as structurally wrong rather than just badly worded — strong conceptual insight. #1 slightly awkward verb choice ('obscure' vs 'mask'). #4 cleanest fix of the set."
+    }
+  },
+  "skills_developed": [
+    "conventional_commits",
+    "commit_message_writing",
+    "imperative_mood_writing",
+    "atomic_commits"
+  ],
+  "key_takeaways": [
+    "50 chars is the target for the entire subject line; 72 is the hard ceiling before truncation",
+    "Imperative mood: 'add', not 'added' or 'adding' — use 'if applied' test to verify",
+    "No trailing period — subject lines are titles, not sentences",
+    "Be specific enough that the reader can reconstruct what changed without opening the commit",
+    "WIP commits are structurally wrong, not just badly named",
+    "Capitalization after the CC prefix is a project-level style choice, not a spec requirement"
+  ],
+  "helm_deliverable": "Rewrote 5 vague Helm commit subject lines applying 50/72 rule, imperative mood, and specificity standards",
+  "code_committed": false,
+  "objectives_met": [
+    "Apply the 50-character subject line limit and explain why it matters",
+    "Write commit subjects in imperative mood correctly and consistently",
+    "Avoid trailing periods",
+    "Identify and fix vague or over-broad commit descriptions",
+    "Distinguish good from bad subject lines at a glance"
+  ],
+  "struggles": [],
+  "misconceptions_noted": [
+    "Initial answer on Q1 did not distinguish 50 (target) from 72 (hard cap) — treated 50 as a single cutoff rather than a two-tier constraint"
+  ],
+  "readiness_for_next_lesson": true,
+  "professor_notes": "Strong performance consistent with expert-level conventional_commits baseline. Most noteworthy moment: pushed back on capitalization rule with accurate sourcing (CC spec uses lowercase), which prompted correction to lesson material. This is a pattern of quality-control engagement that appeared in L01 (caught checkpoint count mismatch) and continues here. WIP insight on #5 was the best answer in the exercise — went beyond the surface rewrite to correctly identify that some commits are wrong at the structural level. Ready for P01-M03-L03 (Commit Bodies and Footers)."
+}

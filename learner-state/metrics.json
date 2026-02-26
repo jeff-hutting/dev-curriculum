@@ -1,13 +1,13 @@
 {
-  "total_time_minutes": 795,
-  "lessons_completed": 9,
+  "total_time_minutes": 825,
+  "lessons_completed": 10,
   "modules_completed": 2,
   "phases_completed": 0,
   "helm_features_shipped": 6,
   "reflections_written": 0,
-  "average_confidence": 4.67,
+  "average_confidence": 4.7,
   "consistency_score": 1.0,
-  "last_updated": "2025-01-12T21:45:00Z",
+  "last_updated": "2026-02-25T00:00:00Z",
   "lesson_history": [
     {
       "lesson_id": "P01-M01-L01",
@@ -80,14 +80,22 @@
       "confidence_level": 5,
       "checkpoints_completed": 4,
       "assessment_score": "exceptional"
+    },
+    {
+      "lesson_id": "P01-M03-L02",
+      "completed_at": "2026-02-25T00:00:00Z",
+      "duration_minutes": 30,
+      "confidence_level": 5,
+      "checkpoints_completed": 1,
+      "assessment_score": "exceptional"
     }
   ],
   "weekly_stats": {
-    "current_week": "2025-W02",
-    "lessons_this_week": 4,
-    "time_this_week_minutes": 390,
+    "current_week": "2026-W09",
+    "lessons_this_week": 1,
+    "time_this_week_minutes": 30,
     "target_weekly_hours": 10,
-    "progress_toward_target": 65.0
+    "progress_toward_target": 5.0
   },
   "skill_progression": {
     "git_basics": {
